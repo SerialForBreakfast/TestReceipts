@@ -1,0 +1,45 @@
+{
+  "runId": 42299118931,
+  "url": "https://github.com/SerialForBreakfast/TestReceipts/actions/runs/42299118931",
+  "sourceRevision": "3ee188904fe861584d89015746a1a24d714a387b",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "name": "package",
+      "conclusion": "success"
+    },
+    {
+      "name": "race",
+      "conclusion": "success"
+    },
+    {
+      "name": "native (darwin/amd64, darwin-amd64, macos-15-intel, x64, amd64, false)",
+      "conclusion": "success"
+    },
+    {
+      "name": "native (linux/amd64, linux-amd64, ubuntu-24.04, x64, amd64, true)",
+      "conclusion": "success"
+    },
+    {
+      "name": "native (darwin/arm64, darwin-arm64, macos-15, arm64, arm64, false)",
+      "conclusion": "success"
+    },
+    {
+      "name": "native (windows/arm64, windows-arm64, windows-11-arm, arm64, arm64, false)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "native (linux/arm64, linux-arm64, ubuntu-24.04-arm, arm64, arm64, true)",
+      "conclusion": "success"
+    },
+    {
+      "name": "native (windows/amd64, windows-amd64, windows-2025, x64, amd64, false)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "qualification",
+      "conclusion": "failure"
+    }
+  ],
+  "correction": "Windows negative ACL probe failed after Go tests/reference parity and valid package comparisons passed. Replace broad deny-read with READ_DATA-only denial, preserve ACL control for cleanup, and temporarily disable/restore backup/restore bypass privileges. No application facts or tests are relaxed."
+}

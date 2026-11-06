@@ -50,17 +50,21 @@ with tempfile.TemporaryDirectory(prefix='testreceipts-installed-') as tmp:
   assert r.returncode==2 and 'Output failed' in r.stderr;checks['unwritableStdout']='pass; exit 2'
  else:
   checks['POSIXPermissions']='not applicable on Windows'
-  identity=subprocess.run(['whoami','/user','/fo','csv','/nh'],capture_output=True,check=True).stdout.decode('utf-8',errors='replace')
-  sid=re.search(r'S-1-(?:\d+-)+\d+',identity)
-  assert sid,'Windows user SID unavailable'
+  from windows_permissions import ordinary_file_access
   blocked=sample/'catalog.json'
-  deny=subprocess.run(['icacls',str(blocked),'/deny','*'+sid.group(0)+':(R)'],capture_output=True)
-  assert deny.returncode==0,deny.stderr.decode(errors='replace')
-  try:
-   r,_,_=execute(['compare-recording',str(sample),*urls]);assert r.returncode==2 and r.stdout=='' and r.stderr;checks['unreadableCatalogACL']='pass; explicit deny-read ACL, exit 2'
-  finally:
-   restore=subprocess.run(['icacls',str(blocked),'/remove:d','*'+sid.group(0)],capture_output=True)
-   assert restore.returncode==0,'failed to restore temporary ACL'
+  # Deny file data only: retaining READ_CONTROL/WRITE_DAC lets the test undo its own ACE.
+  with ordinary_file_access() as privileges:
+   deny=subprocess.run(['icacls',str(blocked),'/deny','*S-1-1-0:(RD)'],capture_output=True)
+   assert deny.returncode==0,deny.stderr.decode(errors='replace')
+   try:
+    r,_,_=execute(['compare-recording',str(sample),*urls])
+    assert r.returncode==2 and r.stdout=='' and r.stderr,repr((r.returncode,r.stdout,r.stderr))
+    checks['unreadableCatalogACL']='pass; deny READ_DATA with backup/restore privileges disabled, exit 2'
+   finally:
+    restore=subprocess.run(['icacls',str(blocked),'/remove:d','*S-1-1-0'],capture_output=True)
+    assert restore.returncode==0,restore.stderr.decode(errors='replace')
+  checks['windowsPrivilegeTestScope']=privileges
+  r,_,_=execute(['compare-recording',str(sample),*urls]);assert r.returncode==0,'ACL restoration did not recover reads'
   with output.open('r') as readonly:
    r=subprocess.run([str(exe),'compare-recording',str(sample),*urls],env=env,cwd=work,stdout=readonly,stderr=subprocess.PIPE,text=True,timeout=30)
   assert r.returncode==2 and 'Output failed' in r.stderr;checks['unwritableStdout']='pass; read-only stdout handle, exit 2'

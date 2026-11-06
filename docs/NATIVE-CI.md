@@ -8,7 +8,7 @@ A Linux build job creates the six-target package set twice, checks binary/archiv
 
 - Python host, Go host and actual executable header match the target OS/CPU; emulation is not accepted as native qualification.
 - All native Go tests and vet, frozen source hashes, 20 reference tests, 15 golden pairs and partial-listing regressions.
-- Actual installed package comparisons, spaces/Unicode paths, version, stderr/exits, output files and empty PATH. Windows adds deny-read ACL and read-only output-handle tests; POSIX checks include execute/read permissions.
+- Actual installed package comparisons, spaces/Unicode paths, version, stderr/exits, output files and empty PATH. Windows adds deny-read ACL (temporarily disabling backup/restore bypass privileges and restoring them afterward) and read-only output-handle tests; POSIX checks include execute/read permissions.
 - Exact MCP/CLI parity for the fixtures and, when enabled, the live capture. Skipped Go tests are listed explicitly.
 - Real public Prow HTTPS capture using the OS trust store, then exact offline replay and independent Python/DOM facts. Artifact discovery must be complete for this probe; parser identity warnings remain explicit and do not become passing CI claims.
 - On Linux only: all 16 small recording comparisons in a pinned minimal Debian container with Go/Python/Node/compilers absent, no network, read-only mounts and an unprivileged user. This verifies minimal userland execution on the native kernel, not a full clean-machine VM.
@@ -37,3 +37,5 @@ Git checkout attributes preserve frozen reference/report bytes. Python workers e
 Hosted VMs include development tools. Empty PATH checks and Linux minimal containers do not establish full-machine installation with no language tools present. Oldest supported OS versions, fresh browser-download quarantine/Gatekeeper/SmartScreen, publisher signing/notarization, modern MCP and third-party host integration remain open. Native coverage applies only to the actual OS versions reported by jobs. The [runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners) documents label availability; private-repository plan/quotas may still prevent a job from starting.
 
 See [qualification evidence](../evidence/platform-ci/README.md) for actual executed results. Configuration and local preflight alone are not remote native passes.
+
+Windows ACL tests follow the [AdjustTokenPrivileges restore-state contract](https://learn.microsoft.com/en-us/windows/win32/api/securitybaseapi/nf-securitybaseapi-adjusttokenprivileges). They deny only file data, leaving ACL read/write control available so a test can undo its own temporary denial. Privilege state is recorded; no privilege is added or permanently changed.
