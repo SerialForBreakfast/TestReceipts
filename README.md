@@ -48,7 +48,7 @@ There are 20 frozen reference tests and 15 recorded comparison pairs, each check
 
 G01 is complete: bounded XML classification, observed-record facts, exact signatures, recorded pagination/discovery, integrity checks, inventories, and two-run comparison. See [G01 validation](docs/G01-VALIDATION.md), [task ledger](Tasks.md), [behavior contract](docs/PORTING-CONTRACT.md), and [handoff](HANDOFF.md).
 
-G02-01 is complete and supplies reproducible six-target private candidate builds and packaging. See [release instructions](docs/RELEASING.md) and [G02 qualification/gaps](docs/G02-VALIDATION.md); clean-machine and other-platform native validation remain pending. Only macOS arm64 has current native runtime evidence; no Windows/Linux runtime compatibility is claimed. G03 adds live Prow/GCS support. MCP and agent studies remain deferred. A first-party license and hosted module path remain open before public distribution.
+G02-01 is complete and supplies reproducible six-target private candidate builds and packaging. See [release instructions](docs/RELEASING.md) and [G02 qualification/gaps](docs/G02-VALIDATION.md); clean-machine and other-platform native validation remain pending. Only macOS arm64 has current native runtime evidence; no Windows/Linux runtime compatibility is claimed. G03 adds live Prow/GCS support. MCP and agent studies remain deferred. First-party code uses the [MIT license](LICENSE); the hosted module path remains open before public distribution.
 
 Historical agent findings are in [evidence/README.md](evidence/README.md). They do not measure this Go implementation, repeated use, or live networking. No Go size, speed, or token-saving advantage is claimed.
 
@@ -59,4 +59,4 @@ python3 tools/release.py build --version v0.1.0-dev.1 --out dist/my-candidate --
 python3 tools/release.py verify dist/my-candidate
 ```
 
-This builds six packages twice and requires matching binary/archive bytes. Python is only a packaging/test tool. Packages contain the Go executable, install instructions, metadata and notices. They are private candidates while licensing, public module naming, signing and platform qualification remain open. No publication is automatic.
+This builds six packages twice and requires matching binary/archive bytes. Python is only a packaging/test tool. Packages contain the Go executable, install instructions, metadata and notices. They are private candidates while public module naming, signing and platform qualification remain open. No publication is automatic.

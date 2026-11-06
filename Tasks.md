@@ -58,10 +58,10 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ### G02-03 — Prepare distribution documentation
 
-- **Status:** In progress; license, hosted module path and public signing decisions pending. **Owner:** Maintainer. **Dependencies:** G02-02.
+- **Status:** In progress; MIT license selected and packaged; hosted module path and public signing decisions pending. **Owner:** Maintainer. **Dependencies:** G02-02.
 - **Deliverable:** Final module/repository name, chosen first-party license, notices, install/uninstall instructions, release checklist and signing/notarization decision per platform.
 - **Acceptance:** A reviewer can follow installation and reproduce a sample comparison. License and attribution files accompany relevant dependencies. Publishing is a separate action; no automatic release.
-- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Release/install/uninstall/checklist](docs/RELEASING.md), [packaged instructions](release/INSTALL.md), [license status](release/LICENSE-STATUS.txt).
+- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Release/install/uninstall/checklist](docs/RELEASING.md), [packaged instructions](release/INSTALL.md), [MIT license](LICENSE).
 
 ## G03 — Live provider support
 

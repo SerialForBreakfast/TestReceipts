@@ -1,6 +1,6 @@
 # G02 release qualification — 2026-11-06
 
-G02 is partially validated. Six-target reproducible private development packaging is implemented; native checks currently cover macOS arm64 on the existing development host. G02 is not fully Done: clean-machine, other native targets, first-party license, hosted module path and public distribution decisions remain open.
+G02 is partially validated. Six-target reproducible private development packaging is implemented; native checks currently cover macOS arm64 on the existing development host. G02 is not fully Done: clean-machine, other native targets, hosted module path and public distribution decisions remain open.
 
 ## Build and packaging evidence
 
@@ -52,5 +52,9 @@ The current command is local-only and does not use TLS certificates. G03 must re
 
 1. Run the supplied package smoke checks on fresh native runners for all six target pairs, including the oldest intended OS and Windows ACL/output behavior. Retain exact inputs, outputs and host details.
 2. Complete clean installation/removal checks without language tools installed and downloaded-package trust behavior.
-3. Choose the first-party license and hosted repository/module path. LICENSE-STATUS.txt remains explicit in packages until then.
+3. MIT first-party license is selected. Choose the hosted repository/module path and preserve distinct third-party notices.
 4. Decide public signing/notarization policy, regenerate post-signing hashes if used, then request explicit publication authorization.
+
+## MIT licensing update
+
+The maintainer selected MIT on 2026-11-06. The root [LICENSE](../LICENSE) replaces the pending-license placeholder in the `v0.1.0-dev.2` packages. The `dev.1` evidence above remains a historical packaging snapshot. Updated package and native-check evidence is retained under `evidence/g02-mit/`. Platform and publication gaps remain unchanged.

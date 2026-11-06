@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 TARGETS=[f'{o}/{a}' for o in ('darwin','linux','windows') for a in ('amd64','arm64')]
 PIN='go1.27.3'
-ASSETS=['INSTALL.md','NOTICE.txt','LICENSE-STATUS.txt']
+ASSETS=['INSTALL.md','NOTICE.txt','LICENSE']
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def encoded(v):return (json.dumps(v,sort_keys=True,indent=2)+'\n').encode()
 def run(cmd,**kwargs):return subprocess.check_output(cmd,text=True,**kwargs).strip()
@@ -63,10 +63,10 @@ def build(args):
  sources=sorted([ROOT/'go.mod',*ROOT.glob('cmd/**/*.go'),*ROOT.glob('internal/**/*.go')]);source_bytes={str(p.relative_to(ROOT)):p.read_bytes() for p in sources}
  revision=run(['git','rev-parse','HEAD'],cwd=ROOT);dirty=bool(run(['git','status','--porcelain'],cwd=ROOT))
  goroot=Path(run([str(go),'env','GOROOT'],env=env));license_bytes=(goroot/'LICENSE').read_bytes()
- assets={n:(ROOT/'release'/n).read_bytes() for n in ASSETS};assets['GO-LICENSE.txt']=license_bytes
+ assets={n:(ROOT/n if n=='LICENSE' else ROOT/'release'/n).read_bytes() for n in ASSETS};assets['GO-LICENSE.txt']=license_bytes
  modules=run([str(go),'list','-m','all'],cwd=ROOT,env=env).splitlines()
  if modules!=['testreceipts']:raise SystemExit('Dependency inventory changed; update and review package notices before building')
- common={'version':args.version,'sourceRevision':revision,'workingTreeDirty':dirty,'sourceFilesSha256':{n:sha(b) for n,b in source_bytes.items()},'releaseAssetsSha256':{n:sha(b) for n,b in assets.items()},'toolchain':version,'dependencies':modules,'settings':{k:env[k] for k in ('CGO_ENABLED','GOAMD64','GOARM64','GOTOOLCHAIN','GOENV','GOFLAGS','GOEXPERIMENT','GOPROXY','GOSUMDB','GOWORK')},'packagerSourceSha256':sha(Path(__file__).read_bytes()),'goExecutableSha256':sha(go.read_bytes()),'packager':{'python':platform.python_version(),'zlib':zlib.ZLIB_VERSION,'archivePolicy':'sorted members; fixed owners/modes/timestamps; gzip mtime=0; ZIP epoch=1980'},'distribution':'private unsigned development candidate; license/platform qualification pending'}
+ common={'version':args.version,'sourceRevision':revision,'workingTreeDirty':dirty,'sourceFilesSha256':{n:sha(b) for n,b in source_bytes.items()},'releaseAssetsSha256':{n:sha(b) for n,b in assets.items()},'toolchain':version,'dependencies':modules,'settings':{k:env[k] for k in ('CGO_ENABLED','GOAMD64','GOARM64','GOTOOLCHAIN','GOENV','GOFLAGS','GOEXPERIMENT','GOPROXY','GOSUMDB','GOWORK')},'packagerSourceSha256':sha(Path(__file__).read_bytes()),'goExecutableSha256':sha(go.read_bytes()),'packager':{'python':platform.python_version(),'zlib':zlib.ZLIB_VERSION,'archivePolicy':'sorted members; fixed owners/modes/timestamps; gzip mtime=0; ZIP epoch=1980'},'distribution':'private unsigned development candidate; platform qualification/publication pending'}
  rows=[];out.mkdir(parents=True)
  with tempfile.TemporaryDirectory(prefix='testreceipts-release-') as tmp:
   for target in TARGETS:

@@ -1,20 +1,20 @@
 # Reproducible TestReceipts development packages
 
-G02 prepares private candidates; it does not publish a release. The current version label is `v0.1.0-dev.1`. First-party licensing, a hosted module/repository path, broader native qualification and publisher signing remain open. The source's `release/LICENSE-STATUS.txt` is packaged explicitly; it is not an invented public license.
+G02 prepares private candidates; it does not publish a release. The current version label is `v0.1.0-dev.2`. First-party code is MIT licensed, selected by the maintainer on 2026-11-06. A hosted module/repository path, broader native qualification and publisher signing remain open. The root LICENSE is included in every package.
 
 ## Build and verify
 
 Use Go 1.27.3 and Python 3.10+ on the build host. Python and Go are development tools only and are excluded from executable packages. The project-local Go copy is selected automatically; pass `--go /absolute/path/to/go` elsewhere. A dirty source tree is recorded, not hidden; a distribution candidate should be built from a clean source commit.
 
 ```sh
-python3 tools/release.py build --version v0.1.0-dev.1 --out dist/my-candidate --verify-repro
+python3 tools/release.py build --version v0.1.0-dev.2 --out dist/my-candidate --verify-repro
 python3 tools/release.py verify dist/my-candidate
 python3 tools/test_release.py
 ```
 
 The output directory must not already exist. The compatibility entry point `./tools/go run ./tools/build.go` takes the same arguments. Builds refuse a toolchain version mismatch, unexpected external module inventory, non-prerelease version labels, existing output directories, and divergent repeated binaries/archives. The pipeline works offline with the standard library; automatic toolchain/module downloads are disabled.
 
-The six targets are macOS, Linux and Windows × amd64/arm64. macOS/Linux archives use tar.gz; Windows uses zip. Every package contains exactly the executable, BUILD.json, INSTALL.md, NOTICE.txt, LICENSE-STATUS.txt and GO-LICENSE.txt. No Python, fixtures, expected outputs, caches, toolchain, credentials or datasets are included. The Go runtime/standard library license is retained. Root SHA256SUMS.json covers the six archives and release-manifest.json; this detects corruption against the manifest, not authenticity against an attacker able to rewrite both. No publisher signature is provided.
+The six targets are macOS, Linux and Windows × amd64/arm64. macOS/Linux archives use tar.gz; Windows uses zip. Every package contains exactly the executable, BUILD.json, INSTALL.md, NOTICE.txt, LICENSE and GO-LICENSE.txt. No Python, fixtures, expected outputs, caches, toolchain, credentials or datasets are included. The Go runtime/standard library license is retained. Root SHA256SUMS.json covers the six archives and release-manifest.json; this detects corruption against the manifest, not authenticity against an attacker able to rewrite both. No publisher signature is provided.
 
 ## Declared reproducibility envelope
 
@@ -29,7 +29,7 @@ This checks byte reproducibility under the declared environment. It does not pro
 Run the smoke driver on a matching native OS/architecture. It extracts the package, preserves executable modes, copies the development recordings to a temporary location with spaces/Unicode, and launches the executable with an empty PATH. The driver itself uses Python, but the installed executable cannot look up Go/Python/Node through PATH.
 
 ```sh
-python3 tools/smoke_release.py --package dist/my-candidate/testreceipts-v0.1.0-dev.1-darwin-arm64.tar.gz --out evidence/g02/native-macos-arm64 --measure
+python3 tools/smoke_release.py --package dist/my-candidate/testreceipts-v0.1.0-dev.2-darwin-arm64.tar.gz --out evidence/g02/native-macos-arm64 --measure
 ```
 
 For other hosts replace the archive and output path. Windows packages end in `.zip`. Omit `--measure` outside macOS; its `/usr/bin/time -l` probe may need process/resource access. The driver refuses to execute a foreign target. All 15 real comparisons must match goldens. It checks version, stderr and exit codes, output files, POSIX execute/read permissions and output-write errors where applicable. Windows ACL/read-only directory tests remain manual work.
@@ -44,7 +44,7 @@ macOS binaries use the Go linker's ad hoc signature and Apple system libraries; 
 
 ## Public-release checklist
 
-- Choose and add the first-party license; review inherited source rights and notices.
+- MIT first-party license selected; preserve LICENSE and all distinct third-party notices.
 - Choose the hosted repository/module path and remote; update import/module identifiers together if changed.
 - Pass repeated builds and archive verification from the intended clean source revision.
 - Retain all six target manifests, executable inspections, sizes and native results.

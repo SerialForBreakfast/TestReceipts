@@ -3,7 +3,7 @@
 Choose the archive matching your operating system and CPU architecture. Verify
 its SHA-256 against SHA256SUMS.json from the same build. These unsigned development
 packages have not been published, notarized, or qualified on every target platform.
-See LICENSE-STATUS.txt and BUILD.json before distribution.
+See LICENSE and BUILD.json before distribution.
 
 Extract the archive to a folder you control. On macOS/Linux run
 `./testreceipts version` and `./testreceipts help`; on Windows run

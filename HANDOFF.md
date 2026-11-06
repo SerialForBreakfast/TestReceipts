@@ -23,7 +23,7 @@ G02-01 is complete: G02 adds reproducible six-target private candidate packaging
 
 ## Not yet delivered
 
-There is no live provider, MCP server, installer, public release, signing/notarization, or native Windows/Linux validation. Git has no configured remote. The first-party license and hosted module path remain open before publication. The target matrix remains macOS/Linux/Windows × amd64/arm64; cross-builds and native execution must be reported separately.
+There is no live provider, MCP server, installer, public release, signing/notarization, or native Windows/Linux validation. Git has no configured remote. The first-party license is [MIT](LICENSE); the hosted module path remains open before publication. The target matrix remains macOS/Linux/Windows × amd64/arm64; cross-builds and native execution must be reported separately.
 
 The complete comparable production workload has not been benchmarked, and no Go size/speed advantage is claimed. No model calls are needed or authorized for these development checks. Agent evaluation is a later explicit task; preserve the historical baseline caveats in [evaluation](docs/EVALUATION.md).
 

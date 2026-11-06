@@ -1,6 +1,6 @@
 # Source and license notices
 
-The reference implementation was copied from the user's Spotlightning workspace. Its exact files and hashes are listed in [source provenance](docs/source-provenance.json). The source repository had no root license file at handoff time; no new first-party public license has been selected here. Choose one before public distribution.
+The reference implementation was copied from the user's Spotlightning workspace. Its exact files and hashes are listed in [source provenance](docs/source-provenance.json). The source repository had no root license file at handoff time; TestReceipts first-party code is now licensed under [MIT](LICENSE), selected by the maintainer on 2026-11-06. Third-party components retain their own licenses; the frozen reference and upstream notices/hashes are preserved.
 
 The development reference bundles junitparser 5.0.3 in its original wheel. The upstream license is retained in the wheel and copied to [junitparser-LICENSE.txt](docs/junitparser-LICENSE.txt). It is a development dependency, not a proposed Go runtime dependency.
 

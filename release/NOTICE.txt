@@ -1,3 +1,4 @@
+TestReceipts first-party code is MIT licensed; see LICENSE.
 TestReceipts contains first-party Go code and the Go standard library/runtime.
 The Go authors' BSD license is included as GO-LICENSE.txt.
 No external Go modules are linked. Python, junitparser, upstream test reports,
