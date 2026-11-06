@@ -1,0 +1,54 @@
+[
+  {
+    "binary": "darwin-amd64",
+    "format": "Mach-O",
+    "importedLibraries": [
+      "/usr/lib/libSystem.B.dylib",
+      "/usr/lib/libresolv.9.dylib"
+    ],
+    "linkedMinimumOS": "13.0.0",
+    "machine": "CpuAmd64"
+  },
+  {
+    "binary": "darwin-arm64",
+    "format": "Mach-O",
+    "importedLibraries": [
+      "/usr/lib/libSystem.B.dylib",
+      "/usr/lib/libresolv.9.dylib"
+    ],
+    "linkedMinimumOS": "13.0.0",
+    "machine": "CpuArm64"
+  },
+  {
+    "binary": "linux-amd64",
+    "format": "ELF",
+    "importedLibraries": [],
+    "interpreters": [],
+    "machine": "EM_X86_64"
+  },
+  {
+    "binary": "linux-arm64",
+    "format": "ELF",
+    "importedLibraries": [],
+    "interpreters": [],
+    "machine": "EM_AARCH64"
+  },
+  {
+    "binary": "windows-amd64",
+    "format": "PE",
+    "importScope": "PE direct import table only; dynamic OS loads not enumerated",
+    "importedLibraries": [
+      "kernel32.dll"
+    ],
+    "machine": "0x8664"
+  },
+  {
+    "binary": "windows-arm64",
+    "format": "PE",
+    "importScope": "PE direct import table only; dynamic OS loads not enumerated",
+    "importedLibraries": [
+      "kernel32.dll"
+    ],
+    "machine": "0xaa64"
+  }
+]

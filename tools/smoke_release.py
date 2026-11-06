@@ -4,7 +4,7 @@ import argparse,json,os,platform,re,shutil,subprocess,tempfile,time
 from pathlib import Path
 from release import ROOT,unpack,sha
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('--package',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--measure',action='store_true');a=p.parse_args()
-files,metadata=unpack(a.package);host={'Darwin':'darwin','Linux':'linux','Windows':'windows'}[platform.system()]+'/'+{'arm64':'arm64','aarch64':'arm64','x86_64':'amd64','AMD64':'amd64'}[platform.machine()]
+files,metadata=unpack(a.package);host={'Darwin':'darwin','Linux':'linux','Windows':'windows'}[platform.system()]+'/'+{'arm64':'arm64','aarch64':'arm64','x86_64':'amd64','amd64':'amd64'}[platform.machine().lower()]
 if metadata['target']!=host:raise SystemExit(f'Package {metadata["target"]} is not native on {host}')
 a.out.mkdir(parents=True,exist_ok=True);rows=[]
 with tempfile.TemporaryDirectory(prefix='testreceipts-installed-') as tmp:

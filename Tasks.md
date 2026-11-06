@@ -44,10 +44,10 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ### G02-01 — Reproducible builds and dependency accounting
 
-- **Status:** Validating. **Owner:** Release engineer. **Dependencies:** G01-04.
+- **Status:** Done. **Owner:** Release engineer. **Dependencies:** G01-04.
 - **Deliverable:** Pinned supported Go toolchain, six target binaries, checksums and dependency/build metadata using the supplied build helper as a starting point.
 - **Acceptance:** Repeated builds under the same declared environment have explained reproducibility results. Record compressed and installed sizes for the completed tool, not only scaffold sizes. No Python, fixtures, caches, secrets or large datasets in release packages.
-- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Build/reproducibility pipeline](docs/RELEASING.md), [qualification evidence](evidence/g02/README.md).
+- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Build/reproducibility pipeline](docs/RELEASING.md), [six-target clean-source manifest](evidence/g02/release-manifest.json), [qualification evidence](evidence/g02/README.md).
 
 ### G02-02 — Native clean-machine smoke tests
 

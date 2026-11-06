@@ -1,0 +1,9 @@
+{
+  "release-manifest.json": "b59bfca40a131386bbe512110992865f68d88143a190c9d264097aec4acaad9e",
+  "testreceipts-v0.1.0-dev.1-darwin-amd64.tar.gz": "c4d68f91744b6afbc8a3b4e0b9b49272e8e4bba8739d545aab1ae34bcae46501",
+  "testreceipts-v0.1.0-dev.1-darwin-arm64.tar.gz": "3e59056432e060946bc58699742766b6a011db3b7ab5ca63f03165f23b8ad375",
+  "testreceipts-v0.1.0-dev.1-linux-amd64.tar.gz": "3be8062b24651453b429ea75c2eb9275cbb94da33bed4854dedc4ab713faf908",
+  "testreceipts-v0.1.0-dev.1-linux-arm64.tar.gz": "816361a78cebf97ac9fa73777f08b79bf711d18d33a57ffde6d0929ab038cbb3",
+  "testreceipts-v0.1.0-dev.1-windows-amd64.zip": "bbd438c4ce08168d9996b7a59d13fb30b71f1bc2d1a1ca4080335191d3b851b2",
+  "testreceipts-v0.1.0-dev.1-windows-arm64.zip": "fab99ffccc69fcba12c49980fe423ccd8f90da726fda49fa1e971c37abf4ade4"
+}

@@ -1,5 +1,7 @@
 # G02 packaging and native qualification evidence
 
+Final candidate: `v0.1.0-dev.1`, clean source `404dc82`, generated locally in ignored `dist/g02-release/`.
+
 See [G02 validation](../../docs/G02-VALIDATION.md) for the platform matrix and [release instructions](../../docs/RELEASING.md) for repeatable commands.
 
 - `release-manifest.json`: final candidate's six targets, exact build inputs/provenance, byte hashes, two-build reproducibility and logical/compressed sizes.

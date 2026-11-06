@@ -1,0 +1,5 @@
+{
+  "alteredArchive": "pass; checksum mismatch detected",
+  "unexpectedReleaseFile": "pass; artifact inventory mismatch detected",
+  "archiveContents": "four focused packaging tests pass, including unexpected member, binary mutation, traversal and link rejection"
+}

@@ -1,0 +1,211 @@
+{
+  "dependencies": [
+    "testreceipts"
+  ],
+  "distribution": "private unsigned development candidate; license/platform qualification pending",
+  "goExecutableSha256": "aa355b078a81158d418079a3f8c776719eb99cc6f527e39ffa3250c66566aafb",
+  "packager": {
+    "archivePolicy": "sorted members; fixed owners/modes/timestamps; gzip mtime=0; ZIP epoch=1980",
+    "python": "3.14.3",
+    "zlib": "1.2.12"
+  },
+  "packagerSourceSha256": "8587eec3851ac6a5076cffd1d2e78a6710596b1ac7dc5407dd3b5676da6c8669",
+  "releaseAssetsSha256": {
+    "GO-LICENSE.txt": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+    "INSTALL.md": "f8853a79958bf669fb7259cd90bfdb49daf1cf20dfa2b3e21ee432f755451682",
+    "LICENSE-STATUS.txt": "4ff62d752fbaccbf8109117542a727dd940dc30fe19bd982ed7fb36049aa8526",
+    "NOTICE.txt": "51e9e582a5c7671e6d3f3bb71dc9e4512e3d7fc7cd97e3e33b2e2901a3db6203"
+  },
+  "settings": {
+    "CGO_ENABLED": "0",
+    "GOAMD64": "v1",
+    "GOARM64": "v8.0",
+    "GOENV": "off",
+    "GOEXPERIMENT": "",
+    "GOFLAGS": "",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "GOWORK": "off"
+  },
+  "sourceFilesSha256": {
+    "cmd/testreceipts/main.go": "741b8245984caa9fb3482c6a8474e80a9b1d88faec675bc3bcf716d4d7e44684",
+    "cmd/testreceipts/main_test.go": "85e3eb692c033e27fbf671244f7216fef65f3dd8c44f619f8f5e2e680f700f9b",
+    "go.mod": "f7cf998918f8a9b829782540be2a655fdb1e9c81ec904f1bf579292e3890b448",
+    "internal/evidence/evidence.go": "7334d796cad79500c140813042e6564a01b5a0cb1d617bccf84d8c6a33f8ff25",
+    "internal/evidence/evidence_test.go": "bd50baa586dda9daf34efb9bed483e8d14ef9215e494b26685cbcbf90efd4d93",
+    "internal/junit/junit.go": "72ab3f354f4863ee3c05b3c203a4ee7ef9fa88566f4d5f971df0e0cbf3651e52",
+    "internal/junit/junit_test.go": "447dfcaa9b7035bc2e36d09e16e1ccc44f4cd51a57816813415e011b23bdf9bd",
+    "internal/junit/namespaces.go": "b19543ddb5809923a4b6cca055fe278a15ba3ac0f5cdbcf163f0ab99162e355c",
+    "internal/provider/recording.go": "eec54cbd63970e4cb1eb72e21926e0827352ac2aa1e030a05abb781a15fc9748",
+    "internal/provider/recording_test.go": "876da4ce26d7e1124765d884bbf3ae2e86161776cb924cdbe8bac7f98ce6f874"
+  },
+  "sourceRevision": "404dc82b4415e6156ae459c433c6eb3d7b4ffbb8",
+  "targets": [
+    {
+      "archive": "testreceipts-v0.1.0-dev.1-darwin-amd64.tar.gz",
+      "archiveBuildHashes": [
+        "c4d68f91744b6afbc8a3b4e0b9b49272e8e4bba8739d545aab1ae34bcae46501",
+        "c4d68f91744b6afbc8a3b4e0b9b49272e8e4bba8739d545aab1ae34bcae46501"
+      ],
+      "archiveBytes": 1404285,
+      "archiveMembers": [
+        "BUILD.json",
+        "GO-LICENSE.txt",
+        "INSTALL.md",
+        "LICENSE-STATUS.txt",
+        "NOTICE.txt",
+        "testreceipts"
+      ],
+      "archiveSha256": "c4d68f91744b6afbc8a3b4e0b9b49272e8e4bba8739d545aab1ae34bcae46501",
+      "binaryBuildHashes": [
+        "933b459a5e37ae2c838a5691d7e604d83d003bb932603eab45ad431f9d5f5deb",
+        "933b459a5e37ae2c838a5691d7e604d83d003bb932603eab45ad431f9d5f5deb"
+      ],
+      "binaryBytes": 3274896,
+      "binarySha256": "933b459a5e37ae2c838a5691d7e604d83d003bb932603eab45ad431f9d5f5deb",
+      "installedPackageBytes": 3282313,
+      "nativeRuntime": "unverified",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "target": "darwin/amd64"
+    },
+    {
+      "archive": "testreceipts-v0.1.0-dev.1-darwin-arm64.tar.gz",
+      "archiveBuildHashes": [
+        "3e59056432e060946bc58699742766b6a011db3b7ab5ca63f03165f23b8ad375",
+        "3e59056432e060946bc58699742766b6a011db3b7ab5ca63f03165f23b8ad375"
+      ],
+      "archiveBytes": 1290869,
+      "archiveMembers": [
+        "BUILD.json",
+        "GO-LICENSE.txt",
+        "INSTALL.md",
+        "LICENSE-STATUS.txt",
+        "NOTICE.txt",
+        "testreceipts"
+      ],
+      "archiveSha256": "3e59056432e060946bc58699742766b6a011db3b7ab5ca63f03165f23b8ad375",
+      "binaryBuildHashes": [
+        "5cf88cb80b3c0970999d7ea2eaa6491f22e4a0a2c00c801c274a951d26e0e604",
+        "5cf88cb80b3c0970999d7ea2eaa6491f22e4a0a2c00c801c274a951d26e0e604"
+      ],
+      "binaryBytes": 3073538,
+      "binarySha256": "5cf88cb80b3c0970999d7ea2eaa6491f22e4a0a2c00c801c274a951d26e0e604",
+      "installedPackageBytes": 3080957,
+      "nativeRuntime": "unverified",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "target": "darwin/arm64"
+    },
+    {
+      "archive": "testreceipts-v0.1.0-dev.1-linux-amd64.tar.gz",
+      "archiveBuildHashes": [
+        "3be8062b24651453b429ea75c2eb9275cbb94da33bed4854dedc4ab713faf908",
+        "3be8062b24651453b429ea75c2eb9275cbb94da33bed4854dedc4ab713faf908"
+      ],
+      "archiveBytes": 1395697,
+      "archiveMembers": [
+        "BUILD.json",
+        "GO-LICENSE.txt",
+        "INSTALL.md",
+        "LICENSE-STATUS.txt",
+        "NOTICE.txt",
+        "testreceipts"
+      ],
+      "archiveSha256": "3be8062b24651453b429ea75c2eb9275cbb94da33bed4854dedc4ab713faf908",
+      "binaryBuildHashes": [
+        "397df49d704750bcd717031962665a4230951bfd42a6ff6d52f5823e3c72fd3b",
+        "397df49d704750bcd717031962665a4230951bfd42a6ff6d52f5823e3c72fd3b"
+      ],
+      "binaryBytes": 3231868,
+      "binarySha256": "397df49d704750bcd717031962665a4230951bfd42a6ff6d52f5823e3c72fd3b",
+      "installedPackageBytes": 3239283,
+      "nativeRuntime": "unverified",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "target": "linux/amd64"
+    },
+    {
+      "archive": "testreceipts-v0.1.0-dev.1-linux-arm64.tar.gz",
+      "archiveBuildHashes": [
+        "816361a78cebf97ac9fa73777f08b79bf711d18d33a57ffde6d0929ab038cbb3",
+        "816361a78cebf97ac9fa73777f08b79bf711d18d33a57ffde6d0929ab038cbb3"
+      ],
+      "archiveBytes": 1259252,
+      "archiveMembers": [
+        "BUILD.json",
+        "GO-LICENSE.txt",
+        "INSTALL.md",
+        "LICENSE-STATUS.txt",
+        "NOTICE.txt",
+        "testreceipts"
+      ],
+      "archiveSha256": "816361a78cebf97ac9fa73777f08b79bf711d18d33a57ffde6d0929ab038cbb3",
+      "binaryBuildHashes": [
+        "d763068270b025f38734230f2808e7f1ae44dcf792ea0101103d616a79b7226f",
+        "d763068270b025f38734230f2808e7f1ae44dcf792ea0101103d616a79b7226f"
+      ],
+      "binaryBytes": 3080316,
+      "binarySha256": "d763068270b025f38734230f2808e7f1ae44dcf792ea0101103d616a79b7226f",
+      "installedPackageBytes": 3087733,
+      "nativeRuntime": "unverified",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "target": "linux/arm64"
+    },
+    {
+      "archive": "testreceipts-v0.1.0-dev.1-windows-amd64.zip",
+      "archiveBuildHashes": [
+        "bbd438c4ce08168d9996b7a59d13fb30b71f1bc2d1a1ca4080335191d3b851b2",
+        "bbd438c4ce08168d9996b7a59d13fb30b71f1bc2d1a1ca4080335191d3b851b2"
+      ],
+      "archiveBytes": 1440652,
+      "archiveMembers": [
+        "BUILD.json",
+        "GO-LICENSE.txt",
+        "INSTALL.md",
+        "LICENSE-STATUS.txt",
+        "NOTICE.txt",
+        "testreceipts.exe"
+      ],
+      "archiveSha256": "bbd438c4ce08168d9996b7a59d13fb30b71f1bc2d1a1ca4080335191d3b851b2",
+      "binaryBuildHashes": [
+        "f8e805e0a76990fd8d9578378ff00091916b7273fea27d3f8b8a062704674cbb",
+        "f8e805e0a76990fd8d9578378ff00091916b7273fea27d3f8b8a062704674cbb"
+      ],
+      "binaryBytes": 3348992,
+      "binarySha256": "f8e805e0a76990fd8d9578378ff00091916b7273fea27d3f8b8a062704674cbb",
+      "installedPackageBytes": 3356415,
+      "nativeRuntime": "unverified",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "target": "windows/amd64"
+    },
+    {
+      "archive": "testreceipts-v0.1.0-dev.1-windows-arm64.zip",
+      "archiveBuildHashes": [
+        "fab99ffccc69fcba12c49980fe423ccd8f90da726fda49fa1e971c37abf4ade4",
+        "fab99ffccc69fcba12c49980fe423ccd8f90da726fda49fa1e971c37abf4ade4"
+      ],
+      "archiveBytes": 1284863,
+      "archiveMembers": [
+        "BUILD.json",
+        "GO-LICENSE.txt",
+        "INSTALL.md",
+        "LICENSE-STATUS.txt",
+        "NOTICE.txt",
+        "testreceipts.exe"
+      ],
+      "archiveSha256": "fab99ffccc69fcba12c49980fe423ccd8f90da726fda49fa1e971c37abf4ade4",
+      "binaryBuildHashes": [
+        "4158970ef22cb5b7275516fe645d3b7364947f0577e5367ded8a6ca9394c1b05",
+        "4158970ef22cb5b7275516fe645d3b7364947f0577e5367ded8a6ca9394c1b05"
+      ],
+      "binaryBytes": 3059200,
+      "binarySha256": "4158970ef22cb5b7275516fe645d3b7364947f0577e5367ded8a6ca9394c1b05",
+      "installedPackageBytes": 3066625,
+      "nativeRuntime": "unverified",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "target": "windows/arm64"
+    }
+  ],
+  "toolchain": "go version go1.27.3 darwin/arm64",
+  "version": "v0.1.0-dev.1",
+  "workingTreeDirty": false
+}

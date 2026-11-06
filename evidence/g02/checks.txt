@@ -1,0 +1,27 @@
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.020s
+
+OK
+ok  	testreceipts/cmd/testreceipts	0.139s
+ok  	testreceipts/internal/evidence	(cached)
+ok  	testreceipts/internal/junit	(cached)
+ok  	testreceipts/internal/provider	1.462s
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.011s
+
+OK
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 1.707s
+
+OK
+PASS: copied source hashes, 20 reference tests and 15 recorded-pair contracts.
+Go parity: PASS
+
+PASS: go vet ./...
+PASS: six executable headers match target OS/architecture
+PASS: final native artifact hashes match release manifest
+PASS: final packager and Go source hashes match clean build provenance
+PASS: release checksums, archive allowlists and negative controls
