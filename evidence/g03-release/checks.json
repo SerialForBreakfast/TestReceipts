@@ -1,0 +1,16 @@
+{
+  "version": "v0.2.0-dev.1",
+  "cleanSourceRevision": "646211db653731b2caef68beca65a56c6de24a1a",
+  "sixTargetBinaryAndArchiveReproducibility": "pass",
+  "archiveChecksumsAndAllowlists": "pass",
+  "packagedMITLicense": "pass",
+  "sixExecutableHeaders": "pass",
+  "nativeMacOSArm64Comparisons": 15,
+  "packagedExecutableLiveCaptureAndExactOfflineReplay": "pass",
+  "pythonRuntimeAndIndependentDOMFacts": "pass",
+  "tamperAndRecoveryControl": "pass",
+  "untrustedTLSAndHTTPFailures": "pass; full Go race suite",
+  "nativeOtherPlatforms": "not validated",
+  "cleanMachinesAndOldestOS": "not validated",
+  "publisherSigningAndPublication": "not performed"
+}

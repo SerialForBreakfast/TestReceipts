@@ -1,11 +1,11 @@
 {
-  "capturePath": ".artifacts/g03-real-final",
+  "capturePath": ".artifacts/g03-release-live",
   "urls": [
     "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2116467111751585792",
     "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2116739156053856256"
   ],
   "replayEqual": true,
-  "replayWallSeconds": 0.638441,
+  "replayWallSeconds": 0.098712,
   "offlineExecution": "empty PATH and unusable HTTP/HTTPS/ALL proxy; replay code performs no HTTP",
   "pythonAndIndependentDOMFactsEqual": true,
   "partialControl": "altered report detected as unresolved; unaffected evidence retained",
@@ -22,7 +22,7 @@
     },
     "network.json": {
       "bytes": 1834,
-      "sha256": "9517f3303692236291df6970e502dd9926248fb798e803f5a69a917897e3ba49"
+      "sha256": "c55097ed334956c500645b233508bd5bab75cc3406f403bd674c09d070501ef1"
     },
     "objects/36c1d43f1ac159def4a8faab738940ac64f767f6e7bc223beec28c965c1b38a0.xml": {
       "bytes": 922902,
@@ -39,6 +39,10 @@
     "pages-1.json": {
       "bytes": 3038,
       "sha256": "a0d8ed1a11684d0587dd925fcc8aff1103308d20ee8e9ef6991bcc5333ace195"
+    },
+    "request.json": {
+      "bytes": 263,
+      "sha256": "296889d5f32fee86abade73e3bd84ad223b0851296c80aa070eef9e90db4aa8c"
     },
     "responses/001.body": {
       "bytes": 3795,
@@ -57,5 +61,8 @@
       "sha256": "74d1623579fff144b45bda10e7bca4ae829330ae3688bd318be498564efd4f0a"
     }
   },
-  "limitations": "Runs from the same public job; not asserted consecutive. Artifact discovery is scoped to enumerated XML; parser uncertainty remains in outputs. Downloaded original capture remains ignored, outside Git."
+  "limitations": "Runs from the same public job; not asserted consecutive. Artifact discovery is scoped to enumerated XML; parser uncertainty remains in outputs. Downloaded original capture remains ignored, outside Git.",
+  "captureExecutableSha256": "465d7168714d99636e841fbf08eda5ca677d7577e75e28b3e8e45cbe1235955a",
+  "captureSourceRevision": "646211db653731b2caef68beca65a56c6de24a1a",
+  "captureVersion": "v0.2.0-dev.1"
 }

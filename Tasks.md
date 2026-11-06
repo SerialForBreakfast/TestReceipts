@@ -65,21 +65,21 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ## G03 — Live provider support
 
-**Outcome:** Two supported live CI URLs produce the same bounded evidence contract. **Dependencies:** G01; packaging validation repeated after HTTP is added. **Status:** Validating; live/replay checks pass, HTTP packaging refresh in progress. **Plan:** [G03](docs/plans/G03-live-provider.md).
+**Outcome:** Two supported live CI URLs produce the same bounded evidence contract. **Dependencies:** G01; packaging validation repeated after HTTP is added. **Status:** Done for the supported public Prow/GCS scope; remaining native-platform qualification stays explicit in G02. **Plan:** [G03](docs/plans/G03-live-provider.md).
 
 ### G03-01 — Implement the first live provider
 
-- **Status:** Validating. **Owner:** Go engineer. **Dependencies:** G01-04.
+- **Status:** Done. **Owner:** Go engineer. **Dependencies:** G01-04.
 - **Deliverable:** Read-only public Prow/GCS adapter with documented URL forms, bounded pagination, generation-pinned fetches, timeouts, retries and explicit unavailable states.
 - **Acceptance:** Local HTTP-server tests cover pages, cycles, rate limits, redirects, integrity mismatch, oversized content and missing reports. Arbitrary URL fetching and out-of-scope redirects are rejected. Network failure never becomes “no failures.” Live access is tested separately from replay.
 - **Context:** [G03](docs/plans/G03-live-provider.md). **Evidence:** [Live contract](docs/G03-LIVE.md), [HTTP/TLS tests](evidence/g03/go-tests.txt), [partial-listing fixture](testdata/live/partial-listing/expected.json).
 
 ### G03-02 — Validate live capture and recovery
 
-- **Status:** Validating. **Owner:** Evaluation lead. **Dependencies:** G03-01.
+- **Status:** Done. **Owner:** Evaluation lead. **Dependencies:** G03-01.
 - **Deliverable:** A bounded real-run capture with exact inputs/outputs and a repeatable offline replay; report bytes, requests, time and errors.
 - **Acceptance:** Inventories account for every discovered XML object, including generic Ginkgo names. Include partial availability and recovery controls. Full completed-binary size and platform checks are rerun. No token-saving claim from local timing.
-- **Context:** [G03](docs/plans/G03-live-provider.md). **Evidence:** [Real capture audit](evidence/g03/real-capture-audit.json), [validation and remaining platform gaps](docs/G03-VALIDATION.md).
+- **Context:** [G03](docs/plans/G03-live-provider.md). **Evidence:** [Real capture audit](evidence/g03/real-capture-audit.json), [HTTP-enabled release/native evidence](evidence/g03-release/README.md), [validation and remaining platform gaps](docs/G03-VALIDATION.md).
 
 ## G04 — Agent integration and repeated-use value
 

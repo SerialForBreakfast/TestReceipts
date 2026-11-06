@@ -15,7 +15,7 @@ Discovery of the listed XML completed and both reports passed generation, size, 
 
 The [network record](../evidence/g03/network.json) reports four HTTP attempts and 1,849,268 consumed response-body bytes, with request and acquisition times separated. Exact live JSON equals offline replay run with an empty PATH and unusable HTTP/HTTPS/ALL proxy settings. The Go facts also match the frozen Python runtime and independent DOM checker after removing only the new acquisition wrapper fields. Full comparison outputs and original response hashes are retained in [the audit](../evidence/g03/real-capture-audit.json).
 
-A copied real report was deliberately altered: replay retained other evidence and marked the affected inventory unresolved. Restoring the original bytes recovered the exact original result. Original downloaded bodies/reports remain under ignored `.artifacts/g03-real-final/`; they are not committed datasets. The audit records exact paths, sizes and SHA-256. A clone needs that separately retained capture, or a new live acquisition, to replay this specific real observation.
+A copied real report was deliberately altered: replay retained other evidence and marked the affected inventory unresolved. Restoring the original bytes recovered the exact original result. Original downloaded bodies/reports remain under ignored `.artifacts/g03-release-live/`; they are not committed datasets. The audit records exact paths, sizes and SHA-256. A clone needs that separately retained capture, or a new live acquisition, to replay this specific real observation.
 
 ## Local failure and correctness tests
 
@@ -35,6 +35,17 @@ The new checked-in [partial listing fixture](../testdata/live/partial-listing/ex
 
 The HTTP-enabled executable requires system TLS roots and HTTPS egress; the real capture exercised the native macOS arm64 trust store. Untrusted-certificate tests reject a local TLS server, and no insecure verification mode is provided. Linux may require a system CA bundle; Windows/macOS use platform trust facilities. A local-only executable's previous package validation is not claimed as validation of this larger HTTP-enabled binary.
 
-Updated six-target reproducibility, sizes, inspections and native package smoke results are retained with the G03 release evidence once completed. Native Windows/Linux and macOS amd64 execution, clean-machine installs, oldest-OS testing and downloaded-package/publisher-signing flows remain unvalidated. Cross-builds will be reported separately from native execution. No public release or model/agent evaluation is part of G03.
+The HTTP-enabled private candidate `v0.2.0-dev.1` was built twice from clean source `646211db653731b2caef68beca65a56c6de24a1a`. All six executable and archive hashes agree across source directories. The extracted macOS arm64 package passed all 15 comparisons and native permissions/output/version checks; that exact packaged executable then performed the real HTTPS capture described above. Its live result again equals offline replay and both independent parser facts. See [release evidence](../evidence/g03-release/README.md), [manifest](../evidence/g03-release/release-manifest.json), and [native result](../evidence/g03-release/native-macos-arm64/result.json).
+
+| Target | Executable bytes | Archive bytes | Repeated binary + archive |
+|---|---:|---:|---|
+| darwin/amd64 | 7,335,552 | 3,068,291 | Pass |
+| darwin/arm64 | 6,793,938 | 2,815,664 | Pass |
+| linux/amd64 | 7,168,124 | 3,021,320 | Pass |
+| linux/arm64 | 6,619,260 | 2,715,268 | Pass |
+| windows/amd64 | 7,369,728 | 3,092,092 | Pass |
+| windows/arm64 | 6,681,088 | 2,754,115 | Pass |
+
+Logical installed package bytes, source/build/packager hashes and full request/startup/memory measurements are retained in the manifests and native result. The Linux binaries have no ELF interpreter or direct shared-library imports; a system CA bundle is still needed for HTTPS. macOS imports libSystem/libresolv and CoreFoundation/Security through the standard-library TLS implementation; these system dependencies were inspected and exercised on this host. Windows direct imports were inspected without claiming native runtime success. Native Windows/Linux and macOS amd64 execution, clean-machine installs, oldest-OS testing and downloaded-package/publisher-signing flows remain unvalidated. Cross-builds will be reported separately from native execution. No public release or model/agent evaluation is part of G03.
 
 Live listing is an observation of a potentially changing provider, not an atomic snapshot or proof a job has finished uploading. Scope excludes other buckets/providers, private runs, archives, extensionless reports and arbitrary logs. Unsupported XML dialects and identity warnings remain explicit. There is no production cache or resume-in-place; capture again into a new directory to recover. No Go size/speed or token-saving advantage is claimed.

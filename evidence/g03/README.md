@@ -9,4 +9,6 @@
 - `go-tests.txt`, `provider-tests.txt`, `parity.txt`: final HTTP/TLS tests and unchanged reference/fixture checks.
 - `development-notes.md`: corrections and failed restricted acquisition probe, not counted as successful live validation.
 
-Raw real responses and reports are downloaded data and remain ignored under `.artifacts/g03-real-final/`. They must be retained separately for future replay; a source-only clone omits them. The compact audit identifies all inputs exactly. The real result intentionally remains incomplete because parser identities contain slashes.
+Raw real responses and reports are downloaded data and remain ignored under `.artifacts/g03-release-live/`. They must be retained separately for future replay; a source-only clone omits them. The compact audit identifies all inputs exactly. The real result intentionally remains incomplete because parser identities contain slashes.
+
+The final capture used the extracted `v0.2.0-dev.1` package; its binary hash and source revision are recorded in the audit. See [refreshed packaging/native evidence](../g03-release/README.md).

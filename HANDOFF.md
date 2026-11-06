@@ -14,12 +14,12 @@ Read [G01 validation](docs/G01-VALIDATION.md) for current checks and [the origin
 
 G02-01 is complete: G02 adds reproducible six-target private candidate packaging, checksums, build provenance and a native package smoke driver. See [G02 validation](docs/G02-VALIDATION.md) for the exact completed checks and remaining native/clean-machine gaps, and [release instructions](docs/RELEASING.md) to recreate packages. The latest MIT-licensed candidate `v0.1.0-dev.2` was built from clean source `c3d37e0`; see [updated package evidence](evidence/g02-mit/README.md). The earlier `dev.1` evidence remains historical. G02-02/03 remain partially validated/pending; no public release has occurred.
 
-G03 adds `compare-live NEW_CAPTURE BEFORE_URL AFTER_URL`, with bounded public Prow/GCS requests, immutable captures, generation/size/checksum verification and explicit incomplete discovery. It invokes the same recording comparison; offline replay still performs no HTTP. The real capture and two independent parser comparisons retain identity warnings. See [G03 validation](docs/G03-VALIDATION.md) and [usage/limits](docs/G03-LIVE.md). HTTP-enabled release checks are tracked separately; prior G02 package results describe earlier local-only binaries.
+G03 adds `compare-live NEW_CAPTURE BEFORE_URL AFTER_URL`, with bounded public Prow/GCS requests, immutable captures, generation/size/checksum verification and explicit incomplete discovery. It invokes the same recording comparison; offline replay still performs no HTTP. The real capture and two independent parser comparisons retain identity warnings. See [G03 validation](docs/G03-VALIDATION.md) and [usage/limits](docs/G03-LIVE.md). G03 is complete for the supported public scope. HTTP-enabled `v0.2.0-dev.1` packages were built reproducibly from clean source `646211d`; the native macOS package performed the real capture and replay audit. See [current release evidence](evidence/g03-release/README.md). Prior G02 package results describe earlier local-only binaries; other native OS/certificate/clean-machine checks remain open.
 
 ## Continue here
 
 1. Run `./tools/go test ./...`, build using the README, then `python3 tools/verify.py --go-binary bin/testreceipts`.
-2. Follow [Tasks.md](Tasks.md), continuing G02 native/clean-machine qualification, or prioritize G03 explicitly if live CI access is the next product need. Retest packaging after networking is added.
+2. Follow [Tasks.md](Tasks.md), continuing G02 native/clean-machine qualification, or explicitly prioritize optional MCP integration next. G03 is complete; repeat packaging/network qualification after any further provider changes.
 3. Preserve unsupported/unresolved states, observed-record semantics, and exact diagnostic text. Matching diagnostics do not prove a common root cause.
 4. Update task completion evidence. Keep fixtures small and retain reference hashes. Never regenerate golden outputs to conceal disagreements.
 
