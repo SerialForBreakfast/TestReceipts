@@ -1,0 +1,5 @@
+TestReceipts contains first-party Go code and the Go standard library/runtime.
+The Go authors' BSD license is included as GO-LICENSE.txt.
+No external Go modules are linked. Python, junitparser, upstream test reports,
+development recordings, caches, and toolchains are not included in this package.
+The source checkout retains separate development dependency/fixture notices.

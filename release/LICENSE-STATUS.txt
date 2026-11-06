@@ -1,0 +1,2 @@
+TestReceipts first-party license: not yet selected.
+These packages are private development candidates. Public distribution remains pending the maintainer's license decision and platform qualification.

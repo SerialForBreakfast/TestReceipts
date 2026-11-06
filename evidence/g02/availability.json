@@ -1,0 +1,13 @@
+{
+  "dockerEngine": {
+    "exit": 1,
+    "stdout": "null",
+    "stderr": "Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"
+  },
+  "x86TranslationProbe": {
+    "exit": 1,
+    "stdout": "",
+    "stderr": "arch: posix_spawnp: /usr/bin/uname: Bad CPU type in executable"
+  },
+  "conclusion": "Only macOS arm64 native execution is available. No Linux engine, Windows runner, or usable x86 translation was available; translation would not qualify native x86 hardware anyway."
+}

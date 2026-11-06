@@ -1,6 +1,6 @@
 # TestReceipts implementation handoff
 
-Updated 2026-11-06 after G01. This is the standalone Go CI comparison tool, separate from Spotlightning.
+Updated 2026-11-06 during G02. This is the standalone Go CI comparison tool, separate from Spotlightning.
 
 ## Current state
 
@@ -12,10 +12,12 @@ The frozen Python comparator remains under `reference/`, with original hashes un
 
 Read [G01 validation](docs/G01-VALIDATION.md) for current checks and [the original scaffold validation](VALIDATION.md) for historical build-only evidence. Per-case Python and Go outputs and operation measurements live in [evidence/g01](evidence/g01/README.md).
 
+G02 adds reproducible six-target private candidate packaging, checksums, build provenance and a native package smoke driver. See [G02 validation](docs/G02-VALIDATION.md) for the exact completed checks and remaining native/clean-machine gaps, and [release instructions](docs/RELEASING.md) to recreate packages. G02 remains partially validated; no public release has occurred.
+
 ## Continue here
 
 1. Run `./tools/go test ./...`, build using the README, then `python3 tools/verify.py --go-binary bin/testreceipts`.
-2. Follow [Tasks.md](Tasks.md), starting with G02 reproducible packaging, or prioritize G03 explicitly if live CI access is the next product need. Retest packaging after networking is added.
+2. Follow [Tasks.md](Tasks.md), continuing G02 native/clean-machine qualification, or prioritize G03 explicitly if live CI access is the next product need. Retest packaging after networking is added.
 3. Preserve unsupported/unresolved states, observed-record semantics, and exact diagnostic text. Matching diagnostics do not prove a common root cause.
 4. Update task completion evidence. Keep fixtures small and retain reference hashes. Never regenerate golden outputs to conceal disagreements.
 
