@@ -55,3 +55,7 @@ The recording adapter accepts the public Prow/GCS URL form used by the fixtures 
 Object acquisition, size/MD5 mismatch, and missing byte files remain explicit `acquisition_error` inventory entries, consistent with the reference. If a catalog object includes `sha256`, Go also validates it; mismatch fails interpretation with `source_hash_mismatch`. All successfully acquired XML contributes its retained SHA-256 to the inventory hash. Parsed source bytes and listings are freshly validated on every command; no persistent cache is used. Malformed recording structure or path escapes fail the command, rather than becoming an empty successful inventory.
 
 The parser retains original text before the first nested diagnostic element and flags `nested_diagnostic_markup`. The independent legacy DOM checker differs on nested element tail text, so that construct has a focused Go regression asserting the frozen runtime semantics; it is not silently accepted as fully covered. Fixture parity is development coverage, not proof of all JUnit dialects.
+
+## Contract 1.2 — Live acquisition extension
+
+See [G03 live contract](G03-LIVE.md#recording-and-uncertainty-contract-12). Original 15 golden outputs and frozen reference hashes are unchanged. Optional per-run acquisition metadata permits honest partial-pagination replay; live results add discoveryCoverage and conservative comparisonComplete fields. Size and every available MD5/CRC32C are validated; missing checksums remain unresolved. No existing replay command begins making network requests.

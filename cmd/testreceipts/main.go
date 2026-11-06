@@ -2,29 +2,42 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
 	"os"
+	"os/signal"
 	"testreceipts/internal/provider"
+	"time"
 )
 
 var version = "dev"
 
 func run(args []string, out, errOut io.Writer) int {
 	if len(args) == 0 || (len(args) == 1 && (args[0] == "help" || args[0] == "--help")) {
-		fmt.Fprintln(out, "TestReceipts: exact CI report comparison\nUsage: testreceipts version | help\n       testreceipts compare-recording RECORDING BEFORE_URL AFTER_URL")
+		fmt.Fprintln(out, "TestReceipts: exact CI report comparison\nUsage: testreceipts version | help\n       testreceipts compare-recording RECORDING BEFORE_URL AFTER_URL\n       testreceipts compare-live NEW_CAPTURE BEFORE_URL AFTER_URL")
 		return 0
 	}
 	if len(args) == 1 && args[0] == "version" {
 		fmt.Fprintln(out, version)
 		return 0
 	}
-	if len(args) != 4 || args[0] != "compare-recording" {
+	if len(args) != 4 || (args[0] != "compare-recording" && args[0] != "compare-live") {
 		fmt.Fprintln(errOut, "Invalid command. Use testreceipts help.")
 		return 2
 	}
-	result, err := provider.Compare(args[1], args[2:])
+	var result provider.Object
+	var err error
+	if args[0] == "compare-live" {
+		base, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+		defer stop()
+		ctx, cancel := context.WithTimeout(base, 5*time.Minute)
+		defer cancel()
+		result, err = provider.Capture(ctx, provider.NewHTTPSource(), args[1], args[2:])
+	} else {
+		result, err = provider.Compare(args[1], args[2:])
+	}
 	if err != nil {
 		fmt.Fprintln(errOut, "Comparison failed:", err)
 		return 2

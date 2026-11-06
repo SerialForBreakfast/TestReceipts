@@ -1,0 +1,45 @@
+{
+  "acquisitionSeconds": "2.175901",
+  "events": [
+    {
+      "attempt": 1,
+      "bytes": 3795,
+      "responseFile": "responses/001.body",
+      "responseSha256": "1751a9857c6ba33a3b53587f17ab9c2d0c77d4c831d9d22cda15fc0dcb15ae6b",
+      "seconds": "1.114713",
+      "status": 200,
+      "url": "https://storage.googleapis.com/storage/v1/b/kubernetes-ci-logs/o?fields=items%28name%2Cgeneration%2Csize%2Cmd5Hash%2Ccrc32c%2CcontentEncoding%29%2CnextPageToken&maxResults=1000&prefix=logs%2Fci-aws-ebs-csi-driver-e2e-functional%2F2116467111751585792%2F"
+    },
+    {
+      "attempt": 1,
+      "bytes": 918777,
+      "responseFile": "responses/002.body",
+      "responseSha256": "f805700bfea872483b18f48fca0e6fb1822bd09de39f17f4eeb3816f5804d062",
+      "seconds": "0.466677",
+      "status": 200,
+      "url": "https://storage.googleapis.com/storage/v1/b/kubernetes-ci-logs/o/logs%2Fci-aws-ebs-csi-driver-e2e-functional%2F2116467111751585792%2Fartifacts%2Fjunit.xml?alt=media&generation=1793442002855415"
+    },
+    {
+      "attempt": 1,
+      "bytes": 3794,
+      "responseFile": "responses/003.body",
+      "responseSha256": "4fa79b13f786873392edd3c5f8d092e56ba55be2dfeda360caca52c50ffcb4a8",
+      "seconds": "0.088848",
+      "status": 200,
+      "url": "https://storage.googleapis.com/storage/v1/b/kubernetes-ci-logs/o?fields=items%28name%2Cgeneration%2Csize%2Cmd5Hash%2Ccrc32c%2CcontentEncoding%29%2CnextPageToken&maxResults=1000&prefix=logs%2Fci-aws-ebs-csi-driver-e2e-functional%2F2116739156053856256%2F"
+    },
+    {
+      "attempt": 1,
+      "bytes": 922902,
+      "responseFile": "responses/004.body",
+      "responseSha256": "74d1623579fff144b45bda10e7bca4ae829330ae3688bd318be498564efd4f0a",
+      "seconds": "0.477880",
+      "status": 200,
+      "url": "https://storage.googleapis.com/storage/v1/b/kubernetes-ci-logs/o/logs%2Fci-aws-ebs-csi-driver-e2e-functional%2F2116739156053856256%2Fartifacts%2Fjunit.xml?alt=media&generation=1793506811393752"
+    }
+  ],
+  "requestSeconds": "2.148117",
+  "requests": 4,
+  "responseBytes": 1849268,
+  "scope": "public Prow/GCS; no authentication; generation-pinned objects"
+}

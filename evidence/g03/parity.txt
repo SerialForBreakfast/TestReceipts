@@ -1,0 +1,12 @@
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.066s
+
+OK
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 8.091s
+
+OK
+PASS: copied source hashes, 20 reference tests and 15 recorded-pair contracts.
+Go parity: PASS

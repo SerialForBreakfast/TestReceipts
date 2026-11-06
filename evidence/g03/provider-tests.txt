@@ -1,0 +1,2 @@
+ok  	testreceipts/internal/provider	13.935s
+ok  	testreceipts/cmd/testreceipts	0.368s

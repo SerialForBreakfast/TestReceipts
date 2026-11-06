@@ -3,7 +3,6 @@ package provider
 
 import (
 	"bytes"
-	"crypto/md5"
 	"encoding/base64"
 	"encoding/json"
 	"errors"
@@ -229,19 +228,66 @@ func Compare(root string, urls []string) (Object, error) {
 	if err != nil {
 		return nil, err
 	}
+	acquisition := Object{}
+	if v, ok := catalog["acquisition"]; ok {
+		acquisition, err = obj(v)
+		if err != nil {
+			return nil, err
+		}
+	}
 	snapshots := []Object{}
 	groups := []map[string]Object{}
 	for _, u := range urls {
-		snapshot, g, err := run(root, u, runs, objects)
+		snapshot, g, err := run(root, u, runs, objects, acquisition)
 		if err != nil {
 			return nil, err
 		}
 		snapshots = append(snapshots, snapshot)
 		groups = append(groups, g)
 	}
-	return evidence.Compare(snapshots, groups), nil
+	result := evidence.Compare(snapshots, groups)
+	if len(acquisition) > 0 {
+		complete := true
+		for _, s := range snapshots {
+			if s["artifactComplete"] != true || s["parserCoverage"].(Object)["complete"] != true || len(s["parserCoverage"].(Object)["limitations"].([]string)) > 0 {
+				complete = false
+			}
+		}
+		result["comparisonComplete"] = complete
+	}
+	return result, nil
 }
-func run(root, u string, runs, objects Object) (Object, map[string]Object, error) {
+func run(root, u string, runs, objects, acquisition Object) (Object, map[string]Object, error) {
+	listingComplete := true
+	var discovery Object
+	if len(acquisition) > 0 {
+		v, ok := acquisition[u]
+		if !ok {
+			return nil, nil, errors.New("missing_acquisition_coverage")
+		}
+		var e error
+		discovery, e = obj(v)
+		if e != nil {
+			return nil, nil, e
+		}
+		var valid bool
+		listingComplete, valid = discovery["complete"].(bool)
+		if !valid {
+			return nil, nil, errors.New("invalid_acquisition_coverage")
+		}
+		rows, ok := discovery["unresolved"].([]any)
+		if !ok {
+			return nil, nil, errors.New("invalid_acquisition_issues")
+		}
+		for _, v := range rows {
+			if _, ok := v.(string); !ok {
+				return nil, nil, errors.New("invalid_acquisition_issue")
+			}
+		}
+		if listingComplete && len(rows) > 0 || !listingComplete && len(rows) == 0 {
+			return nil, nil, errors.New("contradictory_acquisition_coverage")
+		}
+	}
 	path, err := str(runs, u)
 	if err != nil {
 		return nil, nil, errors.New("unrecorded_run_url")
@@ -327,11 +373,11 @@ func run(root, u string, runs, objects Object) (Object, map[string]Object, error
 			}
 			break
 		}
-		if tokens[token] {
+		if tokens[token] && !(!listingComplete && i == len(all)-1) {
 			return nil, nil, errors.New("pagination_cycle")
 		}
 		tokens[token] = true
-		if i == len(all)-1 {
+		if i == len(all)-1 && listingComplete {
 			return nil, nil, errors.New("missing_listing_page")
 		}
 	}
@@ -362,13 +408,15 @@ func run(root, u string, runs, objects Object) (Object, map[string]Object, error
 		if e != nil || size < 0 {
 			return nil, nil, errors.New("invalid_object_size")
 		}
-		md5Hash, err := str(item, "md5Hash")
-		if err != nil {
-			return nil, nil, err
-		}
-		decoded, e := base64.StdEncoding.DecodeString(md5Hash)
-		if e != nil || len(decoded) != 16 {
-			return nil, nil, errors.New("invalid_object_md5")
+		if v, ok := item["md5Hash"]; ok {
+			s, ok := v.(string)
+			if !ok {
+				return nil, nil, errors.New("invalid_object_md5")
+			}
+			b, e := base64.StdEncoding.DecodeString(s)
+			if e != nil || len(b) != 16 {
+				return nil, nil, errors.New("invalid_object_md5")
+			}
 		}
 		disposition, reason := "blocked", ""
 		var sha any
@@ -405,8 +453,7 @@ func run(root, u string, runs, objects Object) (Object, map[string]Object, error
 						if err != nil {
 							reason = "acquisition_error"
 						} else {
-							md := md5.Sum(raw)
-							if len(raw) != int(size) || base64.StdEncoding.EncodeToString(md[:]) != md5Hash {
+							if verifyObject(raw, item) != nil {
 								reason = "acquisition_error"
 							}
 						}
@@ -462,6 +509,9 @@ func run(root, u string, runs, objects Object) (Object, map[string]Object, error
 	if included == 0 {
 		unknown["no_junit_reports"] = true
 	}
-	snapshot := Object{"url": u, "xmlCandidates": len(rows), "includedReports": included, "excludedObjects": excluded, "unresolvedObjects": unresolved, "artifactComplete": len(unresolved) == 0, "inventorySha256": evidence.Hash(rows), "listingSha256": evidence.Hash(pages), "inputBytes": input, "counts": counts, "parserCoverage": Object{"complete": len(unknown) == 0, "unresolved": evidence.Sorted(unknown), "limitations": evidence.Sorted(limits)}, "distinctFailures": len(groups)}
+	snapshot := Object{"url": u, "xmlCandidates": len(rows), "includedReports": included, "excludedObjects": excluded, "unresolvedObjects": unresolved, "artifactComplete": len(unresolved) == 0 && listingComplete, "inventorySha256": evidence.Hash(rows), "listingSha256": evidence.Hash(pages), "inputBytes": input, "counts": counts, "parserCoverage": Object{"complete": len(unknown) == 0, "unresolved": evidence.Sorted(unknown), "limitations": evidence.Sorted(limits)}, "distinctFailures": len(groups)}
+	if discovery != nil {
+		snapshot["discoveryCoverage"] = discovery
+	}
 	return snapshot, groups, nil
 }

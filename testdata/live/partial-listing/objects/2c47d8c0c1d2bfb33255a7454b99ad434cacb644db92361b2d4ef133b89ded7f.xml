@@ -1,0 +1,1 @@
+<testsuite name="s"><testcase name="new"><failure type="X" message="new">new diagnostic</failure></testcase><testcase name="shared"><error>shared</error></testcase><testcase name="pass"/><testcase name="skip"><skipped/></testcase></testsuite>

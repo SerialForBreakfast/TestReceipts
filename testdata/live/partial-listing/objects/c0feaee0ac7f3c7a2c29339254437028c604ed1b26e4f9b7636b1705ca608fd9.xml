@@ -1,0 +1,1 @@
+<testsuite name="s"><testcase name="old"><failure type="X" message="old">old diagnostic</failure></testcase><testcase name="shared"><error>shared</error></testcase></testsuite>

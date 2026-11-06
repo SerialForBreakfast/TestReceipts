@@ -27,8 +27,19 @@ checkout, replacing the executable path with your installed path:
 Successful interpretation returns 0. Invalid command/recording or output failure
 returns 2 with an error on stderr. Partial report evidence can return 0 with
 artifactComplete=false or parserCoverage.complete=false: inspect both fields.
-This version never downloads CI reports and does not need TLS certificates for
-recorded comparisons. Network/certificate requirements must be retested with G03.
+The compare-recording command never downloads reports and does not use TLS.
+To capture two public supported Prow runs, use:
+
+    testreceipts compare-live NEW_CAPTURE BEFORE_URL AFTER_URL > comparison.json
+
+NEW_CAPTURE must not exist. Supported URLs use https://prow.k8s.io/view/gs/
+kubernetes-ci-logs/logs/JOB/BUILD or pr-logs/pull/REPOSITORY/PR/JOB/BUILD.
+The live command needs HTTPS access to storage.googleapis.com and a working OS
+TLS trust store (Linux may need a system CA bundle). It uses public read-only
+access with no CI credentials. Unavailable pages/reports remain explicit.
+Replay the retained recording with compare-recording, without network access.
+Live network acquisition is bounded to five minutes; Ctrl-C cancels acquisition and
+preserves an incomplete recording when the process can finish writing.
 
 Toolchain upstream floors (not tested minimums): macOS 13+, Linux kernel 3.2+,
 Windows 10+/Server 2016+. amd64 uses baseline v1; arm64 uses v8.0.

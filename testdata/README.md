@@ -23,3 +23,5 @@ G01 adds `unicode-added`, `suite-errors`, `retries`, `identity-and-counts`, `uns
 `tools/add_g01_vectors.py` creates the new vectors and refuses to overwrite a case. Use `--case NAME` to create one missing case. The original nine expected outputs remain unchanged. The `xml-text` case exposed the optional-system-parser dependency described in contract 1.1; it now agrees under the isolated standard-library reference runner.
 
 The `xml-text` original intentionally contains literal tab, LF and CRLF in an attribute. Its scoped `.gitattributes` rule preserves exact bytes and disables whitespace style errors for that fixture.
+
+`live/partial-listing/` is a small G03 recording extension: one listing page is unavailable after a valid report was observed. Its explicit acquisition metadata permits replay of the retained page without claiming complete discovery. The expected result retains two observed records in that run, sets `artifactComplete=false`, and sets `comparisonComplete=false`. It is tested by the Go partial-recording regression separately from the unchanged 15 G01 Python/DOM parity pairs.

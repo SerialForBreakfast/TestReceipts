@@ -1,13 +1,13 @@
 # Reproducible TestReceipts development packages
 
-G02 prepares private candidates; it does not publish a release. The current version label is `v0.1.0-dev.2`. First-party code is MIT licensed, selected by the maintainer on 2026-11-06. A hosted module/repository path, broader native qualification and publisher signing remain open. The root LICENSE is included in every package.
+G02 prepares private candidates; it does not publish a release. The current version label is `v0.2.0-dev.1`. First-party code is MIT licensed, selected by the maintainer on 2026-11-06. A hosted module/repository path, broader native qualification and publisher signing remain open. The root LICENSE is included in every package.
 
 ## Build and verify
 
 Use Go 1.27.3 and Python 3.10+ on the build host. Python and Go are development tools only and are excluded from executable packages. The project-local Go copy is selected automatically; pass `--go /absolute/path/to/go` elsewhere. A dirty source tree is recorded, not hidden; a distribution candidate should be built from a clean source commit.
 
 ```sh
-python3 tools/release.py build --version v0.1.0-dev.2 --out dist/my-candidate --verify-repro
+python3 tools/release.py build --version v0.2.0-dev.1 --out dist/my-candidate --verify-repro
 python3 tools/release.py verify dist/my-candidate
 python3 tools/test_release.py
 ```
@@ -29,7 +29,7 @@ This checks byte reproducibility under the declared environment. It does not pro
 Run the smoke driver on a matching native OS/architecture. It extracts the package, preserves executable modes, copies the development recordings to a temporary location with spaces/Unicode, and launches the executable with an empty PATH. The driver itself uses Python, but the installed executable cannot look up Go/Python/Node through PATH.
 
 ```sh
-python3 tools/smoke_release.py --package dist/my-candidate/testreceipts-v0.1.0-dev.2-darwin-arm64.tar.gz --out evidence/g02/native-macos-arm64 --measure
+python3 tools/smoke_release.py --package dist/my-candidate/testreceipts-v0.2.0-dev.1-darwin-arm64.tar.gz --out evidence/g02/native-macos-arm64 --measure
 ```
 
 For other hosts replace the archive and output path. Windows packages end in `.zip`. Omit `--measure` outside macOS; its `/usr/bin/time -l` probe may need process/resource access. The driver refuses to execute a foreign target. All 15 real comparisons must match goldens. It checks version, stderr and exit codes, output files, POSIX execute/read permissions and output-write errors where applicable. Windows ACL/read-only directory tests remain manual work.
@@ -38,7 +38,7 @@ An empty PATH on a development host is not a clean-machine installation. Repeat 
 
 ## Platform requirements and signing
 
-The [Go minimum-requirements page](https://go.dev/wiki/MinimumRequirements), checked 2026-11-06, states Go 1.27 needs macOS 13+, Linux kernel 3.2+, or Windows 10+/Server 2016+. These are upstream floors, not tested TestReceipts minima. Both CPU targets use baseline microarchitectures. The local-only command does not use certificates or live HTTP; repeat networking/certificate qualification after G03.
+The [Go minimum-requirements page](https://go.dev/wiki/MinimumRequirements), checked 2026-11-06, states Go 1.27 needs macOS 13+, Linux kernel 3.2+, or Windows 10+/Server 2016+. These are upstream floors, not tested TestReceipts minima. Both CPU targets use baseline microarchitectures. The compare-recording command does not use certificates or HTTP. The compare-live command requires HTTPS egress and OS trust roots; consult the G03 live validation. Every new platform must qualify its certificate/network behavior separately.
 
 macOS binaries use the Go linker's ad hoc signature and Apple system libraries; they have no Developer ID identity or notarization. Download quarantine/Gatekeeper behavior is unverified. Windows packages have no Authenticode signing; SmartScreen and fresh-machine behavior are unverified. Linux packages have no detached publisher signature or package-manager installation. Do not bypass host security prompts automatically. Signing or notarization would change artifact bytes and needs a separate post-signing checksum/reproducibility policy.
 

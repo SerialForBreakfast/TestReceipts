@@ -2,7 +2,7 @@
 
 TestReceipts compares structured test reports from two recorded CI runs. It reports observed testcase counts, exact diagnostic changes, and the original report inventory, while preserving incomplete and unsupported evidence states.
 
-The local Go comparison works without Python, Node, network access, or a compiler at runtime. Live CI downloading and MCP are later milestones. This standalone project has no Spotlightning, Swift, or Apple framework dependency in its core.
+The local Go comparison works without Python, Node, network access, or a compiler at runtime. Public Prow/GCS live capture is implemented; MCP remains a later milestone. This standalone project has no Spotlightning, Swift, or Apple framework dependency in its core.
 
 ## Build and run
 
@@ -17,7 +17,7 @@ bin/testreceipts compare-recording testdata/cases/changes \
   https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/200
 ```
 
-The command writes one JSON result to stdout. Invalid commands or recordings write bounded errors to stderr and return a nonzero exit. Report acquisition or classification failures remain explicit in the JSON inventory; they do not erase other usable evidence. Recorded URLs are identifiers and are never fetched.
+The command writes one JSON result to stdout. Invalid commands or recordings write bounded errors to stderr and return a nonzero exit. Report acquisition or classification failures remain explicit in the JSON inventory; they do not erase other usable evidence. Recorded URLs are identifiers and are never fetched by compare-recording. The separate compare-live command fetches supported public Prow/GCS runs.
 
 A normal native Go installation can use `go` in place of `./tools/go`. On Windows, build with `-o bin/testreceipts.exe`. The provisional module path is `testreceipts`; choose a hosted module path before external library publication.
 
@@ -48,15 +48,24 @@ There are 20 frozen reference tests and 15 recorded comparison pairs, each check
 
 G01 is complete: bounded XML classification, observed-record facts, exact signatures, recorded pagination/discovery, integrity checks, inventories, and two-run comparison. See [G01 validation](docs/G01-VALIDATION.md), [task ledger](Tasks.md), [behavior contract](docs/PORTING-CONTRACT.md), and [handoff](HANDOFF.md).
 
-G02-01 is complete and supplies reproducible six-target private candidate builds and packaging. See [release instructions](docs/RELEASING.md) and [G02 qualification/gaps](docs/G02-VALIDATION.md); clean-machine and other-platform native validation remain pending. Only macOS arm64 has current native runtime evidence; no Windows/Linux runtime compatibility is claimed. G03 adds live Prow/GCS support. MCP and agent studies remain deferred. First-party code uses the [MIT license](LICENSE); the hosted module path remains open before public distribution.
+G02-01 is complete and supplies reproducible six-target private candidate builds and packaging. See [release instructions](docs/RELEASING.md) and [G02 qualification/gaps](docs/G02-VALIDATION.md); clean-machine and other-platform native validation remain pending. Only macOS arm64 has current native runtime evidence; no Windows/Linux runtime compatibility is claimed. G03 implements bounded live Prow/GCS capture, partial-discovery coverage and offline replay; see [live usage](docs/G03-LIVE.md) and [validation](docs/G03-VALIDATION.md). MCP and agent studies remain deferred. First-party code uses the [MIT license](LICENSE); the hosted module path remains open before public distribution.
 
 Historical agent findings are in [evidence/README.md](evidence/README.md). They do not measure this Go implementation, repeated use, or live networking. No Go size, speed, or token-saving advantage is claimed.
 
 ## Build a private development package
 
 ```sh
-python3 tools/release.py build --version v0.1.0-dev.2 --out dist/my-candidate --verify-repro
+python3 tools/release.py build --version v0.2.0-dev.1 --out dist/my-candidate --verify-repro
 python3 tools/release.py verify dist/my-candidate
 ```
 
 This builds six packages twice and requires matching binary/archive bytes. Python is only a packaging/test tool. Packages contain the Go executable, install instructions, metadata and notices. They are private candidates while public module naming, signing and platform qualification remain open. No publication is automatic.
+
+## Capture public Prow/GCS runs
+
+```sh
+bin/testreceipts compare-live .artifacts/my-new-capture BEFORE_URL AFTER_URL > comparison.json
+bin/testreceipts compare-recording .artifacts/my-new-capture BEFORE_URL AFTER_URL > replay.json
+```
+
+The capture directory must be new. Live access uses only supported public Kubernetes Prow URLs and generation-pinned GCS reports. It needs HTTPS access and OS TLS roots. Unavailable pages, objects and parser limitations remain explicit; inspect artifactComplete, parserCoverage and comparisonComplete rather than treating an empty report inventory as passing. See [bounds, URL forms and recovery](docs/G03-LIVE.md).

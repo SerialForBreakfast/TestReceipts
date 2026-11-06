@@ -1,0 +1,81 @@
+{
+  "change": {
+    "disappearedDistinct": 1,
+    "newDistinct": 0,
+    "newOccurrences": 0,
+    "sharedDistinct": 0
+  },
+  "comparisonComplete": false,
+  "newEvidence": [],
+  "runs": [
+    {
+      "artifactComplete": true,
+      "counts": {
+        "attempts": 105,
+        "error": 0,
+        "failure": 1,
+        "passed": 91,
+        "skipped": 13
+      },
+      "discoveryCoverage": {
+        "complete": true,
+        "noSuccessfulListingPages": false,
+        "objectErrors": [],
+        "unresolved": []
+      },
+      "distinctFailures": 1,
+      "excludedObjects": [],
+      "includedReports": 1,
+      "inputBytes": 918777,
+      "inventorySha256": "ccec373ae937872a253e96ef0cb031e4a2fe32a5e7dc5a1fe4db0c6cf76e4662",
+      "listingSha256": "75e9564a99dfc97955ef09d4c9ce0fd7e1783123cd2a70a3ea9975c29a87af4b",
+      "parserCoverage": {
+        "complete": false,
+        "limitations": [],
+        "unresolved": [
+          "ambiguous_slash_identity"
+        ]
+      },
+      "unresolvedObjects": [],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2116467111751585792",
+      "xmlCandidates": 1
+    },
+    {
+      "artifactComplete": false,
+      "counts": {
+        "attempts": 0,
+        "error": 0,
+        "failure": 0,
+        "passed": 0,
+        "skipped": 0
+      },
+      "discoveryCoverage": {
+        "complete": true,
+        "noSuccessfulListingPages": false,
+        "objectErrors": [],
+        "unresolved": []
+      },
+      "distinctFailures": 0,
+      "excludedObjects": [],
+      "includedReports": 0,
+      "inputBytes": 0,
+      "inventorySha256": "bf0d82208858cc2b5bf9bf82bf4bfcb08270485b5e268ada57ea7f1cb2328fc8",
+      "listingSha256": "567090cb08a759ebbae3b29af196eff9d49b0858249ed96c2cd7137ccc2422e1",
+      "parserCoverage": {
+        "complete": false,
+        "limitations": [],
+        "unresolved": [
+          "no_junit_reports"
+        ]
+      },
+      "unresolvedObjects": [
+        {
+          "name": "logs/ci-aws-ebs-csi-driver-e2e-functional/2116739156053856256/artifacts/junit.xml",
+          "reason": "acquisition_error"
+        }
+      ],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2116739156053856256",
+      "xmlCandidates": 1
+    }
+  ]
+}

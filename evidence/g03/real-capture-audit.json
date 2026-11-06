@@ -1,0 +1,61 @@
+{
+  "capturePath": ".artifacts/g03-real-final",
+  "urls": [
+    "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2116467111751585792",
+    "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2116739156053856256"
+  ],
+  "replayEqual": true,
+  "replayWallSeconds": 0.638441,
+  "offlineExecution": "empty PATH and unusable HTTP/HTTPS/ALL proxy; replay code performs no HTTP",
+  "pythonAndIndependentDOMFactsEqual": true,
+  "partialControl": "altered report detected as unresolved; unaffected evidence retained",
+  "recoveryControl": "restored report bytes recover exact original result",
+  "networkResponseHashesValid": true,
+  "captureFiles": {
+    "catalog.json": {
+      "bytes": 1145,
+      "sha256": "2eefe13368bc85004addcb615970452f06b0d45e1265eb28569e62efc640215f"
+    },
+    "comparison.json": {
+      "bytes": 2082,
+      "sha256": "83cba4910715d26a3c1c7b77e561b4700a9ed6bbe3801f87b022eaf4976303dd"
+    },
+    "network.json": {
+      "bytes": 1834,
+      "sha256": "9517f3303692236291df6970e502dd9926248fb798e803f5a69a917897e3ba49"
+    },
+    "objects/36c1d43f1ac159def4a8faab738940ac64f767f6e7bc223beec28c965c1b38a0.xml": {
+      "bytes": 922902,
+      "sha256": "74d1623579fff144b45bda10e7bca4ae829330ae3688bd318be498564efd4f0a"
+    },
+    "objects/fa13adca24d57c96898516a8fe0f60401d397a57287735445ca6e7cbfe8946cb.xml": {
+      "bytes": 918777,
+      "sha256": "f805700bfea872483b18f48fca0e6fb1822bd09de39f17f4eeb3816f5804d062"
+    },
+    "pages-0.json": {
+      "bytes": 3039,
+      "sha256": "0b268b041b49cde53d1d9ac66f58de3d0802a02369d3a076152d4bd8feec193d"
+    },
+    "pages-1.json": {
+      "bytes": 3038,
+      "sha256": "a0d8ed1a11684d0587dd925fcc8aff1103308d20ee8e9ef6991bcc5333ace195"
+    },
+    "responses/001.body": {
+      "bytes": 3795,
+      "sha256": "1751a9857c6ba33a3b53587f17ab9c2d0c77d4c831d9d22cda15fc0dcb15ae6b"
+    },
+    "responses/002.body": {
+      "bytes": 918777,
+      "sha256": "f805700bfea872483b18f48fca0e6fb1822bd09de39f17f4eeb3816f5804d062"
+    },
+    "responses/003.body": {
+      "bytes": 3794,
+      "sha256": "4fa79b13f786873392edd3c5f8d092e56ba55be2dfeda360caca52c50ffcb4a8"
+    },
+    "responses/004.body": {
+      "bytes": 922902,
+      "sha256": "74d1623579fff144b45bda10e7bca4ae829330ae3688bd318be498564efd4f0a"
+    }
+  },
+  "limitations": "Runs from the same public job; not asserted consecutive. Artifact discovery is scoped to enumerated XML; parser uncertainty remains in outputs. Downloaded original capture remains ignored, outside Git."
+}
