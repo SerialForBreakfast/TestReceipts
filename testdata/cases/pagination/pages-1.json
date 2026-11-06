@@ -1,0 +1,23 @@
+[
+  {
+    "items": [
+      {
+        "name": "logs/test/200/artifacts/generic-0.xml",
+        "generation": "1",
+        "size": "81",
+        "md5Hash": "jxl9BuWq8KsFNVO8zh4MKg=="
+      }
+    ],
+    "nextPageToken": "next"
+  },
+  {
+    "items": [
+      {
+        "name": "logs/test/200/artifacts/generic-1.xml",
+        "generation": "1",
+        "size": "81",
+        "md5Hash": "jxl9BuWq8KsFNVO8zh4MKg=="
+      }
+    ]
+  }
+]

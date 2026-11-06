@@ -1,0 +1,15 @@
+# Build outputs and local runtime state
+/bin/
+/dist/
+/.state/
+/.cache/
+/.artifacts/
+/.work/
+__pycache__/
+*.pyc
+.DS_Store
+# Large evidence is external; deliberately keep testdata and compact reports.
+/evidence/raw/
+/evidence/workspaces/
+*.zip
+*.tar.gz

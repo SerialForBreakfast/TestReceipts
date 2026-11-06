@@ -1,0 +1,1182 @@
+{
+  "attempts": 72,
+  "cases": [
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 51072.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 346.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 1001719.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 31.28531789779663,
+          "input_tokens": 59153.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 5264.0,
+          "output_tokens": 1170.5,
+          "total_tokens": 60323.5,
+          "uncached_input_tokens": 8081.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 83776.0,
+          "calls": 4.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2090.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 1001719.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 856.5,
+            "savedScripts": 0.5
+          },
+          "elapsed": 47.86949849128723,
+          "input_tokens": 103211.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 22254.0,
+          "output_tokens": 1692.5,
+          "total_tokens": 104903.5,
+          "uncached_input_tokens": 19435.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 70336.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 954.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 1001719.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 39.494603991508484,
+          "input_tokens": 87642.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 15163.5,
+          "output_tokens": 1320.5,
+          "total_tokens": 88963.0,
+          "uncached_input_tokens": 17306.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U01",
+      "job": "ci-kubernetes-unit-1-36",
+      "project": "kubernetes/kubernetes",
+      "savingsPercent": {
+        "api": 42.49619888754903,
+        "ready": 32.19259692231602
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 45248.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 419.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 5045177.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 29.079654574394226,
+          "input_tokens": 64743.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 5861.0,
+          "output_tokens": 921.0,
+          "total_tokens": 65664.5,
+          "uncached_input_tokens": 19495.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 73856.0,
+          "calls": 4.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2005.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 5045177.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 857.0,
+            "savedScripts": 0.5
+          },
+          "elapsed": 46.04597353935242,
+          "input_tokens": 94215.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 19731.0,
+          "output_tokens": 1507.0,
+          "total_tokens": 95722.0,
+          "uncached_input_tokens": 20359.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 61248.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 969.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 5045177.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 36.21394455432892,
+          "input_tokens": 78144.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 13740.0,
+          "output_tokens": 1114.0,
+          "total_tokens": 79258.5,
+          "uncached_input_tokens": 16896.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U02",
+      "job": "pull-kueue-test-unit-shard-0-main",
+      "project": "kubernetes-sigs/kueue",
+      "savingsPercent": {
+        "api": 31.40082739600092,
+        "ready": 17.151472712705896
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 45696.0,
+          "calls": 2.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 432.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 0.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 0.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 0.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 27.5291029214859,
+          "input_tokens": 64210.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 4831.5,
+          "output_tokens": 807.5,
+          "total_tokens": 65017.5,
+          "uncached_input_tokens": 18514.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 89600.0,
+          "calls": 4.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 1968.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 0.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 0.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 0.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 52.00661385059357,
+          "input_tokens": 107831.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 21684.5,
+          "output_tokens": 1456.5,
+          "total_tokens": 109287.5,
+          "uncached_input_tokens": 18231.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 47936.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 988.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 0.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 0.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 0.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 29.729743480682373,
+          "input_tokens": 79027.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 15463.0,
+          "output_tokens": 1007.0,
+          "total_tokens": 80034.5,
+          "uncached_input_tokens": 31091.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U03",
+      "job": "pull-cloud-provider-azure-unit",
+      "project": "kubernetes-sigs/cloud-provider-azure",
+      "savingsPercent": {
+        "api": 40.50783483930002,
+        "ready": 18.7631583879452
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 59328.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 462.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 0.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 0.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 0.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 29.974417567253113,
+          "input_tokens": 73636.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 5128.0,
+          "output_tokens": 873.0,
+          "total_tokens": 74509.0,
+          "uncached_input_tokens": 14308.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 95872.0,
+          "calls": 4.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2978.5,
+            "commandFailures": 0.5,
+            "downloadBytes": 0.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 0.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 0.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 54.609068512916565,
+          "input_tokens": 115102.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 21529.5,
+          "output_tokens": 1711.0,
+          "total_tokens": 116813.0,
+          "uncached_input_tokens": 19230.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 70400.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 957.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 0.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 0.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 0.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 37.60701084136963,
+          "input_tokens": 87439.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 14366.5,
+          "output_tokens": 1014.5,
+          "total_tokens": 88454.0,
+          "uncached_input_tokens": 17039.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U04",
+      "job": "ci-etcd-integration-1-cpu-release35-arm64",
+      "project": "etcd-io/etcd",
+      "savingsPercent": {
+        "api": 36.21514728668899,
+        "ready": 15.765256517511927
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 52864.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 436.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 6678254.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 100.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 100.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 28.861536502838135,
+          "input_tokens": 61183.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 5976.5,
+          "output_tokens": 895.5,
+          "total_tokens": 62079.0,
+          "uncached_input_tokens": 8319.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 93440.0,
+          "calls": 4.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2137.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 6678254.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 100.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 100.0,
+            "savedScriptBytes": 979.5,
+            "savedScripts": 0.5
+          },
+          "elapsed": 43.35253190994263,
+          "input_tokens": 112838.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 21868.5,
+          "output_tokens": 1514.0,
+          "total_tokens": 114352.5,
+          "uncached_input_tokens": 19398.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 61696.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 986.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 6678254.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 100.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 100.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 33.653217911720276,
+          "input_tokens": 79019.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 15605.5,
+          "output_tokens": 1133.0,
+          "total_tokens": 80152.0,
+          "uncached_input_tokens": 17323.0,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U05",
+      "job": "pull-controller-runtime-test",
+      "project": "kubernetes-sigs/controller-runtime",
+      "savingsPercent": {
+        "api": 45.71259919984259,
+        "ready": 22.548408024752963
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 35328.0,
+          "calls": 2.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 258.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 5111679.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 4.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 4.0,
+            "reportsParsed": 4.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 32.82025408744812,
+          "input_tokens": 54807.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 5402.0,
+          "output_tokens": 1234.0,
+          "total_tokens": 56041.0,
+          "uncached_input_tokens": 19479.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 82560.0,
+          "calls": 4.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2095.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 5111679.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 4.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 4.0,
+            "reportsParsed": 4.0,
+            "savedScriptBytes": 865.0,
+            "savedScripts": 0.5
+          },
+          "elapsed": 59.198659896850586,
+          "input_tokens": 102112.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 21994.5,
+          "output_tokens": 1946.5,
+          "total_tokens": 104058.5,
+          "uncached_input_tokens": 19552.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 75904.0,
+          "calls": 4.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 944.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 5111679.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 4.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 4.0,
+            "reportsParsed": 4.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 46.842063426971436,
+          "input_tokens": 88743.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 16952.0,
+          "output_tokens": 1571.0,
+          "total_tokens": 90314.5,
+          "uncached_input_tokens": 12839.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U06",
+      "job": "e2e-kops-aws-ha-euwest1",
+      "project": "kubernetes/kops",
+      "savingsPercent": {
+        "api": 46.14471667379407,
+        "ready": 37.949055799456346
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 50240.0,
+          "calls": 2.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 489.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 2198686.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 39.828935503959656,
+          "input_tokens": 64744.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 5734.0,
+          "output_tokens": 1397.5,
+          "total_tokens": 66142.0,
+          "uncached_input_tokens": 14504.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 73024.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2001.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 2198686.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 51.59414982795715,
+          "input_tokens": 91586.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 19037.0,
+          "output_tokens": 1875.0,
+          "total_tokens": 93461.0,
+          "uncached_input_tokens": 18562.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 52800.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 1006.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 2198686.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 42.41830861568451,
+          "input_tokens": 73912.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 14708.5,
+          "output_tokens": 1529.0,
+          "total_tokens": 75441.0,
+          "uncached_input_tokens": 21112.0,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U07",
+      "job": "pull-prow-unit-test-race-detector-nonblocking",
+      "project": "kubernetes-sigs/prow",
+      "savingsPercent": {
+        "api": 29.23037416676475,
+        "ready": 12.326188677244465
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 50176.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 424.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 504.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 27.267438173294067,
+          "input_tokens": 64590.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 5683.5,
+          "output_tokens": 833.5,
+          "total_tokens": 65424.0,
+          "uncached_input_tokens": 14414.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 98624.0,
+          "calls": 4.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2099.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 504.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 45.350719571113586,
+          "input_tokens": 112871.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 21508.0,
+          "output_tokens": 1454.0,
+          "total_tokens": 114325.0,
+          "uncached_input_tokens": 14247.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 65088.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 895.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 504.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 33.520949363708496,
+          "input_tokens": 86860.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 13372.5,
+          "output_tokens": 1035.0,
+          "total_tokens": 87895.5,
+          "uncached_input_tokens": 21772.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U08",
+      "job": "ci-kubernetes-node-swap-conformance-ubuntu-serial",
+      "project": "kubernetes/kubernetes",
+      "savingsPercent": {
+        "api": 42.77367155040454,
+        "ready": 25.566155263921363
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 38272.0,
+          "calls": 2.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 423.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 3103254.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 105.20936095714569,
+          "input_tokens": 54902.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 16346.0,
+          "output_tokens": 4520.5,
+          "total_tokens": 59423.0,
+          "uncached_input_tokens": 16630.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 133632.0,
+          "calls": 6.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2465.5,
+            "commandFailures": 0.5,
+            "downloadBytes": 3103254.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 911.5,
+            "savedScripts": 0.5
+          },
+          "elapsed": 135.3620433807373,
+          "input_tokens": 151216.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 34537.0,
+          "output_tokens": 5320.0,
+          "total_tokens": 156536.5,
+          "uncached_input_tokens": 17584.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 74112.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 1207.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 3103254.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 108.78995358943939,
+          "input_tokens": 94734.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 25554.0,
+          "output_tokens": 4807.5,
+          "total_tokens": 99542.0,
+          "uncached_input_tokens": 20622.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U09",
+      "job": "pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35",
+      "project": "kubernetes-sigs/cloud-provider-azure",
+      "savingsPercent": {
+        "api": 62.03888549954804,
+        "ready": 40.303590444234594
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 50112.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 481.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 524401.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 32.11239969730377,
+          "input_tokens": 64344.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 4954.0,
+          "output_tokens": 1004.5,
+          "total_tokens": 65349.0,
+          "uncached_input_tokens": 14232.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 101696.0,
+          "calls": 5.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2364.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 524401.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 868.5,
+            "savedScripts": 0.5
+          },
+          "elapsed": 49.730754375457764,
+          "input_tokens": 126309.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 21241.5,
+          "output_tokens": 1712.5,
+          "total_tokens": 128021.5,
+          "uncached_input_tokens": 24613.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 61760.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 982.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 524401.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 2.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 2.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 35.21500861644745,
+          "input_tokens": 87567.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 14455.0,
+          "output_tokens": 1058.5,
+          "total_tokens": 88625.5,
+          "uncached_input_tokens": 25807.0,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U10",
+      "job": "pull-lws-test-e2e-main-cert-manager",
+      "project": "kubernetes-sigs/lws",
+      "savingsPercent": {
+        "api": 48.954667770647895,
+        "ready": 26.263885676244424
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 35456.0,
+          "calls": 2.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 348.5,
+            "commandFailures": 0.0,
+            "downloadBytes": 5932211.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 100.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 100.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 31.1272634267807,
+          "input_tokens": 54673.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 4876.5,
+          "output_tokens": 1111.5,
+          "total_tokens": 55784.5,
+          "uncached_input_tokens": 19217.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 92992.0,
+          "calls": 4.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2121.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 5932211.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 100.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 100.0,
+            "savedScriptBytes": 877.5,
+            "savedScripts": 0.5
+          },
+          "elapsed": 44.093281865119934,
+          "input_tokens": 111789.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 19548.5,
+          "output_tokens": 1575.0,
+          "total_tokens": 113364.0,
+          "uncached_input_tokens": 18797.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 70208.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 1019.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 5932211.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 100.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 2.0,
+            "reportsParsed": 100.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 38.91888654232025,
+          "input_tokens": 87478.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 14899.5,
+          "output_tokens": 1289.5,
+          "total_tokens": 88767.5,
+          "uncached_input_tokens": 17270.0,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U11",
+      "job": "periodic-controller-runtime-test",
+      "project": "kubernetes-sigs/controller-runtime",
+      "savingsPercent": {
+        "api": 50.79169754066546,
+        "ready": 37.156617005097594
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "cached_input_tokens": 41728.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 425.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 2538264.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 4.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 4.0,
+            "reportsParsed": 4.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 32.729286551475525,
+          "input_tokens": 60196.0,
+          "inventoryCorrect": 2,
+          "outputBytes": 6295.5,
+          "output_tokens": 1065.0,
+          "total_tokens": 61261.0,
+          "uncached_input_tokens": 18468.0,
+          "unsupportedCompletenessClaims": 0
+        },
+        "api": {
+          "attempts": 2,
+          "cached_input_tokens": 68736.0,
+          "calls": 3.5,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 2055.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 2538264.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 4.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 4.0,
+            "reportsParsed": 4.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 43.27334403991699,
+          "input_tokens": 92042.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 18457.0,
+          "output_tokens": 1648.5,
+          "total_tokens": 93691.0,
+          "uncached_input_tokens": 23306.5,
+          "unsupportedCompletenessClaims": 0
+        },
+        "ready": {
+          "attempts": 2,
+          "cached_input_tokens": 61504.0,
+          "calls": 3.0,
+          "correct": 2,
+          "effort": {
+            "commandCharacters": 963.0,
+            "commandFailures": 0.0,
+            "downloadBytes": 2538264.0,
+            "downloadCacheHits": 0.0,
+            "downloads": 4.0,
+            "parserCacheHits": 0.0,
+            "providerLists": 4.0,
+            "reportsParsed": 4.0,
+            "savedScriptBytes": 0.0,
+            "savedScripts": 0.0
+          },
+          "elapsed": 39.34703862667084,
+          "input_tokens": 78419.5,
+          "inventoryCorrect": 2,
+          "outputBytes": 14540.5,
+          "output_tokens": 1291.5,
+          "total_tokens": 79711.0,
+          "uncached_input_tokens": 16915.5,
+          "unsupportedCompletenessClaims": 0
+        }
+      },
+      "id": "U12",
+      "job": "e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest",
+      "project": "kubernetes/kops",
+      "savingsPercent": {
+        "api": 34.61378360781718,
+        "ready": 23.14611534167179
+      }
+    }
+  ],
+  "comparisons": {
+    "api": {
+      "aggregateSavingsPercent": 43.69671024055882,
+      "medianPairedSavingsPercent": 42.634935218976786,
+      "pairsWithOver10PercentRegression": 0
+    },
+    "ready": {
+      "aggregateSavingsPercent": 26.29982310431004,
+      "medianPairedSavingsPercent": 24.356135302796577,
+      "pairsWithOver10PercentRegression": 0
+    }
+  },
+  "complete": true,
+  "correct": 72,
+  "failures": [],
+  "gates": {
+    "api": {
+      "artifactCompleteness": true,
+      "correctness": true,
+      "regressions": true,
+      "tokens30Percent": true
+    },
+    "ready": {
+      "artifactCompleteness": true,
+      "correctness": true,
+      "regressions": true,
+      "tokens30Percent": false
+    }
+  },
+  "humanNarrativeReview": "pending",
+  "inventoryCorrect": 72,
+  "planned": 72,
+  "promotion": false,
+  "providerRetries": [],
+  "totals": {
+    "adapter": {
+      "attempts": 24,
+      "correct": 24,
+      "effort": {
+        "commandCharacters": 9889,
+        "commandFailures": 0,
+        "downloadBytes": 64268298,
+        "downloadCacheHits": 0,
+        "downloads": 440,
+        "parserCacheHits": 0,
+        "providerLists": 56,
+        "reportsParsed": 440,
+        "savedScriptBytes": 0,
+        "savedScripts": 0
+      },
+      "inventoryCorrect": 24,
+      "usage": {
+        "cached_input_tokens": 1111040,
+        "input_tokens": 1482368,
+        "output_tokens": 31668,
+        "total_tokens": 1514036,
+        "uncached_input_tokens": 371328
+      }
+    },
+    "api": {
+      "attempts": 24,
+      "correct": 24,
+      "effort": {
+        "commandCharacters": 52764,
+        "commandFailures": 2,
+        "downloadBytes": 64268298,
+        "downloadCacheHits": 0,
+        "downloads": 440,
+        "parserCacheHits": 0,
+        "providerLists": 56,
+        "reportsParsed": 440,
+        "savedScriptBytes": 12431,
+        "savedScripts": 7
+      },
+      "inventoryCorrect": 24,
+      "usage": {
+        "cached_input_tokens": 2175616,
+        "input_tokens": 2642247,
+        "output_tokens": 46825,
+        "total_tokens": 2689072,
+        "uncached_input_tokens": 466631
+      }
+    },
+    "ready": {
+      "attempts": 24,
+      "correct": 24,
+      "effort": {
+        "commandCharacters": 23745,
+        "commandFailures": 0,
+        "downloadBytes": 64268298,
+        "downloadCacheHits": 0,
+        "downloads": 440,
+        "parserCacheHits": 0,
+        "providerLists": 56,
+        "reportsParsed": 440,
+        "savedScriptBytes": 0,
+        "savedScripts": 0
+      },
+      "inventoryCorrect": 24,
+      "usage": {
+        "cached_input_tokens": 1545984,
+        "input_tokens": 2017976,
+        "output_tokens": 36342,
+        "total_tokens": 2054318,
+        "uncached_input_tokens": 471992
+      }
+    }
+  },
+  "unsupportedCompletenessClaims": 0
+}

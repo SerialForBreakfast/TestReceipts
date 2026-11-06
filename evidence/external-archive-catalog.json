@@ -1,0 +1,25 @@
+{
+  "note": "Optional historical archives are NOT shipped. Paths are identifiers in the original Spotlightning project, not dependencies of this starter.",
+  "entries": [
+    {
+      "path": "docs/evaluation/results/2026-11-06-url-first-source-v1",
+      "files": 519,
+      "bytes": 229772331,
+      "treeSha256": "330546d05bdd471c610dc0af4d1e5127b4f9f4c456e287fc1a2d289b6cb0d318",
+      "archive": ".artifacts/evidence/330546d05bdd471c610dc0af4d1e5127b4f9f4c456e287fc1a2d289b6cb0d318.zip",
+      "archiveBytes": 17741787,
+      "archiveSha256": "1fee806f2ed1cecf8ae2e32d37a15f979eae9de31a11bb28b578161812f0ce44",
+      "availability": "local-only; not uploaded"
+    },
+    {
+      "path": "docs/evaluation/results/2026-11-06-url-first-v1",
+      "files": 5217,
+      "bytes": 468555361,
+      "treeSha256": "48c51ad3957402f79758c1cd8cbacffd77ebb58969cd547d91fb685f14d4017e",
+      "archive": ".artifacts/evidence/48c51ad3957402f79758c1cd8cbacffd77ebb58969cd547d91fb685f14d4017e.zip",
+      "archiveBytes": 36500515,
+      "archiveSha256": "d454853f5fefcb3f4f19b24ab7fbe0ac36b2ff22b521921c4c0418b233d83d15",
+      "availability": "local-only; not uploaded"
+    }
+  ]
+}

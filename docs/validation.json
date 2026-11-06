@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-06",
+  "toolchain": {
+    "version": "go1.27.3",
+    "filename": "go1.27.3.darwin-arm64.tar.gz",
+    "sha256": "dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2"
+  },
+  "referenceTests": 20,
+  "recordedPairs": 9,
+  "goComparison": "not implemented; no parity claim",
+  "nativeRuntime": "macOS arm64 help and explicit unimplemented-operation error only",
+  "builds": [
+    {
+      "name": "ci-evidence-darwin-amd64",
+      "bytes": 1624480,
+      "sha256": "e4c42eac8514cac22de22537c6a6550fdef38a27fbdcbadeeff8e4161863f8a7",
+      "scope": "scaffold only"
+    },
+    {
+      "name": "ci-evidence-darwin-arm64",
+      "bytes": 1571234,
+      "sha256": "4e2142583957b1b4675b9672f51d3a09e896b57cc1b7c9c713d7f102edf2e3fb",
+      "scope": "scaffold only"
+    },
+    {
+      "name": "ci-evidence-linux-amd64",
+      "bytes": 1515680,
+      "sha256": "d6dd21d48dada80ac134a812768ad868b06653f40d9ead027ba05c37db775bcb",
+      "scope": "scaffold only"
+    },
+    {
+      "name": "ci-evidence-linux-arm64",
+      "bytes": 1573024,
+      "sha256": "4d706b0775e5418b1e65f0bcfc5f6b70193fc205c59a378d7e14bfd361bc5c4f",
+      "scope": "scaffold only"
+    },
+    {
+      "name": "ci-evidence-windows-amd64.exe",
+      "bytes": 1655296,
+      "sha256": "145816effeabf7320a35e3e007a654255983925e85367c4e8c9f6a54b6072cac",
+      "scope": "scaffold only"
+    },
+    {
+      "name": "ci-evidence-windows-arm64.exe",
+      "bytes": 1565184,
+      "sha256": "272aef9c093a88acf2de5bc2a6eee28e7b8eace8e29f343236767f769622ac98",
+      "scope": "scaffold only"
+    }
+  ]
+}

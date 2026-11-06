@@ -1,0 +1,72 @@
+{
+  "origin": "Spotlightning",
+  "sourceCommit": "0a97ab1cf4462617bec302ea0466b534f326720b",
+  "note": "Reference files include uncommitted research code. Exact file hashes, not the commit alone, identify the copied version.",
+  "files": [
+    {
+      "source": "scripts/test_url_first.py",
+      "destination": "reference/scripts/test_url_first.py",
+      "sha256": "3c9ca6c9ba9ed2cc89742544e4ab6484c8b570cf81611e242c7ae747615eff32"
+    },
+    {
+      "source": "scripts/test_cross_run_discovery.py",
+      "destination": "reference/scripts/test_cross_run_discovery.py",
+      "sha256": "284bf8c2463833b59547f5fda89802ad28e96a86447147c566c44a1eef27801f"
+    },
+    {
+      "source": "scripts/cross_run/discovery.py",
+      "destination": "reference/scripts/cross_run/discovery.py",
+      "sha256": "35b38463fb8f5e4e182c2b285fc925c115abf8572d5898f195540cfd18ded5e6"
+    },
+    {
+      "source": "scripts/test_scale/single_report.py",
+      "destination": "reference/scripts/test_scale/single_report.py",
+      "sha256": "6fe29b2a63a781bf88b5ef7ee405f3ebc862b5143b3c3c66a7319b4269b23660"
+    },
+    {
+      "source": "scripts/test_scale/batch_reader.py",
+      "destination": "reference/scripts/test_scale/batch_reader.py",
+      "sha256": "26db67511ea3a4e133ecd3e8e84c4fa0dc83e3304a6712800064475f8c7550ac"
+    },
+    {
+      "source": "scripts/test_scale/oracle.py",
+      "destination": "reference/scripts/test_scale/oracle.py",
+      "sha256": "76a5b2608ea13849f0cae54ea1dbb45d5af08dc9a40cb9262dae2fcb6625d090"
+    },
+    {
+      "source": "scripts/url_first/inspect_urls.py",
+      "destination": "reference/scripts/url_first/inspect_urls.py",
+      "sha256": "37f6e0fb4f4b92442dcf4e982b06fb343b26776dfdf005fd7928a92855913528"
+    },
+    {
+      "source": "scripts/url_first/manifest_api.py",
+      "destination": "reference/scripts/url_first/manifest_api.py",
+      "sha256": "dc6acad8263c0b570fa5ef3e89792f2c10914279e3a49ae7644ecdea5c368ab3"
+    },
+    {
+      "source": "scripts/url_first/provider_api.py",
+      "destination": "reference/scripts/url_first/provider_api.py",
+      "sha256": "b68a6d3d1be005308be408c62f99eb1843a5beb80f253662628f58046334d5bd"
+    },
+    {
+      "source": "scripts/url_first/ready_query.py",
+      "destination": "reference/scripts/url_first/ready_query.py",
+      "sha256": "685435fb4ba1533fe7131067911f47b7552b66413bd1fe6e906c338ab3c3889d"
+    },
+    {
+      "source": "scripts/url_first/reference.py",
+      "destination": "reference/scripts/url_first/reference.py",
+      "sha256": "5d1fb7d9cb13c474f96777e0daf47f1de6e4bb69ca6671349d8bb6f255e16e5a"
+    },
+    {
+      "source": "scripts/url_first/parser_profile.py",
+      "destination": "reference/scripts/url_first/parser_profile.py",
+      "sha256": "1c123ff3734c442848cd0f4e4538826ad6f6fb360e6eae945336800ea7d61b00"
+    },
+    {
+      "source": "evals/heldout-tests/vendor/junitparser-5.0.3-py3-none-any.whl",
+      "destination": "reference/evals/heldout-tests/vendor/junitparser-5.0.3-py3-none-any.whl",
+      "sha256": "553535b8cd1672a9c8bd2c7326ae1ae69279267fbc562106b5aa44d3c5f769af"
+    }
+  ]
+}

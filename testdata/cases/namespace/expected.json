@@ -1,0 +1,73 @@
+{
+  "change": {
+    "disappearedDistinct": 0,
+    "newDistinct": 0,
+    "newOccurrences": 0,
+    "sharedDistinct": 0
+  },
+  "newEvidence": [],
+  "runs": [
+    {
+      "artifactComplete": false,
+      "counts": {
+        "attempts": 0,
+        "error": 0,
+        "failure": 0,
+        "passed": 0,
+        "skipped": 0
+      },
+      "distinctFailures": 0,
+      "excludedObjects": [],
+      "includedReports": 0,
+      "inputBytes": 0,
+      "inventorySha256": "0808a7e99bcc87a54e208d4db69bf86654e29d0dd9c3e90f161539a7e686f532",
+      "listingSha256": "11628d16634572079761fab58fda9251ab8c3be8df457c9bc5c74fdaaf42e589",
+      "parserCoverage": {
+        "complete": false,
+        "limitations": [],
+        "unresolved": [
+          "no_junit_reports"
+        ]
+      },
+      "unresolvedObjects": [
+        {
+          "name": "logs/test/100/artifacts/generic-0.xml",
+          "reason": "unsupported_junit_like_root"
+        }
+      ],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/100",
+      "xmlCandidates": 1
+    },
+    {
+      "artifactComplete": false,
+      "counts": {
+        "attempts": 0,
+        "error": 0,
+        "failure": 0,
+        "passed": 0,
+        "skipped": 0
+      },
+      "distinctFailures": 0,
+      "excludedObjects": [],
+      "includedReports": 0,
+      "inputBytes": 0,
+      "inventorySha256": "d778d2dcf57a92f5557ae6eca91ad16bc9d66570f62236efee48daebd8f07e93",
+      "listingSha256": "a6450a34be3334238e39defab1b56e9dc835d269efca148ce40ef02b1f56d036",
+      "parserCoverage": {
+        "complete": false,
+        "limitations": [],
+        "unresolved": [
+          "no_junit_reports"
+        ]
+      },
+      "unresolvedObjects": [
+        {
+          "name": "logs/test/200/artifacts/generic-0.xml",
+          "reason": "unsupported_junit_like_root"
+        }
+      ],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/200",
+      "xmlCandidates": 1
+    }
+  ]
+}
