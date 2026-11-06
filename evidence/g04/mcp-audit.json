@@ -9,8 +9,8 @@
       "cliOutputBytes": 1344,
       "mcpWireResponseBytes": 3142,
       "mcpEnvelopeExtraBytes": 1798,
-      "cliWallSeconds": 0.009613,
-      "mcpWallSeconds": 0.000859
+      "cliWallSeconds": 0.008778,
+      "mcpWallSeconds": 0.000759
     },
     {
       "case": "testdata/cases/empty",
@@ -18,8 +18,8 @@
       "cliOutputBytes": 1191,
       "mcpWireResponseBytes": 2814,
       "mcpEnvelopeExtraBytes": 1623,
-      "cliWallSeconds": 0.006774,
-      "mcpWallSeconds": 0.000467
+      "cliWallSeconds": 0.0072,
+      "mcpWallSeconds": 0.000682
     },
     {
       "case": "testdata/cases/entities",
@@ -27,8 +27,8 @@
       "cliOutputBytes": 1349,
       "mcpWireResponseBytes": 3149,
       "mcpEnvelopeExtraBytes": 1800,
-      "cliWallSeconds": 0.00726,
-      "mcpWallSeconds": 0.000604
+      "cliWallSeconds": 0.009873,
+      "mcpWallSeconds": 0.000734
     },
     {
       "case": "testdata/cases/identity-and-counts",
@@ -36,8 +36,8 @@
       "cliOutputBytes": 1250,
       "mcpWireResponseBytes": 2950,
       "mcpEnvelopeExtraBytes": 1700,
-      "cliWallSeconds": 0.007558,
-      "mcpWallSeconds": 0.000618
+      "cliWallSeconds": 0.008479,
+      "mcpWallSeconds": 0.000749
     },
     {
       "case": "testdata/cases/malformed",
@@ -45,8 +45,8 @@
       "cliOutputBytes": 1339,
       "mcpWireResponseBytes": 3130,
       "mcpEnvelopeExtraBytes": 1791,
-      "cliWallSeconds": 0.006978,
-      "mcpWallSeconds": 0.000631
+      "cliWallSeconds": 0.007187,
+      "mcpWallSeconds": 0.000717
     },
     {
       "case": "testdata/cases/namespace",
@@ -54,8 +54,8 @@
       "cliOutputBytes": 1367,
       "mcpWireResponseBytes": 3186,
       "mcpEnvelopeExtraBytes": 1819,
-      "cliWallSeconds": 0.006972,
-      "mcpWallSeconds": 0.000645
+      "cliWallSeconds": 0.007643,
+      "mcpWallSeconds": 0.000546
     },
     {
       "case": "testdata/cases/non-junit",
@@ -63,8 +63,8 @@
       "cliOutputBytes": 1347,
       "mcpWireResponseBytes": 3146,
       "mcpEnvelopeExtraBytes": 1799,
-      "cliWallSeconds": 0.006974,
-      "mcpWallSeconds": 0.000662
+      "cliWallSeconds": 0.011979,
+      "mcpWallSeconds": 0.000621
     },
     {
       "case": "testdata/cases/pagination",
@@ -72,8 +72,8 @@
       "cliOutputBytes": 1157,
       "mcpWireResponseBytes": 2748,
       "mcpEnvelopeExtraBytes": 1591,
-      "cliWallSeconds": 0.007608,
-      "mcpWallSeconds": 0.000779
+      "cliWallSeconds": 0.007375,
+      "mcpWallSeconds": 0.000726
     },
     {
       "case": "testdata/cases/retries",
@@ -81,8 +81,8 @@
       "cliOutputBytes": 1509,
       "mcpWireResponseBytes": 3499,
       "mcpEnvelopeExtraBytes": 1990,
-      "cliWallSeconds": 0.007745,
-      "mcpWallSeconds": 0.00076
+      "cliWallSeconds": 0.006419,
+      "mcpWallSeconds": 0.000538
     },
     {
       "case": "testdata/cases/suite-errors",
@@ -90,8 +90,8 @@
       "cliOutputBytes": 1354,
       "mcpWireResponseBytes": 3170,
       "mcpEnvelopeExtraBytes": 1816,
-      "cliWallSeconds": 0.006983,
-      "mcpWallSeconds": 0.000676
+      "cliWallSeconds": 0.00591,
+      "mcpWallSeconds": 0.000494
     },
     {
       "case": "testdata/cases/unicode",
@@ -99,8 +99,8 @@
       "cliOutputBytes": 1175,
       "mcpWireResponseBytes": 2783,
       "mcpEnvelopeExtraBytes": 1608,
-      "cliWallSeconds": 0.008143,
-      "mcpWallSeconds": 0.000561
+      "cliWallSeconds": 0.005992,
+      "mcpWallSeconds": 0.000483
     },
     {
       "case": "testdata/cases/unicode-added",
@@ -108,8 +108,8 @@
       "cliOutputBytes": 2948,
       "mcpWireResponseBytes": 6381,
       "mcpEnvelopeExtraBytes": 3433,
-      "cliWallSeconds": 0.006921,
-      "mcpWallSeconds": 0.000672
+      "cliWallSeconds": 0.005968,
+      "mcpWallSeconds": 0.000572
     },
     {
       "case": "testdata/cases/unsupported-constructs",
@@ -117,8 +117,8 @@
       "cliOutputBytes": 1292,
       "mcpWireResponseBytes": 3042,
       "mcpEnvelopeExtraBytes": 1750,
-      "cliWallSeconds": 0.007242,
-      "mcpWallSeconds": 0.00058
+      "cliWallSeconds": 0.006151,
+      "mcpWallSeconds": 0.000491
     },
     {
       "case": "testdata/cases/upstream-parser-only",
@@ -126,8 +126,8 @@
       "cliOutputBytes": 1185,
       "mcpWireResponseBytes": 2816,
       "mcpEnvelopeExtraBytes": 1631,
-      "cliWallSeconds": 0.007243,
-      "mcpWallSeconds": 0.000723
+      "cliWallSeconds": 0.006009,
+      "mcpWallSeconds": 0.000622
     },
     {
       "case": "testdata/cases/xml-text",
@@ -135,8 +135,8 @@
       "cliOutputBytes": 1383,
       "mcpWireResponseBytes": 3228,
       "mcpEnvelopeExtraBytes": 1845,
-      "cliWallSeconds": 0.007118,
-      "mcpWallSeconds": 0.000506
+      "cliWallSeconds": 0.005792,
+      "mcpWallSeconds": 0.000454
     },
     {
       "case": "testdata/live/partial-listing",
@@ -144,8 +144,8 @@
       "cliOutputBytes": 1613,
       "mcpWireResponseBytes": 3712,
       "mcpEnvelopeExtraBytes": 2099,
-      "cliWallSeconds": 0.006783,
-      "mcpWallSeconds": 0.000676
+      "cliWallSeconds": 0.007036,
+      "mcpWallSeconds": 0.000575
     },
     {
       "case": ".artifacts/g03-release-live",
@@ -153,11 +153,17 @@
       "cliOutputBytes": 2082,
       "mcpWireResponseBytes": 4660,
       "mcpEnvelopeExtraBytes": 2578,
-      "cliWallSeconds": 0.04907,
-      "mcpWallSeconds": 0.039273
+      "cliWallSeconds": 0.050101,
+      "mcpWallSeconds": 0.038839
     }
   ],
-  "live": null,
+  "live": {
+    "capture": ".artifacts/g04-mcp-live",
+    "liveAndMCPReplayAndCLIEqual": true,
+    "comparisonComplete": false,
+    "wallSeconds": 1.088181,
+    "mcpWireResponseBytes": 4655
+  },
   "validationErrors": "unknown tool and traversal rejected",
   "measurementLimits": "Single observations; MCP process already initialized, CLI includes process launch; caches uncontrolled. Bytes are protocol overhead, not agent token savings."
 }

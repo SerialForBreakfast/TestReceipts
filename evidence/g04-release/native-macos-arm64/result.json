@@ -1,0 +1,143 @@
+{
+  "target": "darwin/arm64",
+  "host": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "package": "testreceipts-v0.3.0-dev.1-darwin-arm64.tar.gz",
+  "packageSha256": "3950cf24d7101543392a1025576b194203c2ce1f27115e017e4731072d2dfc67",
+  "binarySha256": "99b784f8a2680db0b911172cff8efe1c80775cebecba7a474ff675077a307dfc",
+  "version": "v0.3.0-dev.1",
+  "checks": {
+    "extractedArchiveAndExecutablePermissions": "pass",
+    "fifteenExactComparisons": "pass",
+    "spacesAndUnicodePaths": "pass",
+    "outputFileRedirection": "pass",
+    "versionStamp": "pass",
+    "emptyExecutablePATH": "pass; host still has development runtimes installed",
+    "unknownCommand": "pass; exit 2, stderr only",
+    "missingRecording": "pass; exit 2, stderr only",
+    "badArguments": "pass; exit 2, stderr only",
+    "missingExecutePermission": "pass; OS rejected execution",
+    "unreadableCatalog": "pass; exit 2",
+    "unwritableStdout": "pass; exit 2"
+  },
+  "comparisons": [
+    {
+      "case": "changes",
+      "pass": true,
+      "wallSeconds": 0.00963,
+      "maximumResidentSetBytes": 11354112
+    },
+    {
+      "case": "empty",
+      "pass": true,
+      "wallSeconds": 0.009098,
+      "maximumResidentSetBytes": 11124736
+    },
+    {
+      "case": "entities",
+      "pass": true,
+      "wallSeconds": 0.00882,
+      "maximumResidentSetBytes": 11026432
+    },
+    {
+      "case": "identity-and-counts",
+      "pass": true,
+      "wallSeconds": 0.008116,
+      "maximumResidentSetBytes": 11239424
+    },
+    {
+      "case": "malformed",
+      "pass": true,
+      "wallSeconds": 0.007967,
+      "maximumResidentSetBytes": 11386880
+    },
+    {
+      "case": "namespace",
+      "pass": true,
+      "wallSeconds": 0.008161,
+      "maximumResidentSetBytes": 11337728
+    },
+    {
+      "case": "non-junit",
+      "pass": true,
+      "wallSeconds": 0.008156,
+      "maximumResidentSetBytes": 11206656
+    },
+    {
+      "case": "pagination",
+      "pass": true,
+      "wallSeconds": 0.008808,
+      "maximumResidentSetBytes": 11239424
+    },
+    {
+      "case": "retries",
+      "pass": true,
+      "wallSeconds": 0.008876,
+      "maximumResidentSetBytes": 11354112
+    },
+    {
+      "case": "suite-errors",
+      "pass": true,
+      "wallSeconds": 0.008998,
+      "maximumResidentSetBytes": 11272192
+    },
+    {
+      "case": "unicode",
+      "pass": true,
+      "wallSeconds": 0.008409,
+      "maximumResidentSetBytes": 11304960
+    },
+    {
+      "case": "unicode-added",
+      "pass": true,
+      "wallSeconds": 0.008949,
+      "maximumResidentSetBytes": 11386880
+    },
+    {
+      "case": "unsupported-constructs",
+      "pass": true,
+      "wallSeconds": 0.007992,
+      "maximumResidentSetBytes": 11206656
+    },
+    {
+      "case": "upstream-parser-only",
+      "pass": true,
+      "wallSeconds": 0.008153,
+      "maximumResidentSetBytes": 11108352
+    },
+    {
+      "case": "xml-text",
+      "pass": true,
+      "wallSeconds": 0.008079,
+      "maximumResidentSetBytes": 11206656
+    }
+  ],
+  "startupVersionWallSeconds": [
+    0.014354,
+    0.013099,
+    0.011715,
+    0.011157,
+    0.009923,
+    0.008963,
+    0.008546,
+    0.007878,
+    0.008017,
+    0.008785
+  ],
+  "inspection": {
+    "runtimeLibraries": {
+      "exit": 0,
+      "output": "testreceipts:\n\t/usr/lib/libSystem.B.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/libresolv.9.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 0.0.0, current version 0.0.0)\n\t/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 0.0.0, current version 0.0.0)\n"
+    },
+    "codeSignature": {
+      "exit": 0,
+      "output": "Executable=testreceipts\nIdentifier=a.out\nFormat=Mach-O thin (arm64)\nCodeDirectory v=20400 size=53022 flags=0x20002(adhoc,linker-signed) hashes=1654+0 location=embedded\nVersionPlatform=1\nVersionMin=851968\nVersionSDK=1704448\nHash type=sha256 size=32\nCandidateCDHash sha256=b765e469b3f6b2df2c9f3b733d1cd82818f6a3c1\nCandidateCDHashFull sha256=b765e469b3f6b2df2c9f3b733d1cd82818f6a3c1c93d05965d231db3ed6a53e9\nHash choices=sha256\nCMSDigest=b765e469b3f6b2df2c9f3b733d1cd82818f6a3c1c93d05965d231db3ed6a53e9\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=5537792\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=b765e469b3f6b2df2c9f3b733d1cd82818f6a3c1\nSignature=adhoc\nInfo.plist=not bound\nTeamIdentifier=not set\nSealed Resources=none\nInternal requirements=none\n"
+    }
+  },
+  "limitations": [
+    "Existing development host, not a clean machine without runtimes installed",
+    "Empty PATH proves no executable runtime lookup; it does not simulate all OS installations",
+    "No oldest-supported-OS, downloaded-quarantine/Gatekeeper, notarization, or public install test",
+    "This offline package smoke does not validate networking/certificates; inspect separate live evidence",
+    "One full-operation observation per case; startup timings include process launch and optional time wrapper; caches uncontrolled"
+  ]
+}

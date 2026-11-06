@@ -1,0 +1,18 @@
+{
+  "version": "v0.3.0-dev.1",
+  "sourceRevision": "3665338fd5abd37866d5e39b91c2a9e1723eab0c",
+  "workingTreeDirtyAtBuild": false,
+  "sixReproducibleTargets": 6,
+  "nativeMacOSArm64FixtureComparisons": 15,
+  "mcpCLIParityComparisons": 17,
+  "liveMCPAndReplayAndCLIEqual": true,
+  "supportedProtocol": "2025-11-25 legacy stdio; modern 2026 stateless profile not implemented",
+  "modelCalls": 0,
+  "unvalidated": [
+    "other five native targets",
+    "clean machines and minimum OS versions",
+    "publisher signing and hosted distribution",
+    "third-party MCP hosts and modern 2026 protocol"
+  ],
+  "study": "draft only; no frozen sources, budget or model execution"
+}

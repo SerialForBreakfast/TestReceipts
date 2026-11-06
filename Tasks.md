@@ -87,10 +87,10 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ### G04-01 — Optional MCP boundary
 
-- **Status:** Validating. **Owner:** Integration engineer. **Dependencies:** G03-02 and explicit prioritization.
+- **Status:** Done for the pinned legacy 2025-11-25 stdio profile; modern protocol and third-party hosts remain unverified. **Owner:** Integration engineer. **Dependencies:** G03-02 and explicit prioritization.
 - **Deliverable:** A thin MCP wrapper around the same Go core, with validated arguments, bounded output and exact evidence references.
 - **Acceptance:** Same inputs yield the same facts as the CLI; record protocol overhead separately. No duplicate parser or model-generated summaries. Keep the CLI usable independently.
-- **Context:** [G04](docs/plans/G04-agent-value.md). **Evidence:** [MCP usage/profile](docs/MCP.md), [17-case parity/overhead audit](evidence/g04/mcp-audit.json), [boundary tests](internal/mcp/server_test.go).
+- **Context:** [G04](docs/plans/G04-agent-value.md). **Evidence:** [MCP usage/profile](docs/MCP.md), [17-case parity/overhead audit](evidence/g04/mcp-audit.json), [boundary tests](internal/mcp/server_test.go), [packaged native/live qualification](evidence/g04-release/README.md).
 
 ### G04-02 — Repeated-use agent comparison
 

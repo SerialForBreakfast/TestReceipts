@@ -1,11 +1,11 @@
 .............
 ----------------------------------------------------------------------
-Ran 13 tests in 0.006s
+Ran 13 tests in 0.005s
 
 OK
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.774s
+Ran 7 tests in 0.758s
 
 OK
 PASS: copied source hashes, 20 reference tests and 15 recorded-pair contracts.
