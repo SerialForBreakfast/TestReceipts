@@ -1,0 +1,34 @@
+{
+  "target": "darwin/arm64",
+  "status": "passed",
+  "sourceRevision": "3665338fd5abd37866d5e39b91c2a9e1723eab0c",
+  "package": "testreceipts-v0.3.0-dev.1-darwin-arm64.tar.gz",
+  "packageSha256": "3950cf24d7101543392a1025576b194203c2ce1f27115e017e4731072d2dfc67",
+  "binarySha256": "99b784f8a2680db0b911172cff8efe1c80775cebecba7a474ff675077a307dfc",
+  "runner": {
+    "name": null,
+    "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "runnerArch": null
+  },
+  "unverified": [
+    "oldest-supported OS",
+    "full clean-machine install on macOS/Windows",
+    "downloaded-package trust and publisher signing",
+    "third-party MCP hosts and modern protocol",
+    "live HTTPS / OS certificate trust on this run"
+  ],
+  "checks": {
+    "nativeArchitecture": "passed",
+    "archiveVerification": "passed",
+    "goTests": "passed",
+    "goVet": "passed",
+    "referenceParity": "passed",
+    "packageSmoke": "passed",
+    "packagingBoundaries": "passed",
+    "liveHTTPS": "not_run",
+    "mcpParity": "passed",
+    "minimalLinux": "not_applicable"
+  },
+  "scope": "local harness preflight using previous package; no hosted CI or clean-machine claim"
+}

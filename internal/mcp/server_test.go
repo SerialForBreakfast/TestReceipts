@@ -146,11 +146,14 @@ func TestPathBoundary(t *testing.T) {
 			t.Fatal("accepted", path)
 		}
 	}
-	if e := os.Symlink(t.TempDir(), filepath.Join(root, "escape")); e == nil {
-		if _, e = s.path("escape", false); e == nil {
+	t.Run("symlink", func(t *testing.T) {
+		if e := os.Symlink(t.TempDir(), filepath.Join(root, "escape")); e != nil {
+			t.Skipf("symlink creation unavailable: %v", e)
+		}
+		if _, e := s.path("escape", false); e == nil {
 			t.Fatal("symlink escape")
 		}
-	}
+	})
 	for _, path := range []string{"existing", "nested/new"} {
 		if _, e := s.path(path, true); e == nil {
 			t.Fatal("invalid capture", path)

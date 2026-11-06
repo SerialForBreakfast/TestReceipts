@@ -48,7 +48,23 @@ with tempfile.TemporaryDirectory(prefix='testreceipts-installed-') as tmp:
    # EBADF on stdout is an actual CLI output error, not a shell redirection error.
    r=subprocess.run([str(exe),'compare-recording',str(sample),*urls],env=env,cwd=work,stdout=readonly,stderr=subprocess.PIPE,text=True,timeout=30)
   assert r.returncode==2 and 'Output failed' in r.stderr;checks['unwritableStdout']='pass; exit 2'
- else:checks['POSIXPermissions']='not applicable; Windows ACL checks still required'
+ else:
+  checks['POSIXPermissions']='not applicable on Windows'
+  identity=subprocess.run(['whoami','/user','/fo','csv','/nh'],capture_output=True,check=True).stdout.decode('utf-8',errors='replace')
+  sid=re.search(r'S-1-(?:\d+-)+\d+',identity)
+  assert sid,'Windows user SID unavailable'
+  blocked=sample/'catalog.json'
+  deny=subprocess.run(['icacls',str(blocked),'/deny','*'+sid.group(0)+':(R)'],capture_output=True)
+  assert deny.returncode==0,deny.stderr.decode(errors='replace')
+  try:
+   r,_,_=execute(['compare-recording',str(sample),*urls]);assert r.returncode==2 and r.stdout=='' and r.stderr;checks['unreadableCatalogACL']='pass; explicit deny-read ACL, exit 2'
+  finally:
+   restore=subprocess.run(['icacls',str(blocked),'/remove:d','*'+sid.group(0)],capture_output=True)
+   assert restore.returncode==0,'failed to restore temporary ACL'
+  with output.open('r') as readonly:
+   r=subprocess.run([str(exe),'compare-recording',str(sample),*urls],env=env,cwd=work,stdout=readonly,stderr=subprocess.PIPE,text=True,timeout=30)
+  assert r.returncode==2 and 'Output failed' in r.stderr;checks['unwritableStdout']='pass; read-only stdout handle, exit 2'
+
  inspections={}
  if platform.system()=='Darwin':
   for label,cmd in [('runtimeLibraries',['/usr/bin/otool','-L',str(exe)]),('codeSignature',['/usr/bin/codesign','-dv','--verbose=4',str(exe)])]:

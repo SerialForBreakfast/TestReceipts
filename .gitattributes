@@ -1,2 +1,6 @@
+# Portable source checkout; preserve frozen comparator and report bytes exactly.
+* text=auto eol=lf
+reference/** -text
+testdata/** -text
 # Raw XML whitespace is intentional test input; preserve bytes and suppress style checks.
 testdata/cases/xml-text/objects/*.xml -text -whitespace

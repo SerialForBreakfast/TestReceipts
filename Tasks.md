@@ -51,10 +51,10 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ### G02-02 — Native clean-machine smoke tests
 
-- **Status:** Validating; macOS arm64 development host only; clean-machine and five native targets pending. **Owner:** Release/test engineer. **Dependencies:** G02-01.
+- **Status:** Validating; six native CI jobs configured, hosted results pending; full clean-machine and minimum-OS coverage remain open. **Owner:** Release/test engineer. **Dependencies:** G02-01.
 - **Deliverable:** macOS/Linux/Windows tests, with amd64/arm64 coverage explicitly identified.
 - **Acceptance:** Install and run actual comparisons without Go or Python installed; paths with spaces/Unicode, permissions, stderr, exits and output files behave correctly. Record OS minimums, runtime libraries and certificates. Build-only targets remain unverified, not passed.
-- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Native result](evidence/g02/native-macos-arm64/result.json), [explicit platform matrix and gaps](docs/G02-VALIDATION.md).
+- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Native result](evidence/g02/native-macos-arm64/result.json), [native CI scope/results](docs/NATIVE-CI.md), [explicit platform matrix and gaps](docs/G02-VALIDATION.md).
 
 ### G02-03 — Prepare distribution documentation
 

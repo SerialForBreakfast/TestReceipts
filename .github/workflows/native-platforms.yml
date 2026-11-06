@@ -1,0 +1,157 @@
+name: Native platform qualification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      live_validation:
+        description: Validate public Prow HTTPS capture and offline replay
+        type: boolean
+        default: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: native-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  PYTHONUTF8: '1'
+  PYTHONIOENCODING: utf-8
+  GOTOOLCHAIN: local
+  GOENV: 'off'
+  CGO_ENABLED: '0'
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: '1.27.3'
+          cache: false
+      - name: Load checked target inventory
+        id: matrix
+        run: python tools/native_ci.py matrix >> "$GITHUB_OUTPUT"
+      - name: Reproduce and verify all six packages
+        env:
+          CANDIDATE: v0.3.0-ci.${{ github.run_id }}.${{ github.run_attempt }}
+        run: |
+          python tools/release.py build --version "$CANDIDATE" --out dist/ci --verify-repro
+          python tools/release.py verify dist/ci
+          python tools/test_release.py
+          python tools/test_native_ci.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: qualification-packages
+          path: dist/ci/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 7
+  native:
+    needs: package
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.package.outputs.matrix) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+          architecture: ${{ matrix.python_arch }}
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: '1.27.3'
+          architecture: ${{ matrix.go_arch }}
+          cache: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: qualification-packages
+          path: dist/ci
+      - name: Execute matching native package and record all outcomes
+        env:
+          TARGET: ${{ matrix.target }}
+          LIVE_VALIDATION: ${{ github.event_name != 'workflow_dispatch' || inputs.live_validation }}
+          MINIMAL_LINUX: ${{ matrix.minimal_linux }}
+        run: python tools/native_ci.py run --target "$TARGET" --packages dist/ci --out .artifacts/native-ci
+      - name: Retain native evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: native-${{ matrix.name }}
+          path: .artifacts/native-ci/${{ matrix.name }}/
+          if-no-files-found: warn
+          retention-days: 7
+  race:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      CGO_ENABLED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: '1.27.3'
+          cache: false
+      - name: Race detector on supported Linux amd64 host
+        run: |
+          mkdir -p .artifacts/race
+          go test -race -json ./... > .artifacts/race/tests.jsonl
+          go vet ./...
+      - if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: race-linux-amd64
+          path: .artifacts/race/
+          retention-days: 7
+  qualification:
+    if: always()
+    needs: [package, native, race]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        continue-on-error: true
+        with:
+          pattern: native-*
+          path: .artifacts/downloads
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        continue-on-error: true
+        with:
+          name: qualification-packages
+          path: .artifacts/packages
+      - name: Require six matching reports; never treat missing evidence as passing
+        env:
+          PACKAGE_RESULT: ${{ needs.package.result }}
+          NATIVE_RESULT: ${{ needs.native.result }}
+          RACE_RESULT: ${{ needs.race.result }}
+        run: python tools/native_ci.py summarize --reports .artifacts/downloads --packages .artifacts/packages --out .artifacts/qualification
+      - if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: qualification-summary
+          path: .artifacts/qualification/
+          if-no-files-found: warn
+          retention-days: 7

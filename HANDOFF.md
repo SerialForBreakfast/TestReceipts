@@ -18,6 +18,8 @@ G03 adds `compare-live NEW_CAPTURE BEFORE_URL AFTER_URL`, with bounded public Pr
 
 The README is deliberately terse; build/test details are in [development](docs/DEVELOPMENT.md), installation in [install instructions](release/INSTALL.md), and MCP setup in [MCP profile](docs/MCP.md). G04-01 is complete for the pinned legacy 2025-11-25 profile. It adds a scoped stdio adapter over the same core with exact CLI parity and measured protocol overhead. The `v0.3.0-dev.1` candidate was built reproducibly from clean source `3665338`; see [package/native/live evidence](evidence/g04-release/README.md). The [evaluation protocol](docs/STUDY-PLAN.md) is only a draft; no model trials are authorized or run.
 
+Native CI is configured for all six targets; see [workflow scope/results](docs/NATIVE-CI.md). Configured jobs are not native passes until their source/artifact-matched reports are retained.
+
 ## Continue here
 
 1. Run `./tools/go test ./...`, build using the README, then `python3 tools/verify.py --go-binary bin/testreceipts`.
@@ -27,7 +29,7 @@ The README is deliberately terse; build/test details are in [development](docs/D
 
 ## Not yet delivered
 
-There is no system installer, public release, publisher signing/notarization, or native Windows/Linux validation. The optional MCP stdio boundary now exists; modern-protocol and third-party-host interoperability remain unverified. Git has no configured remote. The first-party license is [MIT](LICENSE); the hosted module path remains open before publication. The target matrix remains macOS/Linux/Windows × amd64/arm64; cross-builds and native execution must be reported separately.
+There is no system installer, public release, publisher signing/notarization, or native Windows/Linux validation. The optional MCP stdio boundary now exists; modern-protocol and third-party-host interoperability remain unverified. Git origin is now https://github.com/SerialForBreakfast/TestReceipts.git (private). The first-party license is [MIT](LICENSE); the hosted module path remains open before publication. The target matrix remains macOS/Linux/Windows × amd64/arm64; cross-builds and native execution must be reported separately.
 
 The complete comparable production workload has not been benchmarked, and no Go size/speed advantage is claimed. No model calls are needed or authorized for these development checks. Agent evaluation is a later explicit task; preserve the historical baseline caveats in [evaluation](docs/EVALUATION.md).
 

@@ -1,0 +1,10 @@
+{
+  "include": [
+    {"target":"darwin/amd64","name":"darwin-amd64","runner":"macos-15-intel","python_arch":"x64","go_arch":"amd64","minimal_linux":false},
+    {"target":"darwin/arm64","name":"darwin-arm64","runner":"macos-15","python_arch":"arm64","go_arch":"arm64","minimal_linux":false},
+    {"target":"linux/amd64","name":"linux-amd64","runner":"ubuntu-24.04","python_arch":"x64","go_arch":"amd64","minimal_linux":true},
+    {"target":"linux/arm64","name":"linux-arm64","runner":"ubuntu-24.04-arm","python_arch":"arm64","go_arch":"arm64","minimal_linux":true},
+    {"target":"windows/amd64","name":"windows-amd64","runner":"windows-2025","python_arch":"x64","go_arch":"amd64","minimal_linux":false},
+    {"target":"windows/arm64","name":"windows-arm64","runner":"windows-11-arm","python_arch":"arm64","go_arch":"arm64","minimal_linux":false}
+  ]
+}

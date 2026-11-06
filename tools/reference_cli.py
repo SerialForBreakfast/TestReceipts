@@ -13,7 +13,7 @@ def compare(recording,urls):
    shutil.copyfile(ROOT/'reference/scripts/url_first'/name,work/name)
   shutil.copyfile(ROOT/'reference/scripts/cross_run/discovery.py',work/'discovery.py')
   (work/'provider-config.json').write_text(json.dumps(dict(recording=str(Path(recording).resolve()))))
-  p=subprocess.run([sys.executable,'-E','-S','-B','inspect_urls.py',*urls],cwd=work,text=True,capture_output=True)
+  p=subprocess.run([sys.executable,'-E','-S','-X','utf8','-B','inspect_urls.py',*urls],cwd=work,text=True,capture_output=True)
   if p.returncode:raise RuntimeError(p.stderr or p.stdout)
   return json.loads(p.stdout)
 if __name__=='__main__':
