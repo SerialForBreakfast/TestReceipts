@@ -1,9 +1,15 @@
 # TestReceipts private development candidate
 
+No public download is published yet. Generate a private candidate using the source
+checkout's docs/RELEASING.md; existing local packages are under ignored dist/.
+Go/Python are needed only on the build/test host, never to run a copied executable.
+
 Choose the archive matching your operating system and CPU architecture. Verify
 its SHA-256 against SHA256SUMS.json from the same build. These unsigned development
 packages have not been published, notarized, or qualified on every target platform.
-See LICENSE and BUILD.json before distribution.
+See LICENSE and BUILD.json before distribution. On macOS use `shasum -a 256`,
+on Linux `sha256sum`, or PowerShell `Get-FileHash -Algorithm SHA256` and compare
+the archive hash with its SHA256SUMS.json entry.
 
 Extract the archive to a folder you control. On macOS/Linux run
 `./testreceipts version` and `./testreceipts help`; on Windows run
@@ -44,3 +50,14 @@ preserves an incomplete recording when the process can finish writing.
 Toolchain upstream floors (not tested minimums): macOS 13+, Linux kernel 3.2+,
 Windows 10+/Server 2016+. amd64 uses baseline v1; arm64 uses v8.0.
 Current native results are recorded separately in the source's G02 validation.
+
+Optional MCP stdio mode:
+
+    testreceipts mcp ROOT
+
+ROOT is an explicit existing workspace/capture directory. A compatible legacy
+MCP 2025-11-25 host can call compare_recording and compare_live; the same facts,
+coverage warnings and provider limits apply. Use relative paths within ROOT;
+new live captures must be direct child directory names. See source docs/MCP.md
+for configuration, wire/output limits and compatibility. No model calls are made
+by the server. MCP 2026 stateless compatibility is not implemented.

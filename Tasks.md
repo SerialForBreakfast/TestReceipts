@@ -83,18 +83,18 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ## G04 — Agent integration and repeated-use value
 
-**Outcome:** Determine whether the tool helps beyond a reusable URL script. **Dependencies:** G03. **Status:** Deferred. **Plan:** [G04](docs/plans/G04-agent-value.md).
+**Outcome:** Determine whether the tool helps beyond a reusable URL script. **Dependencies:** G03. **Status:** In progress; MCP validating, study protocol drafted without model execution. **Plan:** [G04](docs/plans/G04-agent-value.md).
 
 ### G04-01 — Optional MCP boundary
 
-- **Status:** Deferred. **Owner:** Integration engineer. **Dependencies:** G03-02 and explicit prioritization.
+- **Status:** Validating. **Owner:** Integration engineer. **Dependencies:** G03-02 and explicit prioritization.
 - **Deliverable:** A thin MCP wrapper around the same Go core, with validated arguments, bounded output and exact evidence references.
 - **Acceptance:** Same inputs yield the same facts as the CLI; record protocol overhead separately. No duplicate parser or model-generated summaries. Keep the CLI usable independently.
-- **Context:** [G04](docs/plans/G04-agent-value.md). **Evidence:** Pending.
+- **Context:** [G04](docs/plans/G04-agent-value.md). **Evidence:** [MCP usage/profile](docs/MCP.md), [17-case parity/overhead audit](evidence/g04/mcp-audit.json), [boundary tests](internal/mcp/server_test.go).
 
 ### G04-02 — Repeated-use agent comparison
 
-- **Status:** Deferred; no model execution authorized by this handoff. **Owner:** Evaluation lead. **Dependencies:** Working interface and frozen study plan.
+- **Status:** Plan drafted; execution deferred until explicit evaluation scope, source manifest and budget are approved. **Owner:** Evaluation lead. **Dependencies:** Working interface and frozen study plan.
 - **Deliverable:** A proposed comparison retaining capable parser and ready-query baselines plus a reusable URL-wrapper baseline, with first-use and repeated-use conditions separated.
 - **Acceptance:** Freeze questions, source selection, correctness rubric and total-token accounting before execution. Keep failed runs, cached/uncached inputs, retries, tool overhead, follow-up reads and auditable charts. Record human review. Do not tune on held-out outcomes or assume the historical 24.36% saving transfers.
-- **Context:** [G04](docs/plans/G04-agent-value.md), [evaluation](docs/EVALUATION.md). **Evidence:** Pending.
+- **Context:** [G04](docs/plans/G04-agent-value.md), [evaluation](docs/EVALUATION.md). **Evidence:** [Reviewable study protocol](docs/STUDY-PLAN.md); no sources, budget or model trials frozen/executed.

@@ -1,6 +1,6 @@
 # G04 — Optional agent interface and repeated-use evidence
 
-Task ledger: [G04](../../Tasks.md#g04--agent-integration-and-repeated-use-value). This milestone is deferred; no model calls are part of the Go port.
+Task ledger: [G04](../../Tasks.md#g04--agent-integration-and-repeated-use-value). The optional MCP stdio boundary is implemented and validating; model evaluation remains deferred. See [MCP profile](../MCP.md) and the [unexecuted study protocol](../STUDY-PLAN.md). No model calls are part of correctness or deployment checks.
 
 If prioritized, expose the same comparison core through MCP without adding a second parser or generated answers. Specify request scope, result-size limits, error states, original-source references and escalation/fetch behavior. Compare CLI and MCP facts before measuring agent overhead.
 

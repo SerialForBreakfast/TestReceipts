@@ -1,0 +1,5 @@
+ok  	testreceipts/cmd/testreceipts	1.368s	coverage: 52.8% of statements
+ok  	testreceipts/internal/evidence	(cached)	coverage: 44.4% of statements
+ok  	testreceipts/internal/junit	(cached)	coverage: 89.1% of statements
+ok  	testreceipts/internal/mcp	1.517s	coverage: 81.7% of statements
+ok  	testreceipts/internal/provider	(cached)	coverage: 85.4% of statements

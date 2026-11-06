@@ -1,0 +1,163 @@
+{
+  "protocol": "2025-11-25 legacy stdio; modern 2026 stateless profile not implemented",
+  "client": "independent Python standard-library JSON-RPC harness; not a third-party-host integration test",
+  "modelCalls": 0,
+  "comparisons": [
+    {
+      "case": "testdata/cases/changes",
+      "factsEqual": true,
+      "cliOutputBytes": 1344,
+      "mcpWireResponseBytes": 3142,
+      "mcpEnvelopeExtraBytes": 1798,
+      "cliWallSeconds": 0.009613,
+      "mcpWallSeconds": 0.000859
+    },
+    {
+      "case": "testdata/cases/empty",
+      "factsEqual": true,
+      "cliOutputBytes": 1191,
+      "mcpWireResponseBytes": 2814,
+      "mcpEnvelopeExtraBytes": 1623,
+      "cliWallSeconds": 0.006774,
+      "mcpWallSeconds": 0.000467
+    },
+    {
+      "case": "testdata/cases/entities",
+      "factsEqual": true,
+      "cliOutputBytes": 1349,
+      "mcpWireResponseBytes": 3149,
+      "mcpEnvelopeExtraBytes": 1800,
+      "cliWallSeconds": 0.00726,
+      "mcpWallSeconds": 0.000604
+    },
+    {
+      "case": "testdata/cases/identity-and-counts",
+      "factsEqual": true,
+      "cliOutputBytes": 1250,
+      "mcpWireResponseBytes": 2950,
+      "mcpEnvelopeExtraBytes": 1700,
+      "cliWallSeconds": 0.007558,
+      "mcpWallSeconds": 0.000618
+    },
+    {
+      "case": "testdata/cases/malformed",
+      "factsEqual": true,
+      "cliOutputBytes": 1339,
+      "mcpWireResponseBytes": 3130,
+      "mcpEnvelopeExtraBytes": 1791,
+      "cliWallSeconds": 0.006978,
+      "mcpWallSeconds": 0.000631
+    },
+    {
+      "case": "testdata/cases/namespace",
+      "factsEqual": true,
+      "cliOutputBytes": 1367,
+      "mcpWireResponseBytes": 3186,
+      "mcpEnvelopeExtraBytes": 1819,
+      "cliWallSeconds": 0.006972,
+      "mcpWallSeconds": 0.000645
+    },
+    {
+      "case": "testdata/cases/non-junit",
+      "factsEqual": true,
+      "cliOutputBytes": 1347,
+      "mcpWireResponseBytes": 3146,
+      "mcpEnvelopeExtraBytes": 1799,
+      "cliWallSeconds": 0.006974,
+      "mcpWallSeconds": 0.000662
+    },
+    {
+      "case": "testdata/cases/pagination",
+      "factsEqual": true,
+      "cliOutputBytes": 1157,
+      "mcpWireResponseBytes": 2748,
+      "mcpEnvelopeExtraBytes": 1591,
+      "cliWallSeconds": 0.007608,
+      "mcpWallSeconds": 0.000779
+    },
+    {
+      "case": "testdata/cases/retries",
+      "factsEqual": true,
+      "cliOutputBytes": 1509,
+      "mcpWireResponseBytes": 3499,
+      "mcpEnvelopeExtraBytes": 1990,
+      "cliWallSeconds": 0.007745,
+      "mcpWallSeconds": 0.00076
+    },
+    {
+      "case": "testdata/cases/suite-errors",
+      "factsEqual": true,
+      "cliOutputBytes": 1354,
+      "mcpWireResponseBytes": 3170,
+      "mcpEnvelopeExtraBytes": 1816,
+      "cliWallSeconds": 0.006983,
+      "mcpWallSeconds": 0.000676
+    },
+    {
+      "case": "testdata/cases/unicode",
+      "factsEqual": true,
+      "cliOutputBytes": 1175,
+      "mcpWireResponseBytes": 2783,
+      "mcpEnvelopeExtraBytes": 1608,
+      "cliWallSeconds": 0.008143,
+      "mcpWallSeconds": 0.000561
+    },
+    {
+      "case": "testdata/cases/unicode-added",
+      "factsEqual": true,
+      "cliOutputBytes": 2948,
+      "mcpWireResponseBytes": 6381,
+      "mcpEnvelopeExtraBytes": 3433,
+      "cliWallSeconds": 0.006921,
+      "mcpWallSeconds": 0.000672
+    },
+    {
+      "case": "testdata/cases/unsupported-constructs",
+      "factsEqual": true,
+      "cliOutputBytes": 1292,
+      "mcpWireResponseBytes": 3042,
+      "mcpEnvelopeExtraBytes": 1750,
+      "cliWallSeconds": 0.007242,
+      "mcpWallSeconds": 0.00058
+    },
+    {
+      "case": "testdata/cases/upstream-parser-only",
+      "factsEqual": true,
+      "cliOutputBytes": 1185,
+      "mcpWireResponseBytes": 2816,
+      "mcpEnvelopeExtraBytes": 1631,
+      "cliWallSeconds": 0.007243,
+      "mcpWallSeconds": 0.000723
+    },
+    {
+      "case": "testdata/cases/xml-text",
+      "factsEqual": true,
+      "cliOutputBytes": 1383,
+      "mcpWireResponseBytes": 3228,
+      "mcpEnvelopeExtraBytes": 1845,
+      "cliWallSeconds": 0.007118,
+      "mcpWallSeconds": 0.000506
+    },
+    {
+      "case": "testdata/live/partial-listing",
+      "factsEqual": true,
+      "cliOutputBytes": 1613,
+      "mcpWireResponseBytes": 3712,
+      "mcpEnvelopeExtraBytes": 2099,
+      "cliWallSeconds": 0.006783,
+      "mcpWallSeconds": 0.000676
+    },
+    {
+      "case": ".artifacts/g03-release-live",
+      "factsEqual": true,
+      "cliOutputBytes": 2082,
+      "mcpWireResponseBytes": 4660,
+      "mcpEnvelopeExtraBytes": 2578,
+      "cliWallSeconds": 0.04907,
+      "mcpWallSeconds": 0.039273
+    }
+  ],
+  "live": null,
+  "validationErrors": "unknown tool and traversal rejected",
+  "measurementLimits": "Single observations; MCP process already initialized, CLI includes process launch; caches uncontrolled. Bytes are protocol overhead, not agent token savings."
+}

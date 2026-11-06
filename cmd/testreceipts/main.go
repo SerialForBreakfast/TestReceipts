@@ -8,6 +8,7 @@ import (
 	"io"
 	"os"
 	"os/signal"
+	"testreceipts/internal/mcp"
 	"testreceipts/internal/provider"
 	"time"
 )
@@ -16,11 +17,24 @@ var version = "dev"
 
 func run(args []string, out, errOut io.Writer) int {
 	if len(args) == 0 || (len(args) == 1 && (args[0] == "help" || args[0] == "--help")) {
-		fmt.Fprintln(out, "TestReceipts: exact CI report comparison\nUsage: testreceipts version | help\n       testreceipts compare-recording RECORDING BEFORE_URL AFTER_URL\n       testreceipts compare-live NEW_CAPTURE BEFORE_URL AFTER_URL")
+		fmt.Fprintln(out, "TestReceipts: exact CI report comparison\nUsage: testreceipts version | help\n       testreceipts compare-recording RECORDING BEFORE_URL AFTER_URL\n       testreceipts compare-live NEW_CAPTURE BEFORE_URL AFTER_URL\n       testreceipts mcp ROOT")
 		return 0
 	}
 	if len(args) == 1 && args[0] == "version" {
 		fmt.Fprintln(out, version)
+		return 0
+	}
+	if len(args) == 2 && args[0] == "mcp" {
+		server, e := mcp.New(args[1], version)
+		if e == nil {
+			base, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+			defer stop()
+			e = server.Serve(base, os.Stdin, out)
+		}
+		if e != nil {
+			fmt.Fprintln(errOut, "MCP server failed:", e)
+			return 2
+		}
 		return 0
 	}
 	if len(args) != 4 || (args[0] != "compare-recording" && args[0] != "compare-live") {
