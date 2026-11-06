@@ -1,0 +1,942 @@
+{
+  "runId": 42300372775,
+  "url": "https://github.com/SerialForBreakfast/TestReceipts/actions/runs/42300372775",
+  "status": "completed",
+  "conclusion": "success",
+  "testedSourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+  "jobs": [
+    {
+      "id": 128176272010,
+      "name": "race",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:53:24Z",
+      "completedAt": "2026-11-06T21:55:05Z"
+    },
+    {
+      "id": 128176272491,
+      "name": "package",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:53:24Z",
+      "completedAt": "2026-11-06T21:56:21Z"
+    },
+    {
+      "id": 128177633320,
+      "name": "native (windows/arm64, windows-arm64, windows-11-arm, arm64, arm64, false)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:56:23Z",
+      "completedAt": "2026-11-06T21:58:38Z"
+    },
+    {
+      "id": 128177633321,
+      "name": "native (windows/amd64, windows-amd64, windows-2025, x64, amd64, false)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:56:23Z",
+      "completedAt": "2026-11-06T21:58:40Z"
+    },
+    {
+      "id": 128177633324,
+      "name": "native (darwin/amd64, darwin-amd64, macos-15-intel, x64, amd64, false)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:56:25Z",
+      "completedAt": "2026-11-06T21:59:09Z"
+    },
+    {
+      "id": 128177633347,
+      "name": "native (darwin/arm64, darwin-arm64, macos-15, arm64, arm64, false)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:56:23Z",
+      "completedAt": "2026-11-06T21:56:56Z"
+    },
+    {
+      "id": 128177633435,
+      "name": "native (linux/amd64, linux-amd64, ubuntu-24.04, x64, amd64, true)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:56:24Z",
+      "completedAt": "2026-11-06T21:57:35Z"
+    },
+    {
+      "id": 128177633507,
+      "name": "native (linux/arm64, linux-arm64, ubuntu-24.04-arm, arm64, arm64, true)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:56:26Z",
+      "completedAt": "2026-11-06T21:57:25Z"
+    },
+    {
+      "id": 128178861823,
+      "name": "qualification",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-06T21:59:11Z",
+      "completedAt": "2026-11-06T21:59:21Z"
+    }
+  ],
+  "targets": [
+    {
+      "target": "darwin/amd64",
+      "status": "passed",
+      "sourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+      "package": "testreceipts-v0.3.0-ci.42300372775.1-darwin-amd64.tar.gz",
+      "packageSha256": "948922c8391d80fb23cc6c326f82b7b0555b8032e6caabb3b57b2ece162834ef",
+      "binarySha256": "2db2cdb8fee2385455bd82b7d15ba88c5abdb1f4be5694c49b0a79c34821ee08",
+      "runner": {
+        "name": "GitHub Actions 1000002529",
+        "os": "macOS-15.7.9-x86_64-i386-64bit-Mach-O",
+        "machine": "x86_64",
+        "runnerArch": "X64"
+      },
+      "skippedGoTests": [],
+      "unverified": [
+        "oldest-supported OS",
+        "full clean-machine VM installs; Linux minimal container is narrower proof",
+        "downloaded-package trust and publisher signing",
+        "third-party MCP hosts and modern protocol"
+      ],
+      "checks": {
+        "nativeArchitecture": {
+          "status": "passed",
+          "python": "darwin/amd64",
+          "go": "darwin/amd64",
+          "goVersion": "go version go1.27.3 darwin/amd64",
+          "binary": "darwin/amd64"
+        },
+        "archiveVerification": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.71492
+        },
+        "goTests": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 52.570166
+        },
+        "goVet": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 6.645363
+        },
+        "referenceParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 6.746601
+        },
+        "packageSmoke": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 4.280976
+        },
+        "packagingBoundaries": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.203178
+        },
+        "liveHTTPS": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 1.278101,
+          "comparisonComplete": false,
+          "scope": "artifact acquisition passed; parser uncertainty retained"
+        },
+        "liveReplay": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.87246
+        },
+        "mcpParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.69005
+        },
+        "minimalLinux": {
+          "status": "not_applicable",
+          "reason": "not requested; full clean-machine coverage remains separate"
+        }
+      },
+      "packageSmokeChecks": {
+        "extractedArchiveAndExecutablePermissions": "pass",
+        "fifteenExactComparisons": "pass",
+        "spacesAndUnicodePaths": "pass",
+        "outputFileRedirection": "pass",
+        "versionStamp": "pass",
+        "emptyExecutablePATH": "pass; host still has development runtimes installed",
+        "unknownCommand": "pass; exit 2, stderr only",
+        "missingRecording": "pass; exit 2, stderr only",
+        "badArguments": "pass; exit 2, stderr only",
+        "missingExecutePermission": "pass; OS rejected execution",
+        "unreadableCatalog": "pass; exit 2",
+        "unwritableStdout": "pass; exit 2"
+      },
+      "fixtureComparisons": 15,
+      "mcpComparisons": 17,
+      "live": {
+        "requests": 4,
+        "responseBodyBytes": 1849268,
+        "comparisonComplete": false,
+        "parserUnresolved": [
+          [
+            "ambiguous_slash_identity"
+          ],
+          [
+            "ambiguous_slash_identity"
+          ]
+        ]
+      }
+    },
+    {
+      "target": "darwin/arm64",
+      "status": "passed",
+      "sourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+      "package": "testreceipts-v0.3.0-ci.42300372775.1-darwin-arm64.tar.gz",
+      "packageSha256": "3e679560c59b48be5e5a3e21d6f14b54308a4f57b7ddd2ec7534dbb5cd14c8c4",
+      "binarySha256": "192c54f4ab87c0525c0b243459888d62f6ed18671dc79fe5bdd1f2ea1a7996c5",
+      "runner": {
+        "name": "GitHub Actions 1000002531",
+        "os": "macOS-15.8.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "runnerArch": "ARM64"
+      },
+      "skippedGoTests": [],
+      "unverified": [
+        "oldest-supported OS",
+        "full clean-machine VM installs; Linux minimal container is narrower proof",
+        "downloaded-package trust and publisher signing",
+        "third-party MCP hosts and modern protocol"
+      ],
+      "checks": {
+        "nativeArchitecture": {
+          "status": "passed",
+          "python": "darwin/arm64",
+          "go": "darwin/arm64",
+          "goVersion": "go version go1.27.3 darwin/arm64",
+          "binary": "darwin/arm64"
+        },
+        "archiveVerification": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.204707
+        },
+        "goTests": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 7.593363
+        },
+        "goVet": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 1.162077
+        },
+        "referenceParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 1.721914
+        },
+        "packageSmoke": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.648891
+        },
+        "packagingBoundaries": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.080686
+        },
+        "liveHTTPS": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.939895,
+          "comparisonComplete": false,
+          "scope": "artifact acquisition passed; parser uncertainty retained"
+        },
+        "liveReplay": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.323146
+        },
+        "mcpParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.301604
+        },
+        "minimalLinux": {
+          "status": "not_applicable",
+          "reason": "not requested; full clean-machine coverage remains separate"
+        }
+      },
+      "packageSmokeChecks": {
+        "extractedArchiveAndExecutablePermissions": "pass",
+        "fifteenExactComparisons": "pass",
+        "spacesAndUnicodePaths": "pass",
+        "outputFileRedirection": "pass",
+        "versionStamp": "pass",
+        "emptyExecutablePATH": "pass; host still has development runtimes installed",
+        "unknownCommand": "pass; exit 2, stderr only",
+        "missingRecording": "pass; exit 2, stderr only",
+        "badArguments": "pass; exit 2, stderr only",
+        "missingExecutePermission": "pass; OS rejected execution",
+        "unreadableCatalog": "pass; exit 2",
+        "unwritableStdout": "pass; exit 2"
+      },
+      "fixtureComparisons": 15,
+      "mcpComparisons": 17,
+      "live": {
+        "requests": 4,
+        "responseBodyBytes": 1849268,
+        "comparisonComplete": false,
+        "parserUnresolved": [
+          [
+            "ambiguous_slash_identity"
+          ],
+          [
+            "ambiguous_slash_identity"
+          ]
+        ]
+      }
+    },
+    {
+      "target": "linux/amd64",
+      "status": "passed",
+      "sourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+      "package": "testreceipts-v0.3.0-ci.42300372775.1-linux-amd64.tar.gz",
+      "packageSha256": "ae00c118fae0201367517666ab193147e565289c2455dae88df32d8bacb74436",
+      "binarySha256": "03570486ef9aedd9738ff5285877089cbea6aa3e26065a462a562f70cc4a5657",
+      "runner": {
+        "name": "GitHub Actions 1000002534",
+        "os": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "machine": "x86_64",
+        "runnerArch": "X64"
+      },
+      "skippedGoTests": [],
+      "unverified": [
+        "oldest-supported OS",
+        "full clean-machine VM installs; Linux minimal container is narrower proof",
+        "downloaded-package trust and publisher signing",
+        "third-party MCP hosts and modern protocol"
+      ],
+      "checks": {
+        "nativeArchitecture": {
+          "status": "passed",
+          "python": "linux/amd64",
+          "go": "linux/amd64",
+          "goVersion": "go version go1.27.3 linux/amd64",
+          "binary": "linux/amd64"
+        },
+        "archiveVerification": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.314624
+        },
+        "goTests": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 25.940793
+        },
+        "goVet": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 3.579322
+        },
+        "referenceParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 3.374103
+        },
+        "packageSmoke": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.214415
+        },
+        "packagingBoundaries": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.114258
+        },
+        "liveHTTPS": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.815698,
+          "comparisonComplete": false,
+          "scope": "artifact acquisition passed; parser uncertainty retained"
+        },
+        "liveReplay": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.414952
+        },
+        "mcpParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.26455
+        },
+        "minimalLinux": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 8.838968
+        }
+      },
+      "packageSmokeChecks": {
+        "extractedArchiveAndExecutablePermissions": "pass",
+        "fifteenExactComparisons": "pass",
+        "spacesAndUnicodePaths": "pass",
+        "outputFileRedirection": "pass",
+        "versionStamp": "pass",
+        "emptyExecutablePATH": "pass; host still has development runtimes installed",
+        "unknownCommand": "pass; exit 2, stderr only",
+        "missingRecording": "pass; exit 2, stderr only",
+        "badArguments": "pass; exit 2, stderr only",
+        "missingExecutePermission": "pass; OS rejected execution",
+        "unreadableCatalog": "pass; exit 2",
+        "unwritableStdout": "pass; exit 2"
+      },
+      "fixtureComparisons": 15,
+      "mcpComparisons": 17,
+      "live": {
+        "requests": 4,
+        "responseBodyBytes": 1849268,
+        "comparisonComplete": false,
+        "parserUnresolved": [
+          [
+            "ambiguous_slash_identity"
+          ],
+          [
+            "ambiguous_slash_identity"
+          ]
+        ]
+      },
+      "minimalLinux": {
+        "status": "passed",
+        "target": "linux/amd64",
+        "image": "debian@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc",
+        "imageID": "sha256:43f84a0b210f98845ef003912981774c95efe439eaa4b1cb62cf803fd46fc82a",
+        "architecture": "amd64",
+        "version": "v0.3.0-ci.42300372775.1",
+        "languageToolsAbsent": [
+          "go",
+          "python",
+          "python3",
+          "node",
+          "gcc",
+          "cc",
+          "clang"
+        ],
+        "network": "disabled",
+        "comparisons": [
+          {
+            "case": "cases/changes",
+            "pass": true
+          },
+          {
+            "case": "cases/empty",
+            "pass": true
+          },
+          {
+            "case": "cases/entities",
+            "pass": true
+          },
+          {
+            "case": "cases/identity-and-counts",
+            "pass": true
+          },
+          {
+            "case": "cases/malformed",
+            "pass": true
+          },
+          {
+            "case": "cases/namespace",
+            "pass": true
+          },
+          {
+            "case": "cases/non-junit",
+            "pass": true
+          },
+          {
+            "case": "cases/pagination",
+            "pass": true
+          },
+          {
+            "case": "cases/retries",
+            "pass": true
+          },
+          {
+            "case": "cases/suite-errors",
+            "pass": true
+          },
+          {
+            "case": "cases/unicode",
+            "pass": true
+          },
+          {
+            "case": "cases/unicode-added",
+            "pass": true
+          },
+          {
+            "case": "cases/unsupported-constructs",
+            "pass": true
+          },
+          {
+            "case": "cases/upstream-parser-only",
+            "pass": true
+          },
+          {
+            "case": "cases/xml-text",
+            "pass": true
+          },
+          {
+            "case": "live/partial-listing",
+            "pass": true
+          }
+        ],
+        "scope": "minimal userland container on matching native Linux kernel; not a clean full-machine installation"
+      }
+    },
+    {
+      "target": "linux/arm64",
+      "status": "passed",
+      "sourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+      "package": "testreceipts-v0.3.0-ci.42300372775.1-linux-arm64.tar.gz",
+      "packageSha256": "0f17049e4a02a6bc0d63ff8ff58afe0d2a9452bf5a34130b00867e7ca598d8bf",
+      "binarySha256": "4d4291edc9963e497fd4709c77fcf579c33d785fbecfc3405c141752b0919e1d",
+      "runner": {
+        "name": "GitHub Actions 1000002533",
+        "os": "Linux-7.0.0-1017-azure-aarch64-with-glibc2.39",
+        "machine": "aarch64",
+        "runnerArch": "ARM64"
+      },
+      "skippedGoTests": [],
+      "unverified": [
+        "oldest-supported OS",
+        "full clean-machine VM installs; Linux minimal container is narrower proof",
+        "downloaded-package trust and publisher signing",
+        "third-party MCP hosts and modern protocol"
+      ],
+      "checks": {
+        "nativeArchitecture": {
+          "status": "passed",
+          "python": "linux/arm64",
+          "go": "linux/arm64",
+          "goVersion": "go version go1.27.3 linux/arm64",
+          "binary": "linux/arm64"
+        },
+        "archiveVerification": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.264986
+        },
+        "goTests": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 18.864404
+        },
+        "goVet": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 2.425399
+        },
+        "referenceParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 3.319548
+        },
+        "packageSmoke": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.214317
+        },
+        "packagingBoundaries": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.114135
+        },
+        "liveHTTPS": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.915627,
+          "comparisonComplete": false,
+          "scope": "artifact acquisition passed; parser uncertainty retained"
+        },
+        "liveReplay": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.41471
+        },
+        "mcpParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.214345
+        },
+        "minimalLinux": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 7.383906
+        }
+      },
+      "packageSmokeChecks": {
+        "extractedArchiveAndExecutablePermissions": "pass",
+        "fifteenExactComparisons": "pass",
+        "spacesAndUnicodePaths": "pass",
+        "outputFileRedirection": "pass",
+        "versionStamp": "pass",
+        "emptyExecutablePATH": "pass; host still has development runtimes installed",
+        "unknownCommand": "pass; exit 2, stderr only",
+        "missingRecording": "pass; exit 2, stderr only",
+        "badArguments": "pass; exit 2, stderr only",
+        "missingExecutePermission": "pass; OS rejected execution",
+        "unreadableCatalog": "pass; exit 2",
+        "unwritableStdout": "pass; exit 2"
+      },
+      "fixtureComparisons": 15,
+      "mcpComparisons": 17,
+      "live": {
+        "requests": 4,
+        "responseBodyBytes": 1849268,
+        "comparisonComplete": false,
+        "parserUnresolved": [
+          [
+            "ambiguous_slash_identity"
+          ],
+          [
+            "ambiguous_slash_identity"
+          ]
+        ]
+      },
+      "minimalLinux": {
+        "status": "passed",
+        "target": "linux/arm64",
+        "image": "debian@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc",
+        "imageID": "sha256:5b6c2c6cbc90b6085e3f9b3086110b1eccedb643374137bfdcd1d2f5c78f6cd1",
+        "architecture": "arm64",
+        "version": "v0.3.0-ci.42300372775.1",
+        "languageToolsAbsent": [
+          "go",
+          "python",
+          "python3",
+          "node",
+          "gcc",
+          "cc",
+          "clang"
+        ],
+        "network": "disabled",
+        "comparisons": [
+          {
+            "case": "cases/changes",
+            "pass": true
+          },
+          {
+            "case": "cases/empty",
+            "pass": true
+          },
+          {
+            "case": "cases/entities",
+            "pass": true
+          },
+          {
+            "case": "cases/identity-and-counts",
+            "pass": true
+          },
+          {
+            "case": "cases/malformed",
+            "pass": true
+          },
+          {
+            "case": "cases/namespace",
+            "pass": true
+          },
+          {
+            "case": "cases/non-junit",
+            "pass": true
+          },
+          {
+            "case": "cases/pagination",
+            "pass": true
+          },
+          {
+            "case": "cases/retries",
+            "pass": true
+          },
+          {
+            "case": "cases/suite-errors",
+            "pass": true
+          },
+          {
+            "case": "cases/unicode",
+            "pass": true
+          },
+          {
+            "case": "cases/unicode-added",
+            "pass": true
+          },
+          {
+            "case": "cases/unsupported-constructs",
+            "pass": true
+          },
+          {
+            "case": "cases/upstream-parser-only",
+            "pass": true
+          },
+          {
+            "case": "cases/xml-text",
+            "pass": true
+          },
+          {
+            "case": "live/partial-listing",
+            "pass": true
+          }
+        ],
+        "scope": "minimal userland container on matching native Linux kernel; not a clean full-machine installation"
+      }
+    },
+    {
+      "target": "windows/amd64",
+      "status": "passed",
+      "sourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+      "package": "testreceipts-v0.3.0-ci.42300372775.1-windows-amd64.zip",
+      "packageSha256": "c3b6d4727cc49a5cb2d0427d0267db82e680deb20fd056f8190901fb03c347a7",
+      "binarySha256": "47cb134c75ebda32e9ec05b1202da15e41bddc849ab6a1c651dfc82ea554d83c",
+      "runner": {
+        "name": "GitHub Actions 1000002532",
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "machine": "AMD64",
+        "runnerArch": "X64"
+      },
+      "skippedGoTests": [],
+      "unverified": [
+        "oldest-supported OS",
+        "full clean-machine VM installs; Linux minimal container is narrower proof",
+        "downloaded-package trust and publisher signing",
+        "third-party MCP hosts and modern protocol"
+      ],
+      "checks": {
+        "nativeArchitecture": {
+          "status": "passed",
+          "python": "windows/amd64",
+          "go": "windows/amd64",
+          "goVersion": "go version go1.27.3 windows/amd64",
+          "binary": "windows/amd64"
+        },
+        "archiveVerification": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.535349
+        },
+        "goTests": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 57.940495
+        },
+        "goVet": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 11.823225
+        },
+        "referenceParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 7.499869
+        },
+        "packageSmoke": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 1.205855
+        },
+        "packagingBoundaries": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.181558
+        },
+        "liveHTTPS": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.604061,
+          "comparisonComplete": false,
+          "scope": "artifact acquisition passed; parser uncertainty retained"
+        },
+        "liveReplay": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.639827
+        },
+        "mcpParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.482112
+        },
+        "minimalLinux": {
+          "status": "not_applicable",
+          "reason": "not requested; full clean-machine coverage remains separate"
+        }
+      },
+      "packageSmokeChecks": {
+        "extractedArchiveAndExecutablePermissions": "pass",
+        "fifteenExactComparisons": "pass",
+        "spacesAndUnicodePaths": "pass",
+        "outputFileRedirection": "pass",
+        "versionStamp": "pass",
+        "emptyExecutablePATH": "pass; host still has development runtimes installed",
+        "unknownCommand": "pass; exit 2, stderr only",
+        "missingRecording": "pass; exit 2, stderr only",
+        "badArguments": "pass; exit 2, stderr only",
+        "POSIXPermissions": "not applicable on Windows",
+        "unreadableCatalogACL": "pass; deny READ_DATA with backup/restore privileges disabled, exit 2",
+        "windowsPrivilegeTestScope": {
+          "SeBackupPrivilege": {
+            "present": true,
+            "changed": true,
+            "previouslyEnabled": true
+          },
+          "SeRestorePrivilege": {
+            "present": true,
+            "changed": true,
+            "previouslyEnabled": true
+          }
+        },
+        "unwritableStdout": "pass; read-only stdout handle, exit 2"
+      },
+      "fixtureComparisons": 15,
+      "mcpComparisons": 17,
+      "live": {
+        "requests": 4,
+        "responseBodyBytes": 1849268,
+        "comparisonComplete": false,
+        "parserUnresolved": [
+          [
+            "ambiguous_slash_identity"
+          ],
+          [
+            "ambiguous_slash_identity"
+          ]
+        ]
+      }
+    },
+    {
+      "target": "windows/arm64",
+      "status": "passed",
+      "sourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+      "package": "testreceipts-v0.3.0-ci.42300372775.1-windows-arm64.zip",
+      "packageSha256": "52f6010967711886301199d5adb051e3088cce6c4cbc58651aa8dbad100b3628",
+      "binarySha256": "360d2490fdb1089ac9851aefeffb93af649113f4d21a0f36e8b00d528e264603",
+      "runner": {
+        "name": "GitHub Actions 1000002530",
+        "os": "Windows-11-10.0.26200-SP0",
+        "machine": "ARM64",
+        "runnerArch": "ARM64"
+      },
+      "skippedGoTests": [],
+      "unverified": [
+        "oldest-supported OS",
+        "full clean-machine VM installs; Linux minimal container is narrower proof",
+        "downloaded-package trust and publisher signing",
+        "third-party MCP hosts and modern protocol"
+      ],
+      "checks": {
+        "nativeArchitecture": {
+          "status": "passed",
+          "python": "windows/arm64",
+          "go": "windows/arm64",
+          "goVersion": "go version go1.27.3 windows/arm64",
+          "binary": "windows/arm64"
+        },
+        "archiveVerification": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.563321
+        },
+        "goTests": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 36.712431
+        },
+        "goVet": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 5.709439
+        },
+        "referenceParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 5.779575
+        },
+        "packageSmoke": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 1.339547
+        },
+        "packagingBoundaries": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.165998
+        },
+        "liveHTTPS": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 1.015801,
+          "comparisonComplete": false,
+          "scope": "artifact acquisition passed; parser uncertainty retained"
+        },
+        "liveReplay": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.630219
+        },
+        "mcpParity": {
+          "status": "passed",
+          "exit": 0,
+          "seconds": 0.575175
+        },
+        "minimalLinux": {
+          "status": "not_applicable",
+          "reason": "not requested; full clean-machine coverage remains separate"
+        }
+      },
+      "packageSmokeChecks": {
+        "extractedArchiveAndExecutablePermissions": "pass",
+        "fifteenExactComparisons": "pass",
+        "spacesAndUnicodePaths": "pass",
+        "outputFileRedirection": "pass",
+        "versionStamp": "pass",
+        "emptyExecutablePATH": "pass; host still has development runtimes installed",
+        "unknownCommand": "pass; exit 2, stderr only",
+        "missingRecording": "pass; exit 2, stderr only",
+        "badArguments": "pass; exit 2, stderr only",
+        "POSIXPermissions": "not applicable on Windows",
+        "unreadableCatalogACL": "pass; deny READ_DATA with backup/restore privileges disabled, exit 2",
+        "windowsPrivilegeTestScope": {
+          "SeBackupPrivilege": {
+            "present": true,
+            "changed": true,
+            "previouslyEnabled": true
+          },
+          "SeRestorePrivilege": {
+            "present": true,
+            "changed": true,
+            "previouslyEnabled": true
+          }
+        },
+        "unwritableStdout": "pass; read-only stdout handle, exit 2"
+      },
+      "fixtureComparisons": 15,
+      "mcpComparisons": 17,
+      "live": {
+        "requests": 4,
+        "responseBodyBytes": 1849268,
+        "comparisonComplete": false,
+        "parserUnresolved": [
+          [
+            "ambiguous_slash_identity"
+          ],
+          [
+            "ambiguous_slash_identity"
+          ]
+        ]
+      }
+    }
+  ],
+  "artifactRetentionDays": 7,
+  "rawEvidenceLocalPath": ".artifacts/ci-final",
+  "scope": "Native CI and minimal Linux userland verified; full clean-machine/minimum-OS/publisher-trust claims remain open. No model calls."
+}

@@ -24,7 +24,7 @@ Use your Prow URLs; the capture directory must be new. Our [real-run example](ev
 |---|---|
 | Correctness | 20 reference tests; 15/15 fixture comparisons and 17/17 MCP/CLI comparisons pass |
 | Real capture | 2 runs, 4 requests, 1.85 MB response bodies; exact offline replay |
-| Packaging | 6/6 targets reproduce byte for byte; native runtime checked on macOS arm64 only |
+| Packaging | 6/6 reproducible builds and native CI targets pass; Linux minimal userlands: 2/2 |
 | macOS arm64 package | 2.83 MB archive; 6.83 MB executable (`v0.3.0-dev.1`) |
 
-See [real-capture evidence](docs/G03-VALIDATION.md) and [current package/MCP checks](evidence/g04-release/README.md). No speed or token-saving advantage is claimed. Private candidates; other native platforms, clean installs and signing remain unvalidated. [MCP setup](docs/MCP.md) · [Remaining tasks](Tasks.md).
+See [real-capture evidence](docs/G03-VALIDATION.md) and [native CI results](evidence/platform-ci/README.md). No speed or token-saving advantage is claimed. Private candidates; full clean installs, minimum OS versions and signing remain unvalidated. [MCP setup](docs/MCP.md) · [Remaining tasks](Tasks.md).

@@ -26,6 +26,9 @@ This checks byte reproducibility under the declared environment. It does not pro
 
 ## Native package qualification
 
+The [native CI workflow](NATIVE-CI.md) now validates all six target pairs, live capture/replay, and minimal Linux userlands on both architectures. The [actual results](../evidence/platform-ci/README.md) retain scope and gaps; a green run does not imply full clean-machine or oldest-OS qualification.
+
+
 Run the smoke driver on a matching native OS/architecture. It extracts the package, preserves executable modes, copies the development recordings to a temporary location with spaces/Unicode, and launches the executable with an empty PATH. The driver itself uses Python, but the installed executable cannot look up Go/Python/Node through PATH.
 
 ```sh
@@ -45,10 +48,10 @@ macOS binaries use the Go linker's ad hoc signature and Apple system libraries; 
 ## Public-release checklist
 
 - MIT first-party license selected; preserve LICENSE and all distinct third-party notices.
-- Choose the hosted repository/module path and remote; update import/module identifiers together if changed.
+- Private source repository is SerialForBreakfast/TestReceipts. The CLI uses local module `testreceipts`; choose/migrate a hosted module path before publishing a reusable Go library.
 - Pass repeated builds and archive verification from the intended clean source revision.
 - Retain all six target manifests, executable inspections, sizes and native results.
-- Complete missing native/clean-machine/oldest-OS checks; leave unsupported targets explicitly unverified.
+- Native six-target CI passes; complete full clean-machine/oldest-OS/trust-flow checks and keep missing coverage explicitly unverified.
 - Decide publisher signing/notarization per platform and verify resulting packages.
 - Follow package INSTALL.md to install, compare a sample and uninstall.
 - Review version, source provenance, package allowlist and notices, then obtain explicit publication authorization. No upload, tag, release or remote change is automatic.

@@ -1,5 +1,7 @@
 # G02 release qualification — 2026-11-06
 
+**Subsequent CI update:** all six native OS/architecture pairs, live HTTPS/replay and two minimal Linux userlands now pass; see [current platform evidence](../evidence/platform-ci/README.md). The version-specific results below remain historical. Full clean-machine, minimum-OS and publisher-trust checks are still open.
+
 G02 is partially validated. Six-target reproducible private development packaging is implemented; native checks currently cover macOS arm64 on the existing development host. G02 is not fully Done: clean-machine, other native targets, hosted module path and public distribution decisions remain open.
 
 ## Build and packaging evidence

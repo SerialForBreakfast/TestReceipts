@@ -1,0 +1,93 @@
+{
+  "sourceRevision": "54614e18d531f188d29c02a2d8fbec66a4b27e13",
+  "status": "passed",
+  "native": [
+    {
+      "target": "darwin/amd64",
+      "status": "passed",
+      "reason": "native package checks passed; live HTTPS passed; parser warnings remain separate"
+    },
+    {
+      "target": "darwin/arm64",
+      "status": "passed",
+      "reason": "native package checks passed; live HTTPS passed; parser warnings remain separate"
+    },
+    {
+      "target": "linux/amd64",
+      "status": "passed",
+      "reason": "native package checks passed; live HTTPS passed; parser warnings remain separate"
+    },
+    {
+      "target": "linux/arm64",
+      "status": "passed",
+      "reason": "native package checks passed; live HTTPS passed; parser warnings remain separate"
+    },
+    {
+      "target": "windows/amd64",
+      "status": "passed",
+      "reason": "native package checks passed; live HTTPS passed; parser warnings remain separate"
+    },
+    {
+      "target": "windows/arm64",
+      "status": "passed",
+      "reason": "native package checks passed; live HTTPS passed; parser warnings remain separate"
+    }
+  ],
+  "workflowJobs": {
+    "PACKAGE_RESULT": "success",
+    "NATIVE_RESULT": "success",
+    "RACE_RESULT": "success"
+  },
+  "reportedUnverified": {
+    "linux/amd64": [
+      "oldest-supported OS",
+      "full clean-machine VM installs; Linux minimal container is narrower proof",
+      "downloaded-package trust and publisher signing",
+      "third-party MCP hosts and modern protocol"
+    ],
+    "linux/arm64": [
+      "oldest-supported OS",
+      "full clean-machine VM installs; Linux minimal container is narrower proof",
+      "downloaded-package trust and publisher signing",
+      "third-party MCP hosts and modern protocol"
+    ],
+    "darwin/arm64": [
+      "oldest-supported OS",
+      "full clean-machine VM installs; Linux minimal container is narrower proof",
+      "downloaded-package trust and publisher signing",
+      "third-party MCP hosts and modern protocol"
+    ],
+    "windows/arm64": [
+      "oldest-supported OS",
+      "full clean-machine VM installs; Linux minimal container is narrower proof",
+      "downloaded-package trust and publisher signing",
+      "third-party MCP hosts and modern protocol"
+    ],
+    "darwin/amd64": [
+      "oldest-supported OS",
+      "full clean-machine VM installs; Linux minimal container is narrower proof",
+      "downloaded-package trust and publisher signing",
+      "third-party MCP hosts and modern protocol"
+    ],
+    "windows/amd64": [
+      "oldest-supported OS",
+      "full clean-machine VM installs; Linux minimal container is narrower proof",
+      "downloaded-package trust and publisher signing",
+      "third-party MCP hosts and modern protocol"
+    ]
+  },
+  "skippedGoTests": {
+    "linux/amd64": [],
+    "linux/arm64": [],
+    "darwin/arm64": [],
+    "windows/arm64": [],
+    "darwin/amd64": [],
+    "windows/amd64": []
+  },
+  "remaining": [
+    "full clean-machine VM installs; Linux minimal containers are narrower proof",
+    "minimum OS versions",
+    "publisher signing and downloaded-package trust",
+    "modern MCP and third-party host integration"
+  ]
+}

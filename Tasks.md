@@ -40,7 +40,7 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ## G02 — Portable executable deployment
 
-**Outcome:** Users can run the completed local comparison without installing a language runtime. **Dependencies:** G01. **Status:** Validating; partial native coverage. **Plan:** [G02](docs/plans/G02-portable-deployment.md).
+**Outcome:** Users can run the completed local comparison without installing a language runtime. **Dependencies:** G01. **Status:** Validating; all six native targets and two minimal Linux userlands pass; full-machine/minimum-OS and distribution trust work remains. **Plan:** [G02](docs/plans/G02-portable-deployment.md).
 
 ### G02-01 — Reproducible builds and dependency accounting
 
@@ -51,14 +51,14 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ### G02-02 — Native clean-machine smoke tests
 
-- **Status:** Validating; six native CI jobs configured, hosted results pending; full clean-machine and minimum-OS coverage remain open. **Owner:** Release/test engineer. **Dependencies:** G02-01.
+- **Status:** Native CI complete: 6/6 target pairs pass, including HTTPS/replay and Windows ACL checks; minimal Linux userlands 2/2 pass. Full clean-machine VM, minimum-OS and downloaded-package trust coverage remains unverified. **Owner:** Release/test engineer. **Dependencies:** G02-01.
 - **Deliverable:** macOS/Linux/Windows tests, with amd64/arm64 coverage explicitly identified.
 - **Acceptance:** Install and run actual comparisons without Go or Python installed; paths with spaces/Unicode, permissions, stderr, exits and output files behave correctly. Record OS minimums, runtime libraries and certificates. Build-only targets remain unverified, not passed.
-- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Native result](evidence/g02/native-macos-arm64/result.json), [native CI scope/results](docs/NATIVE-CI.md), [explicit platform matrix and gaps](docs/G02-VALIDATION.md).
+- **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Current six-target results](evidence/platform-ci/native-results.json), [native CI scope/results](docs/NATIVE-CI.md), [explicit platform matrix and gaps](docs/G02-VALIDATION.md).
 
 ### G02-03 — Prepare distribution documentation
 
-- **Status:** In progress; MIT license selected and packaged; hosted module path and public signing decisions pending. **Owner:** Maintainer. **Dependencies:** G02-02.
+- **Status:** In progress; MIT license selected and packaged; private repository published; public-library module path and publisher signing decisions pending. **Owner:** Maintainer. **Dependencies:** G02-02.
 - **Deliverable:** Final module/repository name, chosen first-party license, notices, install/uninstall instructions, release checklist and signing/notarization decision per platform.
 - **Acceptance:** A reviewer can follow installation and reproduce a sample comparison. License and attribution files accompany relevant dependencies. Publishing is a separate action; no automatic release.
 - **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Release/install/uninstall/checklist](docs/RELEASING.md), [packaged instructions](release/INSTALL.md), [MIT license](LICENSE).

@@ -2,6 +2,10 @@
 
 The [workflow](../.github/workflows/native-platforms.yml) runs on pushes, pull requests and manual dispatch in [SerialForBreakfast/TestReceipts](https://github.com/SerialForBreakfast/TestReceipts). It does not publish a release, create tags, deploy, or call models. Repository permissions are read-only; official actions are pinned to [verified commits](../ci/actions-lock.json).
 
+## Verified run
+
+[Run 42300372775](https://github.com/SerialForBreakfast/TestReceipts/actions/runs/42300372775) passed all six native jobs, both minimal Linux userlands, package reproduction and the Linux amd64 race gate on source `54614e1`. See [actual OS versions and remaining gaps](../evidence/platform-ci/README.md). The first failed Windows ACL probe is retained separately. Full clean-machine/minimum-OS/trust-flow scope remains unverified.
+
 ## What is checked
 
 A Linux build job creates the six-target package set twice, checks binary/archive equality, and retains checksums and build provenance. Each [native matrix job](../ci/platforms.json) downloads that same package set and verifies:
