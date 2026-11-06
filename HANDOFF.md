@@ -12,7 +12,7 @@ The frozen Python comparator remains under `reference/`, with original hashes un
 
 Read [G01 validation](docs/G01-VALIDATION.md) for current checks and [the original scaffold validation](VALIDATION.md) for historical build-only evidence. Per-case Python and Go outputs and operation measurements live in [evidence/g01](evidence/g01/README.md).
 
-G02-01 is complete: G02 adds reproducible six-target private candidate packaging, checksums, build provenance and a native package smoke driver. See [G02 validation](docs/G02-VALIDATION.md) for the exact completed checks and remaining native/clean-machine gaps, and [release instructions](docs/RELEASING.md) to recreate packages. The final candidate `v0.1.0-dev.1` was built from clean source `404dc82`. G02-02/03 remain partially validated/pending; no public release has occurred.
+G02-01 is complete: G02 adds reproducible six-target private candidate packaging, checksums, build provenance and a native package smoke driver. See [G02 validation](docs/G02-VALIDATION.md) for the exact completed checks and remaining native/clean-machine gaps, and [release instructions](docs/RELEASING.md) to recreate packages. The latest MIT-licensed candidate `v0.1.0-dev.2` was built from clean source `c3d37e0`; see [updated package evidence](evidence/g02-mit/README.md). The earlier `dev.1` evidence remains historical. G02-02/03 remain partially validated/pending; no public release has occurred.
 
 ## Continue here
 

@@ -55,7 +55,7 @@ Historical agent findings are in [evidence/README.md](evidence/README.md). They 
 ## Build a private development package
 
 ```sh
-python3 tools/release.py build --version v0.1.0-dev.1 --out dist/my-candidate --verify-repro
+python3 tools/release.py build --version v0.1.0-dev.2 --out dist/my-candidate --verify-repro
 python3 tools/release.py verify dist/my-candidate
 ```
 

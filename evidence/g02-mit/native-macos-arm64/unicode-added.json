@@ -1,0 +1,71 @@
+{
+  "change": {
+    "disappearedDistinct": 0,
+    "newDistinct": 1,
+    "newOccurrences": 1,
+    "sharedDistinct": 0
+  },
+  "newEvidence": [
+    {
+      "exceptionType": "例",
+      "id": "f62cf7e01f46bcee30c05a51f2d02d4c45922328fd47dc4ee237776fc87bd47c",
+      "kind": "failure",
+      "message": "🙂é<&>\"\\\n\t  界界界",
+      "occurrences": 1,
+      "text": "🙂é<&>\"\\\n\t  界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界界",
+      "totalCharacters": 521
+    }
+  ],
+  "runs": [
+    {
+      "artifactComplete": true,
+      "counts": {
+        "attempts": 0,
+        "error": 0,
+        "failure": 0,
+        "passed": 0,
+        "skipped": 0
+      },
+      "distinctFailures": 0,
+      "excludedObjects": [],
+      "includedReports": 0,
+      "inputBytes": 0,
+      "inventorySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "listingSha256": "f8342b2c993942742732ca50f20a3a08022d383c0a487a9918f38e16bb434939",
+      "parserCoverage": {
+        "complete": false,
+        "limitations": [],
+        "unresolved": [
+          "no_junit_reports"
+        ]
+      },
+      "unresolvedObjects": [],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/100",
+      "xmlCandidates": 0
+    },
+    {
+      "artifactComplete": true,
+      "counts": {
+        "attempts": 1,
+        "error": 0,
+        "failure": 1,
+        "passed": 0,
+        "skipped": 0
+      },
+      "distinctFailures": 1,
+      "excludedObjects": [],
+      "includedReports": 1,
+      "inputBytes": 1704,
+      "inventorySha256": "95a9e7529164119639237abfdd1e1ce1859f2412aeddc622093ea9dc5c41cc29",
+      "listingSha256": "26b81802db54fa057464ce565a0574caf37c66363113a07a794e0541c9587751",
+      "parserCoverage": {
+        "complete": true,
+        "limitations": [],
+        "unresolved": []
+      },
+      "unresolvedObjects": [],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/200",
+      "xmlCandidates": 1
+    }
+  ]
+}

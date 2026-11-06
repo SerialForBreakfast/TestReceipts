@@ -57,4 +57,4 @@ The current command is local-only and does not use TLS certificates. G03 must re
 
 ## MIT licensing update
 
-The maintainer selected MIT on 2026-11-06. The root [LICENSE](../LICENSE) replaces the pending-license placeholder in the `v0.1.0-dev.2` packages. The `dev.1` evidence above remains a historical packaging snapshot. Updated package and native-check evidence is retained under `evidence/g02-mit/`. Platform and publication gaps remain unchanged.
+The maintainer selected MIT on 2026-11-06. The root [LICENSE](../LICENSE) replaces the pending-license placeholder in the `v0.1.0-dev.2` packages. The `dev.1` evidence above remains a historical packaging snapshot. Updated [package and native-check evidence](../evidence/g02-mit/README.md) records clean source `c3d37e0`, matching repeated binaries/archives on all six targets, exact MIT license inclusion, and all 15 native macOS arm64 comparisons passing. Platform and publication gaps remain unchanged.
