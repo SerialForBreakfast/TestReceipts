@@ -1,4 +1,6 @@
-# Handoff validation — 2026-11-06
+# Original scaffold handoff validation — 2026-11-06
+
+Historical evidence only. For the implemented TestReceipts local comparison, see [G01 validation](docs/G01-VALIDATION.md).
 
 The starter was copied to a temporary directory outside Spotlightning and tested there. The reference does not require the original checkout, an external drive, network access or credentials.
 

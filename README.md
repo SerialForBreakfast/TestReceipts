@@ -1,55 +1,53 @@
-# CI Evidence — Go port starter
+# TestReceipts
 
-A standalone starting point for a small tool that compares structured test reports from two CI runs. **CI Evidence is a working name.** It has no dependency on Spotlight, Swift, Apple frameworks or the original repository.
+TestReceipts compares structured test reports from two recorded CI runs. It reports observed testcase counts, exact diagnostic changes, and the original report inventory, while preserving incomplete and unsupported evidence states.
 
-The Python reference works with recorded provider responses. The Go code currently provides only help/version and an explicit error for unimplemented operations. **The Go parser, live downloading and MCP interface are not built yet.** This folder is ready to copy into a new repository and use as a new chat's workspace.
+The local Go comparison works without Python, Node, network access, or a compiler at runtime. Live CI downloading and MCP are later milestones. This standalone project has no Spotlightning, Swift, or Apple framework dependency in its core.
 
-## Start here
+## Build and run
 
-1. Read [HANDOFF.md](HANDOFF.md) for the current state and scope.
-2. Use [NEW_CHAT_PROMPT.md](NEW_CHAT_PROMPT.md) to start the implementation chat.
-3. Follow [Tasks.md](Tasks.md), beginning with the parser and recorded-run comparison.
-
-## Run now
-
-From this folder, with Python 3.10 or newer:
+The project pins Go 1.27.3. On this development checkout, the verified toolchain is installed under ignored `.cache/toolchain/`; use:
 
 ```sh
-python3 tools/verify.py
+./tools/go test ./...
+./tools/go build -trimpath -buildvcs=false -o bin/testreceipts ./cmd/testreceipts
+bin/testreceipts help
+bin/testreceipts compare-recording testdata/cases/changes \
+  https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/100 \
+  https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/200
 ```
 
-On Windows, use `py -3` in place of `python3`. The reference dependency is bundled; no pip installation, network, external drive, credentials or model access is needed. Python is for development checks, not the intended deployed tool.
+The command writes one JSON result to stdout. Invalid commands or recordings write bounded errors to stderr and return a nonzero exit. Report acquisition or classification failures remain explicit in the JSON inventory; they do not erase other usable evidence. Recorded URLs are identifiers and are never fetched.
 
-With Go installed ([official instructions](https://go.dev/doc/install)):
+A normal native Go installation can use `go` in place of `./tools/go`. On Windows, build with `-o bin/testreceipts.exe`. The provisional module path is `testreceipts`; choose a hosted module path before external library publication.
+
+For a fresh macOS arm64 checkout, obtain `go1.27.3.darwin-arm64.tar.gz` from [Go's download archive](https://go.dev/dl/) and run:
 
 ```sh
-go test ./...
-go build -trimpath -buildvcs=false -o bin/ci-evidence ./cmd/ci-evidence
-go run ./cmd/ci-evidence help
-go run ./tools/build.go
+python3 tools/setup_go.py --archive /path/to/go1.27.3.darwin-arm64.tar.gz
+./tools/go version
 ```
 
-For a directly runnable Windows native binary, use `-o bin/ci-evidence.exe`. The build helper emits six OS/architecture binaries and checksums under ignored `dist/`. Cross-compilation is not proof they run correctly on each OS. The module's provisional language floor is Go 1.23; use a currently supported Go release and pin the verified version for releases. Change the local module name `ci-evidence` to the new repository's module path before external library publication.
+The setup helper checks the pinned SHA-256 before extraction and refuses to overwrite an installation. The toolchain is a development dependency and is never committed or bundled into the product. Other hosts can install the same Go version natively.
 
-After the Go comparison is implemented, this must pass:
+## Verify
+
+Python 3.12+ is needed only for the development setup helper; the reference verification tools need Python 3.10+. The frozen reference wheel is bundled, and its runner excludes system site packages. No pip installation, network, credentials, or model calls are needed.
 
 ```sh
-python3 tools/verify.py --go-binary bin/ci-evidence
+python3 tools/verify.py --go-binary bin/testreceipts
+./tools/go test -race ./...
+./tools/go vet ./...
+python3 tools/check_relocation.py --go-binary bin/testreceipts
+python3 tools/audit_g01.py --go-binary bin/testreceipts
 ```
 
-It deliberately fails with today's scaffold. There is no fake comparison or silent Python fallback.
+There are 20 frozen reference tests and 15 recorded comparison pairs, each checked against the Go executable, Python runtime, and independent DOM checker. Go tests additionally exercise boundaries and failure behavior. The audit retains per-case outputs, wall time and macOS peak-RSS measurements; macOS resource measurement may need broader local execution permissions. These development fixtures are not held-out performance or agent-value evidence.
 
-## What is included
+## Status and next milestones
 
-- Tested Python discovery, parser, inventory and comparison helpers, with 20 tests.
-- Nine small recorded development pairs, exact expected outputs and a separate DOM-based checker.
-- Four small original Jenkins fixture reports with source provenance and license.
-- Go CLI scaffold and a dependency-free cross-build helper.
-- Porting contract, implementation plans, release checklist and a new-chat handoff.
-- Compact historical evaluation metrics and a chart. Large CI recordings and agent traces are excluded.
+G01 is complete: bounded XML classification, observed-record facts, exact signatures, recorded pagination/discovery, integrity checks, inventories, and two-run comparison. See [G01 validation](docs/G01-VALIDATION.md), [task ledger](Tasks.md), [behavior contract](docs/PORTING-CONTRACT.md), and [handoff](HANDOFF.md).
 
-## Evidence and limits
+G02 covers reproducible six-target release builds and native clean-machine validation. Only macOS arm64 has current native runtime evidence; no Windows/Linux runtime compatibility is claimed. G03 adds live Prow/GCS support. MCP and agent studies remain deferred. A first-party license and hosted module path remain open before public distribution.
 
-The latest historical study found 42.63% fewer median paired agent tokens than parser-based custom assembly and 24.36% fewer than a ready-made query, across 12 pairs and 72 investigations. All required-fact and inventory checks passed. This measured first-use setup on captured Prow/GCS data—not a Go implementation, live networking, repeated use of a prepared URL script, or Spotlight.
-
-See [the evidence summary](evidence/README.md). The new development fixtures are for correctness, not fresh evidence of token savings. The first release goal is a correct portable executable; do not rerun paid agent benchmarks to validate a language port.
+Historical agent findings are in [evidence/README.md](evidence/README.md). They do not measure this Go implementation, repeated use, or live networking. No Go size, speed, or token-saving advantage is claimed.

@@ -1,0 +1,29 @@
+{
+  "scope": "Local recorded comparison, macOS arm64; development binary, not a release or size advantage claim",
+  "toolchain": "go version go1.27.3 darwin/arm64",
+  "command": [
+    "./tools/go",
+    "build",
+    "-trimpath",
+    "-buildvcs=false",
+    "-o",
+    "bin/testreceipts",
+    "./cmd/testreceipts"
+  ],
+  "binary": {
+    "path": "bin/testreceipts",
+    "bytes": 4632466,
+    "sha256": "7abd852f24a380141d7ad488fa9ed9cfc50d78499487def00881ce21e19aab26"
+  },
+  "sourceFilesSha256": {
+    "cmd/testreceipts/main.go": "741b8245984caa9fb3482c6a8474e80a9b1d88faec675bc3bcf716d4d7e44684",
+    "go.mod": "f7cf998918f8a9b829782540be2a655fdb1e9c81ec904f1bf579292e3890b448",
+    "internal/evidence/evidence.go": "7334d796cad79500c140813042e6564a01b5a0cb1d617bccf84d8c6a33f8ff25",
+    "internal/junit/junit.go": "72ab3f354f4863ee3c05b3c203a4ee7ef9fa88566f4d5f971df0e0cbf3651e52",
+    "internal/junit/namespaces.go": "b19543ddb5809923a4b6cca055fe278a15ba3ac0f5cdbcf163f0ab99162e355c",
+    "internal/provider/recording.go": "eec54cbd63970e4cb1eb72e21926e0827352ac2aa1e030a05abb781a15fc9748"
+  },
+  "dependencies": [
+    "testreceipts"
+  ]
+}

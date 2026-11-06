@@ -3,7 +3,7 @@
 The executable's first complete command is proposed as:
 
 ```text
-ci-evidence compare-recording RECORDING BEFORE_URL AFTER_URL
+testreceipts compare-recording RECORDING BEFORE_URL AFTER_URL
 ```
 
 It reads only the supplied local recording, emits one JSON result to stdout, and sends execution errors to stderr with a nonzero exit. No live network calls occur in this mode. Unknown commands fail. The CLI name and JSON contract are local development choices until versioned for release.
@@ -41,3 +41,17 @@ An empty listing can have complete artifact discovery while parser coverage is f
 `tools/verify.py` checks nine recorded pairs against both the Python runtime and a separate DOM-based checker. It optionally executes the Go binary on exactly those inputs. Current fixtures cover added/shared/disappeared diagnostics, skipped/passed records, generic filenames, pagination, empty evidence, malformed/namespace/entity XML, Unicode and original upstream reports. Existing tests add cache reuse, tampering, download errors and budgets.
 
 The upstream fixture pair is deliberately unrelated: it tests parser compatibility, not a real consecutive-run investigation. All included data is development data; do not label it held out after use. Add Go tests for the full reference semantics, including retries, suite-level failures, source changes, error-message stability and boundary conditions.
+
+## Contract 1.1 — G01 implementation and hardened recording boundary
+
+Version 1.1 retains the original nine golden outputs and adds six independently checked development pairs plus canonical JSON vectors. No frozen `reference/` file or provenance hash was changed. The executable and module are now `testreceipts`.
+
+**Reference harness correction:** `junitparser` attempts to import optional `lxml` before falling back to the standard library. A diagnostic containing a comment exposed host-dependent text and coverage: lxml retained the comment as a nested node and stopped `.text` there; standard-library ElementTree and the DOM checker concatenate text across comments. `tools/reference_cli.py` now starts its isolated worker with `-E -S`, so only the copied wheel and standard library define the reference behavior. The `xml-text` vector retains the discovered case. The original nine vectors and five other added vectors agree unchanged. This corrects the development harness, not copied reference source. XML literal attribute whitespace is normalized to spaces, while character references preserve their values; Go uses a bounded preprocessing pass before the standard XML decoder to supply that missing decoder behavior.
+
+**Explicit Go boundaries:** catalog and listing files are each limited to 8 MiB, JSON depth to 128, JSON integer tokens to 4,096 characters, declared testcase counts to the isolated Python default of 4,300 decimal digits, saved listing pages to 1,024 per run, and listed objects to 16,384 per run. XML is limited to 250,000 nodes and depth 256 in addition to the original byte/run/report limits. Structure-limit violations produce `xml_structure_budget_exceeded` unresolved inventory entries. No partial tree facts are reported as complete.
+
+The recording adapter accepts the public Prow/GCS URL form used by the fixtures and verifies object names are under that run prefix. It rejects duplicate JSON keys, noninteger JSON numbers, trailing JSON, invalid UTF-8/lone surrogate escapes, malformed listing metadata, unreachable or missing pages, duplicate XML objects, cycles, path traversal, absolute/drive-style paths, and symlink escapes. These harden controlled-experiment assumptions in the prototype; they are not live HTTP behavior. Paths must resolve to regular files. Undeclared/reserved namespace misuse, duplicate expanded XML attributes and XML directives other than the already-rejected entity/DTD declarations are malformed XML.
+
+Object acquisition, size/MD5 mismatch, and missing byte files remain explicit `acquisition_error` inventory entries, consistent with the reference. If a catalog object includes `sha256`, Go also validates it; mismatch fails interpretation with `source_hash_mismatch`. All successfully acquired XML contributes its retained SHA-256 to the inventory hash. Parsed source bytes and listings are freshly validated on every command; no persistent cache is used. Malformed recording structure or path escapes fail the command, rather than becoming an empty successful inventory.
+
+The parser retains original text before the first nested diagnostic element and flags `nested_diagnostic_markup`. The independent legacy DOM checker differs on nested element tail text, so that construct has a focused Go regression asserting the frozen runtime semantics; it is not silently accepted as fully covered. Fixture parity is development coverage, not proof of all JUnit dialects.

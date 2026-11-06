@@ -1,0 +1,247 @@
+{
+  "scope": "Complete recorded comparison CLI operations, one invocation per case; not a performance advantage claim. Python includes temporary reference setup and subprocess execution. OS caches uncontrolled; no agent/model calls. Memory is maximum RSS reported by macOS time for the timed command, not summed concurrent child-process memory.",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "python": "3.14.3",
+  "cases": [
+    {
+      "case": "changes",
+      "inputs": "testdata/cases/changes",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.193558,
+          "maximumResidentSetBytes": 28459008
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.015955,
+          "maximumResidentSetBytes": 5586944
+        }
+      }
+    },
+    {
+      "case": "empty",
+      "inputs": "testdata/cases/empty",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.168773,
+          "maximumResidentSetBytes": 28246016
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.008762,
+          "maximumResidentSetBytes": 5505024
+        }
+      }
+    },
+    {
+      "case": "entities",
+      "inputs": "testdata/cases/entities",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.168008,
+          "maximumResidentSetBytes": 28262400
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.010757,
+          "maximumResidentSetBytes": 5570560
+        }
+      }
+    },
+    {
+      "case": "identity-and-counts",
+      "inputs": "testdata/cases/identity-and-counts",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.179572,
+          "maximumResidentSetBytes": 28540928
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.010369,
+          "maximumResidentSetBytes": 5603328
+        }
+      }
+    },
+    {
+      "case": "malformed",
+      "inputs": "testdata/cases/malformed",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.244094,
+          "maximumResidentSetBytes": 28557312
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.020254,
+          "maximumResidentSetBytes": 5472256
+        }
+      }
+    },
+    {
+      "case": "namespace",
+      "inputs": "testdata/cases/namespace",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.43406,
+          "maximumResidentSetBytes": 28393472
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.0119,
+          "maximumResidentSetBytes": 5537792
+        }
+      }
+    },
+    {
+      "case": "non-junit",
+      "inputs": "testdata/cases/non-junit",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.34452,
+          "maximumResidentSetBytes": 28540928
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.011725,
+          "maximumResidentSetBytes": 5849088
+        }
+      }
+    },
+    {
+      "case": "pagination",
+      "inputs": "testdata/cases/pagination",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.229532,
+          "maximumResidentSetBytes": 28426240
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.011865,
+          "maximumResidentSetBytes": 5390336
+        }
+      }
+    },
+    {
+      "case": "retries",
+      "inputs": "testdata/cases/retries",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.219281,
+          "maximumResidentSetBytes": 28508160
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.010902,
+          "maximumResidentSetBytes": 5488640
+        }
+      }
+    },
+    {
+      "case": "suite-errors",
+      "inputs": "testdata/cases/suite-errors",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.173944,
+          "maximumResidentSetBytes": 28426240
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.009542,
+          "maximumResidentSetBytes": 5554176
+        }
+      }
+    },
+    {
+      "case": "unicode",
+      "inputs": "testdata/cases/unicode",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.237525,
+          "maximumResidentSetBytes": 28573696
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.010233,
+          "maximumResidentSetBytes": 5455872
+        }
+      }
+    },
+    {
+      "case": "unicode-added",
+      "inputs": "testdata/cases/unicode-added",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.208686,
+          "maximumResidentSetBytes": 28295168
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.012385,
+          "maximumResidentSetBytes": 5767168
+        }
+      }
+    },
+    {
+      "case": "unsupported-constructs",
+      "inputs": "testdata/cases/unsupported-constructs",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.22416,
+          "maximumResidentSetBytes": 28590080
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.011672,
+          "maximumResidentSetBytes": 5357568
+        }
+      }
+    },
+    {
+      "case": "upstream-parser-only",
+      "inputs": "testdata/cases/upstream-parser-only",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.211072,
+          "maximumResidentSetBytes": 28573696
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.011621,
+          "maximumResidentSetBytes": 5488640
+        }
+      }
+    },
+    {
+      "case": "xml-text",
+      "inputs": "testdata/cases/xml-text",
+      "results": {
+        "python": {
+          "pass": true,
+          "wallSeconds": 0.204838,
+          "maximumResidentSetBytes": 28426240
+        },
+        "go": {
+          "pass": true,
+          "wallSeconds": 0.009204,
+          "maximumResidentSetBytes": 5554176
+        }
+      }
+    }
+  ]
+}

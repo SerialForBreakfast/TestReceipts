@@ -1,0 +1,1 @@
+<testsuite tests="3"><testcase name="a"><failure>retry</failure></testcase><testcase name="a"/><testcase name="precedence"><skipped/><failure/><error/></testcase></testsuite>

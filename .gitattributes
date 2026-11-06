@@ -1,0 +1,2 @@
+# Raw XML whitespace is intentional test input; preserve bytes and suppress style checks.
+testdata/cases/xml-text/objects/*.xml -text -whitespace

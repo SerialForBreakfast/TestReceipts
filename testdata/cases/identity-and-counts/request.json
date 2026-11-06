@@ -1,0 +1,7 @@
+{
+  "urls": [
+    "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/100",
+    "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/200"
+  ],
+  "kind": "G01 development vector"
+}

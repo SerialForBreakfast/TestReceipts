@@ -1,0 +1,66 @@
+{
+  "change": {
+    "disappearedDistinct": 0,
+    "newDistinct": 0,
+    "newOccurrences": 0,
+    "sharedDistinct": 0
+  },
+  "newEvidence": [],
+  "runs": [
+    {
+      "artifactComplete": true,
+      "counts": {
+        "attempts": 1,
+        "error": 0,
+        "failure": 0,
+        "passed": 1,
+        "skipped": 0
+      },
+      "distinctFailures": 0,
+      "excludedObjects": [],
+      "includedReports": 1,
+      "inputBytes": 80,
+      "inventorySha256": "965b6b8a412ca8e9355d357b4c6957e2f476a6c82804f64a691ea0e190f887b6",
+      "listingSha256": "ec9aaf7350749fad6777f38eb4a3d5e6825ee057b9366d4ab31adc5052a3291c",
+      "parserCoverage": {
+        "complete": false,
+        "limitations": [
+          "declared_count_mismatch"
+        ],
+        "unresolved": [
+          "ambiguous_slash_identity"
+        ]
+      },
+      "unresolvedObjects": [],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/100",
+      "xmlCandidates": 1
+    },
+    {
+      "artifactComplete": true,
+      "counts": {
+        "attempts": 3,
+        "error": 0,
+        "failure": 0,
+        "passed": 3,
+        "skipped": 0
+      },
+      "distinctFailures": 0,
+      "excludedObjects": [],
+      "includedReports": 1,
+      "inputBytes": 120,
+      "inventorySha256": "3f1299a5e2a94ce0abc7e90ffd9c017d6db12748a8bdcd2b195111089bf3edac",
+      "listingSha256": "cee29bfdf86076379a16aa33695e6602242137caa314912a981a020d9e953d05",
+      "parserCoverage": {
+        "complete": true,
+        "limitations": [
+          "ambiguous_retry",
+          "invalid_declared_count"
+        ],
+        "unresolved": []
+      },
+      "unresolvedObjects": [],
+      "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/test/200",
+      "xmlCandidates": 1
+    }
+  ]
+}

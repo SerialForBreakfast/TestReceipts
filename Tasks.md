@@ -1,42 +1,42 @@
-# CI Evidence tasks
+# TestReceipts tasks
 
 This is the execution ledger for the new repository. States: Planned → Ready → In progress → Validating → Done. A testable deliverable and linked evidence are required for Done. Owners are roles, not assigned people. Do not confuse the working Python reference with a completed Go product.
 
 ## G00 — Portable handoff
 
-**Outcome:** A movable folder with reference code, fixtures, expected outputs, readable findings and Go build scaffolding. **Status:** Done for handoff preparation. **Evidence:** [Validation](VALIDATION.md), [provenance](docs/source-provenance.json). No Git repository, remote, production connector or new chat was created.
+**Outcome:** A movable folder with reference code, fixtures, expected outputs, readable findings and Go build scaffolding. **Status:** Done for handoff preparation. **Evidence:** [Validation](VALIDATION.md), [provenance](docs/source-provenance.json). At handoff time no Git repository, remote, production connector or new chat was created. Git is now initialized locally; see [G01 validation](docs/G01-VALIDATION.md).
 
 ## G01 — Correct local Go comparison
 
-**Outcome:** A Go executable compares two recorded runs and preserves the reference facts and uncertainty. **Dependencies:** G00. **Status:** Ready to start. **Plan:** [G01](docs/plans/G01-parser-and-comparison.md). **Excluded:** live HTTP, MCP, agent studies and speed claims.
+**Outcome:** A Go executable compares two recorded runs and preserves the reference facts and uncertainty. **Dependencies:** G00. **Status:** Done. **Plan:** [G01](docs/plans/G01-parser-and-comparison.md). **Excluded:** live HTTP, MCP, agent studies and speed claims.
 
 ### G01-01 — Lock the contract and add missing vectors
 
-- **Status:** Ready. **Owner:** Go engineer / evaluation lead. **Dependencies:** G00.
+- **Status:** Done. **Owner:** Go engineer / evaluation lead. **Dependencies:** G00.
 - **Deliverable:** Review the existing nine expected outputs, reference tests and exact signature rules; add small vectors for Unicode added diagnostics, 512-code-point truncation, suite-level errors, retries and canonical JSON edge cases.
 - **Acceptance:** Existing reference tests pass without editing copied reference files. New vectors agree with the runtime and independent checker, or discrepancies are documented as bugs before implementation proceeds. Inputs and expected outputs stay reviewable.
-- **Context:** [Porting contract](docs/PORTING-CONTRACT.md), [G01](docs/plans/G01-parser-and-comparison.md). **Evidence:** Pending.
+- **Context:** [Porting contract](docs/PORTING-CONTRACT.md), [G01](docs/plans/G01-parser-and-comparison.md). **Evidence:** [Contract 1.1](docs/PORTING-CONTRACT.md#contract-11--g01-implementation-and-hardened-recording-boundary), [15-pair verification](evidence/g01/verify.txt), [new vectors](testdata/README.md).
 
 ### G01-02 — Port bounded XML classification and facts
 
-- **Status:** Planned. **Owner:** Go engineer. **Dependencies:** G01-01.
+- **Status:** Done. **Owner:** Go engineer. **Dependencies:** G01-01.
 - **Deliverable:** Go packages for format classification, testcase/diagnostic facts, identity warnings and exact signatures, using streaming XML where suitable.
 - **Acceptance:** Preserve state precedence, original-record counts, entity rejection, unsupported states, warnings and exact text. Reject budgets before unbounded allocations. Go tests cover all named edge cases and compare checked-in expected facts. No Python subprocesses.
-- **Context:** [G01](docs/plans/G01-parser-and-comparison.md). **Evidence:** Pending.
+- **Context:** [G01](docs/plans/G01-parser-and-comparison.md). **Evidence:** [Go tests](evidence/g01/go-tests.txt), [parser fuzz smoke](evidence/g01/fuzz.txt), [validation scope](docs/G01-VALIDATION.md).
 
 ### G01-03 — Port recorded discovery, inventories and comparison
 
-- **Status:** Planned. **Owner:** Go engineer. **Dependencies:** G01-02.
+- **Status:** Done. **Owner:** Go engineer. **Dependencies:** G01-02.
 - **Deliverable:** `compare-recording RECORDING BEFORE_URL AFTER_URL`; recorded pagination, hashes, inventory accounting and exact diagnostic changes.
 - **Acceptance:** `tools/verify.py --go-binary ...` passes every included pair. Cache reuse cannot bypass source validation. Paths stay within the supplied recording. Missing data is explicit; empty evidence is not success. Non-JSON diagnostics go to stderr; failures have nonzero exits.
-- **Context:** [G01](docs/plans/G01-parser-and-comparison.md). **Evidence:** Pending.
+- **Context:** [G01](docs/plans/G01-parser-and-comparison.md). **Evidence:** [15-pair parity](evidence/g01/verify.txt), [boundary tests](internal/provider/recording_test.go), [CLI tests](cmd/testreceipts/main_test.go).
 
 ### G01-04 — Audit Go parity and make the results inspectable
 
-- **Status:** Planned. **Owner:** Evaluation lead. **Dependencies:** G01-03.
+- **Status:** Done. **Owner:** Evaluation lead. **Dependencies:** G01-03.
 - **Deliverable:** Side-by-side inputs, Python outputs and Go outputs, with per-case pass/fail, warnings, runtime and memory measurements.
 - **Acceptance:** Repeat from a relocated checkout without the original repo or network. Deliberately altered inputs/expected outputs are detected. Record all failures and no agent-token claims. Reference and Go performance are compared on the same complete local operation.
-- **Context:** [G01](docs/plans/G01-parser-and-comparison.md), [evaluation](docs/EVALUATION.md). **Evidence:** Pending.
+- **Context:** [G01](docs/plans/G01-parser-and-comparison.md), [evaluation](docs/EVALUATION.md). **Evidence:** [Side-by-side outputs and measurements](evidence/g01/README.md), [per-case audit](evidence/g01/audit.json), [relocation/negative controls](evidence/g01/relocation.json).
 
 ## G02 — Portable executable deployment
 

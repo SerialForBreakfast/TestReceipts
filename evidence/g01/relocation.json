@@ -1,0 +1,8 @@
+{
+  "relocatedReferenceAndGoParity": "pass",
+  "pathWithSpacesAndUnicode": "pass",
+  "nativeWithoutGoOrPythonOnPATH": "pass (macOS arm64 only)",
+  "alteredGoldenDetected": "pass",
+  "alteredFrozenSourceDetected": "pass",
+  "alteredOriginalReportDetected": "pass; explicit unresolved acquisition error"
+}

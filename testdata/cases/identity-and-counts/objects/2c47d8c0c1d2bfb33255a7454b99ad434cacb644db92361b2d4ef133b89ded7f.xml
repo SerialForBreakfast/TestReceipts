@@ -1,0 +1,1 @@
+<testsuite tests="bad"><testcase name="x"/><testcase name="x" attempt="00"/><testcase name="x" attempt="0"/></testsuite>

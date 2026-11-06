@@ -1,0 +1,9 @@
+#!/bin/sh
+# Project-local pinned Go; generated files remain inside the checkout.
+set -eu
+root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+export GOCACHE="$root/.cache/go-build"
+export GOPATH="$root/.cache/gopath"
+export GOTOOLCHAIN=local
+export PATH="$root/.cache/toolchain/go/bin:$PATH"
+exec "$root/.cache/toolchain/go/bin/go" "$@"

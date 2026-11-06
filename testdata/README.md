@@ -14,6 +14,12 @@ Each directory under `cases/` contains the complete recorded input and one expec
 | pagination | Multiple listing pages and repeated diagnostic occurrences |
 | upstream-parser-only | Two small original Jenkins reports; not a real consecutive-run pair |
 
-`tools/make_testdata.py` generated these fixtures and compared the runtime with the independent reference. It refuses to overwrite existing fixture directories. Preserve the originals and review any regeneration as a contract change. The first implementation task adds further missing vectors, including an added long Unicode diagnostic to exercise output truncation (the current unicode case tests disappearance).
+`tools/make_testdata.py` generated these fixtures and compared the runtime with the independent reference. It refuses to overwrite existing fixture directories. Preserve the originals and review any regeneration as a contract change. G01 added the further vectors described below; the original unicode case tests disappearance.
 
 The additional four source files under `upstream/` retain their license and origin. They are already-known parser examples, not held-out evaluation data.
+
+G01 adds `unicode-added`, `suite-errors`, `retries`, `identity-and-counts`, `unsupported-constructs`, and `xml-text`. These exercise long added Unicode excerpts, exact escaping, suite diagnostics, retry ambiguity, state precedence, slash identities, invalid/mismatched declared counts, wrapped reports, unknown elements, comments/CDATA, and XML attribute whitespace. `canonical-vectors.json` records exact UTF-8 bytes and SHA-256 for cross-language JSON edge cases, including XML-inexpressible control characters and U+2028/U+2029.
+
+`tools/add_g01_vectors.py` creates the new vectors and refuses to overwrite a case. Use `--case NAME` to create one missing case. The original nine expected outputs remain unchanged. The `xml-text` case exposed the optional-system-parser dependency described in contract 1.1; it now agrees under the isolated standard-library reference runner.
+
+The `xml-text` original intentionally contains literal tab, LF and CRLF in an attribute. Its scoped `.gitattributes` rule preserves exact bytes and disables whitespace style errors for that fixture.

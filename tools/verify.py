@@ -11,7 +11,7 @@ p=argparse.ArgumentParser();p.add_argument('--go-binary',type=Path);args=p.parse
 for source in json.loads((ROOT/'docs/source-provenance.json').read_text())['files']:
  assert hashlib.sha256((ROOT/source['destination']).read_bytes()).hexdigest()==source['sha256'],source['destination']
 for name in ['test_cross_run_discovery.py','test_url_first.py']:
- subprocess.run([sys.executable,'-B',str(ROOT/'reference/scripts'/name)],cwd=ROOT,check=True)
+ subprocess.run([sys.executable,'-E','-S','-B',str(ROOT/'reference/scripts'/name)],cwd=ROOT,check=True)
 count=0
 for case in sorted((ROOT/'testdata/cases').iterdir()):
  urls=json.loads((case/'request.json').read_text())['urls'];gold=json.loads((case/'expected.json').read_text())
@@ -22,4 +22,4 @@ for case in sorted((ROOT/'testdata/cases').iterdir()):
   assert json.loads(result.stdout)==gold,case.name
  count+=1
 print(f'PASS: copied source hashes, 20 reference tests and {count} recorded-pair contracts.')
-print('Go parity: '+('PASS' if args.go_binary else 'NOT RUN; Go scaffold does not implement comparison yet.'))
+print('Go parity: '+('PASS' if args.go_binary else 'NOT RUN; supply --go-binary to verify Go parity.'))

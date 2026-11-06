@@ -21,12 +21,12 @@ func main() {
 	checksums := ""
 	for _, target := range targets {
 		parts := strings.Split(target, "/")
-		name := "ci-evidence-" + parts[0] + "-" + parts[1]
+		name := "testreceipts-" + parts[0] + "-" + parts[1]
 		if parts[0] == "windows" {
 			name += ".exe"
 		}
 		path := filepath.Join("dist", name)
-		cmd := exec.Command("go", "build", "-trimpath", "-buildvcs=false", "-ldflags=-s -w", "-o", path, "./cmd/ci-evidence")
+		cmd := exec.Command("go", "build", "-trimpath", "-buildvcs=false", "-ldflags=-s -w", "-o", path, "./cmd/testreceipts")
 		env := []string{}
 		for _, v := range os.Environ() {
 			if !strings.HasPrefix(v, "GOOS=") && !strings.HasPrefix(v, "GOARCH=") && !strings.HasPrefix(v, "CGO_ENABLED=") {
@@ -43,7 +43,7 @@ func main() {
 			panic(err)
 		}
 		checksums += fmt.Sprintf("%x  %s\n", sha256.Sum256(raw), name)
-		fmt.Printf("%s: %d bytes (scaffold, not the completed tool)\n", name, len(raw))
+		fmt.Printf("%s: %d bytes (recorded comparison; native runtime validation is separate)\n", name, len(raw))
 	}
 	if err := os.WriteFile(filepath.Join("dist", "SHA256SUMS"), []byte(checksums), 0644); err != nil {
 		panic(err)

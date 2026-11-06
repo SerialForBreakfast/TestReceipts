@@ -1,0 +1,3 @@
+<testsuite><testcase><failure message="a	b
+c
+d">pre<![CDATA[<raw>]]><!--comment-->tail&#13;end&amp;</failure></testcase></testsuite>
