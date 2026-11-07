@@ -1,37 +1,57 @@
 # TestReceipts
 
-**Spend fewer agent tokens figuring out what changed between two CI runs.** TestReceipts turns two public Kubernetes Prow/GCS run URLs into a structured comparison: new and disappeared exact failure diagnostics, source reports, and explicit gaps in coverage. Your agent can investigate the changes without assembling its own report-discovery, download and comparison workflow. TestReceipts itself makes no model calls.
+**Help AI assistants investigate failed software tests with fewer tokens.**
+
+When automated tests fail, an AI assistant often has to find the reports, download them, and write code to compare the results. TestReceipts does that work and returns the evidence: **which failure messages appeared, which disappeared, and where they came from**. The assistant can focus on investigating the changes.
 
 **Measured first-use token savings with the Go workflow:**
 
-| Compared with | Fewer agent tokens (median paired savings) |
+| Compared with | Median token savings |
 |---|---:|
-| Agent-written comparison using an existing parser | **41.53%** |
-| An existing ready-made comparison query | **27.23%** |
+| An assistant building a comparison with an existing parser | **41.53% fewer** |
+| An assistant using an existing ready-made comparison query | **27.23% fewer** |
 
-Across **12 run pairs from eight projects and 72 investigations**, all automated required-fact and inventory checks passed. **23/24 Go-assigned attempts ran the Go comparison; one used the permitted Python fallback, whose cost is included.** These are total input + output tokens, including cached input, **not dollar-cost savings**. [Results, per-case metrics and limitations](evidence/go-url-first/README.md).
+The study covered **72 investigations across 12 run pairs from eight projects**. All automated fact and report-inventory checks passed. **23/24 Go-assigned attempts ran the Go comparison; one chose the permitted Python fallback. Its full cost is included.** These are workflow results, not 24/24 Go-only executions. [Results and limitations](evidence/go-url-first/README.md).
 
-**When this helps:** an agent starts with two unfamiliar CI run URLs and needs to identify changed failures and inspect the supporting evidence. The measured benefit is first-use discovery and setup. An already integrated, reusable comparison script may leave less to save; larger reports alone did not consistently improve savings.
+**[Install and uninstall](release/INSTALL.md)** · [Build from source](docs/DEVELOPMENT.md) · [Tested platforms](docs/SUPPORT.md)
 
-**Measurement scope:** `gpt-6-astra` investigated captured provider responses in fresh workspaces. Both baselines were rerun with the current Go workflow. The historical Python results were 42.63% and 24.36%; the figures above are the new measurements. Savings varied by case, and one pair used 12.51% more tokens than the ready query. **Repeated use and live-network performance remain unmeasured.** Human narrative review is pending; additional model trials are deferred.
+## How it works
 
-The current tool is an unsigned Go PoC with JSON output, live capture and offline replay. No Python, Node or compiler is needed at runtime. [MIT licensed](LICENSE). [Tested-platform support](docs/SUPPORT.md).
+1. Give TestReceipts two supported CI run URLs, one before and one after a change.
+2. It finds and compares the test reports, returning exact changed failure messages, report references, and any missing or uncertain evidence as JSON.
+3. Your assistant uses that comparison to investigate what changed. You can save the captured evidence and repeat the comparison offline.
 
-**[Install and uninstall](release/INSTALL.md)** · [Build from source](docs/DEVELOPMENT.md) · [Live usage and limits](docs/G03-LIVE.md)
+**Use it when:** an assistant starts with unfamiliar run URLs and would otherwise assemble the comparison itself. Current live support covers public Kubernetes Prow/GCS runs with supported JUnit XML reports. TestReceipts makes no model calls and needs no Python, Node or compiler at runtime. It is an unsigned, [MIT-licensed](LICENSE) Go proof of concept.
 
-## Example
+**Savings vary:** one tested pair used 12.51% more tokens than the ready-made query. **Savings from repeated use or an already-prepared comparison script remain unmeasured.**
 
-Investigate a CI regression: capture the runs, compare diagnostics, and replay the evidence offline:
+<details>
+<summary>What the measurements cover</summary>
+
+The same `gpt-6-astra` model setting investigated captured provider responses in fresh workspaces; both baselines were rerun. Tools were already installed. The figures are median paired savings in total input plus output tokens, including cached input—not dollar-cost savings. They do not measure live-network performance, other models or modern MCP integrations. Human narrative review is pending. [Full method, per-case results and audit](evidence/go-url-first/README.md) · [Historical Python results](evidence/README.md).
+
+</details>
+
+## Example: what changed between two failed test runs?
+
+Yesterday's run failed. Today's run also failed. Before asking your assistant to explain why, use TestReceipts to identify the changed failure messages:
 
 ```sh
 JOB=https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional
 BEFORE_URL=$JOB/2116467111751585792
 AFTER_URL=$JOB/2116739156053856256
 testreceipts compare-live ./.artifacts/example-capture "$BEFORE_URL" "$AFTER_URL" > comparison.json
+```
+
+Our [real-run example](evidence/g03/comparison.json) found **one new and one disappeared exact diagnostic**, across 105 testcase records per run. Both reports had ambiguous test identities, so `comparisonComplete` remained **false**. A disappeared message does not prove a fix; missing reports never mean passing tests.
+
+Use your Prow URLs and a new capture directory. To repeat the comparison without downloading again:
+
+```sh
 testreceipts compare-recording ./.artifacts/example-capture "$BEFORE_URL" "$AFTER_URL" > replay.json
 ```
 
-Use your Prow URLs; the capture directory must be new. Our [real-run example](evidence/g03/comparison.json) found one new and one disappeared exact diagnostic across 105 testcase records per run. Both reports had ambiguous identities, so `comparisonComplete` stayed **false**. Missing or unsupported evidence never means a passing CI suite.
+[Live usage and limits](docs/G03-LIVE.md).
 
 ## Measured status
 
