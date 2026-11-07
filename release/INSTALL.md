@@ -1,12 +1,14 @@
-# TestReceipts private development candidate
+# TestReceipts unsigned PoC
 
-No public download is published yet. Generate a private candidate using the source
-checkout's docs/RELEASING.md; existing local packages are under ignored dist/.
+Repository visibility and any release publication are controlled by the maintainer.
+Generate a local PoC package using source docs/RELEASING.md; existing local
+packages are under ignored dist/. This install guide does not authorize publishing.
 Go/Python are needed only on the build/test host, never to run a copied executable.
 
-Choose the archive matching your operating system and CPU architecture. Verify
-its SHA-256 against SHA256SUMS.json from the same build. These unsigned development
-packages have not been published, notarized, or qualified on every target platform.
+Choose the archive matching a tested operating system and CPU architecture. Verify
+its SHA-256 against SHA256SUMS.json from the same build. Packages are intentionally
+unsigned by a publisher; signing/notarization is not planned for this PoC. OS
+security prompts may appear; no prompt-free download/install claim is made.
 See LICENSE and BUILD.json before distribution. On macOS use `shasum -a 256`,
 on Linux `sha256sum`, or PowerShell `Get-FileHash -Algorithm SHA256` and compare
 the archive hash with its SHA256SUMS.json entry.
@@ -47,9 +49,11 @@ Replay the retained recording with compare-recording, without network access.
 Live network acquisition is bounded to five minutes; Ctrl-C cancels acquisition and
 preserves an incomplete recording when the process can finish writing.
 
-Toolchain upstream floors (not tested minimums): macOS 13+, Linux kernel 3.2+,
-Windows 10+/Server 2016+. amd64 uses baseline v1; arm64 uses v8.0.
-Current native results are recorded separately in the source's G02 validation.
+PoC support is limited to the native CI environments: macOS 15 on Intel/Apple
+Silicon, Ubuntu 24.04 hosted Linux on amd64/arm64, Windows Server 2025 amd64 and
+Windows 11 arm64, at the actual versions recorded in source docs/SUPPORT.md.
+Older OS versions, other distributions/editions and full clean-machine VM installs
+are unverified and outside the support promise. No VM/hosting budget is required.
 
 Optional MCP stdio mode:
 
@@ -60,4 +64,5 @@ MCP 2025-11-25 host can call compare_recording and compare_live; the same facts,
 coverage warnings and provider limits apply. Use relative paths within ROOT;
 new live captures must be direct child directory names. See source docs/MCP.md
 for configuration, wire/output limits and compatibility. No model calls are made
-by the server. MCP 2026 stateless compatibility is not implemented.
+by the server. MCP upgrades and all model evaluations are deferred, not PoC release blockers.
+MCP 2026 stateless compatibility and third-party clients remain unverified.

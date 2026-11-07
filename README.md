@@ -1,6 +1,6 @@
 # TestReceipts
 
-Compare two CI runs: changed failures, exact diagnostics, and the reports behind them. Portable Go CLI with JSON output, public Kubernetes Prow/GCS capture, and offline replay. No Python, Node or compiler at runtime. [MIT licensed](LICENSE).
+Compare two CI runs: changed failures, exact diagnostics, and the reports behind them. Unsigned Go PoC with JSON output, public Kubernetes Prow/GCS capture, and offline replay. No Python, Node or compiler at runtime. [MIT licensed](LICENSE). [Tested-platform support](docs/SUPPORT.md).
 
 **[Install and uninstall](release/INSTALL.md)** · [Build from source](docs/DEVELOPMENT.md) · [Live usage and limits](docs/G03-LIVE.md)
 
@@ -27,4 +27,4 @@ Use your Prow URLs; the capture directory must be new. Our [real-run example](ev
 | Packaging | 6/6 reproducible builds and native CI targets pass; Linux minimal userlands: 2/2 |
 | macOS arm64 package | 2.83 MB archive; 6.83 MB executable (`v0.3.0-dev.1`) |
 
-See [real-capture evidence](docs/G03-VALIDATION.md) and [native CI results](evidence/platform-ci/README.md). No speed or token-saving advantage is claimed. Private candidates; full clean installs, minimum OS versions and signing remain unvalidated. [MCP setup](docs/MCP.md) · [Remaining tasks](Tasks.md).
+See [real-capture evidence](docs/G03-VALIDATION.md) and [native CI results](evidence/platform-ci/README.md). No speed or token-saving advantage is claimed. Unsigned PoC; support is limited to the tested platforms. Older OS/full-machine checks, signing, MCP upgrades and evaluations are outside the current scope. Repository visibility is the maintainer’s decision. [MCP setup](docs/MCP.md) · [Remaining tasks](Tasks.md).

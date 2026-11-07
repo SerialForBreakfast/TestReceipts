@@ -9,3 +9,5 @@ macOS/Windows hosted images include development tools. Empty-PATH package checks
 The public Prow live probe is enabled by default and can be disabled on manual dispatch. Disabled, unavailable or failed checks remain marked as such. Live parser warnings do not fail a TLS acquisition probe: reports must be acquired with complete artifact discovery, while `comparisonComplete` can remain false honestly. No models are called.
 
 The runner labels were checked against [GitHub's runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners) on 2026-11-06. Repository plan, quotas and runner availability can still prevent execution. Workflows use read-only repository permissions, immutable official action commits and seven-day artifacts. There is no release/tag/deployment step.
+
+Current policy: [unsigned PoC on tested platforms](../docs/SUPPORT.md). Full-machine/old-OS checks and publisher signing are out of scope, not pending requirements. Do not provision additional VMs/paid hosting or run model evaluations. Visibility and publication are maintainer-controlled.

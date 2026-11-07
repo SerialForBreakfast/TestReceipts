@@ -1,5 +1,12 @@
 # TestReceipts tasks
 
+## Current PoC scope — maintainer decision, 2026-11-06
+
+The unsigned MIT PoC is complete on the [tested platforms](docs/SUPPORT.md). Existing native CI is sufficient. No additional VMs, paid hosting, old-version campaign, signing or notarization work is required. Full-machine/minimum-OS/download-trust claims remain unverified, not silently passed. Modern MCP/client upgrades and all model evaluations are deferred; no model calls, token spending or new evaluation infrastructure are authorized. Repository visibility and any public release are controlled by the maintainer.
+
+Earlier acceptance requirements below are narrowed explicitly for this PoC; historical evidence is preserved. Optional/deferred work is not a release blocker.
+
+
 This is the execution ledger for the new repository. States: Planned → Ready → In progress → Validating → Done. A testable deliverable and linked evidence are required for Done. Owners are roles, not assigned people. Do not confuse the working Python reference with a completed Go product.
 
 ## G00 — Portable handoff
@@ -40,7 +47,7 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ## G02 — Portable executable deployment
 
-**Outcome:** Users can run the completed local comparison without installing a language runtime. **Dependencies:** G01. **Status:** Validating; all six native targets and two minimal Linux userlands pass; full-machine/minimum-OS and distribution trust work remains. **Plan:** [G02](docs/plans/G02-portable-deployment.md).
+**Outcome:** Users can run the completed local comparison without installing a language runtime. **Dependencies:** G01. **Status:** Done for the unsigned PoC on tested platforms. Full-machine/minimum-OS/publisher-trust coverage is unverified and outside the support promise. **Plan:** [G02](docs/plans/G02-portable-deployment.md).
 
 ### G02-01 — Reproducible builds and dependency accounting
 
@@ -49,23 +56,23 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 - **Acceptance:** Repeated builds under the same declared environment have explained reproducibility results. Record compressed and installed sizes for the completed tool, not only scaffold sizes. No Python, fixtures, caches, secrets or large datasets in release packages.
 - **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Build/reproducibility pipeline](docs/RELEASING.md), [six-target clean-source manifest](evidence/g02/release-manifest.json), [qualification evidence](evidence/g02/README.md).
 
-### G02-02 — Native clean-machine smoke tests
+### G02-02 — Native PoC validation (scope revised)
 
-- **Status:** Native CI complete: 6/6 target pairs pass, including HTTPS/replay and Windows ACL checks; minimal Linux userlands 2/2 pass. Full clean-machine VM, minimum-OS and downloaded-package trust coverage remains unverified. **Owner:** Release/test engineer. **Dependencies:** G02-01.
+- **Status:** Done for PoC scope: native CI 6/6 and minimal Linux userlands 2/2 pass. Full-machine/minimum-OS/download-trust tests remain unverified and are not required for this PoC. **Owner:** Release/test engineer. **Dependencies:** G02-01.
 - **Deliverable:** macOS/Linux/Windows tests, with amd64/arm64 coverage explicitly identified.
-- **Acceptance:** Install and run actual comparisons without Go or Python installed; paths with spaces/Unicode, permissions, stderr, exits and output files behave correctly. Record OS minimums, runtime libraries and certificates. Build-only targets remain unverified, not passed.
+- **Acceptance (revised PoC scope):** Execute actual packages on all six tested native OS/CPU pairs, preserving paths/Unicode, permissions, stderr/exits, output files, HTTPS/replay and source provenance. Retain empty-PATH/minimal-userland proof with its limits. Do not claim full-machine or older-OS compatibility. No new VMs or paid hosting.
 - **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Current six-target results](evidence/platform-ci/native-results.json), [native CI scope/results](docs/NATIVE-CI.md), [explicit platform matrix and gaps](docs/G02-VALIDATION.md).
 
 ### G02-03 — Prepare distribution documentation
 
-- **Status:** In progress; MIT license selected and packaged; private repository published; public-library module path and publisher signing decisions pending. **Owner:** Maintainer. **Dependencies:** G02-02.
-- **Deliverable:** Final module/repository name, chosen first-party license, notices, install/uninstall instructions, release checklist and signing/notarization decision per platform.
+- **Status:** Done for PoC documentation: MIT, project/module names, unsigned policy and install/uninstall instructions are settled. Visibility and release publication are maintainer-controlled, outside this task. **Owner:** Maintainer. **Dependencies:** G02-02.
+- **Deliverable:** TestReceipts / local module `testreceipts`, MIT license, notices, install/uninstall instructions and explicitly unsigned PoC policy. Hosted-library migration and signing/notarization are outside scope.
 - **Acceptance:** A reviewer can follow installation and reproduce a sample comparison. License and attribution files accompany relevant dependencies. Publishing is a separate action; no automatic release.
 - **Context:** [G02](docs/plans/G02-portable-deployment.md). **Evidence:** [Release/install/uninstall/checklist](docs/RELEASING.md), [packaged instructions](release/INSTALL.md), [MIT license](LICENSE).
 
 ## G03 — Live provider support
 
-**Outcome:** Two supported live CI URLs produce the same bounded evidence contract. **Dependencies:** G01; packaging validation repeated after HTTP is added. **Status:** Done for the supported public Prow/GCS scope; remaining native-platform qualification stays explicit in G02. **Plan:** [G03](docs/plans/G03-live-provider.md).
+**Outcome:** Two supported live CI URLs produce the same bounded evidence contract. **Dependencies:** G01; packaging validation repeated after HTTP is added. **Status:** Done for the supported public Prow/GCS scope; support is limited to the tested environments in docs/SUPPORT.md. **Plan:** [G03](docs/plans/G03-live-provider.md).
 
 ### G03-01 — Implement the first live provider
 
@@ -83,18 +90,18 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ## G04 — Agent integration and repeated-use value
 
-**Outcome:** Determine whether the tool helps beyond a reusable URL script. **Dependencies:** G03. **Status:** In progress; MCP validating, study protocol drafted without model execution. **Plan:** [G04](docs/plans/G04-agent-value.md).
+**Outcome:** Determine whether the tool helps beyond a reusable URL script. **Dependencies:** G03. **Status:** Existing MCP profile complete; upgrades/client integrations and model-value evaluation deferred, not PoC blockers. **Plan:** [G04](docs/plans/G04-agent-value.md).
 
 ### G04-01 — Optional MCP boundary
 
-- **Status:** Done for the pinned legacy 2025-11-25 stdio profile; modern protocol and third-party hosts remain unverified. **Owner:** Integration engineer. **Dependencies:** G03-02 and explicit prioritization.
+- **Status:** Done for the pinned legacy 2025-11-25 stdio profile; modern protocol and third-party hosts remain unverified and explicitly deferred. **Owner:** Integration engineer. **Dependencies:** G03-02 and explicit prioritization.
 - **Deliverable:** A thin MCP wrapper around the same Go core, with validated arguments, bounded output and exact evidence references.
 - **Acceptance:** Same inputs yield the same facts as the CLI; record protocol overhead separately. No duplicate parser or model-generated summaries. Keep the CLI usable independently.
 - **Context:** [G04](docs/plans/G04-agent-value.md). **Evidence:** [MCP usage/profile](docs/MCP.md), [17-case parity/overhead audit](evidence/g04/mcp-audit.json), [boundary tests](internal/mcp/server_test.go), [packaged native/live qualification](evidence/g04-release/README.md).
 
 ### G04-02 — Repeated-use agent comparison
 
-- **Status:** Plan drafted; execution deferred until explicit evaluation scope, source manifest and budget are approved. **Owner:** Evaluation lead. **Dependencies:** Working interface and frozen study plan.
+- **Status:** Deferred by maintainer. No local/hosted model execution, token spending or evaluation setup is authorized. The historical draft is retained only for a possible later explicit task. **Owner:** Evaluation lead. **Dependencies:** Working interface and frozen study plan.
 - **Deliverable:** A proposed comparison retaining capable parser and ready-query baselines plus a reusable URL-wrapper baseline, with first-use and repeated-use conditions separated.
 - **Acceptance:** Freeze questions, source selection, correctness rubric and total-token accounting before execution. Keep failed runs, cached/uncached inputs, retries, tool overhead, follow-up reads and auditable charts. Record human review. Do not tune on held-out outcomes or assume the historical 24.36% saving transfers.
-- **Context:** [G04](docs/plans/G04-agent-value.md), [evaluation](docs/EVALUATION.md). **Evidence:** [Reviewable study protocol](docs/STUDY-PLAN.md); no sources, budget or model trials frozen/executed.
+- **Context:** [G04](docs/plans/G04-agent-value.md), [evaluation](docs/EVALUATION.md). **Evidence:** [Reviewable study protocol](docs/STUDY-PLAN.md); archived draft only; no sources, budget or model trials frozen/executed. See [current PoC policy](docs/SUPPORT.md).

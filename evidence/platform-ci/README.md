@@ -1,5 +1,7 @@
 # Native platform CI results — 2026-11-06
 
+Current decision: this is sufficient validation for the [unsigned PoC on tested platforms](../../docs/SUPPORT.md). Unverified environments/trust flows below remain unclaimed, not pending PoC requirements. MCP upgrades and evaluations are deferred; publication belongs to the maintainer.
+
 [Successful run 42300372775](https://github.com/SerialForBreakfast/TestReceipts/actions/runs/42300372775) validates source `54614e18d531f188d29c02a2d8fbec66a4b27e13`.
 
 | Target | Actual runner OS | Native | Local fixture / MCP cases | Live HTTPS + replay | Minimal userland |

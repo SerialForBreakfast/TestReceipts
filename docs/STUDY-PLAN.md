@@ -1,4 +1,7 @@
-# G04-02 proposed evaluation plan — no execution authorized
+# G04-02 archived evaluation draft — deferred
+
+**Current decision:** model evaluation is deferred and is not a PoC release blocker. Do not run hosted or local models, spend tokens, select new evaluation sources or provision infrastructure. The maintainer may choose to revisit this on a local-model machine in a separate explicit task. The draft below is retained for history, not as a current approval request or action plan. See [PoC scope](SUPPORT.md).
+
 
 This is a reviewable draft, not a frozen or executed study. Parser correctness and deployment testing continue without models. A separate explicit evaluation instruction, exact source manifest, model/version, sample size, token/spend budget and human reviewer are required before model trials.
 
@@ -31,4 +34,4 @@ For each complete investigation record model input/output, cached and uncached i
 3. Retain unsuccessful runs and protocol deviations; stop on budget exhaustion or broken source equivalence.
 4. Human review checks narratives against original reports and uncertainty before any public claims.
 
-Status: protocol draft prepared; source selection, budget, human review assignment and model execution remain pending. No model calls or fresh agent-token measurements have been run.
+Status: protocol draft prepared; source selection, budget, human review assignment and model execution are deferred, not active pending tasks. No model calls or fresh agent-token measurements have been run.

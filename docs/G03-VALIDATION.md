@@ -1,5 +1,7 @@
 # G03 validation — 2026-11-06
 
+**Current PoC policy:** tested-platform support and existing native CI are sufficient. Signing, new VMs, old-OS/full-machine qualification, MCP upgrades and evaluations are outside scope or deferred, not release blockers. The measurements and unverified claims below remain historical facts; see [current policy](SUPPORT.md).
+
 **Subsequent CI update:** all six native OS/architecture pairs, live HTTPS/replay and two minimal Linux userlands now pass; see [current platform evidence](../evidence/platform-ci/README.md). The version-specific results below remain historical. Full clean-machine, minimum-OS and publisher-trust checks are still open.
 
 The public Prow/GCS adapter and `compare-live` command are implemented using the Go standard library. A live operation retains bounded original HTTP bodies, listings and generation-pinned XML, then invokes the shared recording comparison. Offline replay performs no HTTP. See [usage and contract 1.2](G03-LIVE.md).

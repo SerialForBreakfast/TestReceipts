@@ -1,5 +1,7 @@
 # MCP stdio interface
 
+The existing profile is optional and complete for the PoC. Modern protocol upgrades and third-party client integration are explicitly deferred; no client choice or upgrade work is needed to finish the PoC. See [current scope](SUPPORT.md).
+
 Start `testreceipts mcp ROOT` using an explicit existing workspace/capture root. The two tools invoke the same Go functions as the CLI; no second parser, generated answers, Python runtime, or model calls are involved.
 
 This implementation pins the **legacy MCP 2025-11-25 stdio profile**. It implements initialization, initialized notification, ping, tools/list, tools/call and cancellation notifications. It does not implement the 2026 stateless profile, HTTP serving, prompts, sampling, authentication, sessions shared across clients or background tasks. Use a host that supports the pinned legacy version. The official [2025 lifecycle](https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle) and [tool messages](https://modelcontextprotocol.io/specification/2025-11-25/server/tools) define the interface. Third-party host/SDK integration is not yet verified.

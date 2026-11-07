@@ -1,5 +1,7 @@
 # Evaluation rules for the new project
 
+Model/agent evaluations are explicitly deferred for this PoC. No hosted or local model runs, token spending or new evaluation setup are authorized. Existing correctness/CI checks remain valid; the later-study guidance is retained only for a future explicit task.
+
 ## Port correctness first
 
 The included fixtures are development inputs. Their expected outputs were checked against the runtime and independent DOM reference. Reusing them is appropriate for regression tests, not a claim of unseen-data validation. Keep all source versions, commands, outputs, warnings and expected-result changes reviewable.

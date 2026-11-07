@@ -1,5 +1,7 @@
 # G02 release qualification — 2026-11-06
 
+**Current PoC policy:** tested-platform support and existing native CI are sufficient. Signing, new VMs, old-OS/full-machine qualification, MCP upgrades and evaluations are outside scope or deferred, not release blockers. The measurements and unverified claims below remain historical facts; see [current policy](SUPPORT.md).
+
 **Subsequent CI update:** all six native OS/architecture pairs, live HTTPS/replay and two minimal Linux userlands now pass; see [current platform evidence](../evidence/platform-ci/README.md). The version-specific results below remain historical. Full clean-machine, minimum-OS and publisher-trust checks are still open.
 
 G02 is partially validated. Six-target reproducible private development packaging is implemented; native checks currently cover macOS arm64 on the existing development host. G02 is not fully Done: clean-machine, other native targets, hosted module path and public distribution decisions remain open.
@@ -50,7 +52,9 @@ The macOS executable has a Go linker ad hoc signature, no Developer ID identity,
 
 The current command is local-only and does not use TLS certificates. G03 must repeat network, certificate, size and packaging qualification. No installed-size/speed advantage is claimed from these builds.
 
-## Remaining work
+## Historical follow-up list — superseded for this PoC
+
+The list below records the former broader qualification plan. It is not active work under the [maintainer-selected scope](SUPPORT.md).
 
 1. Run the supplied package smoke checks on fresh native runners for all six target pairs, including the oldest intended OS and Windows ACL/output behavior. Retain exact inputs, outputs and host details.
 2. Complete clean installation/removal checks without language tools installed and downloaded-package trust behavior.

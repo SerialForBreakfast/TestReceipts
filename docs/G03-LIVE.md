@@ -39,4 +39,4 @@ Downloaded real datasets/responses remain under ignored `.artifacts/`; compact c
 
 ## Validation
 
-See [G03 validation](G03-VALIDATION.md), [HTTP/TLS tests](../internal/provider/live_test.go), and [real capture audit](../evidence/g03/real-capture-audit.json). The HTTP-enabled build requires HTTPS egress and a working OS trust store; Linux often needs a CA bundle. Real TLS was exercised on this macOS arm64 host. Other native OS/certificate-store behavior remains unverified; cross-builds do not establish it. No model calls or performance advantage claims are involved.
+See [G03 validation](G03-VALIDATION.md), [HTTP/TLS tests](../internal/provider/live_test.go), and [real capture audit](../evidence/g03/real-capture-audit.json). The HTTP-enabled build requires HTTPS egress and a working OS trust store; Linux often needs a CA bundle. Real TLS was exercised on this macOS arm64 host. Subsequent native CI verifies HTTPS/replay on all six tested targets; no older-OS or full-machine promise is made. See [unsigned PoC scope](SUPPORT.md). No model calls or performance advantage claims are involved.

@@ -36,9 +36,9 @@ Artifacts expire after seven days; they are not a backup. Package artifacts cont
 
 Git checkout attributes preserve frozen reference/report bytes. Python workers explicitly use UTF-8 even when isolated from environment variables, so Windows code pages and CRLF conversion cannot change the comparator or signature inputs.
 
-## Scope still not verified by green CI
+## Unverified scope, outside the PoC support promise
 
-Hosted VMs include development tools. Empty PATH checks and Linux minimal containers do not establish full-machine installation with no language tools present. Oldest supported OS versions, fresh browser-download quarantine/Gatekeeper/SmartScreen, publisher signing/notarization, modern MCP and third-party host integration remain open. Native coverage applies only to the actual OS versions reported by jobs. The [runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners) documents label availability; private-repository plan/quotas may still prevent a job from starting.
+The [maintainer-selected PoC scope](SUPPORT.md) accepts existing native CI and requires no additional VMs, paid hosting or publisher signing. Hosted VMs include development tools. Empty PATH checks and Linux minimal containers do not establish full-machine installation with no language tools present. Oldest supported OS versions, fresh browser-download quarantine/Gatekeeper/SmartScreen, publisher signing/notarization, modern MCP and third-party host integration remain unverified and are not PoC release blockers. MCP upgrades and evaluations are deferred. Native coverage applies only to the actual OS versions reported by jobs. The [runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners) documents label availability; private-repository plan/quotas may still prevent a job from starting.
 
 See [qualification evidence](../evidence/platform-ci/README.md) for actual executed results. Configuration and local preflight alone are not remote native passes.
 

@@ -1,5 +1,7 @@
 # G02 — Deploy without a language environment
 
+**Scope revision:** the unsigned PoC is complete on the tested native platforms. Full-machine/old-OS support, signing and notarization are not required; no additional VM/hosting budget is authorized. The historical plan below is not an instruction to expand that scope. See [current policy](../SUPPORT.md).
+
 Task ledger: [G02](../../Tasks.md#g02--portable-executable-deployment).
 
 Use the Go core and CLI from G01. The provided `tools/build.go` uses `CGO_ENABLED=0`, `-trimpath`, `-buildvcs=false`, and stripped symbols to create macOS/Linux/Windows amd64/arm64 binaries with SHA-256 checksums. These choices are starting settings, not a proven final release policy. Keep `go version`, module list, source revision and build settings with each artifact.
