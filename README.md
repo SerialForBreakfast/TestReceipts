@@ -4,6 +4,8 @@
 
 When automated tests fail, an AI assistant often has to find the reports, download them, and write code to compare the results. TestReceipts does that work and returns the evidence: **which failure messages appeared, which disappeared, and where they came from**. The assistant can focus on investigating the changes.
 
+It reads structured test reports, matches exact failure details across both runs, and returns the differences and source references as JSON without using an AI model.
+
 **Measured first-use token savings with the Go workflow:**
 
 | Compared with | Median token savings |
