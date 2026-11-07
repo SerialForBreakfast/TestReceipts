@@ -1,0 +1,434 @@
+[
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained one XML object, included as a report; neither had excluded or unresolved objects. Artifact accounting is complete within the requested scope, but parser coverage is incomplete for both runs: declared counts mismatch and slash identities are ambiguous. Counts describe observed records, not unique tests or complete CI coverage. The later run adds one exact failure signature involving a PV update timeout and unexpected binding success. This diagnostic alone does not establish the root cause.",
+    "id": "U01",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Every XML object in the captured recursive listings was accounted for: one included report per run, with none excluded or unresolved. Artifact completeness applies only to those captured XML objects, not all CI evidence. Both reports retain incomplete parser coverage (ambiguous_slash_identity) and the declared_count_mismatch warning. Counts represent observed records, not unique tests. The later run introduces one exact failure signature; no signatures disappear. Original bytes and source hashes are preserved in .state/ manifests.",
+    "id": "U01",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Every .xml object in both recursive captured listings was accounted for: one supported JUnit report per run. Artifact completeness applies only to those captured XML inventories; archives, extensionless, unpublished and external artifacts are outside scope. Both parsers report ambiguous_slash_identity and declared_count_mismatch, so these observed record counts do not establish complete CI coverage or unique-test counts. The later run adds one exact failure signature; no signatures disappeared. Exact diagnostic disappearance would not prove repair. Original bytes, listings and manifests are preserved under .state/. Before source: artifacts/junit_20261105-212525.xml, generation 1793915023975068, SHA-256 6ec3b6feee0158d3136c6174d0602bf7c8ce2e600b94013a3ff2e1597756637d. After source: artifacts/junit_20261105-222509.xml, generation 1793918594187740, SHA-256 9e95a75d5d190661b96da7010bd9b86e4af25e92c1c833c364434838c8dc4eeb.",
+    "id": "U01",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured listing contained one XML object, and both were included as reports. Artifact accounting is complete within that scope. Parser coverage is incomplete in both runs because declared counts differ from parsed counts and slash-delimited test identities remain ambiguous. Each run yielded 1,358 observed attempt records. The later run contained one new exact failure signature and no errors. Its diagnostic reports a deadline while updating PVs and says the binding check returned success when an error was expected. The excerpt alone does not establish the cause.",
+    "id": "U01",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Each recursive listing contained one XML object, and both generation-pinned reports were verified. In run order, the source SHA-256 values are 6ec3b6feee0158d3136c6174d0602bf7c8ce2e600b94013a3ff2e1597756637d and 9e95a75d5d190661b96da7010bd9b86e4af25e92c1c833c364434838c8dc4eeb. Both reports contained 1,358 observed attempt records. The later report recorded one new exact failure signature in TestCheckBindings/binding-claimref-uid-empty. The diagnostic reports a deadline while updating PVs and an unexpected success result. It does not establish the underlying cause. Artifact accounting is complete within the captured XML scope. Both runs have incomplete parser coverage due to ambiguous slash identity, and both carry a declared-count mismatch. The counts describe observed records and do not establish unique-test totals or whole-run CI outcomes.",
+    "id": "U01",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each captured run-prefix listing contained one XML object, and both were JUnit reports. Each report yielded 1,358 observed attempt records. The later report introduced one failure signature in TestCheckBindings/binding-claimref-uid-empty. The diagnostic records a PV update deadline and an unexpected success result. Both XML inventories are complete within scope. Ambiguous test identity and declared-count mismatches limit parser coverage, so these counts establish neither unique-test totals nor full CI coverage. The generation-pinned XML SHA-256 hashes, in run order, are 6ec3b6feee0158d3136c6174d0602bf7c8ce2e600b94013a3ff2e1597756637d and 9e95a75d5d190661b96da7010bd9b86e4af25e92c1c833c364434838c8dc4eeb.",
+    "id": "U01",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained one XML object, included as a report; none were excluded or unresolved. Artifact accounting is complete within the requested XML scope, but parser coverage is incomplete in both runs. Counts represent observed records, not unique tests. The earlier run's one exact failure/error signature disappeared, with no new signatures or diagnostic excerpts. This does not prove repair or complete CI coverage. Inventory and listing hashes are preserved below.",
+    "id": "U02",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Every captured .xml object was accounted for: one included report per run, with no exclusions or unresolved acquisitions. Artifact completeness applies only to captured XML listings; archives, extensionless, unpublished and external artifacts are outside scope. Parser coverage remains incomplete with the warnings shown. Counts are observed records, not unique tests. The single-occurrence failure signature 373190ba882f7ceb1159abe1b5f22856dea789f1c60abf8141d52af6e93bd12c disappeared; this does not prove repair. There are no new diagnostic excerpts. Both sources are artifacts/junit-shard-0.xml under their respective run prefixes. Chronological source generations and SHA-256 hashes: 1793912208179279 / 1e40d81739006679cfbf2aa6101dfbbf92dadda1af55eb64f64be2c9d482b698; 1793914795381458 / 5c2e47811edff598cf20b77e227a7756ad65ab2e86ff4eaa6972d2125c554ace. Original bytes, source hashes and generated manifests are preserved under .state/.",
+    "id": "U02",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Every XML object in the captured recursive listings was accounted for using generation-pinned downloads and integrity-validated manifests. Artifact completeness applies only to captured XML; archives, extensionless, unpublished and external artifacts are outside scope. Both runs have incomplete parser coverage, with warnings preserved below. Counts represent observed records, not unique tests. The earlier run's one exact failure signature disappeared, and no new failure/error signatures appeared; this does not prove repair or complete CI coverage. There are no new diagnostic excerpts.",
+    "id": "U02",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured run-prefix listing contained one XML object, and each was included as a JUnit report. XML inventory accounting was complete for both runs. Parser coverage was incomplete in both, so the counts describe observed records and cannot establish unique-test totals. The earlier run’s single exact failure signature was absent from the later report, which recorded zero failures and zero errors. That disappearance alone does not establish that the underlying issue was repaired.",
+    "id": "U02",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "The earlier report contained one failure with exact signature 373190ba882f7ceb1159abe1b5f22856dea789f1c60abf8141d52af6e93bd12c. The later report contained zero failures or errors. The signature’s disappearance does not establish repair. Each recursive captured listing contained exactly one .xml object, which was included. Artifact completeness covers only those listed XML objects. Parser coverage was incomplete in both runs. Counts represent observed testcase records and may include retries. In chronological order, the generation-pinned XML source SHA-256 hashes were 1e40d81739006679cfbf2aa6101dfbbf92dadda1af55eb64f64be2c9d482b698 and 5c2e47811edff598cf20b77e227a7756ad65ab2e86ff4eaa6972d2125c554ace.",
+    "id": "U02",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each recursive listing contained one XML object, and both were included as JUnit reports. Artifact accounting is complete within the captured XML scope. Parser coverage is incomplete in both runs, and counts represent observed records rather than unique tests. The earlier report contained one failure with exact signature 373190ba882f7ceb1159abe1b5f22856dea789f1c60abf8141d52af6e93bd12c. The later report contained zero observed failures or errors. The signature’s disappearance does not establish repair. The generation-pinned XML source SHA-256 hashes, in run order, are 1e40d81739006679cfbf2aa6101dfbbf92dadda1af55eb64f64be2c9d482b698 and 5c2e47811edff598cf20b77e227a7756ad65ab2e86ff4eaa6972d2125c554ace.",
+    "id": "U02",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Both recursive captured run-prefix listings contained zero XML objects, so neither run supplies captured test evidence. Artifact completeness is true only for the requested XML inventory scope; parser coverage is incomplete with no_junit_reports. All counts are observed records, not unique tests. Zero counts and empty signature changes do not establish passing tests, equivalent outcomes, or repairs. No diagnostic excerpts are available. Archives, extensionless, unpublished, and external artifacts remain outside scope.",
+    "id": "U03",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Neither recursive captured listing contains any .xml objects, so neither run supplies captured test evidence. Artifact completeness is true only for the scoped XML inventory; parser coverage remains incomplete with no_junit_reports. Counts represent observed records, not unique tests or proof of passing tests. The empty signature comparison cannot establish improvement, regression, or repair. Listing and inventory hashes are preserved; no XML source hashes or diagnostic excerpts exist. Archives, extensionless, unpublished, and external artifacts are outside scope.",
+    "id": "U03",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Neither captured run-prefix listing contains XML objects. Artifact completeness is true only for accounting within that captured XML scope; parser coverage is incomplete with no_junit_reports. All counts are zero observed records, not evidence of passing tests. The empty signature comparison cannot establish stability or repair, and no diagnostic excerpts are available. Listing and inventory hashes are preserved; there are no XML source hashes. Archives, extensionless, unpublished and external artifacts are outside scope.",
+    "id": "U03",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Neither captured run-prefix listing contained an .xml object. XML inventory accounting is complete for both runs, but parser coverage is incomplete because neither run supplied a JUnit report. The zero counts describe observed records. They establish neither test execution nor a passing result. There were no failure or error signatures to compare, so the comparison provides no evidence of a regression or repair.",
+    "id": "U03",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Both recursive run-prefix listings contained zero .xml objects. Artifact accounting is complete within that scope, but neither run supplied a JUnit report. The zero counts represent observed records only. There were no captured failure or error signatures to compare, so test execution, pass status, regressions and repairs remain undetermined.",
+    "id": "U03",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Both recursive listings contained zero .xml objects. Artifact accounting is complete within that scope, while parser coverage is unresolved for both runs because neither supplied a JUnit report. The zero counts describe observed test records. Test execution, pass status, and repair cannot be inferred from these captures.",
+    "id": "U03",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Both recursive captured listings contain zero XML candidates, so there is no captured test evidence. Artifact completeness is true only for the scoped XML inventory; parser coverage is incomplete with no_junit_reports. Zero observed records does not mean passing tests or complete CI coverage. No exact failure/error signatures were observed in either run, so the empty change set establishes neither stability nor repair. No diagnostic excerpts are available.",
+    "id": "U04",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Both recursive captured listings contain zero XML objects, so neither run provides captured test evidence. artifactComplete=true means all XML candidates in the bounded inventory are accounted for; it does not establish complete CI coverage or passing tests. Counts represent observed records, not unique tests. The empty signature comparison cannot establish improvement, regression, or repair, and no diagnostic excerpts are available. Archives, extensionless, unpublished, and external artifacts are outside scope. Listing and inventory hashes are preserved; there were no XML source bytes to hash.",
+    "id": "U04",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Both recursive captured listings contain zero XML objects, so neither run supplies captured test evidence. Artifact completeness is true only for accounting for the scoped XML inventory; parser coverage remains incomplete with no_junit_reports. Counts represent observed records, not unique tests, and zeros do not establish passing tests. The empty signature comparison supports no conclusion about regressions or repairs. No diagnostic excerpts are available. Archives, extensionless, unpublished and external artifacts are outside scope.",
+    "id": "U04",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Neither captured recursive listing contained a .xml object. Both XML inventories are complete within scope, but parser coverage is incomplete because neither run supplied a JUnit report. The zero counts describe observed records. Whether tests ran or passed, or any failure was repaired, remains unknown.",
+    "id": "U04",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Both recursive run-prefix listings contained zero .xml objects. Artifact accounting is complete within that scope. Parser coverage is incomplete for both runs because neither supplied a JUnit report. The zero counts represent observed records. Test execution, pass status, and whether any failure was repaired remain unknown.",
+    "id": "U04",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Both recursive run-prefix listings contained zero .xml objects. Artifact accounting is complete within that scope. Parser coverage is incomplete for both runs because neither supplied a JUnit report. The zero counts represent observed records. The captures provide no evidence about how many tests ran, whether either run passed, or whether any failure was repaired.",
+    "id": "U04",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained 50 XML objects, all included, with none excluded or unresolved. Artifact completeness applies only to the captured XML scope. Both runs contain 2,137 observed records, not necessarily unique tests: 2,103 passed and 34 skipped, with no observed failure/error signatures or new diagnostic excerpts. Parser coverage remains incomplete in both runs; the preserved warnings prevent concluding complete CI coverage or overall success. Exact diagnostic disappearance would not prove repair.",
+    "id": "U05",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Both captured recursive listings contain 50 XML objects; all were acquired using generation-pinned bytes, integrity-checked and included as JUnit reports. Source hashes and discovery ledgers are preserved in .state/<run-id>/manifest.json. Artifact completeness applies only to captured XML scope. Parser coverage remains incomplete with the unresolved identity ambiguity and warnings shown below. Counts represent observed records, not unique tests. Neither run yielded failure/error signatures, so there are no signature changes or new diagnostic excerpts. This does not establish complete CI coverage or prove repair; interrupted_or_no_tests warnings are not evidence of passing tests.",
+    "id": "U05",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each captured recursive listing contained 50 XML objects; all were acquired as generation-pinned bytes, integrity-checked and included. Source SHA-256 hashes are preserved in .state/<run-id>/manifest.json. Artifact completeness applies only to captured XML objects; archives, extensionless, unpublished and external artifacts are outside scope. Both runs have identical observed record counts and no failure/error signatures or new diagnostic excerpts. Counts are not unique tests. Parser coverage remains incomplete with the preserved warnings, so these results do not establish complete CI coverage or an overall passing run. Exact diagnostic disappearance would not prove repair.",
+    "id": "U05",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured listing contained 50 XML objects, and all 50 were included as reports. Each run recorded 2,103 passed attempts and 34 skipped attempts. Neither run recorded a failure or error signature, so there are no new diagnostic excerpts. The counts describe observed attempts and cannot establish a unique-test total. Parser coverage was incomplete in both runs because of the limitations and unresolved identity reported below. Artifact completeness applies only to XML objects in the captured run prefixes.",
+    "id": "U05",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Each captured listing contained 50 XML objects. All 50 were included as JUnit reports and their source hashes were verified. Both runs had the same observed counts and neither contained a parsed failure or error signature, so there are no new diagnostic excerpts. Counts describe attempt records. Parser coverage was incomplete in both runs, and artifact completeness applies only to XML in the captured listings. The reports alone do not establish either run’s overall CI outcome.",
+    "id": "U05",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each recursive listing contained 50 XML objects. All 50 were verified against their recorded generations and included as JUnit reports. Each run recorded 2,103 passes and 34 skips across 2,137 attempts. These counts include every observed record and may include retries. Neither run yielded a failure or error signature, so there are no new diagnostic excerpts or observed disappearances. Artifact completeness applies only to XML in the captured listings. Parser coverage was incomplete in both runs, so the records cannot establish that every intended test ran.",
+    "id": "U05",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Both captured recursive listings contain two XML objects, all included, with none excluded or unresolved. Artifact accounting is complete within the requested XML scope; parser coverage is incomplete for both runs because of ambiguous_retry and ambiguous_slash_identity. Counts represent observed records, not unique tests. The later run has 11 new exact failure signatures and 11 occurrences; no error signatures were observed. This comparison does not establish complete CI coverage or causation. Archives, extensionless, unpublished and external artifacts are outside scope. Results came from the supplied compare-recording executable. HANDOFF.md and Tasks.md were absent.",
+    "id": "U06",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Every XML object in both captured recursive listings was included: two reports per run, with no exclusions or unresolved acquisitions. Artifact completeness applies only to the scoped captured XML inventory. Parser coverage remains incomplete because of ambiguous_slash_identity, with ambiguous_retry warnings in both runs. Counts represent observed records, not unique tests. The later run contains 11 new exact failure signatures and no errors; the earlier run contains no observed failure/error diagnostics. This does not establish overall CI success or failure causality, and exact diagnostic disappearance would not prove repair. Generation-pinned originals and individual source hashes are preserved in .state/ manifests, alongside aggregate inventory and listing hashes.",
+    "id": "U06",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Every captured .xml object was accounted for using the shared discovery helpers and generation-pinned downloads. Both runs contain two included reports, with no excluded or unresolved XML objects. Artifact completeness applies only to captured XML; archives, extensionless, unpublished and external artifacts are outside scope. Parser coverage remains incomplete in both runs because of ambiguous_slash_identity, with ambiguous_retry as a limitation. Counts represent observed records, not unique tests. The later run introduces 11 exact failure signatures across 11 occurrences; no signatures disappeared or were shared. Exact diagnostic disappearance would not establish repair. Source hashes are retained in the generated manifests under .state/, with inventory and listing hashes below.",
+    "id": "U06",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Both runs included every XML object in their captured recursive listings, two reports per run. Each recorded 3,420 attempts, including 2,183 skips. The earlier reports contained no failure or error records. The later reports contained 11 failures with 11 distinct exact signatures, each observed once, and zero errors. All 11 signatures tied on occurrence count, so the three excerpts appear in ascending signature ID order. Counts describe observed records. Retry and test-identity ambiguity leave unique-test counts and the number of underlying defects undetermined. Artifact completeness applies only to XML in the captured listings.",
+    "id": "U06",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "The later run recorded 11 failures, each with a different exact diagnostic signature. The earlier run recorded none. Both runs recorded 3,420 testcase records, including 2,183 skips each. Each captured listing contained two XML objects, and all four were included as JUnit reports with verified source hashes preserved in the run manifests. Artifact completeness covers only .xml objects in those listings. Parser coverage remains incomplete in both runs because slash-delimited test identities are ambiguous. Retry ambiguity also limits interpretation of the counts as unique tests. The signature comparison alone cannot establish root cause or repair.",
+    "id": "U06",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Both runs had complete inventories within the captured .xml scope. Each contained two JUnit reports and 3,420 observed attempt records. The earlier run recorded zero failures or errors. The later run recorded 11 failures with 11 distinct exact signatures and zero errors. Parser coverage was incomplete in both runs because test identity and retry interpretation were ambiguous. The counts therefore cannot establish how many unique tests regressed or how many underlying causes produced the failures.",
+    "id": "U06",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive run-prefix listing contained one XML object, included as a report; no XML objects were excluded or unresolved. Artifact completeness is true within the requested scope, but parser coverage is incomplete: both runs have ambiguous_slash_identity, and the later run also has declared_count_mismatch. Counts represent observed records, not unique tests. The later run adds two exact failure signatures, one containing a 10-minute TestInterrupts timeout. These two diagnostic records do not establish two independent root causes. No signatures disappeared. Captured XML completeness does not establish coverage of all CI artifacts or tests.",
+    "id": "U07",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Every XML object in the captured listings was accounted for: one artifacts/junit-unit.xml per run. Artifact completeness applies only to captured XML, excluding archives and extensionless, unpublished or external artifacts; it does not establish complete CI coverage. Both parsers report ambiguous_slash_identity; the later report also has declared_count_mismatch. Counts are observed records, not unique tests. The later run introduces two exact failure signatures, including a TestInterrupts timeout; these need not represent independent root causes. Exact diagnostic disappearance would not prove repair. Original bytes, manifests and parsed results are preserved under .state/<build>/. In chronological order, XML generation/SHA-256 pairs are 1793882631448273 / f3cd5d782c1cb9af6afb1cdc33a773648bf31f302883b506202e757d5a49f75c and 1793914758678247 / a6ba8101b40efdf782d82abcd1340a3f41631e497afa6579dc9597d9b5912d61.",
+    "id": "U07",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each captured recursive listing contains one XML object, included as a JUnit report; none were excluded or unresolved during acquisition. Artifact completeness applies only to captured .xml objects. Parser coverage remains incomplete in both runs because of ambiguous_slash_identity; the later run also has declared_count_mismatch. Counts represent observed records, not unique tests. The later run adds two exact failure signatures, including a TestInterrupts timeout after 10 minutes. These need not represent two independent defects. Exact diagnostic disappearance would not prove repair. Generation-pinned originals and source hashes are preserved in .state/ manifests; inventory and listing hashes are reported below.",
+    "id": "U07",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured run listing contained one XML object, and both were included as reports. The earlier report contained no failure or error records. The later report contained two distinct failure signatures, each observed once: one records a 10-minute timeout while TestInterrupts was running; the other contains only the test’s start line. These are two diagnostic records, not evidence of two independent defects. Counts describe observed records, not unique tests. Both runs had unresolved slash identities, and the later report’s declared counts did not match its observed records. Artifact completeness applies only to XML in the captured listings, not to all CI activity.",
+    "id": "U07",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "The later run recorded two new failure signatures, each observed once. Both mention TestInterrupts. One reports a 10-minute timeout, and the other contains only the test-start line. These records do not establish two independent failures or identify the cause of the timeout. Each recursive listing contained one XML object, which was included and hash-validated. The source XML SHA-256 values in run order are f3cd5d782c1cb9af6afb1cdc33a773648bf31f302883b506202e757d5a49f75c and a6ba8101b40efdf782d82abcd1340a3f41631e497afa6579dc9597d9b5912d61. Artifact completeness applies only to XML in the captured run prefixes. Parser coverage was incomplete in both runs because of ambiguous slash identity, and the later report also had a declared-count mismatch. Counts describe observed records and cannot establish unique-test totals.",
+    "id": "U07",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each recursive captured listing contained one XML object, included as JUnit with no exclusions or unresolved objects. Artifact completeness applies only to captured XML scope. Parser coverage remains incomplete for both runs because of ambiguous_slash_identity; the later run also reports declared_count_mismatch. Counts represent observed records, not unique tests. Two exact failure signatures are new, including a TestInterrupts timeout; they need not represent independent underlying faults. No signatures disappeared. Generation-pinned source bytes and hashes are preserved in .state/ manifests. These results do not establish complete CI coverage or overall run success.",
+    "id": "U07",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contains one XML object, artifacts/junit_runner.xml, accepted as JUnit. All XML candidates were accounted for; parser coverage is complete with no reported warnings. Both runs contain one observed failing record and share exact failure signature 02c3ad17056c35356a252c352bd7015841b50e764f62ba7761a3670ad761ed12, occurring once per run. There are no new diagnostics to excerpt. Before source: generation 1793903619169217, SHA-256 e4cc6ad609de91f349ca7a74ef97aecc869323652d22f236562622117a22995f. After source: generation 1793918011896234, SHA-256 ad99d5e58a68be3c9b5ad8ebaa37e9503c9cea7b6263d10fa80c09ea766fefab. Completeness applies only to captured .xml objects, excluding archives, extensionless, unpublished and external artifacts. Counts represent observed records, not unique tests or complete CI coverage. Exact diagnostic disappearance would not prove repair.",
+    "id": "U08",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Each captured recursive listing contains one XML object, artifacts/junit_runner.xml; both were acquired and parsed without warnings or unresolved states. Each run has one observed failing record. The exact shared failure signature is 02c3ad17056c35356a252c352bd7015841b50e764f62ba7761a3670ad761ed12. There are no new diagnostics to excerpt. XML source SHA-256 values, in run order: e4cc6ad609de91f349ca7a74ef97aecc869323652d22f236562622117a22995f (generation 1793903619169217) and ad99d5e58a68be3c9b5ad8ebaa37e9503c9cea7b6263d10fa80c09ea766fefab (generation 1793918011896234). Originals, source hashes, listings and generated manifests are preserved under .state/. Artifact completeness covers only XML objects in the captured listings; it does not establish complete CI coverage. Counts describe observed records, not unique tests. Exact diagnostic disappearance would not prove repair.",
+    "id": "U08",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each captured recursive listing contained one XML object, included as a JUnit report with no exclusions, unresolved objects or parser warnings. Both runs recorded one failed attempt and share the same exact failure signature; no new diagnostic excerpts apply. Completeness is limited to captured XML objects, not all CI artifacts. Counts represent observed records, not unique tests. Generation-pinned originals and their source hashes are preserved in .state/ manifests; listing and inventory hashes appear below. These observations do not establish overall CI coverage or repair.",
+    "id": "U08",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained one XML object, included as a report, with no excluded or unresolved objects. Artifact accounting and parser coverage are complete within the requested scope; no parser warnings were reported. Both runs contain one observed failed record and share the same exact failure/error signature. No new diagnostic excerpts exist. Counts represent observed records, not unique tests. These results do not establish coverage of archives, unpublished, extensionless or external artifacts, or overall CI health.",
+    "id": "U08",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Each captured recursive listing contained one XML object, artifacts/junit_runner.xml. Both were acquired with generation pinning and integrity validation; each contains one observed failed record with the same exact diagnostic signature. No new diagnostic excerpts exist. Artifact completeness applies only to listed XML objects, not overall CI coverage; counts are observed records, not unique tests. Parser coverage is complete with no reported warnings. Exact diagnostic disappearance would not prove repair. Source SHA-256 values, in run order: e4cc6ad609de91f349ca7a74ef97aecc869323652d22f236562622117a22995f (generation 1793903619169217); ad99d5e58a68be3c9b5ad8ebaa37e9503c9cea7b6263d10fa80c09ea766fefab (generation 1793918011896234). Originals and manifests are preserved under .state/. HANDOFF.md and Tasks.md were absent.",
+    "id": "U08",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each recursive captured listing contained one XML object, artifacts/junit_runner.xml; both were included with complete parser coverage and no warnings. Each contains one observed failed record. The exact shared failure signature is 02c3ad17056c35356a252c352bd7015841b50e764f62ba7761a3670ad761ed12. No new diagnostics exist to excerpt. Artifact completeness applies only to captured .xml objects, not overall CI coverage; counts are observed records, not unique tests. Exact diagnostic disappearance would not prove repair. Original bytes and manifests are preserved under .state/. In chronological order, source SHA-256 hashes are e4cc6ad609de91f349ca7a74ef97aecc869323652d22f236562622117a22995f (generation 1793903619169217) and ad99d5e58a68be3c9b5ad8ebaa37e9503c9cea7b6263d10fa80c09ea766fefab (generation 1793918011896234).",
+    "id": "U08",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained one XML object, included as a report; none were excluded or unresolved. Artifact accounting is complete within the requested scope, but parser coverage is incomplete for both runs because of ambiguous_slash_identity. Observed records changed from 85 passed, 0 failed and 30 skipped to 83 passed, 2 failed and 30 skipped. The two new exact diagnostic signatures each occurred once and report Azure PublicIPCountLimitReached during public IP prefix creation. Counts are records, not unique tests; these results do not establish complete CI coverage or prove a code regression. No exact signatures disappeared, and disappearance alone would not prove repair. Excerpts below preserve the original first 512 characters.",
+    "id": "U09",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Every captured .xml object was accounted for: each run contains only artifacts/junit_01.xml. Artifact completeness applies only to captured XML; archives, extensionless, unpublished and external artifacts are outside scope. Counts represent observed records, not unique tests. Both reports retain unresolved ambiguous_slash_identity coverage. The later run adds two exact failure signatures reporting Azure PublicIPCountLimitReached; the recorded diagnostics say the subscription cannot create more than 250 public IP addresses in the region. Their source messages already contain Gomega truncation warnings. No signatures disappeared; exact disappearance would not establish repair. Original XML and per-source hashes are preserved in .state manifests. Chronological source generation/SHA-256 pairs: 1791170981495364/e745ea4d7b91865335eb81d65d49855f90ec47f117c0d4a819abd509818b4591; 1793841867675097/3146d55f29466ddc72a816a39c06f7c8dd19125e40cebdf26b9589ae620bcbe4.",
+    "id": "U09",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each recursive captured listing contained one XML object, artifacts/junit_01.xml; both were acquired and included. Artifact completeness applies only to captured XML, not all CI evidence. Parser coverage remains incomplete because of ambiguous_slash_identity. Counts represent observed records, not unique tests. The later run contains two new exact failure signatures reporting Azure PublicIPCountLimitReached; this does not establish a code regression. Exact diagnostic disappearance would not prove repair. Original bytes, generation pins, source hashes and full query output are preserved under .state/. Source SHA-256 values in chronological order: e745ea4d7b91865335eb81d65d49855f90ec47f117c0d4a819abd509818b4591 (generation 1791170981495364), 3146d55f29466ddc72a816a39c06f7c8dd19125e40cebdf26b9589ae620bcbe4 (generation 1793841867675097). Full diagnostic messages are in .state/result.json; excerpts below are exact first 512 characters.",
+    "id": "U09",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained one XML object, and both were included with no excluded or unresolved objects. Artifact completeness is true within the requested captured-XML scope; parser coverage remains incomplete for both runs because of ambiguous_slash_identity. Observed records changed from 85 passed, 0 failed, 30 skipped to 83 passed, 2 failed, 30 skipped. These are record counts, not unique tests. Both new exact failure signatures report Azure HTTP 400 PublicIPCountLimitReached: the subscription's regional limit of 250 public IP addresses prevented public IP prefix creation. There are no shared or disappeared failure/error signatures. Exact signature changes do not establish unique root causes or prove repair. The diagnostic source also warns that Gomega truncated its representation; the excerpts below preserve the first 512 characters of the captured text.",
+    "id": "U09",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Every .xml object in both captured recursive listings was accounted for: each contained only artifacts/junit_01.xml. Artifact completeness applies only to captured XML; archives, extensionless, unpublished and external artifacts are outside scope. Counts are observed records, not unique tests. Both reports retain the unresolved parser warning ambiguous_slash_identity. The later report contains two new exact failure signatures reporting Azure PublicIPCountLimitReached; their source messages also report Gomega truncation. This does not establish overall CI coverage or a code regression, and diagnostic disappearance would not prove repair. Original XML SHA-256 hashes, in run order: e745ea4d7b91865335eb81d65d49855f90ec47f117c0d4a819abd509818b4591 (generation 1791170981495364), 3146d55f29466ddc72a816a39c06f7c8dd19125e40cebdf26b9589ae620bcbe4 (generation 1793841867675097). Listings, manifests, originals and parsed results are preserved under .state/.",
+    "id": "U09",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Every XML object in both recursive captured listings was accounted for: one included report per run, with no excluded or unresolved objects. Artifact completeness is true within this XML-only scope; parser coverage remains incomplete because both reports flag ambiguous_slash_identity. Counts represent observed records, not unique tests. The later run adds two exact failure signatures reporting Azure PublicIPCountLimitReached (HTTP 400); this does not establish a code regression. No signatures disappeared, and exact disappearance would not prove repair. Generation-pinned originals and their source hashes are preserved in the per-run manifests under .state/. Archives, extensionless, unpublished and external artifacts remain outside scope.",
+    "id": "U09",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained one XML object, included as a report, with no excluded or unresolved objects. Artifact accounting is complete within the requested scope, but parser coverage is incomplete in both runs because of ambiguous_slash_identity. Each run contains 70 observed records: 60 passed and 10 skipped, with no observed failure/error signatures or new diagnostic excerpts. Counts are records, not unique tests; these results do not establish complete CI coverage or prove a repair.",
+    "id": "U10",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Each recursive captured listing contained one XML object, artifacts/junit.xml, which was acquired and included. Both runs observed 70 records: 60 passed and 10 skipped, with no failure/error signatures or new diagnostic excerpts. Counts represent observed records, not unique tests. Artifact completeness applies only to captured XML objects; archives, extensionless, unpublished and external artifacts are outside scope. Parser coverage remains incomplete because both reports contain ambiguous slash identities. These results do not establish complete CI coverage or prove repair. Original bytes and source hashes are preserved in .state manifests. Chronological source SHA-256 values: ad116d381a6fdd57fc87118e249adab48aafa7ad184cfee66389a2f15563903b (generation 1793620015350829); baef50465e2c11ceedce7add675002183617cdbcaff21e9a0b6a097a778f2aa7 (generation 1793708081714194).",
+    "id": "U10",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each recursive captured listing contained exactly one XML object, artifacts/junit.xml; both were acquired generation-pinned and included. Artifact completeness applies only to captured XML, not overall CI coverage. Both reports contain 70 observed records, not necessarily unique tests: 60 passed and 10 skipped. Neither contains failure/error signatures, so there are no new diagnostic excerpts. Parser coverage remains incomplete because of ambiguous_slash_identity; these results do not establish overall CI success or repair. Original XML SHA-256 hashes, in run order: ad116d381a6fdd57fc87118e249adab48aafa7ad184cfee66389a2f15563903b and baef50465e2c11ceedce7add675002183617cdbcaff21e9a0b6a097a778f2aa7. Source hashes and generation identifiers are preserved in .state/ manifests.",
+    "id": "U10",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contains one XML object, included as a report; none were excluded or unresolved. Both runs show 70 observed records: 60 passed and 10 skipped, with no failure/error signatures or new diagnostic excerpts. Artifact accounting is complete within the requested scope, but parser coverage is incomplete in both runs because of ambiguous_slash_identity. These counts are observed records, not unique tests, and do not establish complete CI coverage or prove repair.",
+    "id": "U10",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Each recursive captured listing contained one XML object, artifacts/junit.xml; both were acquired and included. Each yielded 70 observed records: 60 passed and 10 skipped, with no failure/error signatures or new diagnostic excerpts. Counts are records, not unique tests. Artifact accounting is complete within the captured XML scope, but parser coverage is incomplete because both reports contain ambiguous slash identities. This does not establish complete CI coverage or overall run success; exact diagnostic disappearance would not prove repair. Archives, extensionless, unpublished and external artifacts are outside scope. Original bytes and source hashes are preserved in .state/ manifests. Chronological source SHA-256 values: ad116d381a6fdd57fc87118e249adab48aafa7ad184cfee66389a2f15563903b (generation 1793620015350829); baef50465e2c11ceedce7add675002183617cdbcaff21e9a0b6a097a778f2aa7 (generation 1793708081714194).",
+    "id": "U10",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Each recursive captured listing contained exactly one XML object, artifacts/junit.xml, classified as supported JUnit. All XML candidates were accounted for. Each run has 70 observed records, not necessarily unique tests: 60 passed and 10 skipped. Neither contains observed failure/error signatures, so there are no diagnostic changes or new excerpts. Artifact completeness applies only to captured XML; parser coverage remains incomplete because of ambiguous_slash_identity. These results do not establish complete CI coverage or prove repair. Generation-pinned source SHA-256 hashes, in run order: 1793620015350829 → ad116d381a6fdd57fc87118e249adab48aafa7ad184cfee66389a2f15563903b; 1793708081714194 → baef50465e2c11ceedce7add675002183617cdbcaff21e9a0b6a097a778f2aa7. Originals and manifests are preserved under .state/<run ID>/.",
+    "id": "U10",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contains 50 XML objects, all included, with none excluded or unresolved. Artifact completeness is true within the requested scope; parser coverage remains incomplete in both runs because of the preserved limitations and unresolved identity warning. Counts represent observed records, not unique tests. Two exact failure/error signatures disappeared and one appeared; disappearance does not prove repair. Archives and extensionless, unpublished, or external artifacts are outside scope.",
+    "id": "U11",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "All 50 captured XML objects in each run were included, with no excluded or unresolved objects. Artifact completeness applies only to the captured XML scope. Parser coverage remains incomplete, with identity ambiguity and retry/no-test warnings preserved. Counts represent observed records, not unique tests. Exact signatures compare kind, exception type, message and text; disappearance does not prove repair. Original bytes and per-source hashes are preserved in .state/<run-id>/ alongside generated manifests.",
+    "id": "U11",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "All 50 captured XML objects in each run were included using content-based discovery and generation-pinned downloads. Source hashes are preserved in .state/ manifests. Artifact completeness applies only to captured XML; archives, extensionless, unpublished and external artifacts are outside scope. Parser coverage remains incomplete with the warnings shown. Counts represent observed records, not unique tests. Two exact diagnostic signatures disappeared and one appeared; disappearance does not prove repair.",
+    "id": "U11",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Both captured recursive listings contain 50 XML objects, all included, with none excluded or unresolved. Artifact completeness is true within the requested XML scope; parser coverage remains incomplete in both runs, with warnings preserved below. Counts represent observed records, not unique tests. Two exact failure/error signatures disappeared and one appeared; disappearance does not prove repair. Archives, extensionless, unpublished and external artifacts are outside scope.",
+    "id": "U11",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Both captured inventories contain 50 XML objects, all acquired as generation-pinned bytes, integrity-checked and included. Artifact completeness applies only to captured XML objects; archives, extensionless, unpublished and external artifacts are outside scope. Parser coverage remains incomplete with the preserved warnings below. Counts represent observed records, not unique tests. Exact signatures use kind, exception type, message and diagnostic text: two disappeared and one appeared; disappearance does not prove repair. Original bytes and per-source hashes are preserved in .state/ manifests. HANDOFF.md and Tasks.md were absent.",
+    "id": "U11",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Both captured recursive listings contain 50 XML objects, all included as JUnit reports, with none excluded or unresolved. Artifact completeness applies only to these listed XML objects; it does not establish complete CI coverage. Generation-pinned source bytes were integrity-checked, and per-source SHA-256 hashes remain in .state manifests. Parser coverage is incomplete in both runs, with warnings preserved below. Counts represent observed records, not unique tests. Two exact diagnostic signatures disappeared and one appeared; disappearance does not prove repair. HANDOFF.md and Tasks.md were absent.",
+    "id": "U11",
+    "rep": 2
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Both captured recursive listings contain two XML objects, all included, with no excluded or unresolved objects. Artifact completeness is true within the requested scope; parser coverage remains incomplete because of ambiguous_retry and ambiguous_slash_identity. Counts represent observed records, not unique tests or proof of complete CI coverage. The later run adds one exact failure signature concerning a PV resize timeout. No signatures disappeared; diagnostic disappearance would not by itself prove repair. Archives and extensionless, unpublished, or external artifacts are outside scope.",
+    "id": "U12",
+    "rep": 1
+  },
+  {
+    "arm": "api",
+    "explanation": "Every XML object in both captured recursive listings was included: two reports per run, with no exclusions or unresolved acquisitions. Generation-pinned bytes were integrity-checked; originals and source hashes are preserved in .state manifests. Artifact completeness applies only to captured XML, excluding archives, extensionless, unpublished and external artifacts. Parser coverage remains incomplete because of ambiguous slash identities, with ambiguous-retry warnings. Counts represent observed records, not unique tests. The later run adds one exact failure signature concerning a PV resize timeout. These observations do not establish complete CI coverage or a root cause; diagnostic disappearance would not prove repair.",
+    "id": "U12",
+    "rep": 1
+  },
+  {
+    "arm": "ready",
+    "explanation": "Both captured recursive listings contain two XML objects; all four were acquired with generation pinning, integrity checked, and included as JUnit reports. Source hashes are preserved in .state/<run-id>/manifest.json. Artifact completeness applies only to captured XML objects; archives, extensionless, unpublished and external artifacts are outside scope. Parser coverage remains incomplete for both runs due to ambiguous_slash_identity and ambiguous_retry. Counts represent observed records, not unique tests. The later run adds one exact failure signature reporting a PV resize timeout. These observations do not establish complete CI coverage or a causal regression; diagnostic disappearance would not prove repair.",
+    "id": "U12",
+    "rep": 1
+  },
+  {
+    "arm": "adapter",
+    "explanation": "Each captured recursive listing contained two XML objects; all were included, with none excluded or unresolved. Artifact completeness applies only to the captured XML scope. Parser coverage remains incomplete in both runs because of ambiguous_retry and ambiguous_slash_identity. Counts represent observed records, not unique tests. The later run adds one exact failure signature concerning a timeout while waiting for persistent-volume resizing. This evidence does not establish its root cause or complete CI coverage; exact diagnostic disappearance would not prove repair.",
+    "id": "U12",
+    "rep": 2
+  },
+  {
+    "arm": "api",
+    "explanation": "Both captured recursive listings contain two XML objects; all four were acquired with generation pinning, integrity checked, and included as JUnit reports. Source hashes are preserved in .state/ manifests. Artifact completeness applies only to captured XML objects, not overall CI coverage. Both runs retain ambiguous_slash_identity and ambiguous_retry warnings. Counts represent observed records, not unique tests. The later run adds one exact failure signature concerning a PV resize timeout; this does not establish its root cause. Exact diagnostic disappearance would not prove repair.",
+    "id": "U12",
+    "rep": 2
+  },
+  {
+    "arm": "ready",
+    "explanation": "Both captured inventories contain two XML objects, all included, with no exclusions or unresolved objects. Artifact completeness applies only to captured run-prefix XML; archives, extensionless, unpublished and external artifacts are outside scope. Generation-pinned source bytes and hashes are preserved in .state/ manifests and captures. Parser coverage remains incomplete for both runs because of ambiguous slash identity, with an ambiguous retry limitation. Counts represent observed records, not unique tests. The later run introduces one exact failure signature reporting a timeout while fetching a persistent volume during resize. This diagnostic does not establish the underlying cause; signature disappearance, if observed, would not prove repair.",
+    "id": "U12",
+    "rep": 2
+  }
+]

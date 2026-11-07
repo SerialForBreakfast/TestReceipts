@@ -1,0 +1,2090 @@
+[
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 33.40584325790405,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U01",
+    "inventoryCorrect": true,
+    "recordSha256": "e4771f89ec4fc592bb9092999c69630df9378665e787e37b61ab6b5e108157f2",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b391-39cf-7a32-969e-dc4be5a98597",
+    "timeout": false,
+    "traceSha256": "831886c2cf121517879a16d2e2c32fb54186020b60a380edb8cc5a73f9b3f5b6",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 31616,
+      "input_tokens": 66125,
+      "output_tokens": 1206,
+      "total_tokens": 67331,
+      "uncached_input_tokens": 34509
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 50.59847283363342,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U01",
+    "inventoryCorrect": true,
+    "recordSha256": "194028c968109d73a56f254452143cbed88732cd09620366ae465541b471fff9",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b38f-c4bf-7672-87af-637688b0a1e3",
+    "timeout": false,
+    "traceSha256": "2a0e265bfb43767342a858f853456d16ec14bfb8a5ed7628111e839d0e355553",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 92928,
+      "input_tokens": 108235,
+      "output_tokens": 1699,
+      "total_tokens": 109934,
+      "uncached_input_tokens": 15307
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 44.366185903549194,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U01",
+    "inventoryCorrect": true,
+    "recordSha256": "6b2381b8910cd1cd4332aafe7c4957c5963bd952b86a232f5e1a203541f1dbdd",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b390-8b0f-7eb1-b680-a4ea937fcd04",
+    "timeout": false,
+    "traceSha256": "dc0d3f1f936dcdb19b055fd6247c06e02f79ac09682ea5916c95179d9ee41195",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 82816,
+      "input_tokens": 106897,
+      "output_tokens": 1605,
+      "total_tokens": 108502,
+      "uncached_input_tokens": 24081
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 42.11413097381592,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U01",
+    "inventoryCorrect": true,
+    "recordSha256": "e373e7bae596ca06e7262f9a91f6b45c3cda4d98e4268e87d9346f688829b24b",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c5-df5c-7a92-a36d-54b631c9ed53",
+    "timeout": false,
+    "traceSha256": "2eba2632d4aaa2f764e4d399654efe835ded555b98b6dd15f999af7c6ec896e5",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 38656,
+      "input_tokens": 59500,
+      "output_tokens": 1129,
+      "total_tokens": 60629,
+      "uncached_input_tokens": 20844
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 61.73622703552246,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U01",
+    "inventoryCorrect": true,
+    "recordSha256": "808acf81fb121a632182a0d1353a99d2c1d897117187b939dacfb44bd8cf7f77",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c6-8535-7b63-8702-0f8270100153",
+    "timeout": false,
+    "traceSha256": "87a30697218eba400d833519efd6e5700d6d6c3cfdb1c6a765456a1add7b12e8",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 96768,
+      "input_tokens": 110025,
+      "output_tokens": 1602,
+      "total_tokens": 111627,
+      "uncached_input_tokens": 13257
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 60.27399301528931,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U01",
+    "inventoryCorrect": true,
+    "recordSha256": "a9a9b3e8f1d0d31cba30a9134a2c16c41c0f89706702fac5374659933145806c",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c4-f2af-7a11-9240-27be329dc46a",
+    "timeout": false,
+    "traceSha256": "3c79659ea31aea929100ba1370285caaf8b3424c9a584244b6490657231b7bfc",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 92544,
+      "input_tokens": 103906,
+      "output_tokens": 1365,
+      "total_tokens": 105271,
+      "uncached_input_tokens": 11362
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 31.387984037399292,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U02",
+    "inventoryCorrect": true,
+    "recordSha256": "b4b6d0fdcb459aa8f5bd1624eccd6a6a92bc1b2fbcdf289ff00ab7bf8a60f445",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b392-3d95-75c3-bfab-28329c3224e9",
+    "timeout": false,
+    "traceSha256": "429b30a9a39d3bf94cd95a65b6a16a6c9f811a8a88cd6641722e05e6d6d5a0e5",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 55296,
+      "input_tokens": 75506,
+      "output_tokens": 1092,
+      "total_tokens": 76598,
+      "uncached_input_tokens": 20210
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 6,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 55.79770278930664,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U02",
+    "inventoryCorrect": true,
+    "recordSha256": "2c96b4a4ba16cf65759ae9f3d63ebbfdd4b6b10f7d0a5d64b0b1c5757091d71a",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b392-b987-7912-acb2-15aab19d1522",
+    "timeout": false,
+    "traceSha256": "c85ec21940f8d82043ad980be6e00b3fc699bc1ea189ad18113f22df5d69f974",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 128128,
+      "input_tokens": 153953,
+      "output_tokens": 1949,
+      "total_tokens": 155902,
+      "uncached_input_tokens": 25825
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 32.43391704559326,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U02",
+    "inventoryCorrect": true,
+    "recordSha256": "61dd42fbc829fb65e3a3a3cb5e1813012a57e0c72128e06eca7e4dae5b56a08f",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b391-bdd5-7340-9a9c-b1da2435c2b3",
+    "timeout": false,
+    "traceSha256": "f9aab5df51e0560ef8a83445d882c9f142d19d4ef4e1f9319dafda0929298a24",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 77056,
+      "input_tokens": 100541,
+      "output_tokens": 1163,
+      "total_tokens": 101704,
+      "uncached_input_tokens": 23485
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 37.547971963882446,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U02",
+    "inventoryCorrect": true,
+    "recordSha256": "b06a7742bfa9479711f71214d30fcd36135ff22f67c10be8145060fedf70ee99",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c2-590e-7f03-84fe-3e5b8d5ee67f",
+    "timeout": false,
+    "traceSha256": "30c5212a4f9247bbd417b0a041eefb07726b4ef39f5335c43833725298306594",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 49920,
+      "input_tokens": 59793,
+      "output_tokens": 990,
+      "total_tokens": 60783,
+      "uncached_input_tokens": 9873
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 55.904489040374756,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U02",
+    "inventoryCorrect": true,
+    "recordSha256": "83556973104afaf0c7be8972aed737d92cb8fbff5b58c874ddb819c8f084b4b5",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c2-eced-7112-96ef-2d4574e4d16a",
+    "timeout": false,
+    "traceSha256": "985d5bed1e6b751ddd210a203613b246c32b62831aaa1eafd9b5cd2c70acb5e1",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 95616,
+      "input_tokens": 108412,
+      "output_tokens": 1504,
+      "total_tokens": 109916,
+      "uncached_input_tokens": 12796
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 76.01567482948303,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U02",
+    "inventoryCorrect": true,
+    "recordSha256": "beeee7d1d288a5de0672b8a804b50dbf05c42cc5dfe8c1a740eafe4080916b71",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c3-c87b-7e23-9ace-3b024dffaa8d",
+    "timeout": false,
+    "traceSha256": "e57407f395d3a2206f1cd603efb44fe07eff3410bdf5a1279818287a06a44ca1",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 92800,
+      "input_tokens": 104370,
+      "output_tokens": 1291,
+      "total_tokens": 105661,
+      "uncached_input_tokens": 11570
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 36.41117787361145,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U03",
+    "inventoryCorrect": true,
+    "recordSha256": "4aec0280f993abcc4f472893e17ffb1d51499157eb586756942470a1e26cee28",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b393-94cd-7333-b249-69e7c12c0d65",
+    "timeout": false,
+    "traceSha256": "4334977483ce8237a8e3aae4400b6f95937358a69e5a99594fcf0eba74601ed5",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 36992,
+      "input_tokens": 56856,
+      "output_tokens": 1004,
+      "total_tokens": 57860,
+      "uncached_input_tokens": 19864
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 41.00718593597412,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U03",
+    "inventoryCorrect": true,
+    "recordSha256": "6ef6597add489f48ba85c3e19e66bae089b12b043acee3d7bcc6d3c80047c3e2",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b394-24ac-78a2-a56d-afdff30d7a51",
+    "timeout": false,
+    "traceSha256": "a9eaa68c2e948f9e95058cd94c3883a1fa93c10d640a9bdbf555139437a55d95",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 64000,
+      "input_tokens": 108125,
+      "output_tokens": 1480,
+      "total_tokens": 109605,
+      "uncached_input_tokens": 44125
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 34.67226505279541,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U03",
+    "inventoryCorrect": true,
+    "recordSha256": "b91f72367b1b13a948692c1d701f626bf94b2fa895c3e1d9f1b688d31143749f",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b394-c6e7-7911-b324-59fdf049f796",
+    "timeout": false,
+    "traceSha256": "ff74bf945458ba4b750921024aa7cf103e71e6e5d829b53ddbbbafaef047b510",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 59264,
+      "input_tokens": 82684,
+      "output_tokens": 1082,
+      "total_tokens": 83766,
+      "uncached_input_tokens": 23420
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 35.63804292678833,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U03",
+    "inventoryCorrect": true,
+    "recordSha256": "8cb21f8c0d3ab59314bfc52789abbfee4d726389ffb4453fa416403b89cf6b69",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c1-cc92-70d2-8fc0-95ab28142329",
+    "timeout": false,
+    "traceSha256": "3767ea961174ded06757b31cb1eabc12cf7f814e73632b4585dc29455e75b810",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 30080,
+      "input_tokens": 59502,
+      "output_tokens": 913,
+      "total_tokens": 60415,
+      "uncached_input_tokens": 29422
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 52.98872900009155,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U03",
+    "inventoryCorrect": true,
+    "recordSha256": "f713d63b93939eff5803634d8f8df8f8ad9dab6a17669015e5a8508c8a72f434",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c0-4b9a-7071-883e-6efe1e19d63d",
+    "timeout": false,
+    "traceSha256": "45879a2ca48d5297e0bafc07f8c95e9c86efaccc208a4fb775d98c99924ced34",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 92160,
+      "input_tokens": 103571,
+      "output_tokens": 1257,
+      "total_tokens": 104828,
+      "uncached_input_tokens": 11411
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 45.00983023643494,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U03",
+    "inventoryCorrect": true,
+    "recordSha256": "1194d85176696d86b48e1ea92593b298fa90b8c8dd53ebb6fbd6c7b7f4dffb90",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3c1-1b70-7bf3-8d7f-8cc0cdf039e0",
+    "timeout": false,
+    "traceSha256": "27a15a7a53e92176ea8a8c0e9a8703df1f2635c051ac91dc1130f404f660f334",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 71296,
+      "input_tokens": 82921,
+      "output_tokens": 985,
+      "total_tokens": 83906,
+      "uncached_input_tokens": 11625
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 30.378063917160034,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U04",
+    "inventoryCorrect": true,
+    "recordSha256": "fa80d0b6bdf35eefbd7d1509fa3c99f6756af56789a42135c030dd4c03cee9de",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b396-680b-7c61-a20a-fb8012f7f2dc",
+    "timeout": false,
+    "traceSha256": "509d46d7d60e25a782aff5f45e21fc8a04881b4119d1556eac4787df9e48c2db",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 55296,
+      "input_tokens": 75370,
+      "output_tokens": 851,
+      "total_tokens": 76221,
+      "uncached_input_tokens": 20074
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 37.45959401130676,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U04",
+    "inventoryCorrect": true,
+    "recordSha256": "2c5c4babaa30f77ddfd7d27b17a6454c2c3e2cb21d84cc6ad2fe8f807cb17678",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b395-502c-7ff2-aab3-5787d86ca033",
+    "timeout": false,
+    "traceSha256": "c3437152ed7a62ceab84015c81d25e70612d3b4796f29468c91905b6466ddc43",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 82816,
+      "input_tokens": 107940,
+      "output_tokens": 1398,
+      "total_tokens": 109338,
+      "uncached_input_tokens": 25124
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 31.80334496498108,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U04",
+    "inventoryCorrect": true,
+    "recordSha256": "eda8b0088b8d4e68a9887a157353f772ed38d0158cb3dcb0fb14ba7b0e86920d",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b395-e4a1-77f1-be9d-b432059bfcde",
+    "timeout": false,
+    "traceSha256": "46385e648a457505e640a1d07b64e7f4720cc0b60cdac32286c9532a7a8ca49b",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 59264,
+      "input_tokens": 82594,
+      "output_tokens": 1050,
+      "total_tokens": 83644,
+      "uncached_input_tokens": 23330
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 33.000083923339844,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U04",
+    "inventoryCorrect": true,
+    "recordSha256": "dbbd9ab662f94e0e76de9a9030535e8ffb1ac7f713cc10386d87e834a0b73c94",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3bf-0b6e-7973-9b1b-185360d99db1",
+    "timeout": false,
+    "traceSha256": "61625f00ddd40396a89a6d07d81ec075733c9ac311b437e0b4eeb256efd214b2",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 50304,
+      "input_tokens": 60183,
+      "output_tokens": 862,
+      "total_tokens": 61045,
+      "uncached_input_tokens": 9879
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 48.28036284446716,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U04",
+    "inventoryCorrect": true,
+    "recordSha256": "7c76cec1e7fcc5825173c7d15a7b939b35bec98f9facefa72f5b62c1a0aaf0c9",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3bf-8dfc-7241-8093-4528495ea9ea",
+    "timeout": false,
+    "traceSha256": "2f2368d9bfa280797bef09e16f4517d8de92f2dbcc5ca9c1d1d1982bd5f95b6a",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 73856,
+      "input_tokens": 87640,
+      "output_tokens": 1202,
+      "total_tokens": 88842,
+      "uncached_input_tokens": 13784
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 42.215694189071655,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U04",
+    "inventoryCorrect": true,
+    "recordSha256": "683b84838033e006444f007e9ed7996dc1696857c7f3f1e242be35143a31d059",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3be-658a-7db2-b344-b304d1ca883d",
+    "timeout": false,
+    "traceSha256": "fcf94c92aa2efa717854da285aa2ebc71b3fcb5da9ef965dc56c497ed48b6d2d",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 59904,
+      "input_tokens": 82325,
+      "output_tokens": 972,
+      "total_tokens": 83297,
+      "uncached_input_tokens": 22421
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 38.3873827457428,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U05",
+    "inventoryCorrect": true,
+    "recordSha256": "fb9e0af64c6b5c603f0c1952cab7124d2ebf78f02edfee84746a64957207033b",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b397-87d2-7b42-86c0-9c64d44ba1a5",
+    "timeout": false,
+    "traceSha256": "a83ea0beed0ce1663e40fa3c36815180a55532b8d66fa5c30902a37c57bb8b25",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 94976,
+      "input_tokens": 116311,
+      "output_tokens": 1166,
+      "total_tokens": 117477,
+      "uncached_input_tokens": 21335
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 49.85009789466858,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U05",
+    "inventoryCorrect": true,
+    "recordSha256": "3d192b26ac13920cdf6f073030faabc89757d5881a4d5066134a1a357ccaea44",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b398-2357-7021-ad0d-a37b0121ec34",
+    "timeout": false,
+    "traceSha256": "906eeac8c49c8f1e2e9f8e649a64c927b0b8f0a9d18331db2b55d5b41aa8d497",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 93056,
+      "input_tokens": 108142,
+      "output_tokens": 1538,
+      "total_tokens": 109680,
+      "uncached_input_tokens": 15086
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 36.94682598114014,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U05",
+    "inventoryCorrect": true,
+    "recordSha256": "46503c8b5caeda1947d65eea708ab979d2722da96d576d53b2bfeb6544ab3a8d",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b396-e452-7402-a8e6-aec5e7c70b8e",
+    "timeout": false,
+    "traceSha256": "d0b51088c2d7aad1289b746d20e2241b9db117cda018424153985f9a38cc019d",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 51968,
+      "input_tokens": 73277,
+      "output_tokens": 1115,
+      "total_tokens": 74392,
+      "uncached_input_tokens": 21309
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 36.38495397567749,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U05",
+    "inventoryCorrect": true,
+    "recordSha256": "59b9fda51f8da00baff616311274dfef77d4294a017b7955ad2ef12daccf5bd2",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3bc-74ba-78f2-b962-d71843ed7fef",
+    "timeout": false,
+    "traceSha256": "19ee5c72106d0c97abab26838a80b443fc16dfd1a27ef37444d497e4a7ad8d6a",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 49792,
+      "input_tokens": 59387,
+      "output_tokens": 967,
+      "total_tokens": 60354,
+      "uncached_input_tokens": 9595
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 48.34731602668762,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U05",
+    "inventoryCorrect": true,
+    "recordSha256": "52329294b78ab69bc020ce391fe9a6631c96061a8e5544b74d992bedb486a94b",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3bd-047c-7050-948b-31b4f2a4e009",
+    "timeout": false,
+    "traceSha256": "b4c5286ffe43c59d2537c6f740fbcdb3d96da97f9a60f591eae2f2a8c82b389e",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 92416,
+      "input_tokens": 104249,
+      "output_tokens": 1279,
+      "total_tokens": 105528,
+      "uncached_input_tokens": 11833
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 41.46278405189514,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U05",
+    "inventoryCorrect": true,
+    "recordSha256": "8d661d81d2ca3d8043376274f3f3d1492d80dad824cc8dcc171ac4172de78fe6",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3bd-c241-7f62-9b78-f21864987286",
+    "timeout": false,
+    "traceSha256": "6503d3dcfe8ecf62b7d38f5570ec7444b24bf8052de8be482851d78f23ca207c",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 71168,
+      "input_tokens": 82606,
+      "output_tokens": 1057,
+      "total_tokens": 83663,
+      "uncached_input_tokens": 11438
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 42.00173306465149,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U06",
+    "inventoryCorrect": true,
+    "recordSha256": "0f16fead7b5e46c6174b59865db0ee21abdfd3b6afaac61a0892bbefe0fd9b7e",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b398-ef8d-7812-aef4-ed1bc3190420",
+    "timeout": false,
+    "traceSha256": "1108f8e3909aaea9f9c6760682ccb0854b82769ba4f66f421145861d1c2ef112",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 56064,
+      "input_tokens": 76466,
+      "output_tokens": 1449,
+      "total_tokens": 77915,
+      "uncached_input_tokens": 20402
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 58.115922927856445,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U06",
+    "inventoryCorrect": true,
+    "recordSha256": "f4d0ccceb276104123cb801fbd34fccaeaf4e198efc3c5b4f68646490523f012",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b399-9cd7-7fe0-b48a-20faa5470ede",
+    "timeout": false,
+    "traceSha256": "db3bbe311dbd38e47d58dd1fd8f98c7c6639482eaac4806a771534fd92d13a84",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 81536,
+      "input_tokens": 107251,
+      "output_tokens": 1937,
+      "total_tokens": 109188,
+      "uncached_input_tokens": 25715
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 54.78115916252136,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U06",
+    "inventoryCorrect": true,
+    "recordSha256": "b27b2e6810bb1f485b4180f5eec2e04345ca3139eb0594e47d2a9b32577addf5",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b39a-87ab-7b83-8e4b-ec9e4cf3d60e",
+    "timeout": false,
+    "traceSha256": "5321b04df195f83ba577279526e71ebb7c25fb699a1447c7d46f898715b14f23",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 68736,
+      "input_tokens": 81885,
+      "output_tokens": 1589,
+      "total_tokens": 83474,
+      "uncached_input_tokens": 13149
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 50.4340238571167,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U06",
+    "inventoryCorrect": true,
+    "recordSha256": "78521ce804b69b6e244332110825ceac7cd4472c2dad68d678a59332644f46bb",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3bb-ae5a-76a1-a910-46b9acea750c",
+    "timeout": false,
+    "traceSha256": "fff9fcb6c76f57aa156a03781ece874b82c5ceae49f595e205c7d9e01f81e53d",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 34048,
+      "input_tokens": 52842,
+      "output_tokens": 1426,
+      "total_tokens": 54268,
+      "uncached_input_tokens": 18794
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 66.60303497314453,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U06",
+    "inventoryCorrect": true,
+    "recordSha256": "f652b7a63fff06848d7787c75822f6bf3d3285218774f7c1983de5f39a277899",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b9-d4b4-75f2-9ccc-e063ef1caadb",
+    "timeout": false,
+    "traceSha256": "4a8494254292fd5ded30591acb719e42b0616dbe9fe92bd7552cc611298f234a",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 55552,
+      "input_tokens": 78610,
+      "output_tokens": 1739,
+      "total_tokens": 80349,
+      "uncached_input_tokens": 23058
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 54.10381317138672,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U06",
+    "inventoryCorrect": true,
+    "recordSha256": "b338be118d6f73da1bd941415069a327df9cb78baea84b627b3d34e018053c3b",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ba-d9ec-7871-b314-7b0ba6ec7346",
+    "timeout": false,
+    "traceSha256": "f301e2f23ab8e9310bb13e752760feedfb4c1a5f7167e4b603ab63f0eea40e68",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 70656,
+      "input_tokens": 81797,
+      "output_tokens": 1454,
+      "total_tokens": 83251,
+      "uncached_input_tokens": 11141
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 40.99102425575256,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U07",
+    "inventoryCorrect": true,
+    "recordSha256": "594941da56c070f77cbca12bbd5bfa1ceacda7a4132109b11213ad963548315a",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b39d-5f75-7f71-894c-98bf41bf57e8",
+    "timeout": false,
+    "traceSha256": "09e64448008a6fbdb940559087bbdccfe10e9b63880b27f00f686d656c71c18a",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 47104,
+      "input_tokens": 57256,
+      "output_tokens": 1408,
+      "total_tokens": 58664,
+      "uncached_input_tokens": 10152
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 6,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 66.80609703063965,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U07",
+    "inventoryCorrect": true,
+    "recordSha256": "0f4d1728e2aeaa355c8fa505f5816c1227d71ecbb6a5bf63ec6e425f44e1dcb0",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b39b-63d4-7cd3-8b8f-fae2548fd3d2",
+    "timeout": false,
+    "traceSha256": "c9afae9269524a41fa6020b137d87fe2512b035d1bd70aa0199cb8b8744315cd",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 123392,
+      "input_tokens": 137342,
+      "output_tokens": 2252,
+      "total_tokens": 139594,
+      "uncached_input_tokens": 13950
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 58.24146890640259,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U07",
+    "inventoryCorrect": true,
+    "recordSha256": "fc635ed733735ca74066cf534b90178143c9c733de0db28e4c8a4ffae0dc459e",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b39c-7f08-7e21-b12d-0470741a8986",
+    "timeout": false,
+    "traceSha256": "b8272315d63ccaed65df40233686a84ba39ede884d4d880402c2fd063069954a",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 68992,
+      "input_tokens": 82090,
+      "output_tokens": 1514,
+      "total_tokens": 83604,
+      "uncached_input_tokens": 13098
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 51.588396072387695,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U07",
+    "inventoryCorrect": true,
+    "recordSha256": "085917b67074e1dc330ece781be5657f9cb6f4ce81834eeed2b21b79a803f9e2",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b8-0366-7913-9fd1-9d5ab4aa8830",
+    "timeout": false,
+    "traceSha256": "190847f62251d8b152100b8319bb4d99de68aac7455f2e8de9a1c43929aab31d",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 37376,
+      "input_tokens": 58144,
+      "output_tokens": 1397,
+      "total_tokens": 59541,
+      "uncached_input_tokens": 20768
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 66.7584068775177,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U07",
+    "inventoryCorrect": true,
+    "recordSha256": "ae0ecf60a8fdf878d342ed857858c0acdfe305122fbbd933262e62b652931e4d",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b8-ce2a-7911-b7eb-363140fe572a",
+    "timeout": false,
+    "traceSha256": "c18bbadfaca7d339f32940772642077e22ff65775058c0ee3a751a66658ae829",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 72832,
+      "input_tokens": 93359,
+      "output_tokens": 1850,
+      "total_tokens": 95209,
+      "uncached_input_tokens": 20527
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 40.095561027526855,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U07",
+    "inventoryCorrect": true,
+    "recordSha256": "7a5cc7e4a3510d2867abf49f18115162665f7ab9806f6fcf158425708cef69ce",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b7-65f1-7980-bf1e-388b946a3ab0",
+    "timeout": false,
+    "traceSha256": "d973f09277411b875cd1990d992f2e14b8b2a4992bdd740cce630b0386c7a09b",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 68992,
+      "input_tokens": 82362,
+      "output_tokens": 1502,
+      "total_tokens": 83864,
+      "uncached_input_tokens": 13370
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 43.85492300987244,
+    "exitCode": 0,
+    "goCommandObserved": false,
+    "id": "U08",
+    "inventoryCorrect": true,
+    "recordSha256": "ab7bb14e20af2e6e7659aacb09c45a4d401bd690f38411181a4f5272100862c8",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b39e-988f-7712-b877-0c610be3e3ce",
+    "timeout": false,
+    "traceSha256": "2d5c3b56252d3e8fff2198844a2e9a502bdad296085fe0fd721220429b7ed7b5",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 102528,
+      "input_tokens": 126845,
+      "output_tokens": 1311,
+      "total_tokens": 128156,
+      "uncached_input_tokens": 24317
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 54.2496612071991,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U08",
+    "inventoryCorrect": true,
+    "recordSha256": "c59cbcb398f9b13de471373860dca1ce5a4929f28f99d2245cdf09b347ca4439",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b39f-4895-7a01-87d6-b98be7d5ef17",
+    "timeout": false,
+    "traceSha256": "13dade42356ff0c1f06b71621e9da7bc4b2cde218e31c177b409cd3c6a70095d",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 118400,
+      "input_tokens": 133988,
+      "output_tokens": 1868,
+      "total_tokens": 135856,
+      "uncached_input_tokens": 15588
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 36.54077410697937,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U08",
+    "inventoryCorrect": true,
+    "recordSha256": "7f09c597fc6ed65c886d711e249362b7c94537b73d46027e9314ad8bd104dd5e",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b39e-0601-79b0-bbd9-2126b7893124",
+    "timeout": false,
+    "traceSha256": "9b0e46850882c4709f128b8e3da6b0ef239cf8a93e1bae3db838d7bf4f13f7e7",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 59264,
+      "input_tokens": 82338,
+      "output_tokens": 880,
+      "total_tokens": 83218,
+      "uncached_input_tokens": 23074
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 23.956943035125732,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U08",
+    "inventoryCorrect": true,
+    "recordSha256": "2a18f8e798bd6bb16a7884db665674fb767749fddcb5bfe08e9d52a401aa749f",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b5-b926-7c60-a879-273ea6777e65",
+    "timeout": false,
+    "traceSha256": "8eb5d94aeef2411ae1acfbc8c0675e9b4c25fe5c1b5979f5f4c38b640dad37e0",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 47104,
+      "input_tokens": 56759,
+      "output_tokens": 906,
+      "total_tokens": 57665,
+      "uncached_input_tokens": 9655
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 44.59713625907898,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U08",
+    "inventoryCorrect": true,
+    "recordSha256": "e1f2515e33107741ef1509a61d1bc132ef45665d8a4b695c26ac32f893f223b5",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b6-17c6-7f83-a24f-d2db6f7604e8",
+    "timeout": false,
+    "traceSha256": "7d6909f07d1207f5f33992af8be4065aa34da15efb4b9c38d53b7c1f0aa90202",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 106880,
+      "input_tokens": 132506,
+      "output_tokens": 1669,
+      "total_tokens": 134175,
+      "uncached_input_tokens": 25626
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 40.50850200653076,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U08",
+    "inventoryCorrect": true,
+    "recordSha256": "bb7d8fdcb45605cce44a5e50f497f60f9e928696c3f938b0705a72b2c33a02f9",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b6-c6c8-7633-a4c7-072eb185e01c",
+    "timeout": false,
+    "traceSha256": "7b6d5612a000cf47f3e615c7f404a3a976b0accd77095e46981011ec363f214a",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 92672,
+      "input_tokens": 106498,
+      "output_tokens": 1398,
+      "total_tokens": 107896,
+      "uncached_input_tokens": 13826
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 105.42000913619995,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U09",
+    "inventoryCorrect": true,
+    "recordSha256": "368ebbfc13d81d21270e3250df94fa13b1ce4e6ca240f4de8f57d843d8c3dc60",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a0-1dcd-7a22-a237-e7ca9c64c073",
+    "timeout": false,
+    "traceSha256": "23a231bc30c1d914d9a2158351848096531c9b4f5a183350c23e316a190db985",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 55296,
+      "input_tokens": 79346,
+      "output_tokens": 4657,
+      "total_tokens": 84003,
+      "uncached_input_tokens": 24050
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 119.62066769599915,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U09",
+    "inventoryCorrect": true,
+    "recordSha256": "6936a12baa1dc7130a3d9e355d1991b6eebfb14f0b387aba14b44c0f50f8b15c",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a1-bc62-73a2-9aa6-acf137bef523",
+    "timeout": false,
+    "traceSha256": "dabffdbdc4513e3e0f62e8f5cf42c3005b6affcf73db4f9e5f4bdff3108afc05",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 122368,
+      "input_tokens": 141786,
+      "output_tokens": 5267,
+      "total_tokens": 147053,
+      "uncached_input_tokens": 19418
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 111.02539896965027,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U09",
+    "inventoryCorrect": true,
+    "recordSha256": "fdd4a25c051c56a5a5a40b1d0bec560632e61964fc0b0513fff6cd9058064f57",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a3-9166-7f12-ab51-6c7c7ad467f7",
+    "timeout": false,
+    "traceSha256": "67d2fafcd1a0b677198d241b6c6bf106e8297ae7b70548f3fa5aeece5b2ecb41",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 95616,
+      "input_tokens": 112790,
+      "output_tokens": 4877,
+      "total_tokens": 117667,
+      "uncached_input_tokens": 17174
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 2,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 100.57000803947449,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U09",
+    "inventoryCorrect": true,
+    "recordSha256": "345ca41b95fc00cf94f9c936d0c9bd2a20334c73702feed3695b8f9a7fdf022b",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b4-2ec5-7951-b2ee-008e4e9ab2dd",
+    "timeout": false,
+    "traceSha256": "75e7f7079e1170c74227a427e750c32afa651b89a3ac0c9702be8805a2a5fefb",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 47232,
+      "input_tokens": 60768,
+      "output_tokens": 4600,
+      "total_tokens": 65368,
+      "uncached_input_tokens": 13536
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 120.20736885070801,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U09",
+    "inventoryCorrect": true,
+    "recordSha256": "da9cb020e20010abdcc36fcdf71163c6ec00b41d058c59139a64da012049598e",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b0-ca91-7823-9c2b-bff6f9d36f6b",
+    "timeout": false,
+    "traceSha256": "17165bb7d42311bd88c9d3cf755f9bbf72501363b084d46ebed185e8188a73ff",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 100736,
+      "input_tokens": 141945,
+      "output_tokens": 5315,
+      "total_tokens": 147260,
+      "uncached_input_tokens": 41209
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 101.04739999771118,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U09",
+    "inventoryCorrect": true,
+    "recordSha256": "3cd59059e71e8ed33c6b98961ff5159ba94e4a14ef85232e451dbc0d39f23f81",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3b2-a287-7ec2-b0ba-afd67355a5d1",
+    "timeout": false,
+    "traceSha256": "0ffa500784859296930552c768cd8e9590ff54997e4825858222b42dd03b67e1",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 68992,
+      "input_tokens": 85579,
+      "output_tokens": 4619,
+      "total_tokens": 90198,
+      "uncached_input_tokens": 16587
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 29.977356910705566,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U10",
+    "inventoryCorrect": true,
+    "recordSha256": "277f6da338b10a9a8986671e77fb4a7dc633c8e1a3d39c1b27692f7fac73542b",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a6-cce7-78b2-a613-33e728d4c70f",
+    "timeout": false,
+    "traceSha256": "3531aff85df5eea30f953b13fc59b7b9ea964ac3ca7f3ebaf2e48e94d79e52dc",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 47232,
+      "input_tokens": 57059,
+      "output_tokens": 1028,
+      "total_tokens": 58087,
+      "uncached_input_tokens": 9827
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 55.5968120098114,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U10",
+    "inventoryCorrect": true,
+    "recordSha256": "9f8a2dc4d021d7a603979038914c4662bfcb02bbf7aa3cf539f7ab6dc17b87b2",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a5-457d-7821-a9c1-1fbd101bd30e",
+    "timeout": false,
+    "traceSha256": "96e3b562e223f49de14192281d2db41fa12f666df66807f426a5fe652fd560fb",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 96128,
+      "input_tokens": 119496,
+      "output_tokens": 1694,
+      "total_tokens": 121190,
+      "uncached_input_tokens": 23368
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 42.693917989730835,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U10",
+    "inventoryCorrect": true,
+    "recordSha256": "c8dd3b9ae299391930bae630382068c58e8360e8702bf4801e4986b6d06e1a69",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a6-23b8-79f3-a37f-143270ab815e",
+    "timeout": false,
+    "traceSha256": "ab4313b301d659161961b002bc2ffee758bf0e4ddfab3440ea06bd069752f7f6",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 83072,
+      "input_tokens": 109109,
+      "output_tokens": 1304,
+      "total_tokens": 110413,
+      "uncached_input_tokens": 26037
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 29.57116198539734,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U10",
+    "inventoryCorrect": true,
+    "recordSha256": "0c7601c19b4492159a42bd8b7a178bd44d63a7df7a7e6215adfccc5c358a4278",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3af-8959-7a92-91cd-e30c843b9316",
+    "timeout": false,
+    "traceSha256": "062b03fc8c52f3328093fa18f8f834c911718d3601e89221cb424d0bb1a87a7c",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 76160,
+      "input_tokens": 84443,
+      "output_tokens": 1078,
+      "total_tokens": 85521,
+      "uncached_input_tokens": 8283
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 52.075478076934814,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U10",
+    "inventoryCorrect": true,
+    "recordSha256": "83aafa022c62054c40e2a1b9512577257b49fc4c642daef3b418d3912316dc58",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3af-fde2-7b20-b9d5-b06459260fdb",
+    "timeout": false,
+    "traceSha256": "f1a3c345183f2256361e1ed281fd4833416b0e526d7348bcd2b88b3b0a9330f4",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 106368,
+      "input_tokens": 119758,
+      "output_tokens": 1706,
+      "total_tokens": 121464,
+      "uncached_input_tokens": 13390
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 6,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 44.693270206451416,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U10",
+    "inventoryCorrect": true,
+    "recordSha256": "ac79e820753e22f041c4ebd019e53112bd23bdfd501388dd13dd715b23753478",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ae-d98b-7141-88b8-6ca21f1f3424",
+    "timeout": false,
+    "traceSha256": "25ad60e43cf6830ef6b1ee3496c7506a8aa8d93cc26294ceec69fef2ede3f875",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 132096,
+      "input_tokens": 145948,
+      "output_tokens": 1450,
+      "total_tokens": 147398,
+      "uncached_input_tokens": 13852
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 38.65815210342407,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U11",
+    "inventoryCorrect": true,
+    "recordSha256": "670531373272dea61a91a96222b16a1394a37f0e272188344e7385b138ab868e",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a7-f15f-7e11-87d3-e91b0c64d670",
+    "timeout": false,
+    "traceSha256": "2e9d67275efc64ec8bf95900c80fd4d38df25e0843341c54bbd312423611057e",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 59904,
+      "input_tokens": 68083,
+      "output_tokens": 1156,
+      "total_tokens": 69239,
+      "uncached_input_tokens": 8179
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 59.33494305610657,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U11",
+    "inventoryCorrect": true,
+    "recordSha256": "a14000b5627001bb4af64c33338427a4d31f5812ef22ef2ac7c7b89a96bc0de7",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a8-8bbe-7fc1-8ff6-be1efbc2895e",
+    "timeout": false,
+    "traceSha256": "7894c320f14aba8da7655ec457d6fd90b92c499ad32c5875864d3363b43d47e7",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 99584,
+      "input_tokens": 124838,
+      "output_tokens": 1720,
+      "total_tokens": 126558,
+      "uncached_input_tokens": 25254
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 43.35917067527771,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U11",
+    "inventoryCorrect": true,
+    "recordSha256": "6bdec664dee25b6bfd3397e68755091a4e2be31ab881ecb2c63824dc94b2c3d9",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a7-4620-7473-80d7-1cea537cc6fe",
+    "timeout": false,
+    "traceSha256": "2db6bb669d4e284b85334ac9de5fadcaa4b5579b5dd9787efbedadee646cc947",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 68864,
+      "input_tokens": 81991,
+      "output_tokens": 1262,
+      "total_tokens": 83253,
+      "uncached_input_tokens": 13127
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 39.52424502372742,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U11",
+    "inventoryCorrect": true,
+    "recordSha256": "e779f73f7b76203a7b525740a866f9901366ed1d1a317c34994020cc58d7a66c",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ad-0cc0-7b13-b059-599527158c71",
+    "timeout": false,
+    "traceSha256": "d87e0d079b9d782698d8c0d41bd0d7817c7d0ff787bb38ed08993ad9adfe7f04",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 84608,
+      "input_tokens": 94935,
+      "output_tokens": 1252,
+      "total_tokens": 96187,
+      "uncached_input_tokens": 10327
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 48.08631086349487,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U11",
+    "inventoryCorrect": true,
+    "recordSha256": "61563936347b3a14542636887aea0ccf5f1bae8b0949932c6f423662cfc3cfcc",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ad-a79c-7a72-be2f-c6734e916cc4",
+    "timeout": false,
+    "traceSha256": "accfb21cb1913bb091a8df3b042674755ef376768f572c921e8d2cc27d29fb01",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 91776,
+      "input_tokens": 107114,
+      "output_tokens": 1688,
+      "total_tokens": 108802,
+      "uncached_input_tokens": 15338
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 29.587807178497314,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U11",
+    "inventoryCorrect": true,
+    "recordSha256": "cba149ecf2a7b77d2285ba35571cdf38d14859de6854890650fb8a85119db788",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ae-64d5-73d2-b2e6-c76fd86242e6",
+    "timeout": false,
+    "traceSha256": "23803114c6ae49ef5f47f77b5650cb9355f3b3138f2c8ab0986388afb6f700d1",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 58112,
+      "input_tokens": 81453,
+      "output_tokens": 1091,
+      "total_tokens": 82544,
+      "uncached_input_tokens": 23341
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 31.912131786346436,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U12",
+    "inventoryCorrect": true,
+    "recordSha256": "603b59eac97aa9f6885f5d23fbfdf4e82aaed76af41b580d4121ed2ad9bf83a1",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a9-73f6-7781-9d74-3211eb491753",
+    "timeout": false,
+    "traceSha256": "eafa5726812ba895163567b46fcd5aa848aeb015e26db89bec474b8f26f6c770",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 37120,
+      "input_tokens": 57221,
+      "output_tokens": 1235,
+      "total_tokens": 58456,
+      "uncached_input_tokens": 20101
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 43.80345797538757,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U12",
+    "inventoryCorrect": true,
+    "recordSha256": "b43961dcc5d2fddba84f1271d0b8ffe73b000c3f777e65144d074703bc8a36a8",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3a9-f1d8-7443-ad32-f73073740101",
+    "timeout": false,
+    "traceSha256": "6264460f26fdfe104978b8df56d084f7faa934f49bd3d5926875dfcb41df1893",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 102784,
+      "input_tokens": 128240,
+      "output_tokens": 1686,
+      "total_tokens": 129926,
+      "uncached_input_tokens": 25456
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 4,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 37.69874882698059,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U12",
+    "inventoryCorrect": true,
+    "recordSha256": "93e2d806aade7eb533ddb2e910b8ce288e699899f8fe6928b0afa80e185b19c2",
+    "rep": 1,
+    "sourceUnchanged": true,
+    "thread": "01a1b3aa-9e30-7f11-8d99-44290f07bf76",
+    "timeout": false,
+    "traceSha256": "62d29d6eca6c1815eb51ba0669105c6c3307a76b6c56a0cd1154bc562459a9de",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 55168,
+      "input_tokens": 99307,
+      "output_tokens": 1366,
+      "total_tokens": 100673,
+      "uncached_input_tokens": 44139
+    }
+  },
+  {
+    "arm": "adapter",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 35.2966411113739,
+    "exitCode": 0,
+    "goCommandObserved": true,
+    "id": "U12",
+    "inventoryCorrect": true,
+    "recordSha256": "a1a4b119cd0bb13247171e789b53986b781ebca5085ac1a21ce07adc72f388b0",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ac-7f6f-7182-81a9-4bd35c732c25",
+    "timeout": false,
+    "traceSha256": "140778ebbf31b15562e8df01488052f46726d5d0b660c73fb24bfc9b00a4f123",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 65920,
+      "input_tokens": 76482,
+      "output_tokens": 1253,
+      "total_tokens": 77735,
+      "uncached_input_tokens": 10562
+    }
+  },
+  {
+    "arm": "api",
+    "calls": 5,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 49.54915499687195,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U12",
+    "inventoryCorrect": true,
+    "recordSha256": "6460c3939d6f932c7be29b02b2cc36e6d92f8baef129e16edda5aff639e08024",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ab-32fd-7141-a148-723085083a73",
+    "timeout": false,
+    "traceSha256": "5bb78d1c91d8627a9d8ff95387562ed97bba6969f905c6ac45e3a688e8aaa4c6",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 105344,
+      "input_tokens": 131055,
+      "output_tokens": 1805,
+      "total_tokens": 132860,
+      "uncached_input_tokens": 25711
+    }
+  },
+  {
+    "arm": "ready",
+    "calls": 3,
+    "checks": {
+      "change": true,
+      "newEvidence": true,
+      "runs": true
+    },
+    "correct": true,
+    "elapsed": 34.64704990386963,
+    "exitCode": 0,
+    "goCommandObserved": null,
+    "id": "U12",
+    "inventoryCorrect": true,
+    "recordSha256": "87cdc2f9469d9b5facb98e7b6a21d0a74508fede8efa5d7344668a76a4502333",
+    "rep": 2,
+    "sourceUnchanged": true,
+    "thread": "01a1b3ab-f62c-7552-bcd9-1f8789c9e3ee",
+    "timeout": false,
+    "traceSha256": "121226b77d1e6fe1fec785d7eeb20f5401742f9c2e626bf2ffbb1e096e272b07",
+    "unsupportedCompletenessClaims": 0,
+    "usage": {
+      "cached_input_tokens": 59264,
+      "input_tokens": 82897,
+      "output_tokens": 1291,
+      "total_tokens": 84188,
+      "uncached_input_tokens": 23633
+    }
+  }
+]

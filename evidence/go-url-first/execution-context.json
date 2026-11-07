@@ -1,0 +1,24 @@
+{
+  "buildInfo": ".artifacts/go-url-first-v1/protocol/testreceipts: go1.27.3\n\tpath\ttestreceipts/cmd/testreceipts\n\tmod\ttestreceipts\tv0.0.0-20261107005556-48a50877c78b\t\n\tbuild\t-buildmode=exe\n\tbuild\t-compiler=gc\n\tbuild\tDefaultGODEBUG=containermaxprocs=0,cryptocustomrand=1,decoratemappings=0,gotestjsonbuildtext=1,httpcookiemaxnum=0,httpservecontentmaxranges=1,multipathtcp=0,randseednop=0,rsa1024min=0,tlsmlkem=0,tlssecpmlkem=0,tlssha1=1,tracebacklabels=0,updatemaxprocs=0,urlmaxqueryparams=0,urlstrictcolons=0,x509rsacrt=0,x509sha256skid=0,x509sslcertoverrideplatform=0,x509usepolicies=0\n\tbuild\tCGO_ENABLED=1\n\tbuild\tCGO_CFLAGS=\n\tbuild\tCGO_CPPFLAGS=\n\tbuild\tCGO_CXXFLAGS=\n\tbuild\tCGO_LDFLAGS=\n\tbuild\tGOARCH=arm64\n\tbuild\tGOOS=darwin\n\tbuild\tGOARM64=v8.0\n\tbuild\tvcs=git\n\tbuild\tvcs.revision=48a50877c78b7e1d7fadfdac87104fd7fe6fc523\n\tbuild\tvcs.time=2026-11-07T00:55:56Z\n\tbuild\tvcs.modified=false\n",
+  "capturedAt": 1794014798.575635,
+  "coreGitChanges": "",
+  "coreSourceSha256": {
+    "cmd/testreceipts/main.go": "910670843c330fe90b8b524aae8ac73cff17d80f34c4c7735af36df1177198bd",
+    "cmd/testreceipts/main_test.go": "85e3eb692c033e27fbf671244f7216fef65f3dd8c44f619f8f5e2e680f700f9b",
+    "go.mod": "f7cf998918f8a9b829782540be2a655fdb1e9c81ec904f1bf579292e3890b448",
+    "internal/evidence/decode.go": "a9700c63b4a74948104714f32f81a293bcab0a02030682976b8648dd294b6a44",
+    "internal/evidence/evidence.go": "7334d796cad79500c140813042e6564a01b5a0cb1d617bccf84d8c6a33f8ff25",
+    "internal/evidence/evidence_test.go": "bd50baa586dda9daf34efb9bed483e8d14ef9215e494b26685cbcbf90efd4d93",
+    "internal/junit/junit.go": "72ab3f354f4863ee3c05b3c203a4ee7ef9fa88566f4d5f971df0e0cbf3651e52",
+    "internal/junit/junit_test.go": "447dfcaa9b7035bc2e36d09e16e1ccc44f4cd51a57816813415e011b23bdf9bd",
+    "internal/junit/namespaces.go": "b19543ddb5809923a4b6cca055fe278a15ba3ac0f5cdbcf163f0ab99162e355c",
+    "internal/mcp/server.go": "f2e2180cccc6a6736b77bb4219fe517db3e28a7996cfd048c94f95baf5be7df9",
+    "internal/mcp/server_test.go": "90395ab0d93f8b8f3f25b5c5b824379bf08cf83a6503a0bd468e7714a8c06d8b",
+    "internal/provider/live.go": "6d814b142b19e04b3f5a037e7f085b595c4943f006a4099681d14c87339d2da9",
+    "internal/provider/live_test.go": "fa239f28f156b81409ecef5e5b3f3a9bea82175f88d1b40c7635182e526a5602",
+    "internal/provider/recording.go": "7644215885ad46c0af6b518fad85bc7f3adf52fb38eddaa698551f7ca8856c9a",
+    "internal/provider/recording_test.go": "876da4ce26d7e1124765d884bbf3ae2e86161776cb924cdbe8bac7f98ce6f874"
+  },
+  "note": "Supplementary build provenance recorded during execution; frozen protocol and binary unchanged.",
+  "sourceRevision": "48a50877c78b7e1d7fadfdac87104fd7fe6fc523"
+}

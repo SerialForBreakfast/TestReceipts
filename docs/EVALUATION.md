@@ -1,6 +1,6 @@
 # Evaluation rules for the new project
 
-Model/agent evaluations are explicitly deferred for this PoC. No hosted or local model runs, token spending or new evaluation setup are authorized. Existing correctness/CI checks remain valid; the later-study guidance is retained only for a future explicit task.
+The separately authorized 72-investigation first-use Go replication is complete. [Results and audit](../evidence/go-url-first/README.md): 41.53% / 27.23% median paired workflow savings, 72/72 automated fact/inventory passes, 23/24 assigned attempts executing Go and one permitted Python fallback retained in costs. Human narrative review remains pending. Additional model runs, repeated-use evaluation, token spending and infrastructure remain deferred without a new explicit instruction. Existing correctness/CI checks remain valid; later-study guidance below is retained for a future task.
 
 ## Port correctness first
 

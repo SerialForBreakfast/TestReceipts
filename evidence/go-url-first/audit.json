@@ -1,0 +1,21 @@
+{
+  "attempts": 72,
+  "checks": [
+    "frozen protocol/recordings/runner/CLI",
+    "raw answers and usage",
+    "exact gold facts and inventories",
+    "source immutability",
+    "72 unique sessions in frozen sequential schedule",
+    "summary reconstruction"
+  ],
+  "humanNarrativeReview": "pending",
+  "limits": [
+    "Historical inputs, not held out; one model, fresh setup only",
+    "CLI version differs from original; all baselines rerun",
+    "Includes cached input tokens; not dollar savings",
+    "Recorded responses; not live networking, MCP or repeated use",
+    "Go SDK acquisition telemetry unavailable; output inventory correctness checked",
+    "Prompt-scoped access is not proven OS isolation"
+  ],
+  "status": "pass"
+}

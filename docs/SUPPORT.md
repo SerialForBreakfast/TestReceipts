@@ -1,6 +1,6 @@
 # Unsigned PoC scope
 
-Maintainer decision, 2026-11-06: TestReceipts is an MIT-licensed, unsigned proof of concept. Existing native CI is sufficient for this PoC. There is no additional VM, hosting, signing or evaluation budget. Repository visibility and any public release are the maintainer's actions.
+Maintainer decision, 2026-11-06: TestReceipts is an MIT-licensed, unsigned proof of concept. Existing native CI is sufficient for this PoC. There is no additional VM, hosting or signing budget. The maintainer subsequently authorized one 72-investigation Go token-study replication; this is a bounded exception to the earlier evaluation deferral. Repository visibility and any public release are the maintainer's actions.
 
 ## Tested platform support
 
@@ -28,7 +28,7 @@ Signing credentials, certificates and developer accounts are not required for th
 ## Deferred work
 
 - Modern MCP upgrades and third-party client integration: deferred. The existing optional legacy 2025-11-25 stdio profile remains available with its documented limits.
-- Model evaluations and token-saving studies: deferred. Do not run local or hosted model trials, spend tokens, select a new evaluation dataset or provision evaluation infrastructure without a new explicit instruction. A local-model machine is a possible later option, not an active task.
+- Token-study exception: one first-use Go replication of the historical test was authorized and is complete; see the [results and limitations](../evidence/go-url-first/README.md). Repeated-use studies, new datasets, other model campaigns and evaluation infrastructure remain deferred without a new explicit instruction. A local-model machine remains a possible later option.
 - Public-library module-path migration, system installers and package-manager integrations: outside this CLI PoC's scope. The local module remains `testreceipts`.
 
 The maintainer controls making the repository public and authorizing any release publication. Agents must not change repository visibility, publish releases/tags or upload public packages as part of this cleanup. Documentation maintenance and normal source commits do not constitute public release authorization.

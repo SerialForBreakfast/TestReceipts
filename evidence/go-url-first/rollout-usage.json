@@ -1,0 +1,1010 @@
+[
+  {
+    "arm": "adapter",
+    "id": "U01",
+    "rep": 1,
+    "thread": "01a1b391-39cf-7a32-969e-dc4be5a98597",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 31616,
+      "input_tokens": 66125,
+      "output_tokens": 1206,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 67331
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U01",
+    "rep": 1,
+    "thread": "01a1b38f-c4bf-7672-87af-637688b0a1e3",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 92928,
+      "input_tokens": 108235,
+      "output_tokens": 1699,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 109934
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U01",
+    "rep": 1,
+    "thread": "01a1b390-8b0f-7eb1-b680-a4ea937fcd04",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 82816,
+      "input_tokens": 106897,
+      "output_tokens": 1605,
+      "reasoning_output_tokens": 14,
+      "total_tokens": 108502
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U01",
+    "rep": 2,
+    "thread": "01a1b3c5-df5c-7a92-a36d-54b631c9ed53",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 38656,
+      "input_tokens": 59500,
+      "output_tokens": 1129,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 60629
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U01",
+    "rep": 2,
+    "thread": "01a1b3c6-8535-7b63-8702-0f8270100153",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 96768,
+      "input_tokens": 110025,
+      "output_tokens": 1602,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 111627
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U01",
+    "rep": 2,
+    "thread": "01a1b3c4-f2af-7a11-9240-27be329dc46a",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 92544,
+      "input_tokens": 103906,
+      "output_tokens": 1365,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 105271
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U02",
+    "rep": 1,
+    "thread": "01a1b392-3d95-75c3-bfab-28329c3224e9",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 55296,
+      "input_tokens": 75506,
+      "output_tokens": 1092,
+      "reasoning_output_tokens": 23,
+      "total_tokens": 76598
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U02",
+    "rep": 1,
+    "thread": "01a1b392-b987-7912-acb2-15aab19d1522",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 128128,
+      "input_tokens": 153953,
+      "output_tokens": 1949,
+      "reasoning_output_tokens": 17,
+      "total_tokens": 155902
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U02",
+    "rep": 1,
+    "thread": "01a1b391-bdd5-7340-9a9c-b1da2435c2b3",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 77056,
+      "input_tokens": 100541,
+      "output_tokens": 1163,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 101704
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U02",
+    "rep": 2,
+    "thread": "01a1b3c2-590e-7f03-84fe-3e5b8d5ee67f",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 49920,
+      "input_tokens": 59793,
+      "output_tokens": 990,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 60783
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U02",
+    "rep": 2,
+    "thread": "01a1b3c2-eced-7112-96ef-2d4574e4d16a",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 95616,
+      "input_tokens": 108412,
+      "output_tokens": 1504,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 109916
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U02",
+    "rep": 2,
+    "thread": "01a1b3c3-c87b-7e23-9ace-3b024dffaa8d",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 92800,
+      "input_tokens": 104370,
+      "output_tokens": 1291,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 105661
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U03",
+    "rep": 1,
+    "thread": "01a1b393-94cd-7333-b249-69e7c12c0d65",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 36992,
+      "input_tokens": 56856,
+      "output_tokens": 1004,
+      "reasoning_output_tokens": 22,
+      "total_tokens": 57860
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U03",
+    "rep": 1,
+    "thread": "01a1b394-24ac-78a2-a56d-afdff30d7a51",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 64000,
+      "input_tokens": 108125,
+      "output_tokens": 1480,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 109605
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U03",
+    "rep": 1,
+    "thread": "01a1b394-c6e7-7911-b324-59fdf049f796",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 59264,
+      "input_tokens": 82684,
+      "output_tokens": 1082,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83766
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U03",
+    "rep": 2,
+    "thread": "01a1b3c1-cc92-70d2-8fc0-95ab28142329",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 30080,
+      "input_tokens": 59502,
+      "output_tokens": 913,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 60415
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U03",
+    "rep": 2,
+    "thread": "01a1b3c0-4b9a-7071-883e-6efe1e19d63d",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 92160,
+      "input_tokens": 103571,
+      "output_tokens": 1257,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 104828
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U03",
+    "rep": 2,
+    "thread": "01a1b3c1-1b70-7bf3-8d7f-8cc0cdf039e0",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 71296,
+      "input_tokens": 82921,
+      "output_tokens": 985,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83906
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U04",
+    "rep": 1,
+    "thread": "01a1b396-680b-7c61-a20a-fb8012f7f2dc",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 55296,
+      "input_tokens": 75370,
+      "output_tokens": 851,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 76221
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U04",
+    "rep": 1,
+    "thread": "01a1b395-502c-7ff2-aab3-5787d86ca033",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 82816,
+      "input_tokens": 107940,
+      "output_tokens": 1398,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 109338
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U04",
+    "rep": 1,
+    "thread": "01a1b395-e4a1-77f1-be9d-b432059bfcde",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 59264,
+      "input_tokens": 82594,
+      "output_tokens": 1050,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83644
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U04",
+    "rep": 2,
+    "thread": "01a1b3bf-0b6e-7973-9b1b-185360d99db1",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 50304,
+      "input_tokens": 60183,
+      "output_tokens": 862,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 61045
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U04",
+    "rep": 2,
+    "thread": "01a1b3bf-8dfc-7241-8093-4528495ea9ea",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 73856,
+      "input_tokens": 87640,
+      "output_tokens": 1202,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 88842
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U04",
+    "rep": 2,
+    "thread": "01a1b3be-658a-7db2-b344-b304d1ca883d",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 59904,
+      "input_tokens": 82325,
+      "output_tokens": 972,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83297
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U05",
+    "rep": 1,
+    "thread": "01a1b397-87d2-7b42-86c0-9c64d44ba1a5",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 94976,
+      "input_tokens": 116311,
+      "output_tokens": 1166,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 117477
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U05",
+    "rep": 1,
+    "thread": "01a1b398-2357-7021-ad0d-a37b0121ec34",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 93056,
+      "input_tokens": 108142,
+      "output_tokens": 1538,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 109680
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U05",
+    "rep": 1,
+    "thread": "01a1b396-e452-7402-a8e6-aec5e7c70b8e",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 51968,
+      "input_tokens": 73277,
+      "output_tokens": 1115,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 74392
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U05",
+    "rep": 2,
+    "thread": "01a1b3bc-74ba-78f2-b962-d71843ed7fef",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 49792,
+      "input_tokens": 59387,
+      "output_tokens": 967,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 60354
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U05",
+    "rep": 2,
+    "thread": "01a1b3bd-047c-7050-948b-31b4f2a4e009",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 92416,
+      "input_tokens": 104249,
+      "output_tokens": 1279,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 105528
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U05",
+    "rep": 2,
+    "thread": "01a1b3bd-c241-7f62-9b78-f21864987286",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 71168,
+      "input_tokens": 82606,
+      "output_tokens": 1057,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83663
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U06",
+    "rep": 1,
+    "thread": "01a1b398-ef8d-7812-aef4-ed1bc3190420",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 56064,
+      "input_tokens": 76466,
+      "output_tokens": 1449,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 77915
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U06",
+    "rep": 1,
+    "thread": "01a1b399-9cd7-7fe0-b48a-20faa5470ede",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 81536,
+      "input_tokens": 107251,
+      "output_tokens": 1937,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 109188
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U06",
+    "rep": 1,
+    "thread": "01a1b39a-87ab-7b83-8e4b-ec9e4cf3d60e",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 68736,
+      "input_tokens": 81885,
+      "output_tokens": 1589,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83474
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U06",
+    "rep": 2,
+    "thread": "01a1b3bb-ae5a-76a1-a910-46b9acea750c",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 34048,
+      "input_tokens": 52842,
+      "output_tokens": 1426,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 54268
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U06",
+    "rep": 2,
+    "thread": "01a1b3b9-d4b4-75f2-9ccc-e063ef1caadb",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 55552,
+      "input_tokens": 78610,
+      "output_tokens": 1739,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 80349
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U06",
+    "rep": 2,
+    "thread": "01a1b3ba-d9ec-7871-b314-7b0ba6ec7346",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 70656,
+      "input_tokens": 81797,
+      "output_tokens": 1454,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83251
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U07",
+    "rep": 1,
+    "thread": "01a1b39d-5f75-7f71-894c-98bf41bf57e8",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 47104,
+      "input_tokens": 57256,
+      "output_tokens": 1408,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 58664
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U07",
+    "rep": 1,
+    "thread": "01a1b39b-63d4-7cd3-8b8f-fae2548fd3d2",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 123392,
+      "input_tokens": 137342,
+      "output_tokens": 2252,
+      "reasoning_output_tokens": 13,
+      "total_tokens": 139594
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U07",
+    "rep": 1,
+    "thread": "01a1b39c-7f08-7e21-b12d-0470741a8986",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 68992,
+      "input_tokens": 82090,
+      "output_tokens": 1514,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83604
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U07",
+    "rep": 2,
+    "thread": "01a1b3b8-0366-7913-9fd1-9d5ab4aa8830",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 37376,
+      "input_tokens": 58144,
+      "output_tokens": 1397,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 59541
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U07",
+    "rep": 2,
+    "thread": "01a1b3b8-ce2a-7911-b7eb-363140fe572a",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 72832,
+      "input_tokens": 93359,
+      "output_tokens": 1850,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 95209
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U07",
+    "rep": 2,
+    "thread": "01a1b3b7-65f1-7980-bf1e-388b946a3ab0",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 68992,
+      "input_tokens": 82362,
+      "output_tokens": 1502,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83864
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U08",
+    "rep": 1,
+    "thread": "01a1b39e-988f-7712-b877-0c610be3e3ce",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 102528,
+      "input_tokens": 126845,
+      "output_tokens": 1311,
+      "reasoning_output_tokens": 48,
+      "total_tokens": 128156
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U08",
+    "rep": 1,
+    "thread": "01a1b39f-4895-7a01-87d6-b98be7d5ef17",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 118400,
+      "input_tokens": 133988,
+      "output_tokens": 1868,
+      "reasoning_output_tokens": 16,
+      "total_tokens": 135856
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U08",
+    "rep": 1,
+    "thread": "01a1b39e-0601-79b0-bbd9-2126b7893124",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 59264,
+      "input_tokens": 82338,
+      "output_tokens": 880,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83218
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U08",
+    "rep": 2,
+    "thread": "01a1b3b5-b926-7c60-a879-273ea6777e65",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 47104,
+      "input_tokens": 56759,
+      "output_tokens": 906,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 57665
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U08",
+    "rep": 2,
+    "thread": "01a1b3b6-17c6-7f83-a24f-d2db6f7604e8",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 106880,
+      "input_tokens": 132506,
+      "output_tokens": 1669,
+      "reasoning_output_tokens": 16,
+      "total_tokens": 134175
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U08",
+    "rep": 2,
+    "thread": "01a1b3b6-c6c8-7633-a4c7-072eb185e01c",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 92672,
+      "input_tokens": 106498,
+      "output_tokens": 1398,
+      "reasoning_output_tokens": 20,
+      "total_tokens": 107896
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U09",
+    "rep": 1,
+    "thread": "01a1b3a0-1dcd-7a22-a237-e7ca9c64c073",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 55296,
+      "input_tokens": 79346,
+      "output_tokens": 4657,
+      "reasoning_output_tokens": 121,
+      "total_tokens": 84003
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U09",
+    "rep": 1,
+    "thread": "01a1b3a1-bc62-73a2-9aa6-acf137bef523",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 122368,
+      "input_tokens": 141786,
+      "output_tokens": 5267,
+      "reasoning_output_tokens": 35,
+      "total_tokens": 147053
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U09",
+    "rep": 1,
+    "thread": "01a1b3a3-9166-7f12-ab51-6c7c7ad467f7",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 95616,
+      "input_tokens": 112790,
+      "output_tokens": 4877,
+      "reasoning_output_tokens": 101,
+      "total_tokens": 117667
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U09",
+    "rep": 2,
+    "thread": "01a1b3b4-2ec5-7951-b2ee-008e4e9ab2dd",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 47232,
+      "input_tokens": 60768,
+      "output_tokens": 4600,
+      "reasoning_output_tokens": 90,
+      "total_tokens": 65368
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U09",
+    "rep": 2,
+    "thread": "01a1b3b0-ca91-7823-9c2b-bff6f9d36f6b",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 100736,
+      "input_tokens": 141945,
+      "output_tokens": 5315,
+      "reasoning_output_tokens": 39,
+      "total_tokens": 147260
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U09",
+    "rep": 2,
+    "thread": "01a1b3b2-a287-7ec2-b0ba-afd67355a5d1",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 68992,
+      "input_tokens": 85579,
+      "output_tokens": 4619,
+      "reasoning_output_tokens": 61,
+      "total_tokens": 90198
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U10",
+    "rep": 1,
+    "thread": "01a1b3a6-cce7-78b2-a613-33e728d4c70f",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 47232,
+      "input_tokens": 57059,
+      "output_tokens": 1028,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 58087
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U10",
+    "rep": 1,
+    "thread": "01a1b3a5-457d-7821-a9c1-1fbd101bd30e",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 96128,
+      "input_tokens": 119496,
+      "output_tokens": 1694,
+      "reasoning_output_tokens": 14,
+      "total_tokens": 121190
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U10",
+    "rep": 1,
+    "thread": "01a1b3a6-23b8-79f3-a37f-143270ab815e",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 83072,
+      "input_tokens": 109109,
+      "output_tokens": 1304,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 110413
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U10",
+    "rep": 2,
+    "thread": "01a1b3af-8959-7a92-91cd-e30c843b9316",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 76160,
+      "input_tokens": 84443,
+      "output_tokens": 1078,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 85521
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U10",
+    "rep": 2,
+    "thread": "01a1b3af-fde2-7b20-b9d5-b06459260fdb",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 106368,
+      "input_tokens": 119758,
+      "output_tokens": 1706,
+      "reasoning_output_tokens": 16,
+      "total_tokens": 121464
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U10",
+    "rep": 2,
+    "thread": "01a1b3ae-d98b-7141-88b8-6ca21f1f3424",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 132096,
+      "input_tokens": 145948,
+      "output_tokens": 1450,
+      "reasoning_output_tokens": 13,
+      "total_tokens": 147398
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U11",
+    "rep": 1,
+    "thread": "01a1b3a7-f15f-7e11-87d3-e91b0c64d670",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 59904,
+      "input_tokens": 68083,
+      "output_tokens": 1156,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 69239
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U11",
+    "rep": 1,
+    "thread": "01a1b3a8-8bbe-7fc1-8ff6-be1efbc2895e",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 99584,
+      "input_tokens": 124838,
+      "output_tokens": 1720,
+      "reasoning_output_tokens": 9,
+      "total_tokens": 126558
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U11",
+    "rep": 1,
+    "thread": "01a1b3a7-4620-7473-80d7-1cea537cc6fe",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 68864,
+      "input_tokens": 81991,
+      "output_tokens": 1262,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 83253
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U11",
+    "rep": 2,
+    "thread": "01a1b3ad-0cc0-7b13-b059-599527158c71",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 84608,
+      "input_tokens": 94935,
+      "output_tokens": 1252,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 96187
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U11",
+    "rep": 2,
+    "thread": "01a1b3ad-a79c-7a72-be2f-c6734e916cc4",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 91776,
+      "input_tokens": 107114,
+      "output_tokens": 1688,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 108802
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U11",
+    "rep": 2,
+    "thread": "01a1b3ae-64d5-73d2-b2e6-c76fd86242e6",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 58112,
+      "input_tokens": 81453,
+      "output_tokens": 1091,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 82544
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U12",
+    "rep": 1,
+    "thread": "01a1b3a9-73f6-7781-9d74-3211eb491753",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 37120,
+      "input_tokens": 57221,
+      "output_tokens": 1235,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 58456
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U12",
+    "rep": 1,
+    "thread": "01a1b3a9-f1d8-7443-ad32-f73073740101",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 102784,
+      "input_tokens": 128240,
+      "output_tokens": 1686,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 129926
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U12",
+    "rep": 1,
+    "thread": "01a1b3aa-9e30-7f11-8d99-44290f07bf76",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 55168,
+      "input_tokens": 99307,
+      "output_tokens": 1366,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 100673
+    }
+  },
+  {
+    "arm": "adapter",
+    "id": "U12",
+    "rep": 2,
+    "thread": "01a1b3ac-7f6f-7182-81a9-4bd35c732c25",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 65920,
+      "input_tokens": 76482,
+      "output_tokens": 1253,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 77735
+    }
+  },
+  {
+    "arm": "api",
+    "id": "U12",
+    "rep": 2,
+    "thread": "01a1b3ab-32fd-7141-a148-723085083a73",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 105344,
+      "input_tokens": 131055,
+      "output_tokens": 1805,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 132860
+    }
+  },
+  {
+    "arm": "ready",
+    "id": "U12",
+    "rep": 2,
+    "thread": "01a1b3ab-f62c-7552-bcd9-1f8789c9e3ee",
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 59264,
+      "input_tokens": 82897,
+      "output_tokens": 1291,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 84188
+    }
+  }
+]

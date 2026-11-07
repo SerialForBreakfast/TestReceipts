@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 910" role="img" aria-label="Go study median whole-investigation tokens by run pair">
+<rect width="1040" height="910" fill="white"/>
+<g font-family="sans-serif" font-size="14" fill="#172033">
+<text x="20" y="28" font-size="21">Go first-use replication: agent tokens</text>
+<text x="20" y="52">Blue: parser assembly · Green: ready query · Orange: Go tool</text>
+<text x="20" y="74">Per-pair medians of two attempts; includes cached input. Historical replay inputs.</text>
+<text x="20" y="118">U01</text>
+<rect x="75" y="102" width="602.25" height="14" fill="#2563eb"/>
+<text x="685.25" y="114">110,780</text>
+<rect x="75" y="119" width="581.08" height="14" fill="#059669"/>
+<text x="664.08" y="131">106,886</text>
+<rect x="75" y="136" width="347.82" height="14" fill="#c2410c"/>
+<text x="430.82" y="148">63,980</text>
+<text x="20" y="182">U02</text>
+<rect x="75" y="166" width="722.55" height="14" fill="#2563eb"/>
+<text x="805.55" y="178">132,909</text>
+<rect x="75" y="183" width="563.66" height="14" fill="#059669"/>
+<text x="646.66" y="195">103,682</text>
+<rect x="75" y="200" width="373.43" height="14" fill="#c2410c"/>
+<text x="456.43" y="212">68,690</text>
+<text x="20" y="246">U03</text>
+<rect x="75" y="230" width="582.87" height="14" fill="#2563eb"/>
+<text x="665.87" y="242">107,216</text>
+<rect x="75" y="247" width="455.77" height="14" fill="#059669"/>
+<text x="538.77" y="259">83,836</text>
+<rect x="75" y="264" width="321.49" height="14" fill="#c2410c"/>
+<text x="404.49" y="276">59,138</text>
+<text x="20" y="310">U04</text>
+<rect x="75" y="294" width="538.69" height="14" fill="#2563eb"/>
+<text x="621.69" y="306">99,090</text>
+<rect x="75" y="311" width="453.78" height="14" fill="#059669"/>
+<text x="536.78" y="323">83,470</text>
+<rect x="75" y="328" width="373.12" height="14" fill="#c2410c"/>
+<text x="456.12" y="340">68,633</text>
+<text x="20" y="374">U05</text>
+<rect x="75" y="358" width="584.98" height="14" fill="#2563eb"/>
+<text x="667.98" y="370">107,604</text>
+<rect x="75" y="375" width="429.62" height="14" fill="#059669"/>
+<text x="512.62" y="387">79,028</text>
+<rect x="75" y="392" width="483.38" height="14" fill="#c2410c"/>
+<text x="566.38" y="404">88,916</text>
+<text x="20" y="438">U06</text>
+<rect x="75" y="422" width="515.20" height="14" fill="#2563eb"/>
+<text x="598.20" y="434">94,768</text>
+<rect x="75" y="439" width="453.19" height="14" fill="#059669"/>
+<text x="536.19" y="451">83,362</text>
+<rect x="75" y="456" width="359.30" height="14" fill="#c2410c"/>
+<text x="442.30" y="468">66,092</text>
+<text x="20" y="502">U07</text>
+<rect x="75" y="486" width="638.24" height="14" fill="#2563eb"/>
+<text x="721.24" y="498">117,402</text>
+<rect x="75" y="503" width="455.21" height="14" fill="#059669"/>
+<text x="538.21" y="515">83,734</text>
+<rect x="75" y="520" width="321.30" height="14" fill="#c2410c"/>
+<text x="404.30" y="532">59,102</text>
+<text x="20" y="566">U08</text>
+<rect x="75" y="550" width="734.00" height="14" fill="#2563eb"/>
+<text x="817.00" y="562">135,016</text>
+<rect x="75" y="567" width="519.49" height="14" fill="#059669"/>
+<text x="602.49" y="579">95,557</text>
+<rect x="75" y="584" width="505.10" height="14" fill="#c2410c"/>
+<text x="588.10" y="596">92,910</text>
+<text x="20" y="630">U09</text>
+<rect x="75" y="614" width="800.00" height="14" fill="#2563eb"/>
+<text x="883.00" y="626">147,156</text>
+<rect x="75" y="631" width="565.02" height="14" fill="#059669"/>
+<text x="648.02" y="643">103,932</text>
+<rect x="75" y="648" width="406.02" height="14" fill="#c2410c"/>
+<text x="489.02" y="660">74,686</text>
+<text x="20" y="694">U10</text>
+<rect x="75" y="678" width="659.58" height="14" fill="#2563eb"/>
+<text x="742.58" y="690">121,327</text>
+<rect x="75" y="695" width="700.78" height="14" fill="#059669"/>
+<text x="783.78" y="707">128,906</text>
+<rect x="75" y="712" width="390.35" height="14" fill="#c2410c"/>
+<text x="473.35" y="724">71,804</text>
+<text x="20" y="758">U11</text>
+<rect x="75" y="742" width="639.75" height="14" fill="#2563eb"/>
+<text x="722.75" y="754">117,680</text>
+<rect x="75" y="759" width="450.67" height="14" fill="#059669"/>
+<text x="533.67" y="771">82,898</text>
+<rect x="75" y="776" width="449.66" height="14" fill="#c2410c"/>
+<text x="532.66" y="788">82,713</text>
+<text x="20" y="822">U12</text>
+<rect x="75" y="806" width="714.30" height="14" fill="#2563eb"/>
+<text x="797.30" y="818">131,393</text>
+<rect x="75" y="823" width="502.49" height="14" fill="#059669"/>
+<text x="585.49" y="835">92,430</text>
+<rect x="75" y="840" width="370.19" height="14" fill="#c2410c"/>
+<text x="453.19" y="852">68,096</text>
+</g></svg>

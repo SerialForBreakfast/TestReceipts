@@ -2,7 +2,7 @@
 
 ## Current PoC scope — maintainer decision, 2026-11-06
 
-The unsigned MIT PoC is complete on the [tested platforms](docs/SUPPORT.md). Existing native CI is sufficient. No additional VMs, paid hosting, old-version campaign, signing or notarization work is required. Full-machine/minimum-OS/download-trust claims remain unverified, not silently passed. Modern MCP/client upgrades and all model evaluations are deferred; no model calls, token spending or new evaluation infrastructure are authorized. Repository visibility and any public release are controlled by the maintainer.
+The unsigned MIT PoC is complete on the [tested platforms](docs/SUPPORT.md). Existing native CI is sufficient. No additional VMs, paid hosting, old-version campaign, signing or notarization work is required. Full-machine/minimum-OS/download-trust claims remain unverified, not silently passed. Modern MCP/client upgrades remain deferred. One subsequently authorized 72-investigation first-use Go replication is complete; additional model calls, repeated-use trials, token spending and evaluation infrastructure remain deferred. Repository visibility and any public release are controlled by the maintainer.
 
 Earlier acceptance requirements below are narrowed explicitly for this PoC; historical evidence is preserved. Optional/deferred work is not a release blocker.
 
@@ -90,7 +90,7 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ## G04 — Agent integration and repeated-use value
 
-**Outcome:** Determine whether the tool helps beyond a reusable URL script. **Dependencies:** G03. **Status:** Existing MCP profile complete; upgrades/client integrations and model-value evaluation deferred, not PoC blockers. **Plan:** [G04](docs/plans/G04-agent-value.md).
+**Outcome:** Determine whether the tool helps beyond a reusable URL script. **Dependencies:** G03. **Status:** Existing MCP profile and first-use Go-workflow replication complete; upgrades/client integrations and repeated-use evaluation deferred, not PoC blockers. **Plan:** [G04](docs/plans/G04-agent-value.md).
 
 ### G04-01 — Optional MCP boundary
 
@@ -101,7 +101,7 @@ This is the execution ledger for the new repository. States: Planned → Ready �
 
 ### G04-02 — Repeated-use agent comparison
 
-- **Status:** Deferred by maintainer. No local/hosted model execution, token spending or evaluation setup is authorized. The historical draft is retained only for a possible later explicit task. **Owner:** Evaluation lead. **Dependencies:** Working interface and frozen study plan.
+- **Status:** First-use replication Done for the separately authorized 72 attempts; repeated-use work Deferred. All 72 automated fact/inventory checks pass; 23/24 assigned attempts execute Go, with one allowed Python fallback retained in costs. No further model campaign is authorized. **Owner:** Evaluation lead. **Dependencies:** Working interface and frozen study plan.
 - **Deliverable:** A proposed comparison retaining capable parser and ready-query baselines plus a reusable URL-wrapper baseline, with first-use and repeated-use conditions separated.
 - **Acceptance:** Freeze questions, source selection, correctness rubric and total-token accounting before execution. Keep failed runs, cached/uncached inputs, retries, tool overhead, follow-up reads and auditable charts. Record human review. Do not tune on held-out outcomes or assume the historical 24.36% saving transfers.
-- **Context:** [G04](docs/plans/G04-agent-value.md), [evaluation](docs/EVALUATION.md). **Evidence:** [Reviewable study protocol](docs/STUDY-PLAN.md); archived draft only; no sources, budget or model trials frozen/executed. See [current PoC policy](docs/SUPPORT.md).
+- **Context:** [G04](docs/plans/G04-agent-value.md), [evaluation](docs/EVALUATION.md). **Evidence:** [12-pair Go parity preflight](evidence/go-token-preflight/README.md), [72-attempt results and audit](evidence/go-url-first/README.md), [study protocol](docs/STUDY-PLAN.md). Median paired workflow savings are 41.53% / 27.23%; one fallback and one ready-query pair regression are explicit. Human narrative review remains pending; no repeated-use result or 24/24 Go-only execution claim is made. See [current PoC policy](docs/SUPPORT.md).

@@ -1,11 +1,19 @@
-# G04-02 archived evaluation draft — deferred
+# G04-02 evaluation — first-use replication complete
 
-**Current decision:** model evaluation is deferred and is not a PoC release blocker. Do not run hosted or local models, spend tokens, select new evaluation sources or provision infrastructure. The maintainer may choose to revisit this on a local-model machine in a separate explicit task. The draft below is retained for history, not as a current approval request or action plan. See [PoC scope](SUPPORT.md).
+**Current decision (2026-11-06):** the maintainer authorized “that same test” with Go: one replication of the original 72 investigations using `gpt-6-astra`, low reasoning, the same 12 pairs, three approaches and two repetitions. All approaches are rerun. This supersedes the earlier zero-model-spend deferral for this bounded replication. No additional campaign or paid infrastructure is authorized.
 
+The frozen run is `.artifacts/go-url-first-v1`; `freeze.json` pins the model, installed CLI hash/version, protocol, recordings, runner and attempt limit before execution. The installed CLI is newer than the historical CLI; the change is recorded, never treated as an identical environment. Historical inputs are replication data, never new held-out evidence. No dollar-cost claim is made; accounting uses actual input/output tokens including cached input.
 
-This is a reviewable draft, not a frozen or executed study. Parser correctness and deployment testing continue without models. A separate explicit evaluation instruction, exact source manifest, model/version, sample size, token/spend budget and human reviewer are required before model trials.
+## Completed first-use replication
 
-## Question and arms
+1. Check full Go/Python output parity on the historical 12 pairs using `tools/check_historical_go.py`. Keep per-case outputs in ignored storage and a compact summary in Git. **Preflight complete: 12/12 equal**, [evidence](../evidence/go-token-preflight/README.md). This cannot establish token savings.
+2. Frozen: 72 maximum attempts, 900-second timeout per attempt, 16-tool-call correctness gate, fresh workspaces and historical balanced schedule. No automatic replacement of failed attempts. Raw traces and exact model usage are retained; execution/usage/source-integrity failure stops the run. This is an attempt-limited authorization, not an agreed dollar ceiling.
+3. Complete: all 72 attempts executed on the frozen balanced schedule. Required facts and inventories passed in all 72; 23/24 assigned attempts executed the Go comparison. One allowed Python fallback and its full cost remain included. Median paired savings: **41.53% versus parser assembly; 27.23% versus ready query**. [Results, exception, uncertainty and audit](../evidence/go-url-first/README.md). The four-arm repeated-use expansion below is a separate future study.
+4. Retain all attempts and costs, score exact facts and completeness, and report paired savings separately for each baseline and usage condition. Do not transfer the old percentages to Go in advance. Human narrative review remains necessary before fully validated public claims.
+
+The first-use replication above is frozen; the broader repeated-use protocol below remains a draft. No VM, paid hosting, MCP upgrade or publication is part of this task. A local model can test that model's workflow, but cannot directly validate the original model's percentages.
+
+## Broader repeated-use draft — not part of the current run
 
 Does the packaged interface reduce total investigation work compared with equally capable reusable alternatives, without losing facts or overstating incomplete evidence?
 
@@ -34,4 +42,4 @@ For each complete investigation record model input/output, cached and uncached i
 3. Retain unsuccessful runs and protocol deviations; stop on budget exhaustion or broken source equivalence.
 4. Human review checks narratives against original reports and uncertainty before any public claims.
 
-Status: protocol draft prepared; source selection, budget, human review assignment and model execution are deferred, not active pending tasks. No model calls or fresh agent-token measurements have been run.
+Status: authorized first-use replication complete; 72 records audited and all usage totals cross-checked against separate session counters. Models have stopped. Human narrative review and repeated-use evaluation remain pending. No further trials are authorized.

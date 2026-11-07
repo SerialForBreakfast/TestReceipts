@@ -1,5 +1,7 @@
 # Historical evidence carried into the spin-off
 
+**New Go-workflow replication:** [41.53% / 27.23% median paired token savings](go-url-first/README.md), including one retained Python fallback; 72/72 automated fact/inventory checks pass, 23/24 assigned attempts execute the Go comparison. The historical results below remain unchanged.
+
 The copied metric files describe the Python research workflow in Spotlightning. They are not results for this Go scaffold.
 
 | Investigation | Finding | What it supports |

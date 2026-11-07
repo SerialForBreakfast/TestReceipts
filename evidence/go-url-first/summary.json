@@ -1,0 +1,439 @@
+{
+  "attempts": 72,
+  "cases": [
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 63980.0
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 110780.5
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 106886.5
+        }
+      },
+      "id": "U01",
+      "project": "kubernetes/kubernetes",
+      "savingsPercent": {
+        "api": 42.24615342952956,
+        "ready": 40.14211336324045
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 68690.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 132909.0
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 103682.5
+        }
+      },
+      "id": "U02",
+      "project": "kubernetes-sigs/kueue",
+      "savingsPercent": {
+        "api": 48.317645908102534,
+        "ready": 33.74918621753912
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 59137.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 107216.5
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 83836.0
+        }
+      },
+      "id": "U03",
+      "project": "kubernetes-sigs/cloud-provider-azure",
+      "savingsPercent": {
+        "api": 44.842911305629265,
+        "ready": 29.460494298392103
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 68633.0
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 99090.0
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 83470.5
+        }
+      },
+      "id": "U04",
+      "project": "etcd-io/etcd",
+      "savingsPercent": {
+        "api": 30.73670400645877,
+        "ready": 17.775741130099853
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 88915.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 107604.0
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 79027.5
+        }
+      },
+      "id": "U05",
+      "project": "kubernetes-sigs/controller-runtime",
+      "savingsPercent": {
+        "api": 17.36784877885581,
+        "ready": -12.512100218278444
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 66091.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 94768.5
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 83362.5
+        }
+      },
+      "id": "U06",
+      "project": "kubernetes/kops",
+      "savingsPercent": {
+        "api": 30.260054765032685,
+        "ready": 20.71794871794872
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 59102.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 117401.5
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 83734.0
+        }
+      },
+      "id": "U07",
+      "project": "kubernetes-sigs/prow",
+      "savingsPercent": {
+        "api": 49.65779823937514,
+        "ready": 29.41636611173478
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 92910.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 135015.5
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 95557.0
+        }
+      },
+      "id": "U08",
+      "project": "kubernetes/kubernetes",
+      "savingsPercent": {
+        "api": 31.18530835348534,
+        "ready": 2.769551157947614
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 74685.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 147156.5
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 103932.5
+        }
+      },
+      "id": "U09",
+      "project": "kubernetes-sigs/cloud-provider-azure",
+      "savingsPercent": {
+        "api": 49.24756976416265,
+        "ready": 28.14037957328074
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 71804.0
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 121327.0
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 128905.5
+        }
+      },
+      "id": "U10",
+      "project": "kubernetes-sigs/lws",
+      "savingsPercent": {
+        "api": 40.817789939584756,
+        "ready": 44.29717894116233
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 82713.0
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 117680.0
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 82898.5
+        }
+      },
+      "id": "U11",
+      "project": "kubernetes-sigs/controller-runtime",
+      "savingsPercent": {
+        "api": 29.713630183548613,
+        "ready": 0.22376761943823098
+      }
+    },
+    {
+      "arms": {
+        "adapter": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 68095.5
+        },
+        "api": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 131393.0
+        },
+        "ready": {
+          "attempts": 2,
+          "correct": 2,
+          "inventoryCorrect": 2,
+          "medianTokens": 92430.5
+        }
+      },
+      "id": "U12",
+      "project": "kubernetes/kops",
+      "savingsPercent": {
+        "api": 48.17417975082387,
+        "ready": 26.327889603539955
+      }
+    }
+  ],
+  "comparisons": {
+    "api": {
+      "aggregateSavingsPercent": 39.20175316485065,
+      "bootstrap": "10,000 paired-case resamples, fixed seed 20261106; exploratory, small n=12",
+      "exploratoryBootstrap95PercentInterval": [
+        30.49837938574573,
+        48.2459128294632
+      ],
+      "medianPairedSavingsPercent": 41.53197168455716,
+      "original30PercentGatePassed": true,
+      "pairsWithOver10PercentRegression": 0,
+      "perPairRangePercent": [
+        17.36784877885581,
+        49.65779823937514
+      ]
+    },
+    "ready": {
+      "aggregateSavingsPercent": 23.318171519880536,
+      "bootstrap": "10,000 paired-case resamples, fixed seed 20261106; exploratory, small n=12",
+      "exploratoryBootstrap95PercentInterval": [
+        10.272646144023733,
+        31.604840257965613
+      ],
+      "medianPairedSavingsPercent": 27.23413458841035,
+      "original30PercentGatePassed": false,
+      "pairsWithOver10PercentRegression": 1,
+      "perPairRangePercent": [
+        -12.512100218278444,
+        44.29717894116233
+      ]
+    }
+  },
+  "complete": true,
+  "correct": 72,
+  "failures": [],
+  "goArmAttemptsWithGoCommandObserved": 23,
+  "goArmComparisonNotObserved": [
+    {
+      "id": "U08",
+      "rep": 1,
+      "traceSha256": "2d5c3b56252d3e8fff2198844a2e9a502bdad296085fe0fd721220429b7ed7b5"
+    }
+  ],
+  "goArmInterpretation": "Intention-to-treat assigned workflow, retaining fallback costs. U08 repetition 1 ran testreceipts --help, then used the allowed Python helpers without running the Go comparison. The help command exited successfully; no Go comparison failure was observed in that attempt. 23/24 assigned attempts executed the Go comparison. Required-fact checks passed in all 24. These percentages are not a 24/24 Go-only execution result.",
+  "humanNarrativeReview": "pending",
+  "independentMetricReconstruction": "pass",
+  "independentRolloutUsage": "pass",
+  "inventoryCorrect": 72,
+  "limits": [
+    "Historical inputs, not held out; one model, fresh setup only",
+    "CLI version differs from original; all baselines rerun",
+    "Includes cached input tokens; not dollar savings",
+    "Recorded responses; not live networking, MCP or repeated use",
+    "Go SDK acquisition telemetry unavailable; output inventory correctness checked",
+    "Prompt-scoped access is not proven OS isolation",
+    "Intention-to-treat assigned workflow, retaining fallback costs. U08 repetition 1 ran testreceipts --help, then used the allowed Python helpers without running the Go comparison. The help command exited successfully; no Go comparison failure was observed in that attempt. 23/24 assigned attempts executed the Go comparison. Required-fact checks passed in all 24. These percentages are not a 24/24 Go-only execution result."
+  ],
+  "planned": 72,
+  "promotion": false,
+  "totals": {
+    "adapter": {
+      "attempts": 24,
+      "correct": 24,
+      "missingUsage": 0,
+      "usage": {
+        "cached_input_tokens": 1290624,
+        "input_tokens": 1695182,
+        "output_tokens": 34336,
+        "total_tokens": 1729518,
+        "uncached_input_tokens": 404558
+      }
+    },
+    "api": {
+      "attempts": 24,
+      "correct": 24,
+      "missingUsage": 0,
+      "usage": {
+        "cached_input_tokens": 2295424,
+        "input_tokens": 2797580,
+        "output_tokens": 47104,
+        "total_tokens": 2844684,
+        "uncached_input_tokens": 502156
+      }
+    },
+    "ready": {
+      "attempts": 24,
+      "correct": 24,
+      "missingUsage": 0,
+      "usage": {
+        "cached_input_tokens": 1768576,
+        "input_tokens": 2218165,
+        "output_tokens": 37282,
+        "total_tokens": 2255447,
+        "uncached_input_tokens": 449589
+      }
+    }
+  },
+  "unsupportedCompletenessClaims": 0
+}

@@ -1,0 +1,1001 @@
+[
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 1,
+        "newOccurrences": 1,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [
+        {
+          "exceptionType": "",
+          "id": "75d31b8b1e6f3cb2813e646e11923aea08fa5fc76dbda414486ed3828d39c392",
+          "kind": "failure",
+          "message": "Failed",
+          "occurrences": 1,
+          "text": "=== RUN   TestCheckBindings/binding-claimref-uid-empty\n    binder_test.go:1738: Failed to update PVs: context deadline exceeded\n    binder_test.go:1757: returned success but expected error\n    binder_test.go:1760: returned bound true\n--- FAIL: TestCheckBindings/binding-claimref-uid-empty (3.10s)\n\n=== RUN   TestCheckBindings\n=== PAUSE TestCheckBindings\n=== CONT  TestCheckBindings\n--- FAIL: TestCheckBindings (6.66s)\n",
+          "totalCharacters": 418
+        }
+      ],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 1358,
+            "error": 0,
+            "failure": 0,
+            "passed": 1358,
+            "skipped": 0
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 499352,
+          "inventorySha256": "396ac38fddd0dec8d836c23740e452180fdb33e637ff39375443c7cc79fd6837",
+          "listingSha256": "7fa8c95eb07642a42fdda584ec513b6eff52a342054a4a0d6d9ba5190eab7993",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "declared_count_mismatch"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118454474899984384",
+          "xmlCandidates": 1
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 1358,
+            "error": 0,
+            "failure": 1,
+            "passed": 1357,
+            "skipped": 0
+          },
+          "distinctFailures": 1,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 502367,
+          "inventorySha256": "d04f071effc2291c84c93ce62bb9aba97acaab25f3237e1a60bbe83a7a8b83d8",
+          "listingSha256": "dd5070bc4d521f6281f36522011ebfb90a401ca00c55426f11b12f0e51d88db7",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "declared_count_mismatch"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118469575166136320",
+          "xmlCandidates": 1
+        }
+      ]
+    },
+    "id": "U01",
+    "job": "ci-kubernetes-unit-1-36",
+    "project": "kubernetes/kubernetes",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118454474899984384\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118469575166136320\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118454474899984384",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118469575166136320"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 1,
+        "newDistinct": 0,
+        "newOccurrences": 0,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 14179,
+            "error": 0,
+            "failure": 1,
+            "passed": 14175,
+            "skipped": 3
+          },
+          "distinctFailures": 1,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 2435782,
+          "inventorySha256": "f96d53788b9412076dc1f2ca9e78e5fea6a55c8d4850a2f11cdc7b81a8aa0d55",
+          "listingSha256": "1afe6aaed8bd2144b33ac157ce6207b956a6328056d5b5a5014a62e34aae0941",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry",
+              "declared_count_mismatch"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118445565527199744",
+          "xmlCandidates": 1
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 15024,
+            "error": 0,
+            "failure": 0,
+            "passed": 15021,
+            "skipped": 3
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 2609395,
+          "inventorySha256": "260729d3b8a3412bca81aa24bc2288222166a5910b95ad8769139ba64a3867f6",
+          "listingSha256": "4f655c8aa49e80627749393bd23514a9b2ed511635c66cab91add28b57d9e654",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118456443249102848",
+          "xmlCandidates": 1
+        }
+      ]
+    },
+    "id": "U02",
+    "job": "pull-kueue-test-unit-shard-0-main",
+    "project": "kubernetes-sigs/kueue",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118445565527199744\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118456443249102848\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118445565527199744",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118456443249102848"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 0,
+        "newOccurrences": 0,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 0,
+            "error": 0,
+            "failure": 0,
+            "passed": 0,
+            "skipped": 0
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 0,
+          "inputBytes": 0,
+          "inventorySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "listingSha256": "4430aa33428a85447a3115cb77b5a6ea9b2bd064dfbaca3cb7ff7b3b5fa8dfed",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "no_junit_reports"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2117997348016623616",
+          "xmlCandidates": 0
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 0,
+            "error": 0,
+            "failure": 0,
+            "passed": 0,
+            "skipped": 0
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 0,
+          "inputBytes": 0,
+          "inventorySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "listingSha256": "3f4954c67696c9e8f8bd55cd0c9f0d8fdfc3d4386837aa2bba7b68f173a1e638",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "no_junit_reports"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2118364847384039424",
+          "xmlCandidates": 0
+        }
+      ]
+    },
+    "id": "U03",
+    "job": "pull-cloud-provider-azure-unit",
+    "project": "kubernetes-sigs/cloud-provider-azure",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2117997348016623616\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2118364847384039424\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2117997348016623616",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2118364847384039424"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 0,
+        "newOccurrences": 0,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 0,
+            "error": 0,
+            "failure": 0,
+            "passed": 0,
+            "skipped": 0
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 0,
+          "inputBytes": 0,
+          "inventorySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "listingSha256": "2986f1409f2ed3b4c62decfec1893eda2963e36559f8defd532c9833d3424b4b",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "no_junit_reports"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118067169316048896",
+          "xmlCandidates": 0
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 0,
+            "error": 0,
+            "failure": 0,
+            "passed": 0,
+            "skipped": 0
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 0,
+          "inputBytes": 0,
+          "inventorySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "listingSha256": "fc393b546dc35fc7ae529a9e7a6d8607ee654348394c1a746d9a3266683df53f",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "no_junit_reports"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118429562118344704",
+          "xmlCandidates": 0
+        }
+      ]
+    },
+    "id": "U04",
+    "job": "ci-etcd-integration-1-cpu-release35-arm64",
+    "project": "etcd-io/etcd",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118067169316048896\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118429562118344704\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118067169316048896",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118429562118344704"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 0,
+        "newOccurrences": 0,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 2137,
+            "error": 0,
+            "failure": 0,
+            "passed": 2103,
+            "skipped": 34
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 50,
+          "inputBytes": 3337466,
+          "inventorySha256": "59edf72cc62f667bdbae68daeb5a1cfb6480aac66b5d35da8283bbc295616d6f",
+          "listingSha256": "051ba0dd1ab610e97fc9ac50f91bf91686e0af388b2c144860bb02bfb08624c9",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry",
+              "interrupted_or_no_tests"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118263674312331264",
+          "xmlCandidates": 50
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 2137,
+            "error": 0,
+            "failure": 0,
+            "passed": 2103,
+            "skipped": 34
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 50,
+          "inputBytes": 3340788,
+          "inventorySha256": "d973ce1c23dfdc31372fc04b66975eb951a6b851340960ad3321321232e71e16",
+          "listingSha256": "9325929cdaeee88cfdba046455b1f386f82640cfa4e59d445f63b641e82cf3e0",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry",
+              "interrupted_or_no_tests"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118414312518193152",
+          "xmlCandidates": 50
+        }
+      ]
+    },
+    "id": "U05",
+    "job": "pull-controller-runtime-test",
+    "project": "kubernetes-sigs/controller-runtime",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118263674312331264\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118414312518193152\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118263674312331264",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118414312518193152"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 11,
+        "newOccurrences": 11,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [
+        {
+          "exceptionType": "",
+          "id": "02c3ad17056c35356a252c352bd7015841b50e764f62ba7761a3670ad761ed12",
+          "kind": "failure",
+          "message": "",
+          "occurrences": 1,
+          "text": "exit status 255",
+          "totalCharacters": 15
+        },
+        {
+          "exceptionType": "failed",
+          "id": "0ce864d8d06b12d4167c1339f79d716357187151f4c4980b4b7c892d6c93b704",
+          "kind": "failure",
+          "message": "",
+          "occurrences": 1,
+          "text": "[FAILED] wrong \"actual_state_of_world\" volume count for plugin \"kubernetes.io/csi:csi-hostpath-volume-metrics-7781\": before pod=0, after pod running=0, want before+1\nraw attachdetach_controller_total_volumes samples: []\nExpected\n    <int64>: 0\nto equal\n    <int64>: 1\nIn [It] at: k8s.io/kubernetes/test/e2e/storage/volume_metrics.go:377 @ 11/05/26 21:25:53.384\n",
+          "totalCharacters": 361
+        },
+        {
+          "exceptionType": "failed",
+          "id": "1bde06e324fc24a6945e48a08086389ef608d5c567acf69f23c08e9f3c12e1ed",
+          "kind": "failure",
+          "message": "",
+          "occurrences": 1,
+          "text": "[FAILED] Unable to get updated metrics for plugin csi-hostpath-volume-metrics-8011: timed out waiting for the condition\nIn [It] at: k8s.io/kubernetes/test/e2e/storage/volume_metrics.go:624 @ 11/05/26 22:12:49.781\n",
+          "totalCharacters": 213
+        }
+      ],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 3420,
+            "error": 0,
+            "failure": 0,
+            "passed": 1237,
+            "skipped": 2183
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 2,
+          "inputBytes": 1138396,
+          "inventorySha256": "5d61963638005c27fad6e516279ac1ad8917cfda477a252e93dc09159bcb22ac",
+          "listingSha256": "b503bce90f7fafdbcda7f54afa0c68c647db1e44b0f83e535bd5d1f921329dc6",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118330155486154752",
+          "xmlCandidates": 2
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 3420,
+            "error": 0,
+            "failure": 11,
+            "passed": 1226,
+            "skipped": 2183
+          },
+          "distinctFailures": 11,
+          "excludedObjects": [],
+          "includedReports": 2,
+          "inputBytes": 3973283,
+          "inventorySha256": "53f952e7f959525765388f0533468307c5ed1a866bb335c0168aae8a30e500c1",
+          "listingSha256": "d14b0fcf0fe49be11f35a1988c8a48b1858832e24bbdeeae6fbae969da63ed96",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118450952951304192",
+          "xmlCandidates": 2
+        }
+      ]
+    },
+    "id": "U06",
+    "job": "e2e-kops-aws-ha-euwest1",
+    "project": "kubernetes/kops",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118330155486154752\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118450952951304192\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118330155486154752",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118450952951304192"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 2,
+        "newOccurrences": 2,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [
+        {
+          "exceptionType": "",
+          "id": "487e1564cfd8392a9d9f7be83f78815f765cbed44368c458bffd957548a51726",
+          "kind": "failure",
+          "message": "Failed",
+          "occurrences": 1,
+          "text": "panic: test timed out after 10m0s\n\trunning tests:\n\t\tTestInterrupts (10m0s)\n\ngoroutine 9 [running]:\ntesting.(*M).startAlarm.func1()\n\t/usr/local/go/src/testing/testing.go:2961 +0x605\ncreated by time.goFunc\n\t/usr/local/go/src/time/sleep.go:182 +0x45\n\ngoroutine 1 [chan receive]:\ntesting.(*T).Run(0xc0001ae008, {0xa05cc6, 0xe}, 0xe2c6d0)\n\t/usr/local/go/src/testing/testing.go:2268 +0xb3e\ntesting.runTests.func1(0xc0001ae008)\n\t/usr/local/go/src/testing/testing.go:2744 +0x85\ntesting.tRunner(0xc0001ae008, 0xc0000eba40",
+          "totalCharacters": 13209
+        },
+        {
+          "exceptionType": "",
+          "id": "d5953bef7d46550ab9175fb6e79caa9bc01af7d9a3ec5485b53ed71ca8a2ee48",
+          "kind": "failure",
+          "message": "Failed",
+          "occurrences": 1,
+          "text": "=== RUN   TestInterrupts\n",
+          "totalCharacters": 25
+        }
+      ],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 7113,
+            "error": 0,
+            "failure": 0,
+            "passed": 7107,
+            "skipped": 6
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 1091843,
+          "inventorySha256": "8e42b58ce6e0b9d4e0d749e8010adf5ca07d5d788ddb4377fef5acca9b1b599c",
+          "listingSha256": "492eeb6ae26bbd4c54fdc39755cf2ef54f0c4aed14c5040038b878b7210ae364",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118321953260441600",
+          "xmlCandidates": 1
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 7114,
+            "error": 0,
+            "failure": 2,
+            "passed": 7106,
+            "skipped": 6
+          },
+          "distinctFailures": 2,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 1106843,
+          "inventorySha256": "4b4e4fa7d20de6c054ab87c4547f8ecca5c3a1f6694ab6d5311544104cc01110",
+          "listingSha256": "386f81e53e7341727b3738b23b248f73b517e9befd24e1872938cd06eae81df9",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "declared_count_mismatch"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118454707885182976",
+          "xmlCandidates": 1
+        }
+      ]
+    },
+    "id": "U07",
+    "job": "pull-prow-unit-test-race-detector-nonblocking",
+    "project": "kubernetes-sigs/prow",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118321953260441600\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118454707885182976\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118321953260441600",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118454707885182976"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 0,
+        "newOccurrences": 0,
+        "sharedDistinct": 1
+      },
+      "newEvidence": [],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 1,
+            "error": 0,
+            "failure": 1,
+            "passed": 0,
+            "skipped": 0
+          },
+          "distinctFailures": 1,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 252,
+          "inventorySha256": "80979ddea797984638f4bb286e622cff1bda846fb4884beaffb8bbf66f39fdba",
+          "listingSha256": "8e021e70b474f733b6a890b6ac199a3e20cac35438bbbd9d854d73083fede452",
+          "parserCoverage": {
+            "complete": true,
+            "limitations": [],
+            "unresolved": []
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118409429735968768",
+          "xmlCandidates": 1
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 1,
+            "error": 0,
+            "failure": 1,
+            "passed": 0,
+            "skipped": 0
+          },
+          "distinctFailures": 1,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 252,
+          "inventorySha256": "208ace613d0a2ca05f94481816fbe16569618c437fa5952978f865071ad67fc2",
+          "listingSha256": "b5be94b50eef6a956d8a2a97bf743a749f9961e8eed50437b5b7b316b70594d4",
+          "parserCoverage": {
+            "complete": true,
+            "limitations": [],
+            "unresolved": []
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118469826383974400",
+          "xmlCandidates": 1
+        }
+      ]
+    },
+    "id": "U08",
+    "job": "ci-kubernetes-node-swap-conformance-ubuntu-serial",
+    "project": "kubernetes/kubernetes",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118409429735968768\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118469826383974400\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118409429735968768",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118469826383974400"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 2,
+        "newOccurrences": 2,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [
+        {
+          "exceptionType": "failed",
+          "id": "492c6070dacfec4acca145de18f8c254ff0b274515ee265e428f2f10e4f8655c",
+          "kind": "failure",
+          "message": "Unexpected error:\n    <*exported.ResponseError | 0xc539b9187e0>: \n    PUT https://management.azure.com/subscriptions/46678f10-4bbb-447e-98e8-d2829589f2d8/resourceGroups/capz-x9fqlj/providers/Microsoft.Network/publicIPPrefixes/prefix1\n    --------------------------------------------------------------------------------\n    RESPONSE 400: 400 Bad Request\n    ERROR CODE: PublicIPCountLimitReached\n    --------------------------------------------------------------------------------\n    {\n      \"error\": {\n        \"code\": \"PublicIPCountLimitReached\",\n        \"message\": \"Cannot create more than 250 public IP addresses for this subscription in this region.\",\n        \"details\": []\n      }\n    }\n    --------------------------------------------------------------------------------\n    \n    {\n        ErrorCode: \"PublicIPCountLimitReached\",\n        StatusCode: 400,\n        RawResponse: {\n            Status: \"400 Bad Request\",\n            StatusCode: 400,\n            Proto: \"HTTP/2.0\",\n            ProtoMajor: 2,\n            ProtoMinor: 0,\n            Header: {\n                \"Content-Type\": [\n                    \"application/json; charset=utf-8\",\n                ],\n                \"Expires\": [\"-1\"],\n                \"X-Ms-Request-Id\": [\n                    \"50863498-ae27-4dda-8507-4e1ead72f8cc\",\n                ],\n                \"X-Ms-Correlation-Request-Id\": [\n                    \"b4aa234f-8ce1-4222-aab1-37607401e405\",\n                ],\n                \"X-Content-Type-Options\": [\"nosniff\"],\n                \"Date\": [\n                    \"Wed, 04 Nov 2026 23:04:16 GMT\",\n                ],\n                \"Cache-Control\": [\"no-cache\"],\n                \"X-Ms-Throttle-Levels\": [\n                    \"operationRatePct=0.1, operationConcurrencyPct=0.3, subscriptionWriteRatePct=77.2, etc\",\n                ],\n                \"X-Ms-Operation-Identifier\": [\n                    \"appId====REDACTED===,tenantId=d1aa7522-0959-442e-80ee-8c4f7fb4c184,objectId=8eb97873-17bb-46a5-aed9-1967d83ca7ca/switzerlandnorth/5f656fb4-f17e-4cc9-8439-64e6d79719f3\",\n                ],\n                \"X-Ms-Ratelimit-Remaining-Subscription-Writes\": [\"199\"],\n                \"X-Ms-Ratelimit-Remaining-Subscription-Global-Writes\": [\"2998\"],\n                \"X-Ms-Routing-Request-Id\": [\n                    \"SWITZERLANDNORTH:20261104T230417Z:b4aa234f-8ce1-4222-aab1-37607401e405\",\n                ],\n                \"Strict-Transport-Security\": [\n                    \"max-age=31536000; includeSubDomains\",\n                ],\n                \"X-Cache\": [\"CONFIG_NOCACHE\"],\n                \"Pragma\": [\"no-cache\"],\n                \"Content-Length\": [\"157\"],\n                \"X-Ms-Arm-Service-Request-Id\": [\n                    \"4c351af1-fd52-4e0a-9279-08b1f5384b7d\",\n                ],\n                \"X-Msedge-Ref\": [\n                    \"Ref A: A2E20AB999AB4EEF81A550E6CC8675C5 Ref B: CH1AA2020603049 Ref C: 2026-11-04T23:04:16Z\",\n                ],\n            },\n            Body: <*exported.nopClosingBytesReader | 0xc539b4ccf80>{\n                s: \"{\\\"error\\\":{\\\"code\\\":\\\"PublicIPCountLimitReached\\\",\\\"message\\\":\\\"Cannot create more than 250 public IP addresses for this subscription in this region.\\\",\\\"details\\\":[]}}\",\n                i: 0,\n            },\n            ContentLength: 157,\n            TransferEncoding: nil,\n            Close: false,\n            Uncompressed: false,\n            Trailer: nil,\n            Request: {\n                Method: \"PUT\",\n                URL: {\n                    Scheme: \"https\",\n                    Opaque: \"\",\n                    User: nil,\n                    Host: \"management.azure.com\",\n                    Path: \"/subscriptions/46678f10-4bbb-447e-98e8-d2829589f2d8/resourceGroups/capz-x9fqlj/providers/Microsoft.Network/publicIPPrefixes/prefix1\",\n                    Fragment: \"\",\n                    RawQuery: \"api-version=2025-05-01\",\n                    RawPath: \"\",\n                    RawFragment: \"\",\n                    ForceQuery: false,\n                    OmitHost: false,\n                },\n                Proto: \"HTTP/1.1\",\n                ProtoMajor: 1,\n                ProtoMinor: 1,\n                Header: {\n                    \"Accept\": [\"application/json\"],\n                    \"Content-Length\": [\"139\"],\n                    \"Content-Type\": [\"application/json\"],\n                    \"User-Agent\": [\n                        \"azsdk-go-armnetwork/v9.0.0 (go1.27.3; linux)\",\n                    ],\n                    \"Authorization\": [\n                        \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InJ5QngtNjVqTm94SDRGUUhfNnphck5qYU5mNCIsImtpZCI6InJ5QngtNjVqTm94SDRGUUhfNnphck5qYU5mNCJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kMWF...\n\nGomega truncated this representation as it exceeds 'format.MaxLength'.\nConsider having the object provide a custom 'GomegaStringer' representation\nor adjust the parameters in Gomega's 'format' package.\n\nLearn more here: https://onsi.github.io/gomega/#adjusting-output\n\noccurred",
+          "occurrences": 1,
+          "text": "[FAILED] Unexpected error:\n    <*exported.ResponseError | 0xc539b9187e0>: \n    PUT https://management.azure.com/subscriptions/46678f10-4bbb-447e-98e8-d2829589f2d8/resourceGroups/capz-x9fqlj/providers/Microsoft.Network/publicIPPrefixes/prefix1\n    --------------------------------------------------------------------------------\n    RESPONSE 400: 400 Bad Request\n    ERROR CODE: PublicIPCountLimitReached\n    --------------------------------------------------------------------------------\n    {\n      \"error\": {\n",
+          "totalCharacters": 5290
+        },
+        {
+          "exceptionType": "failed",
+          "id": "aa15c30d0c32b9aeecf9ede7f26fbc7ac108fb529d2e7defc1de463f915e4bc9",
+          "kind": "failure",
+          "message": "Unexpected error:\n    <*exported.ResponseError | 0xc539bc4b890>: \n    PUT https://management.azure.com/subscriptions/46678f10-4bbb-447e-98e8-d2829589f2d8/resourceGroups/capz-x9fqlj/providers/Microsoft.Network/publicIPPrefixes/prefix\n    --------------------------------------------------------------------------------\n    RESPONSE 400: 400 Bad Request\n    ERROR CODE: PublicIPCountLimitReached\n    --------------------------------------------------------------------------------\n    {\n      \"error\": {\n        \"code\": \"PublicIPCountLimitReached\",\n        \"message\": \"Cannot create more than 250 public IP addresses for this subscription in this region.\",\n        \"details\": []\n      }\n    }\n    --------------------------------------------------------------------------------\n    \n    {\n        ErrorCode: \"PublicIPCountLimitReached\",\n        StatusCode: 400,\n        RawResponse: {\n            Status: \"400 Bad Request\",\n            StatusCode: 400,\n            Proto: \"HTTP/2.0\",\n            ProtoMajor: 2,\n            ProtoMinor: 0,\n            Header: {\n                \"X-Ms-Correlation-Request-Id\": [\n                    \"b80ae262-ef9a-4490-a36d-6152100013af\",\n                ],\n                \"X-Ms-Ratelimit-Remaining-Subscription-Writes\": [\"199\"],\n                \"Expires\": [\"-1\"],\n                \"X-Ms-Arm-Service-Request-Id\": [\n                    \"fac41478-a935-4668-96d4-5559c36fb8dd\",\n                ],\n                \"X-Content-Type-Options\": [\"nosniff\"],\n                \"X-Msedge-Ref\": [\n                    \"Ref A: 51731536065240CC8B7A46C40526D37A Ref B: CH1AA2030814031 Ref C: 2026-11-04T23:14:31Z\",\n                ],\n                \"Date\": [\n                    \"Wed, 04 Nov 2026 23:14:31 GMT\",\n                ],\n                \"Content-Length\": [\"157\"],\n                \"X-Ms-Throttle-Levels\": [\n                    \"operationRatePct=0.4, operationConcurrencyPct=0.3, subscriptionWriteRatePct=71.5, etc\",\n                ],\n                \"X-Ms-Operation-Identifier\": [\n                    \"appId====REDACTED===,tenantId=d1aa7522-0959-442e-80ee-8c4f7fb4c184,objectId=8eb97873-17bb-46a5-aed9-1967d83ca7ca/switzerlandnorth/9c3a3929-92d7-4b06-a24b-95c185d40624\",\n                ],\n                \"X-Ms-Ratelimit-Remaining-Subscription-Global-Writes\": [\"2999\"],\n                \"Strict-Transport-Security\": [\n                    \"max-age=31536000; includeSubDomains\",\n                ],\n                \"X-Cache\": [\"CONFIG_NOCACHE\"],\n                \"X-Ms-Request-Id\": [\n                    \"6c091e24-a2c3-4813-9c37-a8d33c3611e5\",\n                ],\n                \"X-Ms-Routing-Request-Id\": [\n                    \"SWITZERLANDNORTH:20261104T231431Z:b80ae262-ef9a-4490-a36d-6152100013af\",\n                ],\n                \"Cache-Control\": [\"no-cache\"],\n                \"Pragma\": [\"no-cache\"],\n                \"Content-Type\": [\n                    \"application/json; charset=utf-8\",\n                ],\n            },\n            Body: <*exported.nopClosingBytesReader | 0xc539acacea0>{\n                s: \"{\\\"error\\\":{\\\"code\\\":\\\"PublicIPCountLimitReached\\\",\\\"message\\\":\\\"Cannot create more than 250 public IP addresses for this subscription in this region.\\\",\\\"details\\\":[]}}\",\n                i: 0,\n            },\n            ContentLength: 157,\n            TransferEncoding: nil,\n            Close: false,\n            Uncompressed: false,\n            Trailer: nil,\n            Request: {\n                Method: \"PUT\",\n                URL: {\n                    Scheme: \"https\",\n                    Opaque: \"\",\n                    User: nil,\n                    Host: \"management.azure.com\",\n                    Path: \"/subscriptions/46678f10-4bbb-447e-98e8-d2829589f2d8/resourceGroups/capz-x9fqlj/providers/Microsoft.Network/publicIPPrefixes/prefix\",\n                    Fragment: \"\",\n                    RawQuery: \"api-version=2025-05-01\",\n                    RawPath: \"\",\n                    RawFragment: \"\",\n                    ForceQuery: false,\n                    OmitHost: false,\n                },\n                Proto: \"HTTP/1.1\",\n                ProtoMajor: 1,\n                ProtoMinor: 1,\n                Header: {\n                    \"Accept\": [\"application/json\"],\n                    \"Content-Length\": [\"138\"],\n                    \"Content-Type\": [\"application/json\"],\n                    \"User-Agent\": [\n                        \"azsdk-go-armnetwork/v9.0.0 (go1.27.3; linux)\",\n                    ],\n                    \"Authorization\": [\n                        \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InJ5QngtNjVqTm94SDRGUUhfNnphck5qYU5mNCIsImtpZCI6InJ5QngtNjVqTm94SDRGUUhfNnphck5qYU5mNCJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kMWFh...\n\nGomega truncated this representation as it exceeds 'format.MaxLength'.\nConsider having the object provide a custom 'GomegaStringer' representation\nor adjust the parameters in Gomega's 'format' package.\n\nLearn more here: https://onsi.github.io/gomega/#adjusting-output\n\noccurred",
+          "occurrences": 1,
+          "text": "[FAILED] Unexpected error:\n    <*exported.ResponseError | 0xc539bc4b890>: \n    PUT https://management.azure.com/subscriptions/46678f10-4bbb-447e-98e8-d2829589f2d8/resourceGroups/capz-x9fqlj/providers/Microsoft.Network/publicIPPrefixes/prefix\n    --------------------------------------------------------------------------------\n    RESPONSE 400: 400 Bad Request\n    ERROR CODE: PublicIPCountLimitReached\n    --------------------------------------------------------------------------------\n    {\n      \"error\": {\n ",
+          "totalCharacters": 5289
+        }
+      ],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 115,
+            "error": 0,
+            "failure": 0,
+            "passed": 85,
+            "skipped": 30
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 1530148,
+          "inventorySha256": "ff95d541f4f19d823a81d510a5356d55cae3cb6b727b24da74e13b8d5db8e37c",
+          "listingSha256": "44fe2db0725eaa6226404fadc2b28bcd9335b8c8e8bb3aec6d7f91ded56e26e0",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2106900817654059008",
+          "xmlCandidates": 1
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 115,
+            "error": 0,
+            "failure": 2,
+            "passed": 83,
+            "skipped": 30
+          },
+          "distinctFailures": 2,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 1573106,
+          "inventorySha256": "dbde11db5afe0b4e53bdab1b8995bc90c4e006fb5599c31e24805f74fd58961a",
+          "listingSha256": "83efca895887c44cdc7e68903d84dccc9341413ff64ee1dd603e10f3b26fd9fc",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2118101821867167744",
+          "xmlCandidates": 1
+        }
+      ]
+    },
+    "id": "U09",
+    "job": "pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35",
+    "project": "kubernetes-sigs/cloud-provider-azure",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2106900817654059008\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2118101821867167744\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2106900817654059008",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2118101821867167744"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 0,
+        "newOccurrences": 0,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 70,
+            "error": 0,
+            "failure": 0,
+            "passed": 60,
+            "skipped": 10
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 254177,
+          "inventorySha256": "865e5ed083ae93217f24ad28d2ab35d445fe8b9f8bed237e7075bd9b6ff0b5d6",
+          "listingSha256": "d8c5f5e32233a969b90aff5cd383266a61d594d1a0577ddbcea67dda82f15c49",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117215683241578496",
+          "xmlCandidates": 1
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 70,
+            "error": 0,
+            "failure": 0,
+            "passed": 60,
+            "skipped": 10
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 1,
+          "inputBytes": 270224,
+          "inventorySha256": "eeef71e16a1c6146d8f6b005202203b8425eb0bf73afa7934ef4488d4309ffec",
+          "listingSha256": "f62a8764cabd2208cea5183838b218a1ca1f19850c6f3a27fffd64b89accca6f",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117585183090675712",
+          "xmlCandidates": 1
+        }
+      ]
+    },
+    "id": "U10",
+    "job": "pull-lws-test-e2e-main-cert-manager",
+    "project": "kubernetes-sigs/lws",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117215683241578496\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117585183090675712\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117215683241578496",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117585183090675712"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 2,
+        "newDistinct": 1,
+        "newOccurrences": 1,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [
+        {
+          "exceptionType": "failed",
+          "id": "f37d2478d6819a15fdf1cf2c5e20f2b6097eed28246058af42791812f48790fe",
+          "kind": "failure",
+          "message": "Expected\n    <[]v1.Service | len:0, cap:0>: []\nto have length 1",
+          "occurrences": 1,
+          "text": "[FAILED] Expected\n    <[]v1.Service | len:0, cap:0>: []\nto have length 1\nIn [It] at: /home/prow/go/src/github.com/kubernetes-sigs/controller-runtime/pkg/cache/cache_test.go:499 @ 11/05/26 13:54:57.301\n",
+          "totalCharacters": 201
+        }
+      ],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 2132,
+            "error": 0,
+            "failure": 2,
+            "passed": 1865,
+            "skipped": 265
+          },
+          "distinctFailures": 2,
+          "excludedObjects": [],
+          "includedReports": 50,
+          "inputBytes": 3021427,
+          "inventorySha256": "e6ccd53bc722381265b463ab341cadcef220d9d1a4bd5370cd9ad5c26aba85f3",
+          "listingSha256": "9bc38c6c957c4699e5458ba51ce6b0d3c381e2a97b4ddd0f7b1f791335a18de5",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry",
+              "interrupted_or_no_tests"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118249874846650368",
+          "xmlCandidates": 50
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 2132,
+            "error": 0,
+            "failure": 1,
+            "passed": 1824,
+            "skipped": 307
+          },
+          "distinctFailures": 1,
+          "excludedObjects": [],
+          "includedReports": 50,
+          "inputBytes": 2910784,
+          "inventorySha256": "5c4c292d5b40ac9c40051f1764a256d73d9691d79e20bb292500f2ab760a12a8",
+          "listingSha256": "3d3ba9280061cfca47edbc70baa793716418a152ea4141ef888c85abe85175c7",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry",
+              "interrupted_or_no_tests"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118340473843093504",
+          "xmlCandidates": 50
+        }
+      ]
+    },
+    "id": "U11",
+    "job": "periodic-controller-runtime-test",
+    "project": "kubernetes-sigs/controller-runtime",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118249874846650368\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118340473843093504\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118249874846650368",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118340473843093504"
+    ]
+  },
+  {
+    "gold": {
+      "change": {
+        "disappearedDistinct": 0,
+        "newDistinct": 1,
+        "newOccurrences": 1,
+        "sharedDistinct": 0
+      },
+      "newEvidence": [
+        {
+          "exceptionType": "failed",
+          "id": "4c1466dff1da68c8831a503e014c43b396f0b76e54751fd1f18bc495c3016001",
+          "kind": "failure",
+          "message": "",
+          "occurrences": 1,
+          "text": "[FAILED] While waiting for PV resize to finish: error while waiting for controller resize to finish: error fetching pv \"pvc-290d0437-0365-4a02-bf04-278052408f2c\" for resizing context deadline exceeded\nIn [It] at: k8s.io/kubernetes/test/e2e/storage/csimock/csi_volume_expansion.go:852 @ 11/05/26 21:22:15.903\n",
+          "totalCharacters": 308
+        }
+      ],
+      "runs": [
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 3441,
+            "error": 0,
+            "failure": 0,
+            "passed": 1262,
+            "skipped": 2179
+          },
+          "distinctFailures": 0,
+          "excludedObjects": [],
+          "includedReports": 2,
+          "inputBytes": 1138445,
+          "inventorySha256": "0b3632a901de9ad23c5e121455531e71630cd53663ea32531cfa229b7cadb060",
+          "listingSha256": "a8d9b250e9e943f4799caa95a501658e321c600d907cb8ea8313ebda5ed0e119",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118323109051240448",
+          "xmlCandidates": 2
+        },
+        {
+          "artifactComplete": true,
+          "counts": {
+            "attempts": 3441,
+            "error": 0,
+            "failure": 1,
+            "passed": 1261,
+            "skipped": 2179
+          },
+          "distinctFailures": 1,
+          "excludedObjects": [],
+          "includedReports": 2,
+          "inputBytes": 1399819,
+          "inventorySha256": "b555d8726ff0cc428c570c8dce05ec47b914eec57cac3a8d1353a9c73888faa5",
+          "listingSha256": "e1a44d436134f8441f6b5199cfe4b1bb68fddf22abb5daabd98860ef955239cd",
+          "parserCoverage": {
+            "complete": false,
+            "limitations": [
+              "ambiguous_retry"
+            ],
+            "unresolved": [
+              "ambiguous_slash_identity"
+            ]
+          },
+          "unresolvedObjects": [],
+          "url": "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118443905530728448",
+          "xmlCandidates": 2
+        }
+      ]
+    },
+    "id": "U12",
+    "job": "e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest",
+    "project": "kubernetes/kops",
+    "task": "Investigate these two runs in chronological order:\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118323109051240448\nhttps://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118443905530728448\nReturn each run's XML inventory accounting, observed counts and parser coverage, followed by exact failure/error signature changes and up to three new diagnostic excerpts. Preserve source hashes, warnings and no-evidence results.",
+    "urls": [
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118323109051240448",
+      "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118443905530728448"
+    ]
+  }
+]

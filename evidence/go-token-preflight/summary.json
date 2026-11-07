@@ -1,0 +1,142 @@
+{
+  "modelCalls": 0,
+  "binarySha256": "87f1c98c873feb4d8de4da3cc92f5462acd2cbf6b627ba8ea5ac3beb9919e6f1",
+  "historicalFreezeSha256": "d33f31033c97f4fdc55e6e14138db58c1b4837d9033ba88f5504e7b063a41689",
+  "cases": [
+    {
+      "id": "U01",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118454474899984384",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118469575166136320"
+      ],
+      "goWallSeconds": 0.4276599580189213,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1953
+    },
+    {
+      "id": "U02",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118445565527199744",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118456443249102848"
+      ],
+      "goWallSeconds": 0.23065245803445578,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1457
+    },
+    {
+      "id": "U03",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2117997348016623616",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_cloud-provider-azure/11071/pull-cloud-provider-azure-unit/2118364847384039424"
+      ],
+      "goWallSeconds": 0.009030707995407283,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1377
+    },
+    {
+      "id": "U04",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118067169316048896",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-etcd-integration-1-cpu-release35-arm64/2118429562118344704"
+      ],
+      "goWallSeconds": 0.007688082987442613,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1297
+    },
+    {
+      "id": "U05",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118263674312331264",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_controller-runtime/3625/pull-controller-runtime-test/2118414312518193152"
+      ],
+      "goWallSeconds": 0.2274569590226747,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1499
+    },
+    {
+      "id": "U06",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118330155486154752",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118450952951304192"
+      ],
+      "goWallSeconds": 0.20930704195052385,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 2490
+    },
+    {
+      "id": "U07",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118321953260441600",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118454707885182976"
+      ],
+      "goWallSeconds": 0.11623733298620209,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 2352
+    },
+    {
+      "id": "U08",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118409429735968768",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118469826383974400"
+      ],
+      "goWallSeconds": 0.012445374974049628,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1279
+    },
+    {
+      "id": "U09",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2106900817654059008",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2118101821867167744"
+      ],
+      "goWallSeconds": 0.10840108303818852,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 13473
+    },
+    {
+      "id": "U10",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117215683241578496",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_lws/1258/pull-lws-test-e2e-main-cert-manager/2117585183090675712"
+      ],
+      "goWallSeconds": 0.0261047919630073,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1383
+    },
+    {
+      "id": "U11",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118249874846650368",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118340473843093504"
+      ],
+      "goWallSeconds": 0.19802937499480322,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1879
+    },
+    {
+      "id": "U12",
+      "urls": [
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118323109051240448",
+        "https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118443905530728448"
+      ],
+      "goWallSeconds": 0.12166591704590246,
+      "fullOutputEqual": true,
+      "comparisonComplete": null,
+      "goOutputBytes": 1891
+    }
+  ],
+  "passed": 12,
+  "total": 12,
+  "limits": "Historical development data; not held out. Full Go/Python output parity only. Single uncontrolled timing observations are not speed benchmarks. No agent-token savings, repeated-use benefit or live network reliability measured."
+}
