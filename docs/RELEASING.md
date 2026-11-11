@@ -4,12 +4,14 @@ TestReceipts is an MIT-licensed, unsigned PoC supported on the [tested native en
 
 The maintainer controls repository visibility and any release publication. Building or committing source does not authorize changing visibility, creating public release tags or publishing assets. This workflow has no automatic publication step.
 
+Record user-visible changes, the source version, measurements and their scope in the [release notes](../CHANGELOG.md) for each new version.
+
 ## Build and verify
 
 Use Go 1.27.3 and Python 3.10+ on the build host. These are development tools only; packages do not contain or require them at runtime. The project-local compiler is selected automatically; pass `--go /absolute/path/to/go` elsewhere.
 
 ```sh
-python3 tools/release.py build --version v0.3.0-dev.1 --out dist/my-poc --verify-repro
+python3 tools/release.py build --version v0.4.0-dev.1 --out dist/my-poc --verify-repro
 python3 tools/release.py verify dist/my-poc
 python3 tools/test_release.py
 ```

@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-var version = "dev"
+var version = "v0.4.0-dev.1"
 
 func run(args []string, out, errOut io.Writer) int {
 	if len(args) == 0 || (len(args) == 1 && (args[0] == "help" || args[0] == "--help")) {

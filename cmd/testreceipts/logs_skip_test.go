@@ -67,3 +67,14 @@ func TestRelatedEvidenceBoundaries(t *testing.T) {
 		t.Fatal("attached diagnostic from a different batch")
 	}
 }
+
+func TestTeardownMustMatchInterruptedCommand(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "step.log")
+	data := "SUCCESS! -- 1 Passed | 0 Failed | 0 Pending | 0 Skipped\nInterrupt after 2h0m0s timeout during ./one.sh. Will terminate in another 15m\nerror during ./two.sh (interrupted)\n"
+	if err := os.WriteFile(path, []byte(data), 0600); err != nil {
+		t.Fatal(err)
+	}
+	if r := searchLog(path, "error during", false); len(r.Related) != 0 {
+		t.Fatalf("attached unrelated timeout: %+v", r.Related)
+	}
+}

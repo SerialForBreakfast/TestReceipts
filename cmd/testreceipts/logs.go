@@ -73,6 +73,7 @@ func searchLog(path, query string, partial bool) logResult {
 	var candidates []excerpt
 	segmentStart := 1
 	var recent []string
+	var lastSuite relatedBlock
 	pendingPackage := ""
 	awaitErrors, inErrors := false, false
 	summaryStart, summaryEnd := 0, 0
@@ -86,6 +87,7 @@ func searchLog(path, query string, partial bool) logResult {
 			r.Reason = "oversized_lines"
 			history = nil
 			recent = nil
+			lastSuite = relatedBlock{}
 			pendingPackage = ""
 			awaitErrors, inErrors = false, false
 			summaryStart, summaryEnd = 0, 0
@@ -97,6 +99,12 @@ func searchLog(path, query string, partial bool) logResult {
 			break
 		}
 		line := string(raw)
+		if strings.Contains(line, "Running Suite:") {
+			lastSuite = relatedBlock{}
+		}
+		if strings.Contains(line, " Passed |") && suiteCounts.MatchString(ansiColor.ReplaceAllString(line, "")) {
+			lastSuite = relatedBlock{"preceding_suite_counts", r.Scanned, []string{line}}
+		}
 		// A gotestsum Errors section can follow many package failures. Cite its
 		// first compiler diagnostic as section evidence, not a package-specific cause.
 		if pendingPackage != "" {
@@ -134,6 +142,21 @@ func searchLog(path, query string, partial bool) logResult {
 			if len(candidates) < 8 {
 				if fields := strings.Fields(line); len(fields) >= 3 && fields[0] == "===" && fields[1] == "FAIL:" {
 					pendingPackage = fields[2]
+				}
+				if strings.Contains(line, "(interrupted)") {
+					for i := len(recent) - 1; i >= 0; i-- {
+						if strings.Contains(recent[i], "Running Suite:") {
+							break
+						}
+						m := interruptDuring.FindStringSubmatch(recent[i])
+						if m != nil && strings.Contains(line, "during "+m[1]+" (interrupted)") {
+							if lastSuite.Start > 0 && lastSuite.Start < r.Scanned-len(recent)+i {
+								r.Related = append(r.Related, lastSuite)
+							}
+							r.Related = append(r.Related, relatedBlock{"operation_timeout", r.Scanned - len(recent) + i, []string{recent[i]}})
+							break
+						}
+					}
 				}
 				if block := namedAssertion(recent, line, r.Scanned); block != nil {
 					r.Related = append(r.Related, *block)
@@ -183,6 +206,9 @@ const assertionLookback = 12
 
 var testDiagnostic = regexp.MustCompile(`_test\.go:[0-9]+:`)
 var suiteSummary = regexp.MustCompile(`Summarizing [0-9]+ Failures?:`)
+
+var suiteCounts = regexp.MustCompile(`^(SUCCESS!|FAIL!) -- [0-9]+ Passed \| [0-9]+ Failed \| [0-9]+ Pending \| [0-9]+ Skipped`)
+var interruptDuring = regexp.MustCompile(`Interrupt after \S+ timeout during (\S+)\. Will terminate`)
 
 var compilerDiagnostic = regexp.MustCompile(`^.+\.go:[0-9]+:[0-9]+: .+`)
 var sourceError = regexp.MustCompile(`\.go:[0-9]+: (context deadline exceeded|Expected |Unexpected error)`)
@@ -244,8 +270,19 @@ func diagnosticStart(lines []string, header, fallback int) int {
 			continue
 		}
 		site, _, _ := strings.Cut(strings.TrimPrefix(text, "In [It] at: "), " @ ")
-		if site == location && strings.HasPrefix(clean(lines[i-1]), "[FAILED] ") {
-			return min(fallback, i-1)
+		if site == location {
+			if strings.HasPrefix(clean(lines[i-1]), "[FAILED] ") {
+				return min(fallback, i-1)
+			}
+			for j := i - 1; j >= max(1, header-assertionLookback); j-- {
+				t := clean(lines[j])
+				if strings.HasPrefix(t, "[FAILED]") || strings.HasPrefix(t, "In [It]") || suiteSummary.MatchString(t) {
+					break
+				}
+				if strings.HasPrefix(t, "Error from server (") && clean(lines[j-1]) == "stderr:" {
+					return min(fallback, j)
+				}
+			}
 		}
 		break
 	}

@@ -127,3 +127,5 @@ Frozen log-context replay on six additional Kubernetes builds: Go found 5/11 evi
 Go source errors, named assertions and gotestsum compiler sections replayed on all 16 development logs: +6 evidence groups, +7 extra lines versus previous Go. [Line receipts](evidence/build-logs/source-errors/results.json).
 
 Frozen replay beyond all sixteen tuning logs: four additional builds, Go 5/8 groups with 21 extra lines and Python 3/8 with 17. [Per-case misses and replay](evidence/build-logs/cross-pass/README.md).
+
+Suite-count, interrupted-command and pod stderr replay: 54/54 groups with 171 extra lines across twenty known logs, +3 groups for +5 extra versus preceding Go. [Line receipts](evidence/build-logs/teardown/results.json).

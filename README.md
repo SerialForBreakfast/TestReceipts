@@ -57,7 +57,20 @@ testreceipts compare-recording ./.artifacts/example-capture "$BEFORE_URL" "$AFTE
 
 ## Find evidence in a failed build log
 
-With a current source build, run `testreceipts log-context FILE 'failure message'` to get matching line numbers and surrounding context, including nearby recognized failure summaries. Multiple hits, missing files and known partial logs are explicit. [Example and archived-run comparison](evidence/build-logs/README.md).
+In **v0.4.0-dev.1**, give `log-context` a local build log and a literal failure message. It returns JSON with the matching line numbers, nearby failure summaries, and supporting evidence such as assertion values, compiler errors, or a timeout for the same operation. Multiple matches, missing files and skipped oversized lines are explicit. For a known partial log, add `--partial` before the filename.
+
+```sh
+testreceipts log-context testdata/build-logs/failed.txt 'failed to restore temporary ACL'
+```
+
+On **20 archived logs used during development**, we checked whether each tool returned the lines needed to answer one question per log. Extra lines are distinct returned lines outside that question’s evidence labels.
+
+| Tool | Evidence groups found | Extra lines returned |
+|---|---:|---:|
+| TestReceipts | **54/54** | 171 |
+| Reusable Python search script | 14/54 | 104 |
+
+The Go tool found **40 more evidence groups** and returned **67 more extra lines**. All 20 logs informed tuning. Token savings for log search remain unmeasured. [Per-log results](evidence/build-logs/teardown/results.json) · [Replay method](evidence/build-logs/README.md) · [Release notes](CHANGELOG.md)
 
 ## Measured status
 

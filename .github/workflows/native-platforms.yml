@@ -42,7 +42,7 @@ jobs:
         run: python tools/native_ci.py matrix >> "$GITHUB_OUTPUT"
       - name: Reproduce and verify all six packages
         env:
-          CANDIDATE: v0.3.0-ci.${{ github.run_id }}.${{ github.run_attempt }}
+          CANDIDATE: v0.4.0-ci.${{ github.run_id }}.${{ github.run_attempt }}
         run: |
           python tools/release.py build --version "$CANDIDATE" --out dist/ci --verify-repro
           python tools/release.py verify dist/ci

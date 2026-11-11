@@ -59,3 +59,11 @@ Across the 16 development cases, current Go recovered 46/46 labeled groups with 
 With all four archived sets restored, run `./tools/go build -o .artifacts/build-logs/testreceipts ./cmd/testreceipts` and `python3 tools/replay_source_errors.py .artifacts/build-logs/testreceipts`. The scorer verifies source hashes and excerpt bytes, checks Python against the pinned baseline receipts, and records added and removed line numbers relative to the preceding run. [All 16 per-case receipts](source-errors/results.json).
 
 [Four additional fixed-rule log comparisons](cross-pass/README.md) cover the GCP aggregator, AWS EBS volume modification, GCE teardown, and GCP pod connectivity failures.
+
+## Suite counts, teardown timeouts and command stderr
+
+For matched interrupted-operation errors, log-context checks the preceding 48 lines for a timeout naming the same operation. It can cite that timeout and the preceding Ginkgo suite counts as separate related lines. For a single-spec failure summary, a matching source location can also link a nearby server error in the command's stderr to the excerpt.
+
+The 20-log replay used the existing labels and queries. Updated Go recovered 54/54 groups with 171 extra lines, previous Go 51/54 with 166, and the unchanged Python script 14/54 with 104. Only two Go outputs changed. The GCE teardown gained lines 670 and 822 (both labeled). The pod connectivity excerpt gained lines 2896–2901 (one labeled and five outside the labels). All twenty logs now inform development. No model calls or token measurements.
+
+Build the current tool and run `python3 tools/replay_source_errors.py .artifacts/build-logs/testreceipts --all` with the five archived sets restored. The scorer verifies source hashes, line text and unchanged Python line selections. [All twenty receipts](teardown/results.json).
