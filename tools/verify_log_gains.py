@@ -29,16 +29,20 @@ def check_hash(path, expected):
 
 
 def run(fetch, tmp):
-    for name, digest in read(V/'freeze.json')['hashes'].items():
-        check_hash(ROOT/name, digest)
     source = ROOT/'cmd/testreceipts/logs.go'
+    full = tmp/'full.go'
+    subprocess.run(['patch','-s','-o',full,source,V/'pre-diagnostic.patch'],check=True)
+    for name, digest in read(V/'freeze.json')['hashes'].items():
+        check_hash(full if ROOT/name == source else ROOT/name, digest)
     previous = tmp/'previous.go'
-    subprocess.run(['patch','-s','-o',previous,source,V/'previous.patch'],check=True)
+    subprocess.run(['patch','-s','-o',previous,full,V/'previous.patch'],check=True)
     check_hash(previous, read(EVIDENCE/'holdout/freeze.json')['tools']['cmd/testreceipts/logs.go'])
     overlay = tmp/'overlay.json'
     overlay.write_text(json.dumps({'Replace':{str(source):str(previous)}}))
+    full_overlay = tmp/'full-overlay.json'
+    full_overlay.write_text(json.dumps({'Replace':{str(source):str(full)}}))
     commands = {'python':[sys.executable, ROOT/'tools/search_log.py']}
-    for version, flags in [('previous',['-overlay',overlay]), ('current',[])]:
+    for version, flags in [('previous',['-overlay',overlay]), ('full-summary',['-overlay',full_overlay]), ('current',[])]:
         binary = tmp/version
         subprocess.run([ROOT/'tools/go','build',*flags,'-o',binary,'./cmd/testreceipts'],cwd=ROOT,check=True)
         commands[version] = [binary,'log-context']
@@ -48,7 +52,8 @@ def run(fetch, tmp):
         cases = read(EVIDENCE/name/'cases.json')
         totals[name] = {}
         for version, command in commands.items():
-            receipts = read(EVIDENCE/name/((old if version=='previous' else new)+'.json'))
+            receipt_name = {'previous':old, 'full-summary':new}.get(version, 'linked-diagnostic')
+            receipts = read(EVIDENCE/name/(receipt_name+'.json'))
             require([r['id'] for r in receipts]==[c['id'] for c in cases], 'case order or identity')
             found = extra = complete = 0
             for c, saved in zip(cases, receipts):

@@ -1,0 +1,179 @@
+[
+  {
+    "id": "pair1-heavy",
+    "job": "pull-kubernetes-integration",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143838/pull-kubernetes-integration/2118409019428179968/build-log.txt",
+    "sha256": "ae9d6895cfcfaad6b2690e0b39035ec033d44281ed6d58ac5f98b228c77d1d4d",
+    "literal": "--- FAIL: TestAllocatorPoolBufferCapacityBounded/gate_enabled",
+    "question": "At what source location and with what error did the test server fail?",
+    "evidenceGroups": [
+      [
+        200,
+        337,
+        462,
+        595,
+        828,
+        1197,
+        1328,
+        1517,
+        1653,
+        1796,
+        1922,
+        2056,
+        2188,
+        2321,
+        2450,
+        2578,
+        2706,
+        2834,
+        2962,
+        3092,
+        3221,
+        3348,
+        3477,
+        3606,
+        3738,
+        3868,
+        3998,
+        4128,
+        4259,
+        4388,
+        4516,
+        4647,
+        4807,
+        4946,
+        5074,
+        19613,
+        20719,
+        21667,
+        24491,
+        25337,
+        27209,
+        27361,
+        29932,
+        31205,
+        32484,
+        32628,
+        33100,
+        34366,
+        35295,
+        35441,
+        35592,
+        35747,
+        35884,
+        36011,
+        36162,
+        36304,
+        36480,
+        36623,
+        36772,
+        36922,
+        37087,
+        37233,
+        37383,
+        37535,
+        37684,
+        37823,
+        38125,
+        39429,
+        41017,
+        41319
+      ]
+    ]
+  },
+  {
+    "id": "pair1-sparse",
+    "job": "pull-kubernetes-integration",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/141813/pull-kubernetes-integration/2118421113083006976/build-log.txt",
+    "sha256": "3c92e1574f33c08ac0e60e406db923434833e2a8175ecb3312ab8fa947f2fc97",
+    "literal": "--- FAIL: TestPodTopologyLabels/custom_topology.kubernetes.io_labels_are_not_copied",
+    "question": "What label value was expected and what topology labels appeared instead?",
+    "evidenceGroups": [
+      [
+        147,
+        3082
+      ],
+      [
+        148,
+        3083
+      ]
+    ]
+  },
+  {
+    "id": "pair2-heavy",
+    "job": "pull-kubernetes-integration",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143235/pull-kubernetes-integration/2117917667930148864/build-log.txt",
+    "sha256": "2a5d2daa3fe40f590617c94f1d1df431a312a81756d495cf7dd23c094973c0e0",
+    "literal": "--- FAIL: TestGolangciLint/without-hints",
+    "question": "In the without-hints case, which govet issue was missing and which unexpected typecheck import error was reported?",
+    "evidenceGroups": [
+      [
+        245,
+        311,
+        582,
+        648
+      ],
+      [
+        251,
+        317,
+        588,
+        654
+      ]
+    ]
+  },
+  {
+    "id": "pair2-sparse",
+    "job": "pull-kubernetes-integration",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143729/pull-kubernetes-integration/2117918424024748032/build-log.txt",
+    "sha256": "672dd5591031a1544eee5b1ce2a99728bbe9d1b8ee879f9f4ffcedc2cffc8098",
+    "literal": "--- FAIL: TestCorrectness/cacher_small_history",
+    "question": "Did the linearizability check succeed, and what small-history expiry behavior was expected?",
+    "evidenceGroups": [
+      [
+        114,
+        2465
+      ],
+      [
+        120,
+        2471
+      ]
+    ]
+  },
+  {
+    "id": "pair3-volume",
+    "job": "pull-kubernetes-unit",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143235/pull-kubernetes-unit/2117917671298174976/build-log.txt",
+    "sha256": "2b8ad3b219bb91a99137cff5f060c527d38f39c1ab2316c29f9bfcf265a14ab9",
+    "literal": "=== FAIL: k8s.io/apiextensions-apiserver/pkg/apiserver",
+    "question": "Which package is the first build failure and what undefined type appears in the first compiler diagnostic in the Errors section?",
+    "evidenceGroups": [
+      [
+        1924
+      ],
+      [
+        3841,
+        3875
+      ]
+    ]
+  },
+  {
+    "id": "pair3-sparse",
+    "job": "pull-kubernetes-unit",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143734/pull-kubernetes-unit/2117905406360555520/build-log.txt",
+    "sha256": "601b5c325c181e4521b3ef9ab7247df1aabc5cb3421645dd30ec80c84b243158",
+    "literal": "--- FAIL: TestCompactRevision",
+    "question": "What error was expected instead of storage reinitializing, and at which compacted RV did listing fail?",
+    "evidenceGroups": [
+      [
+        1274,
+        1275,
+        2695,
+        2696
+      ],
+      [
+        1276,
+        2697
+      ]
+    ]
+  }
+]

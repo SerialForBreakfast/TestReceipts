@@ -47,3 +47,5 @@ On the later set, kOps gained nine failed spec names for nine extra lines (mostl
 [Original four current line receipts](projects/full-summary.json) · [Later four current line receipts](holdout/full-summary.json). The earlier result files remain available for comparison. Reproduce with the same replay commands in each set's README using the current binary.
 
 [Independent replay](verification/README.md) rebuilds both Go versions and scores all saved comparisons, including two additional runs.
+
+[Six-build frozen replay](density-pass/README.md) measures the resize-diagnostic version on archived logs outside all ten development cases.

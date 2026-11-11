@@ -1,0 +1,52 @@
+--- current
++++ full-summary
+@@ -148,40 +148,11 @@
+ 	return strings.TrimSpace(plain) != "" && (strings.HasPrefix(plain, " ") || strings.HasPrefix(plain, "\t"))
+ }
+ 
+-// Link a single-spec Ginkgo summary to the preceding failure only when the
+-// summary and the diagnostic cite the same source location.
+-func diagnosticStart(lines []string, header, fallback int) int {
+-	clean := func(s string) string { return strings.TrimSpace(ansiColor.ReplaceAllString(s, "")) }
+-	if clean(lines[header]) != "Summarizing 1 Failure:" || header+2 >= len(lines) || !strings.HasPrefix(clean(lines[header+1]), "[FAIL] ") {
+-		return fallback
+-	}
+-	location := clean(lines[header+2])
+-	if location == "" {
+-		return fallback
+-	}
+-	for i := header - 1; i >= max(1, header-assertionLookback); i-- {
+-		text := clean(lines[i])
+-		if suiteSummary.MatchString(text) || strings.HasPrefix(text, "--- FAIL:") {
+-			break
+-		}
+-		if !strings.HasPrefix(text, "In [It] at: ") {
+-			continue
+-		}
+-		site, _, _ := strings.Cut(strings.TrimPrefix(text, "In [It] at: "), " @ ")
+-		if site == location && strings.HasPrefix(clean(lines[i-1]), "[FAILED] ") {
+-			return min(fallback, i-1)
+-		}
+-		break
+-	}
+-	return fallback
+-}
+-
+ // Expand only around recognizable test failure sections. Preserve raw text and physical lines.
+ func summaryContext(e excerpt) excerpt {
+ 	at := e.Match - e.Start
+ 	lo, hi := max(0, at-2), min(len(e.Lines), at+3)
+ 	if suiteSummary.MatchString(e.Lines[at]) {
+-		lo = diagnosticStart(e.Lines, at, lo)
+ 		for j := at + 1; j < len(e.Lines) && summaryEntry(e.Lines[j]); j++ {
+ 			hi = max(hi, j+1)
+ 		}
+@@ -205,7 +176,7 @@
+ 				break
+ 			}
+ 			if suiteSummary.MatchString(line) {
+-				lo = diagnosticStart(e.Lines, i, min(lo, i))
++				lo = min(lo, i)
+ 				// Include a nearby assertion block preceding the summary.
+ 				for j := i - 1; j >= max(0, i-assertionLookback); j-- {
+ 					text := strings.TrimSpace(ansiColor.ReplaceAllString(e.Lines[j], ""))

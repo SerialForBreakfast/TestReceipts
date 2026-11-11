@@ -1,0 +1,68 @@
+{
+  "projects": {
+    "python": {
+      "found": 6,
+      "extra": 19,
+      "complete": 1
+    },
+    "previous": {
+      "found": 12,
+      "extra": 29,
+      "complete": 4
+    },
+    "full-summary": {
+      "found": 12,
+      "extra": 35,
+      "complete": 4
+    },
+    "current": {
+      "found": 12,
+      "extra": 35,
+      "complete": 4
+    }
+  },
+  "holdout": {
+    "python": {
+      "found": 1,
+      "extra": 24,
+      "complete": 0
+    },
+    "previous": {
+      "found": 7,
+      "extra": 28,
+      "complete": 1
+    },
+    "full-summary": {
+      "found": 19,
+      "extra": 41,
+      "complete": 4
+    },
+    "current": {
+      "found": 19,
+      "extra": 41,
+      "complete": 4
+    }
+  },
+  "verification": {
+    "python": {
+      "found": 2,
+      "extra": 13,
+      "complete": 0
+    },
+    "previous": {
+      "found": 2,
+      "extra": 13,
+      "complete": 0
+    },
+    "full-summary": {
+      "found": 3,
+      "extra": 13,
+      "complete": 1
+    },
+    "current": {
+      "found": 4,
+      "extra": 14,
+      "complete": 2
+    }
+  }
+}

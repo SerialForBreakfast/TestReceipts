@@ -1,0 +1,54 @@
+{
+  "selection": "All six entries in the historical failure-density selection, original order. No replacements.",
+  "indexSha256": "461ed85879ecc793e0fbf837cb744dd849104b15e6e24bb09e31d796690dbe78",
+  "sources": [
+    {
+      "id": "pair1-heavy",
+      "job": "pull-kubernetes-integration",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143838/pull-kubernetes-integration/2118409019428179968/build-log.txt"
+    },
+    {
+      "id": "pair1-sparse",
+      "job": "pull-kubernetes-integration",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/141813/pull-kubernetes-integration/2118421113083006976/build-log.txt"
+    },
+    {
+      "id": "pair2-heavy",
+      "job": "pull-kubernetes-integration",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143235/pull-kubernetes-integration/2117917667930148864/build-log.txt"
+    },
+    {
+      "id": "pair2-sparse",
+      "job": "pull-kubernetes-integration",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143729/pull-kubernetes-integration/2117918424024748032/build-log.txt"
+    },
+    {
+      "id": "pair3-volume",
+      "job": "pull-kubernetes-unit",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143235/pull-kubernetes-unit/2117917671298174976/build-log.txt"
+    },
+    {
+      "id": "pair3-sparse",
+      "job": "pull-kubernetes-unit",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143734/pull-kubernetes-unit/2117905406360555520/build-log.txt"
+    }
+  ],
+  "excludedSha256": [
+    "1332644dc021c60a45550814e3cb245c6f02580386a660c0a474842e8af71a94",
+    "4eaf8bac01cfc38cc973281b4c94a28c0ddad78df3ee00bd07505e1ee84f011b",
+    "33406bd8800b3d770b310d1db0aef3589734e42f11ca9a8747eb2800c4a6a365",
+    "2b7605dc69e96421392b6f2241807fe6ddfd3cfea7d1e10e72b0dbaa30c1edcf",
+    "d892bdc232f7ff7fc7d375203cc6b514d1489c2d391421796fd6df21f9762a22",
+    "3a06fd10d4baac52fc8db50fc1505a75f9dcdbf1cb2e904e127686027e4b0b9c",
+    "1529aba3fade55c2639527d059aabb95b847468112891498931dbd6614d3d668",
+    "a4355f29771f6eea0622a286a16460cd2c8df88081726a512ab20b847ae2afc6",
+    "3f84855d18ca835b880b1e614f2b453c993b65131e2616e050f98237e2e33da9",
+    "620fb9bd84ea0168452ccccb58073aa76ac55cb9ad739ee3552eed49fe0009a3"
+  ],
+  "hashes": {
+    "cmd/testreceipts/logs.go": "6807c49163fee33ac6d26ece6ecefa16058eb9bb6fa4ebf8edd4bb95a1eef1ef",
+    "tools/search_log.py": "13fd76e6de7b8b272abf89111b099652937d016a8cf2c30a2c0c5aca2e570528",
+    "tools/replay_project_logs.py": "a00938a275147ee9db13f8e46fabdb90f7d9e56556d71e2b69dbbfbaf3e98042",
+    ".artifacts/log-density/testreceipts": "2fc1a6c5666d85981dfb40058a79d4e95128adc6c8819f2de8176963664c8202"
+  }
+}

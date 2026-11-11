@@ -21,3 +21,9 @@ For the new replay we froze the rules and selected every remaining run in the hi
 * **kOps volume expansion.** All three returned the failed spec and its source location with three extra lines. All missed the terminal diagnostic at line 2887, five lines before the summary header. The diagnostic reports a deadline exceeded while fetching the PV during resize. Current Go answered one of the two questions completely; the other tools answered neither.
 
 These checks verify replay and arithmetic. Relevance labels have not received independent human review. No model calls or token measurements were made. [Frozen selection](freeze.json) · [Input hashes, queries and evidence lines](cases.json) · [Current receipts](results.json) · [Previous receipts](previous.json).
+
+## Resize diagnostic follow-up
+
+A single-failure Ginkgo summary can now include a nearby preceding `[FAILED]` diagnostic when the adjacent `In [It] at:` location matches the summary location. For kOps this adds lines 2887–2889: the resize timeout, another citation of the already-labeled source location, and a separator. Only the separator is outside the existing labels. The other nine Go receipts and all ten Python receipts are unchanged.
+
+Across all ten known logs, updated Go finds 35/35 groups with 90 extra lines; the preceding Go version found 34/35 with 89 extra. Python finds 9/35 with 56 extra lines. All ten logs have now informed development. Run the verifier above to rebuild all three Go revisions, execute Python, and reproduce [the updated totals](linked-totals.json). The earlier totals remain a historical snapshot. No model calls.

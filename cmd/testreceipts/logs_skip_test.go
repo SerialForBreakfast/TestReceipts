@@ -39,3 +39,17 @@ func TestLongSummaryBoundary(t *testing.T) {
 		t.Fatalf("trailing match %d, start %d", trailing.Match, trailing.Start)
 	}
 }
+
+func TestSummaryDiagnosticRequiresSameSite(t *testing.T) {
+	for _, site := range []string{"resize.go:42", "resize.go:420"} {
+		lines := []string{"[FAILED] operation timed out", "In [It] at: resize.go:42 @ yesterday", "---", "", "", "Summarizing 1 Failure:", "  [FAIL] spec", "  " + site}
+		got := summaryContext(excerpt{Match: 6, Start: 1, Lines: lines})
+		want := 4
+		if site == "resize.go:42" {
+			want = 1
+		}
+		if got.Start != want {
+			t.Errorf("site %s: start %d, want %d", site, got.Start, want)
+		}
+	}
+}

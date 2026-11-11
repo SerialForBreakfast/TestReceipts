@@ -119,3 +119,7 @@ Fixed-rule held-out log replay complete on four additional runs. Go recovered 7/
 Full-summary and assertion-context replay on both known sets: updated Go found 31/31 groups with 76 extra lines, previously 19/31 with 57. Unchanged Python found 7/31 with 43. [Results and limits](evidence/build-logs/README.md#full-summary-replay-on-both-known-sets).
 
 Independent build-log verification reproduced both earlier sets. Frozen replay on two additional logs found 3/4 groups with 13 extra lines versus 2/4 with 13 for both comparators. [Reproduction instructions and remaining miss](evidence/build-logs/verification/README.md).
+
+Linked Ginkgo single-failure summaries to nearby diagnostics with matching source locations. All ten logs replayed and independently rescored: one new evidence group for one extra unlabeled line (three more lines displayed). [Audit](evidence/build-logs/verification/README.md#resize-diagnostic-follow-up).
+
+Frozen log-context replay on six additional Kubernetes builds: Go found 5/11 evidence groups with 48 extra lines; Python found 2/11 with 31. [Misses, scope and reproduction](evidence/build-logs/density-pass/README.md).
