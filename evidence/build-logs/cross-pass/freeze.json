@@ -1,0 +1,97 @@
+{
+  "selection": "All distinct failure-bearing runs from Spotlightning cross-run/corpus-v4/selection.json in manifest order, excluding the 16 development log URLs. No replacements.",
+  "manifestHash": "81f957c4c3451f839c9b22515bf80f2f1c0ef4f3afea5837bf94dd41f5021561",
+  "excluded": [
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118469575166136320/build-log.txt",
+      "sha256": "1332644dc021c60a45550814e3cb245c6f02580386a660c0a474842e8af71a94"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118445565527199744/build-log.txt",
+      "sha256": "4eaf8bac01cfc38cc973281b4c94a28c0ddad78df3ee00bd07505e1ee84f011b"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118454707885182976/build-log.txt",
+      "sha256": "33406bd8800b3d770b310d1db0aef3589734e42f11ca9a8747eb2800c4a6a365"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118249874846650368/build-log.txt",
+      "sha256": "2b7605dc69e96421392b6f2241807fe6ddfd3cfea7d1e10e72b0dbaa30c1edcf"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118450952951304192/build-log.txt",
+      "sha256": "d892bdc232f7ff7fc7d375203cc6b514d1489c2d391421796fd6df21f9762a22"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118409429735968768/build-log.txt",
+      "sha256": "3a06fd10d4baac52fc8db50fc1505a75f9dcdbf1cb2e904e127686027e4b0b9c"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2118101821867167744/build-log.txt",
+      "sha256": "1529aba3fade55c2639527d059aabb95b847468112891498931dbd6614d3d668"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118340473843093504/build-log.txt",
+      "sha256": "a4355f29771f6eea0622a286a16460cd2c8df88081726a512ab20b847ae2afc6"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118469826383974400/build-log.txt",
+      "sha256": "3f84855d18ca835b880b1e614f2b453c993b65131e2616e050f98237e2e33da9"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118443905530728448/build-log.txt",
+      "sha256": "620fb9bd84ea0168452ccccb58073aa76ac55cb9ad739ee3552eed49fe0009a3"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143838/pull-kubernetes-integration/2118409019428179968/build-log.txt",
+      "sha256": "ae9d6895cfcfaad6b2690e0b39035ec033d44281ed6d58ac5f98b228c77d1d4d"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/141813/pull-kubernetes-integration/2118421113083006976/build-log.txt",
+      "sha256": "3c92e1574f33c08ac0e60e406db923434833e2a8175ecb3312ab8fa947f2fc97"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143235/pull-kubernetes-integration/2117917667930148864/build-log.txt",
+      "sha256": "2a5d2daa3fe40f590617c94f1d1df431a312a81756d495cf7dd23c094973c0e0"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143729/pull-kubernetes-integration/2117918424024748032/build-log.txt",
+      "sha256": "672dd5591031a1544eee5b1ce2a99728bbe9d1b8ee879f9f4ffcedc2cffc8098"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143235/pull-kubernetes-unit/2117917671298174976/build-log.txt",
+      "sha256": "2b8ad3b219bb91a99137cff5f060c527d38f39c1ab2316c29f9bfcf265a14ab9"
+    },
+    {
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/143734/pull-kubernetes-unit/2117905406360555520/build-log.txt",
+      "sha256": "601b5c325c181e4521b3ef9ab7247df1aabc5cb3421645dd30ec80c84b243158"
+    }
+  ],
+  "sources": [
+    {
+      "id": "2116943251540807680",
+      "job": "ci-cloud-provider-gcp-e2e-latest",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-cloud-provider-gcp-e2e-latest/2116943251540807680/build-log.txt"
+    },
+    {
+      "id": "2117917430956167168",
+      "job": "ci-aws-ebs-csi-driver-e2e-functional",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2117917430956167168/build-log.txt"
+    },
+    {
+      "id": "2118169343949803520",
+      "job": "ci-kubernetes-e2e-gce-cos-alphafeatures-master",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-e2e-gce-cos-alphafeatures-master/2118169343949803520/build-log.txt"
+    },
+    {
+      "id": "2116218469547511808",
+      "job": "ci-cloud-provider-gcp-e2e-latest",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-cloud-provider-gcp-e2e-latest/2116218469547511808/build-log.txt"
+    }
+  ],
+  "hashes": {
+    "cmd/testreceipts/logs.go": "1c557111b0551f124c70ab9236c52f4195cb519216924af529f02cc84d4bb6d9",
+    "tools/search_log.py": "13fd76e6de7b8b272abf89111b099652937d016a8cf2c30a2c0c5aca2e570528",
+    ".artifacts/log-cross/testreceipts": "935de6e5c051fd09ca0a3cc702640d49ba5039c08b9d30428de59bd076f9b9fa"
+  }
+}

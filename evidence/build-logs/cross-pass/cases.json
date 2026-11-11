@@ -1,0 +1,141 @@
+[
+  {
+    "id": "2116943251540807680",
+    "job": "ci-cloud-provider-gcp-e2e-latest",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-cloud-provider-gcp-e2e-latest/2116943251540807680/build-log.txt",
+    "sha256": "3f6749427123a2709f8a3781ca06f468d6470f72dc52b39d09d7462cc9b7f665",
+    "literal": "Summarizing 1 Failure:",
+    "question": "Which spec failed and what error did its dynamic client report?",
+    "evidenceGroups": [
+      [
+        2425
+      ],
+      [
+        2419
+      ]
+    ],
+    "labels": [
+      "Aggregator spec",
+      "flunder listing rejected by server"
+    ]
+  },
+  {
+    "id": "2117917430956167168",
+    "job": "ci-aws-ebs-csi-driver-e2e-functional",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-aws-ebs-csi-driver-e2e-functional/2117917430956167168/build-log.txt",
+    "sha256": "e527df0b5cf836a03aad85b26c4ae6a4b86a16532a31d67894ab7f3278491a00",
+    "literal": "Summarizing 1 Failure:",
+    "question": "Which volume modification spec failed and what timeout did it report?",
+    "evidenceGroups": [
+      [
+        1158
+      ],
+      [
+        1152
+      ]
+    ],
+    "labels": [
+      "io2-to-gp3 modification spec",
+      "PV modification timed out after 3m0s"
+    ]
+  },
+  {
+    "id": "2118169343949803520",
+    "job": "ci-kubernetes-e2e-gce-cos-alphafeatures-master",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-e2e-gce-cos-alphafeatures-master/2118169343949803520/build-log.txt",
+    "sha256": "e90ae0a1b33cc222a83cbe3e1b127b54e7fedca4197fb8d6e585412ad4a8e99a",
+    "literal": "Failed to list resources",
+    "question": "What counts did the Ginkgo suite report and which subsequent operation hit what timeout?",
+    "evidenceGroups": [
+      [
+        670
+      ],
+      [
+        822
+      ]
+    ],
+    "labels": [
+      "91 passed, zero failed",
+      "list-resources.sh interrupted after two hours"
+    ]
+  },
+  {
+    "id": "2116218469547511808",
+    "job": "ci-cloud-provider-gcp-e2e-latest",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-cloud-provider-gcp-e2e-latest/2116218469547511808/build-log.txt",
+    "sha256": "1a1d7fb4ed8dee7bf82e7d8b79485299d330c6d4184a8bc95d723d86cd1b25f8",
+    "literal": "Summarizing 1 Failure:",
+    "question": "Which connectivity spec failed and what did the server report for its pod?",
+    "evidenceGroups": [
+      [
+        2905
+      ],
+      [
+        2060,
+        2070,
+        2080,
+        2090,
+        2100,
+        2110,
+        2120,
+        2130,
+        2140,
+        2150,
+        2160,
+        2170,
+        2180,
+        2190,
+        2200,
+        2210,
+        2220,
+        2230,
+        2240,
+        2250,
+        2260,
+        2270,
+        2280,
+        2290,
+        2300,
+        2310,
+        2320,
+        2330,
+        2340,
+        2350,
+        2360,
+        2370,
+        2380,
+        2390,
+        2400,
+        2410,
+        2420,
+        2430,
+        2440,
+        2450,
+        2460,
+        2470,
+        2480,
+        2490,
+        2500,
+        2510,
+        2520,
+        2530,
+        2540,
+        2550,
+        2560,
+        2570,
+        2580,
+        2590,
+        2600,
+        2610,
+        2620,
+        2630,
+        2640,
+        2896
+      ]
+    ],
+    "labels": [
+      "terminating-pod connectivity spec",
+      "pause-pod-1 not found"
+    ]
+  }
+]

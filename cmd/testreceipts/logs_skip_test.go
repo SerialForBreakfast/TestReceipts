@@ -53,3 +53,17 @@ func TestSummaryDiagnosticRequiresSameSite(t *testing.T) {
 		}
 	}
 }
+
+func TestRelatedEvidenceBoundaries(t *testing.T) {
+	if namedAssertion([]string{"Test: OtherTest", "Messages: expected expiry"}, "--- FAIL: SomeTest (1s)", 3) != nil {
+		t.Fatal("used another test's assertion")
+	}
+	path := filepath.Join(t.TempDir(), "build.log")
+	data := "=== FAIL: pkg/example (0s)\nFAIL\tpkg/example [build failed]\nDONE 1 test\n=== Errors\nfile.go:3:4: undefined: x\n"
+	if err := os.WriteFile(path, []byte(data), 0600); err != nil {
+		t.Fatal(err)
+	}
+	if r := searchLog(path, "=== FAIL: pkg/example", false); len(r.Related) != 0 {
+		t.Fatal("attached diagnostic from a different batch")
+	}
+}

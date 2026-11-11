@@ -123,3 +123,7 @@ Independent build-log verification reproduced both earlier sets. Frozen replay o
 Linked Ginkgo single-failure summaries to nearby diagnostics with matching source locations. All ten logs replayed and independently rescored: one new evidence group for one extra unlabeled line (three more lines displayed). [Audit](evidence/build-logs/verification/README.md#resize-diagnostic-follow-up).
 
 Frozen log-context replay on six additional Kubernetes builds: Go found 5/11 evidence groups with 48 extra lines; Python found 2/11 with 31. [Misses, scope and reproduction](evidence/build-logs/density-pass/README.md).
+
+Go source errors, named assertions and gotestsum compiler sections replayed on all 16 development logs: +6 evidence groups, +7 extra lines versus previous Go. [Line receipts](evidence/build-logs/source-errors/results.json).
+
+Frozen replay beyond all sixteen tuning logs: four additional builds, Go 5/8 groups with 21 extra lines and Python 3/8 with 17. [Per-case misses and replay](evidence/build-logs/cross-pass/README.md).

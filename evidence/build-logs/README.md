@@ -49,3 +49,13 @@ On the later set, kOps gained nine failed spec names for nine extra lines (mostl
 [Independent replay](verification/README.md) rebuilds both Go versions and scores all saved comparisons, including two additional runs.
 
 [Six-build frozen replay](density-pass/README.md) measures the resize-diagnostic version on archived logs outside all ten development cases.
+
+## Go test and compiler diagnostics on all sixteen logs
+
+For Go failure markers the search includes nearby source-positioned deadlines and expected/unexpected error messages. A matching Testify test name can attach its assertion block from the preceding 48 lines. For a matched failed-package header followed by its build-failed record, the first compiler diagnostic in the subsequent Errors section is reported as batch-level evidence. Disjoint blocks are returned in the optional JSON `related` array with their own starting line and kind. They do not increment the literal match count.
+
+Across the 16 development cases, current Go recovered 46/46 labeled groups with 145 extra lines. Prior Go recovered 40/46 with 138 extra lines. Python recovered 11/46 with 87 extra lines. Only four Go outputs changed: test-server timeout (+1 group, +0 extra), watch expiry and linearizability result (+2, +5), compiler diagnostic (+1, +0), and compacted-revision assertion (+2, +2). Fifteen additional distinct lines were shown: eight labeled lines (including equivalent evidence) and seven outside the labels. Input ambiguity and skipped-line coverage remain explicit. No model calls.
+
+With all four archived sets restored, run `./tools/go build -o .artifacts/build-logs/testreceipts ./cmd/testreceipts` and `python3 tools/replay_source_errors.py .artifacts/build-logs/testreceipts`. The scorer verifies source hashes and excerpt bytes, checks Python against the pinned baseline receipts, and records added and removed line numbers relative to the preceding run. [All 16 per-case receipts](source-errors/results.json).
+
+[Four additional fixed-rule log comparisons](cross-pass/README.md) cover the GCP aggregator, AWS EBS volume modification, GCE teardown, and GCP pod connectivity failures.

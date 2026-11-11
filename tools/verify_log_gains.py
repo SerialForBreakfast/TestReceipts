@@ -30,8 +30,13 @@ def check_hash(path, expected):
 
 def run(fetch, tmp):
     source = ROOT/'cmd/testreceipts/logs.go'
+    linked = tmp/'linked.go'
+    linked.write_bytes(subprocess.check_output(['git','show','0cb3916:cmd/testreceipts/logs.go'], cwd=ROOT))
+    check_hash(linked, read(EVIDENCE/'density-pass/freeze.json')['hashes']['cmd/testreceipts/logs.go'])
+    linked_overlay = tmp/'linked-overlay.json'
+    linked_overlay.write_text(json.dumps({'Replace':{str(source):str(linked)}}))
     full = tmp/'full.go'
-    subprocess.run(['patch','-s','-o',full,source,V/'pre-diagnostic.patch'],check=True)
+    subprocess.run(['patch','-s','-o',full,linked,V/'pre-diagnostic.patch'],check=True)
     for name, digest in read(V/'freeze.json')['hashes'].items():
         check_hash(full if ROOT/name == source else ROOT/name, digest)
     previous = tmp/'previous.go'
@@ -42,7 +47,7 @@ def run(fetch, tmp):
     full_overlay = tmp/'full-overlay.json'
     full_overlay.write_text(json.dumps({'Replace':{str(source):str(full)}}))
     commands = {'python':[sys.executable, ROOT/'tools/search_log.py']}
-    for version, flags in [('previous',['-overlay',overlay]), ('full-summary',['-overlay',full_overlay]), ('current',[])]:
+    for version, flags in [('previous',['-overlay',overlay]), ('full-summary',['-overlay',full_overlay]), ('current',['-overlay',linked_overlay])]:
         binary = tmp/version
         subprocess.run([ROOT/'tools/go','build',*flags,'-o',binary,'./cmd/testreceipts'],cwd=ROOT,check=True)
         commands[version] = [binary,'log-context']

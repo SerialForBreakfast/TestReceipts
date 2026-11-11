@@ -18,19 +18,26 @@ type excerpt struct {
 	Start int      `json:"startLine"`
 	Lines []string `json:"lines"`
 }
+type relatedBlock struct {
+	Kind  string   `json:"kind"`
+	Start int      `json:"startLine"`
+	Lines []string `json:"lines"`
+}
+
 type logResult struct {
-	Source          string    `json:"source"`
-	Query           string    `json:"query"`
-	Status          string    `json:"status"`
-	Coverage        string    `json:"coverage"`
-	Reason          string    `json:"reason,omitempty"`
-	SHA256          string    `json:"sha256,omitempty"`
-	Scanned         int       `json:"linesScanned"`
-	Count           int       `json:"matchedLines"`
-	Excerpts        []excerpt `json:"excerpts"`
-	Skipped         []int     `json:"skippedLines,omitempty"`
-	DeclaredPartial bool      `json:"declaredPartial,omitempty"`
-	Omitted         int       `json:"omittedMatches"`
+	Related         []relatedBlock `json:"related,omitempty"`
+	Source          string         `json:"source"`
+	Query           string         `json:"query"`
+	Status          string         `json:"status"`
+	Coverage        string         `json:"coverage"`
+	Reason          string         `json:"reason,omitempty"`
+	SHA256          string         `json:"sha256,omitempty"`
+	Scanned         int            `json:"linesScanned"`
+	Count           int            `json:"matchedLines"`
+	Excerpts        []excerpt      `json:"excerpts"`
+	Skipped         []int          `json:"skippedLines,omitempty"`
+	DeclaredPartial bool           `json:"declaredPartial,omitempty"`
+	Omitted         int            `json:"omittedMatches"`
 }
 
 func searchLog(path, query string, partial bool) logResult {
@@ -65,6 +72,9 @@ func searchLog(path, query string, partial bool) logResult {
 	var history []string
 	var candidates []excerpt
 	segmentStart := 1
+	var recent []string
+	pendingPackage := ""
+	awaitErrors, inErrors := false, false
 	summaryStart, summaryEnd := 0, 0
 	for len(data) > 0 {
 		raw, rest, _ := bytes.Cut(data, []byte{'\n'})
@@ -75,6 +85,9 @@ func searchLog(path, query string, partial bool) logResult {
 			r.Skipped = append(r.Skipped, r.Scanned)
 			r.Reason = "oversized_lines"
 			history = nil
+			recent = nil
+			pendingPackage = ""
+			awaitErrors, inErrors = false, false
 			summaryStart, summaryEnd = 0, 0
 			segmentStart = r.Scanned + 1
 			continue
@@ -84,6 +97,26 @@ func searchLog(path, query string, partial bool) logResult {
 			break
 		}
 		line := string(raw)
+		// A gotestsum Errors section can follow many package failures. Cite its
+		// first compiler diagnostic as section evidence, not a package-specific cause.
+		if pendingPackage != "" {
+			if line == "FAIL\t"+pendingPackage+" [build failed]" {
+				awaitErrors = true
+			}
+			pendingPackage = ""
+		}
+		if strings.HasPrefix(line, "DONE ") || strings.HasPrefix(line, "=== RUN") || strings.HasPrefix(line, "+++ ") {
+			awaitErrors, inErrors = false, false
+		}
+		if inErrors && strings.TrimSpace(line) != "" {
+			if compilerDiagnostic.MatchString(line) {
+				r.Related = append(r.Related, relatedBlock{"errors_section", r.Scanned, []string{line}})
+			}
+			inErrors = false
+		}
+		if awaitErrors && line == "=== Errors" {
+			awaitErrors, inErrors = false, true
+		}
 		if suiteSummary.MatchString(line) {
 			summaryStart, summaryEnd = r.Scanned, r.Scanned
 		} else if summaryStart > 0 && summaryEnd == r.Scanned-1 && summaryEntry(line) {
@@ -99,9 +132,19 @@ func searchLog(path, query string, partial bool) logResult {
 		if strings.Contains(line, query) {
 			r.Count++
 			if len(candidates) < 8 {
+				if fields := strings.Fields(line); len(fields) >= 3 && fields[0] == "===" && fields[1] == "FAIL:" {
+					pendingPackage = fields[2]
+				}
+				if block := namedAssertion(recent, line, r.Scanned); block != nil {
+					r.Related = append(r.Related, *block)
+				}
 				lines := append([]string(nil), history...)
 				candidates = append(candidates, excerpt{r.Scanned, r.Scanned - len(history), append(lines, line)})
 			}
+		}
+		recent = append(recent, line)
+		if len(recent) > 48 {
+			recent = recent[1:]
 		}
 		history = append(history, line)
 		keep := summaryRadius
@@ -140,6 +183,39 @@ const assertionLookback = 12
 
 var testDiagnostic = regexp.MustCompile(`_test\.go:[0-9]+:`)
 var suiteSummary = regexp.MustCompile(`Summarizing [0-9]+ Failures?:`)
+
+var compilerDiagnostic = regexp.MustCompile(`^.+\.go:[0-9]+:[0-9]+: .+`)
+var sourceError = regexp.MustCompile(`\.go:[0-9]+: (context deadline exceeded|Expected |Unexpected error)`)
+
+// Testify reports can be separated from the FAIL marker by shutdown logs.
+// Require the exact Test: name and its Messages: field before attaching one.
+func namedAssertion(lines []string, marker string, n int) *relatedBlock {
+	if !strings.HasPrefix(marker, "--- FAIL: ") {
+		return nil
+	}
+	name, _, _ := strings.Cut(strings.TrimPrefix(marker, "--- FAIL: "), " ")
+	for i := len(lines) - 2; i >= 0; i-- {
+		t := strings.TrimSpace(lines[i])
+		if strings.HasPrefix(t, "=== RUN") || strings.HasPrefix(t, "--- FAIL:") {
+			break
+		}
+		if !strings.HasPrefix(t, "Test:") || strings.TrimSpace(strings.TrimPrefix(t, "Test:")) != name || !strings.HasPrefix(strings.TrimSpace(lines[i+1]), "Messages:") {
+			continue
+		}
+		start := i
+		for j := i - 1; j >= max(0, i-8); j-- {
+			if strings.Contains(lines[j], ".go:") && strings.Contains(lines[j], ": ERROR:") {
+				start = j
+				if j > 0 && testDiagnostic.MatchString(lines[j-1]) {
+					start--
+				}
+				break
+			}
+		}
+		return &relatedBlock{"named_assertion", n - len(lines) + start, append([]string(nil), lines[start:i+2]...)}
+	}
+	return nil
+}
 
 var ansiColor = regexp.MustCompile("\x1b" + `\[[0-9;]*m`)
 
@@ -219,7 +295,7 @@ func summaryContext(e excerpt) excerpt {
 				}
 				break
 			}
-			if testDiagnostic.MatchString(line) {
+			if testDiagnostic.MatchString(line) || sourceError.MatchString(line) {
 				lo = min(lo, i)
 			}
 		}
