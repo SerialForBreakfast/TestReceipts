@@ -1,0 +1,315 @@
+[
+  {
+    "id": "U06",
+    "results": {
+      "go": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          9125,
+          9126,
+          9127,
+          9128,
+          9129
+        ],
+        "missedGroups": [
+          [
+            9130
+          ],
+          [
+            9132
+          ],
+          [
+            9134
+          ],
+          [
+            9136
+          ],
+          [
+            9138
+          ],
+          [
+            9140
+          ],
+          [
+            9142
+          ],
+          [
+            9144
+          ],
+          [
+            9146
+          ]
+        ],
+        "extraLines": [
+          9125,
+          9126,
+          9127,
+          9129
+        ]
+      },
+      "python": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          9125,
+          9126,
+          9127,
+          9128,
+          9129
+        ],
+        "missedGroups": [
+          [
+            9130
+          ],
+          [
+            9132
+          ],
+          [
+            9134
+          ],
+          [
+            9136
+          ],
+          [
+            9138
+          ],
+          [
+            9140
+          ],
+          [
+            9142
+          ],
+          [
+            9144
+          ],
+          [
+            9146
+          ]
+        ],
+        "extraLines": [
+          9125,
+          9126,
+          9127,
+          9129
+        ]
+      }
+    }
+  },
+  {
+    "id": "U08",
+    "results": {
+      "go": {
+        "status": "ambiguous",
+        "coverage": "supplied_file",
+        "matches": 2,
+        "shownLines": [
+          211,
+          212,
+          213,
+          214,
+          215,
+          242,
+          243,
+          244,
+          245,
+          246
+        ],
+        "missedGroups": [
+          [
+            210,
+            241
+          ]
+        ],
+        "extraLines": [
+          211,
+          212,
+          213,
+          214,
+          215,
+          242,
+          243,
+          244,
+          245,
+          246
+        ]
+      },
+      "python": {
+        "status": "ambiguous",
+        "coverage": "supplied_file",
+        "matches": 2,
+        "shownLines": [
+          211,
+          212,
+          213,
+          214,
+          215,
+          242,
+          243,
+          244,
+          245,
+          246
+        ],
+        "missedGroups": [
+          [
+            210,
+            241
+          ]
+        ],
+        "extraLines": [
+          211,
+          212,
+          213,
+          214,
+          215,
+          242,
+          243,
+          244,
+          245,
+          246
+        ]
+      }
+    }
+  },
+  {
+    "id": "U09",
+    "results": {
+      "go": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          8913,
+          8914,
+          8915,
+          8916,
+          8917,
+          8918,
+          8919,
+          8920,
+          8921,
+          8922,
+          8923
+        ],
+        "missedGroups": [],
+        "extraLines": [
+          8913,
+          8918,
+          8919,
+          8920,
+          8921,
+          8922,
+          8923
+        ]
+      },
+      "python": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          8919,
+          8920,
+          8921,
+          8922,
+          8923
+        ],
+        "missedGroups": [
+          [
+            8914
+          ],
+          [
+            8915
+          ],
+          [
+            8916
+          ],
+          [
+            8917
+          ]
+        ],
+        "extraLines": [
+          8919,
+          8920,
+          8921,
+          8922,
+          8923
+        ]
+      }
+    }
+  },
+  {
+    "id": "U11",
+    "results": {
+      "go": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          688,
+          689,
+          690,
+          691,
+          692,
+          693,
+          694,
+          695,
+          696
+        ],
+        "missedGroups": [
+          [
+            682
+          ],
+          [
+            683
+          ]
+        ],
+        "extraLines": [
+          688,
+          691,
+          692,
+          693,
+          694,
+          695,
+          696
+        ]
+      },
+      "python": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          692,
+          693,
+          694,
+          695,
+          696
+        ],
+        "missedGroups": [
+          [
+            689
+          ],
+          [
+            690,
+            684,
+            678
+          ],
+          [
+            682
+          ],
+          [
+            683
+          ]
+        ],
+        "extraLines": [
+          692,
+          693,
+          694,
+          695,
+          696
+        ]
+      }
+    }
+  }
+]

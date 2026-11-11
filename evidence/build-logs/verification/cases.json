@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2118469826383974400",
+    "project": "kubernetes/kubernetes",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118469826383974400/build-log.txt",
+    "literal": "Test Suite Failed",
+    "question": "Which feature gate was rejected?",
+    "evidenceGroups": [
+      [
+        208,
+        239
+      ]
+    ],
+    "sha256": "3f84855d18ca835b880b1e614f2b453c993b65131e2616e050f98237e2e33da9"
+  },
+  {
+    "id": "2118443905530728448",
+    "project": "kubernetes/kops",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118443905530728448/build-log.txt",
+    "literal": "Summarizing 1 Failure:",
+    "question": "What spec failed, where did it fail, and what final diagnostic explains the PV resize failure?",
+    "evidenceGroups": [
+      [
+        2171,
+        2893
+      ],
+      [
+        2343,
+        2888,
+        2894
+      ],
+      [
+        2887
+      ]
+    ],
+    "sha256": "620fb9bd84ea0168452ccccb58073aa76ac55cb9ad739ee3552eed49fe0009a3"
+  }
+]

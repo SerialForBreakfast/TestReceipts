@@ -1,0 +1,123 @@
+[
+  {
+    "id": "2118469826383974400",
+    "results": {
+      "go": {
+        "status": "ambiguous",
+        "coverage": "supplied_file",
+        "matches": 2,
+        "shownLines": [
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244
+        ],
+        "missedGroups": [],
+        "extraLines": [
+          209,
+          210,
+          211,
+          212,
+          213,
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      },
+      "python": {
+        "status": "ambiguous",
+        "coverage": "supplied_file",
+        "matches": 2,
+        "shownLines": [
+          209,
+          210,
+          211,
+          212,
+          213,
+          240,
+          241,
+          242,
+          243,
+          244
+        ],
+        "missedGroups": [
+          [
+            208,
+            239
+          ]
+        ],
+        "extraLines": [
+          209,
+          210,
+          211,
+          212,
+          213,
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      }
+    }
+  },
+  {
+    "id": "2118443905530728448",
+    "results": {
+      "go": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          2890,
+          2891,
+          2892,
+          2893,
+          2894
+        ],
+        "missedGroups": [
+          [
+            2887
+          ]
+        ],
+        "extraLines": [
+          2890,
+          2891,
+          2892
+        ]
+      },
+      "python": {
+        "status": "matched",
+        "coverage": "supplied_file",
+        "matches": 1,
+        "shownLines": [
+          2890,
+          2891,
+          2892,
+          2893,
+          2894
+        ],
+        "missedGroups": [
+          [
+            2887
+          ]
+        ],
+        "extraLines": [
+          2890,
+          2891,
+          2892
+        ]
+      }
+    }
+  }
+]

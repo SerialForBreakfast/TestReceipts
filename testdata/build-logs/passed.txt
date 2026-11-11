@@ -1,0 +1,1 @@
+PASS: installed windows/amd64 package, 15 exact comparisons, CLI/permissions/output checks

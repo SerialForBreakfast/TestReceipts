@@ -55,6 +55,10 @@ testreceipts compare-recording ./.artifacts/example-capture "$BEFORE_URL" "$AFTE
 
 [Live usage and limits](docs/G03-LIVE.md).
 
+## Find evidence in a failed build log
+
+With a current source build, run `testreceipts log-context FILE 'failure message'` to get matching line numbers and surrounding context, including nearby recognized failure summaries. Multiple hits, missing files and known partial logs are explicit. [Example and archived-run comparison](evidence/build-logs/README.md).
+
 ## Measured status
 
 | Check | Observed result |

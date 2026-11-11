@@ -1,0 +1,20 @@
+{
+  "selection": "All remaining failure-bearing runs in the historical JUnit index after excluding both previous log sets, in index order.",
+  "inputs": [
+    {
+      "id": "2118469826383974400",
+      "project": "kubernetes/kubernetes",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118469826383974400/build-log.txt"
+    },
+    {
+      "id": "2118443905530728448",
+      "project": "kubernetes/kops",
+      "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/e2e-kops-aws-upgrade-k137-kolatest-to-klatest-kolatest/2118443905530728448/build-log.txt"
+    }
+  ],
+  "hashes": {
+    "cmd/testreceipts/logs.go": "38204919ebd546bbe9cc6de6f4b68ddcf84703f1fed9e1b367207f5b6c27c2ac",
+    "tools/search_log.py": "13fd76e6de7b8b272abf89111b099652937d016a8cf2c30a2c0c5aca2e570528",
+    "evidence/go-url-first/inputs-expected.json": "99f5f5929c62795d506e90f64c9343f63189b4485fec4558c669052c2f04c1e1"
+  }
+}

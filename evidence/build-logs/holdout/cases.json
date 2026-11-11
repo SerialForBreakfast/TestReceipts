@@ -1,0 +1,102 @@
+[
+  {
+    "id": "U06",
+    "project": "kubernetes/kops",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/e2e-kops-aws-ha-euwest1/2118450952951304192/build-log.txt",
+    "sha256": "d892bdc232f7ff7fc7d375203cc6b514d1489c2d391421796fd6df21f9762a22",
+    "literal": "Summarizing 10 Failures:",
+    "question": "Which ten failed specs are listed in the final summary?",
+    "evidenceGroups": [
+      [
+        9128
+      ],
+      [
+        9130
+      ],
+      [
+        9132
+      ],
+      [
+        9134
+      ],
+      [
+        9136
+      ],
+      [
+        9138
+      ],
+      [
+        9140
+      ],
+      [
+        9142
+      ],
+      [
+        9144
+      ],
+      [
+        9146
+      ]
+    ]
+  },
+  {
+    "id": "U08",
+    "project": "kubernetes/kubernetes",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-node-swap-conformance-ubuntu-serial/2118409429735968768/build-log.txt",
+    "sha256": "3a06fd10d4baac52fc8db50fc1505a75f9dcdbf1cb2e904e127686027e4b0b9c",
+    "literal": "Test Suite Failed",
+    "question": "Which feature gate did initialization reject?",
+    "evidenceGroups": [
+      [
+        210,
+        241
+      ]
+    ]
+  },
+  {
+    "id": "U09",
+    "project": "kubernetes-sigs/cloud-provider-azure",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/batch/pull-cloud-provider-azure-e2e-ccm-vmss-multi-slb-capz-1-35/2118101821867167744/build-log.txt",
+    "sha256": "1529aba3fade55c2639527d059aabb95b847468112891498931dbd6614d3d668",
+    "literal": "--- FAIL: TestAzureTest",
+    "question": "Which two failed specs and file:line locations are listed in the final summary?",
+    "evidenceGroups": [
+      [
+        8914
+      ],
+      [
+        8915
+      ],
+      [
+        8916
+      ],
+      [
+        8917
+      ]
+    ]
+  },
+  {
+    "id": "U11",
+    "project": "kubernetes-sigs/controller-runtime",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118340473843093504/build-log.txt",
+    "sha256": "a4355f29771f6eea0622a286a16460cd2c8df88081726a512ab20b847ae2afc6",
+    "literal": "--- FAIL: TestSource",
+    "question": "Which failed spec and source location are in the summary, and what actual and expected collection lengths accompany the assertion?",
+    "evidenceGroups": [
+      [
+        689
+      ],
+      [
+        690,
+        684,
+        678
+      ],
+      [
+        682
+      ],
+      [
+        683
+      ]
+    ]
+  }
+]

@@ -1,0 +1,81 @@
+[
+  {
+    "id": "U01",
+    "project": "kubernetes/kubernetes",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/ci-kubernetes-unit-1-36/2118469575166136320/build-log.txt",
+    "sha256": "1332644dc021c60a45550814e3cb245c6f02580386a660c0a474842e8af71a94",
+    "question": "Which PV operation timed out and what two unexpected results did the test report?",
+    "literal": "--- FAIL: TestCheckBindings/binding-claimref-uid-empty",
+    "evidenceGroups": [
+      [
+        592,
+        2710
+      ],
+      [
+        597,
+        2715
+      ],
+      [
+        598,
+        2716
+      ]
+    ]
+  },
+  {
+    "id": "U02",
+    "project": "kubernetes-sigs/kueue",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_kueue/17740/pull-kueue-test-unit-shard-0-main/2118445565527199744/build-log.txt",
+    "sha256": "4eaf8bac01cfc38cc973281b4c94a28c0ddad78df3ee00bd07505e1ee84f011b",
+    "question": "Which package failed setup and what import error explains it?",
+    "literal": "[setup failed]",
+    "evidenceGroups": [
+      [
+        418
+      ],
+      [
+        423
+      ]
+    ]
+  },
+  {
+    "id": "U07",
+    "project": "kubernetes-sigs/prow",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/pr-logs/pull/kubernetes-sigs_prow/1058/pull-prow-unit-test-race-detector-nonblocking/2118454707885182976/build-log.txt",
+    "sha256": "33406bd8800b3d770b310d1db0aef3589734e42f11ca9a8747eb2800c4a6a365",
+    "question": "Which package and running test timed out, and after how long?",
+    "literal": "panic: test timed out",
+    "evidenceGroups": [
+      [
+        530
+      ],
+      [
+        531
+      ],
+      [
+        533
+      ]
+    ]
+  },
+  {
+    "id": "U11",
+    "project": "kubernetes-sigs/controller-runtime",
+    "url": "https://storage.googleapis.com/kubernetes-ci-logs/logs/periodic-controller-runtime-test/2118249874846650368/build-log.txt",
+    "sha256": "2b7605dc69e96421392b6f2241807fe6ddfd3cfea7d1e10e72b0dbaa30c1edcf",
+    "question": "Which two failed specs and source locations do the two suite summaries identify?",
+    "literal": "--- FAIL: TestSource",
+    "evidenceGroups": [
+      [
+        1140
+      ],
+      [
+        1141
+      ],
+      [
+        2799
+      ],
+      [
+        2800
+      ]
+    ]
+  }
+]

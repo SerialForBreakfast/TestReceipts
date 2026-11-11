@@ -1,0 +1,122 @@
+{
+  "sourceHashes": {
+    "failed.txt": "80006e4398c8ca8f53358bcf80bc018956ed806312fa7966f9e14fc076d193ef",
+    "passed.txt": "7b3224dc6907835134bb0561b949f8b6c308c2aaa9ce43e040698e8abf70f40f"
+  },
+  "cases": [
+    {
+      "file": "failed.txt",
+      "literal": "AssertionError: failed to restore temporary ACL",
+      "status": "matched",
+      "matchLines": [
+        13
+      ],
+      "coverage": "supplied_file",
+      "excerpts": [
+        {
+          "matchLine": 13,
+          "startLine": 11,
+          "lines": [
+            "    assert restore.returncode==0,'failed to restore temporary ACL'",
+            "           ^^^^^^^^^^^^^^^^^^^^^",
+            "AssertionError: failed to restore temporary ACL"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "failed.txt",
+      "literal": "Traceback",
+      "status": "ambiguous",
+      "matchLines": [
+        1,
+        9
+      ],
+      "coverage": "supplied_file",
+      "excerpts": [
+        {
+          "matchLine": 1,
+          "startLine": 1,
+          "lines": [
+            "Traceback (most recent call last):",
+            "  File \"D:\\a\\TestReceipts\\TestReceipts\\tools\\smoke_release.py\", line 60, in <module>",
+            "    r,_,_=execute(['compare-recording',str(sample),*urls]);assert r.returncode==2 and r.stdout=='' and r.stderr;checks['unreadableCatalogACL']='pass; explicit deny-read ACL, exit 2'"
+          ]
+        },
+        {
+          "matchLine": 9,
+          "startLine": 7,
+          "lines": [
+            "During handling of the above exception, another exception occurred:",
+            "",
+            "Traceback (most recent call last):",
+            "  File \"D:\\a\\TestReceipts\\TestReceipts\\tools\\smoke_release.py\", line 63, in <module>",
+            "    assert restore.returncode==0,'failed to restore temporary ACL'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "passed.txt",
+      "literal": "AssertionError",
+      "status": "no_match",
+      "matchLines": [],
+      "coverage": "supplied_file",
+      "excerpts": []
+    },
+    {
+      "file": "passed.txt",
+      "literal": "PASS:",
+      "status": "matched",
+      "matchLines": [
+        1
+      ],
+      "coverage": "supplied_file",
+      "excerpts": [
+        {
+          "matchLine": 1,
+          "startLine": 1,
+          "lines": [
+            "PASS: installed windows/amd64 package, 15 exact comparisons, CLI/permissions/output checks"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cut.txt",
+      "literal": "Traceback",
+      "status": "incomplete",
+      "matchLines": [
+        1
+      ],
+      "coverage": "partial",
+      "excerpts": [
+        {
+          "matchLine": 1,
+          "startLine": 1,
+          "lines": [
+            "Traceback (most recent call last):",
+            "  File \"D:\\a\\TestReceipts\\TestReceipts\\tools\\smoke_release.py\", line 60, in <module>",
+            "    r,_,_=execute(['compare-recording',str(sample),*urls]);assert r.returncode==2 and r.stdout=='' and r.stderr;checks['unreadableCatalogACL']='pass; explicit deny-read ACL, exit 2'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cut.txt",
+      "literal": "restore temporary ACL",
+      "status": "incomplete",
+      "matchLines": [],
+      "coverage": "partial",
+      "excerpts": []
+    },
+    {
+      "file": "missing.txt",
+      "literal": "Traceback",
+      "status": "unavailable",
+      "matchLines": [],
+      "coverage": "unavailable",
+      "excerpts": []
+    }
+  ]
+}

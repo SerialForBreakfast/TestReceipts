@@ -17,8 +17,11 @@ var version = "dev"
 
 func run(args []string, out, errOut io.Writer) int {
 	if len(args) == 0 || (len(args) == 1 && (args[0] == "help" || args[0] == "--help")) {
-		fmt.Fprintln(out, "TestReceipts: exact CI report comparison\nUsage: testreceipts version | help\n       testreceipts compare-recording RECORDING BEFORE_URL AFTER_URL\n       testreceipts compare-live NEW_CAPTURE BEFORE_URL AFTER_URL\n       testreceipts mcp ROOT")
+		fmt.Fprintln(out, "TestReceipts: exact CI report comparison\nUsage: testreceipts version | help\n       testreceipts compare-recording RECORDING BEFORE_URL AFTER_URL\n       testreceipts compare-live NEW_CAPTURE BEFORE_URL AFTER_URL\n       testreceipts log-context [--partial] FILE LITERAL\n       testreceipts mcp ROOT")
 		return 0
+	}
+	if len(args) > 0 && args[0] == "log-context" {
+		return logCommand(args[1:], out, errOut)
 	}
 	if len(args) == 1 && args[0] == "version" {
 		fmt.Fprintln(out, version)

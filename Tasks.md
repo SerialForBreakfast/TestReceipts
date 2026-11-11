@@ -105,3 +105,17 @@ This is the execution ledger for the new repository. States: Planned â†’ Ready â
 - **Deliverable:** A proposed comparison retaining capable parser and ready-query baselines plus a reusable URL-wrapper baseline, with first-use and repeated-use conditions separated.
 - **Acceptance:** Freeze questions, source selection, correctness rubric and total-token accounting before execution. Keep failed runs, cached/uncached inputs, retries, tool overhead, follow-up reads and auditable charts. Record human review. Do not tune on held-out outcomes or assume the historical 24.36% saving transfers.
 - **Context:** [G04](docs/plans/G04-agent-value.md), [evaluation](docs/EVALUATION.md). **Evidence:** [12-pair Go parity preflight](evidence/go-token-preflight/README.md), [72-attempt results and audit](evidence/go-url-first/README.md), [study protocol](docs/STUDY-PLAN.md). Median paired workflow savings are 41.53% / 27.23%; one fallback and one ready-query pair regression are explicit. Human narrative review remains pending; no repeated-use result or 24/24 Go-only execution claim is made. See [current PoC policy](docs/SUPPORT.md).
+
+## Local failed-step log search
+
+Implemented literal diagnostic search with bounded context. Both the Go command and reusable Python script passed four cases on two archived CI step logs and three missing/partial controls. No model trials. [Replay evidence](evidence/build-logs/README.md).
+
+Four-project archived-log replay complete. Go recovered 4/12 annotated evidence groups and the Python baseline recovered 6/12. Each answered one of four questions completely. [Per-project findings and replay](evidence/build-logs/projects/README.md).
+
+Follow-up implemented bounded failure-summary context and explicit oversized-line skipping. On the same four projects Go recovered 12/12 evidence groups with 29 extra lines. Python recovered 6/12 with 19 extra lines. No model calls.
+
+Fixed-rule held-out log replay complete on four additional runs. Go recovered 7/19 evidence groups with 28 extra lines; Python recovered 1/19 with 24. [Misses, labels and replay](evidence/build-logs/holdout/README.md).
+
+Full-summary and assertion-context replay on both known sets: updated Go found 31/31 groups with 76 extra lines, previously 19/31 with 57. Unchanged Python found 7/31 with 43. [Results and limits](evidence/build-logs/README.md#full-summary-replay-on-both-known-sets).
+
+Independent build-log verification reproduced both earlier sets. Frozen replay on two additional logs found 3/4 groups with 13 extra lines versus 2/4 with 13 for both comparators. [Reproduction instructions and remaining miss](evidence/build-logs/verification/README.md).

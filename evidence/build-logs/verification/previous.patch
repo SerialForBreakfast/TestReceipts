@@ -1,0 +1,110 @@
+--- current
++++ previous
+@@ -65,7 +65,6 @@
+ 	var history []string
+ 	var candidates []excerpt
+ 	segmentStart := 1
+-	summaryStart, summaryEnd := 0, 0
+ 	for len(data) > 0 {
+ 		raw, rest, _ := bytes.Cut(data, []byte{'\n'})
+ 		data = rest
+@@ -75,7 +74,6 @@
+ 			r.Skipped = append(r.Skipped, r.Scanned)
+ 			r.Reason = "oversized_lines"
+ 			history = nil
+-			summaryStart, summaryEnd = 0, 0
+ 			segmentStart = r.Scanned + 1
+ 			continue
+ 		}
+@@ -84,15 +82,9 @@
+ 			break
+ 		}
+ 		line := string(raw)
+-		if suiteSummary.MatchString(line) {
+-			summaryStart, summaryEnd = r.Scanned, r.Scanned
+-		} else if summaryStart > 0 && summaryEnd == r.Scanned-1 && summaryEntry(line) {
+-			summaryEnd = r.Scanned
+-		}
+ 		for i := range candidates {
+ 			e := &candidates[i]
+-			insideMatchedSummary := e.Match == summaryStart && r.Scanned == summaryEnd
+-			if e.Match >= segmentStart && (r.Scanned-e.Match <= summaryRadius || insideMatchedSummary) {
++			if e.Match >= segmentStart && r.Scanned-e.Match <= summaryRadius {
+ 				e.Lines = append(e.Lines, line)
+ 			}
+ 		}
+@@ -104,12 +96,8 @@
+ 			}
+ 		}
+ 		history = append(history, line)
+-		keep := summaryRadius
+-		if summaryStart > 0 && r.Scanned-summaryEnd <= summaryRadius {
+-			keep = max(keep, r.Scanned-summaryStart+1+assertionLookback)
+-		}
+-		if len(history) > keep {
+-			history = history[len(history)-keep:]
++		if len(history) > summaryRadius {
++			history = history[1:]
+ 		}
+ 	}
+ 	for _, e := range candidates {
+@@ -135,40 +123,15 @@
+ 	return r
+ }
+ 
+-const summaryRadius = 20
+-const assertionLookback = 12
++const summaryRadius = 12
+ 
+ var testDiagnostic = regexp.MustCompile(`_test\.go:[0-9]+:`)
+ var suiteSummary = regexp.MustCompile(`Summarizing [0-9]+ Failures?:`)
+-
+-var ansiColor = regexp.MustCompile("\x1b" + `\[[0-9;]*m`)
+-
+-func summaryEntry(line string) bool {
+-	plain := ansiColor.ReplaceAllString(line, "")
+-	return strings.TrimSpace(plain) != "" && (strings.HasPrefix(plain, " ") || strings.HasPrefix(plain, "\t"))
+-}
+ 
+ // Expand only around recognizable test failure sections. Preserve raw text and physical lines.
+ func summaryContext(e excerpt) excerpt {
+ 	at := e.Match - e.Start
+ 	lo, hi := max(0, at-2), min(len(e.Lines), at+3)
+-	if suiteSummary.MatchString(e.Lines[at]) {
+-		for j := at + 1; j < len(e.Lines) && summaryEntry(e.Lines[j]); j++ {
+-			hi = max(hi, j+1)
+-		}
+-	}
+-	if strings.TrimSpace(e.Lines[at]) == "Test Suite Failed" {
+-		for i := at - 1; i >= max(0, at-6); i-- {
+-			line := strings.TrimSpace(ansiColor.ReplaceAllString(e.Lines[i], ""))
+-			if strings.HasPrefix(line, "ERROR:") {
+-				lo = min(lo, i)
+-				break
+-			}
+-			if line == "Test Suite Failed" {
+-				break
+-			}
+-		}
+-	}
+ 	if strings.HasPrefix(e.Lines[at], "--- FAIL:") {
+ 		for i := at - 1; i >= 0; i-- {
+ 			line := e.Lines[i]
+@@ -177,17 +140,6 @@
+ 			}
+ 			if suiteSummary.MatchString(line) {
+ 				lo = min(lo, i)
+-				// Include a nearby assertion block preceding the summary.
+-				for j := i - 1; j >= max(0, i-assertionLookback); j-- {
+-					text := strings.TrimSpace(ansiColor.ReplaceAllString(e.Lines[j], ""))
+-					if suiteSummary.MatchString(text) || strings.HasPrefix(text, "--- FAIL:") {
+-						break
+-					}
+-					if strings.HasPrefix(text, "[FAILED] Expected") {
+-						lo = j
+-						break
+-					}
+-				}
+ 				break
+ 			}
+ 			if testDiagnostic.MatchString(line) {
