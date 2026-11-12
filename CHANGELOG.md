@@ -1,8 +1,8 @@
 # TestReceipts release notes
 
-## v0.4.0-dev.1 — 2026-11-11
+## 0.4.0 — 2026-11-12
 
-Unsigned source prerelease. This minor version adds a CLI command alongside the existing CI report comparison commands.
+Unsigned proof of concept. The CLI and local packager now use the plain version `0.4.0`, following the `v0.4.0-dev.1` source build. This minor version adds a CLI command alongside the existing CI report comparison commands.
 
 - Search an archived step log with `testreceipts log-context [--partial] FILE LITERAL`. JSON output cites physical lines, includes related diagnostics, and marks ambiguity, missing input and incomplete coverage.
 - Follow Go and Ginkgo failure summaries, assertion values, compiler errors, command stderr, suite counts and interrupted-operation timeouts. Each excerpt can be checked against the supplied log.

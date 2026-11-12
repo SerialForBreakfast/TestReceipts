@@ -11,12 +11,12 @@ Record user-visible changes, the source version, measurements and their scope in
 Use Go 1.27.3 and Python 3.10+ on the build host. These are development tools only; packages do not contain or require them at runtime. The project-local compiler is selected automatically; pass `--go /absolute/path/to/go` elsewhere.
 
 ```sh
-python3 tools/release.py build --version v0.4.0-dev.1 --out dist/my-poc --verify-repro
+python3 tools/release.py build --version 0.4.0 --out dist/my-poc --verify-repro
 python3 tools/release.py verify dist/my-poc
 python3 tools/test_release.py
 ```
 
-Use a new output directory. The compatibility entry point `./tools/go run ./tools/build.go` accepts the same arguments. The builder currently accepts explicit prerelease version labels. It rejects a compiler mismatch, unexpected Go modules, existing output directories and divergent repeated output. No stable/public release is created.
+Use a new output directory. The compatibility entry point `./tools/go run ./tools/build.go` accepts the same arguments. The builder accepts plain versions such as `0.4.0` and existing CI labels such as `v0.4.0-ci.123.1`. It rejects a compiler mismatch, unexpected Go modules, existing output directories and divergent repeated output. Packages are written to the specified local output directory.
 
 The six targets are macOS/Linux/Windows × amd64/arm64. macOS/Linux use tar.gz; Windows uses zip. Each archive contains only the executable, BUILD.json, INSTALL.md, NOTICE.txt, MIT LICENSE and GO-LICENSE.txt. Fixtures, Python, caches, credentials and toolchains are excluded. SHA256SUMS.json covers packages and release-manifest.json; checksums identify bytes, not publisher authenticity.
 

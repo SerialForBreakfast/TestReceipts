@@ -57,7 +57,7 @@ testreceipts compare-recording ./.artifacts/example-capture "$BEFORE_URL" "$AFTE
 
 ## Find evidence in a failed build log
 
-In **v0.4.0-dev.1**, give `log-context` a local build log and a literal failure message. It returns JSON with the matching line numbers, nearby failure summaries, and supporting evidence such as assertion values, compiler errors, or a timeout for the same operation. Multiple matches, missing files and skipped oversized lines are explicit. For a known partial log, add `--partial` before the filename.
+In **0.4.0**, give `log-context` a local build log and a literal failure message. It returns JSON with the matching line numbers, nearby failure summaries, and supporting evidence such as assertion values, compiler errors, or a timeout for the same operation. Multiple matches, missing files and skipped oversized lines are explicit. For a known partial log, add `--partial` before the filename.
 
 ```sh
 testreceipts log-context testdata/build-logs/failed.txt 'failed to restore temporary ACL'

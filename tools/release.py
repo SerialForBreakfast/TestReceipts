@@ -57,7 +57,7 @@ def build(args):
  env.update(GOTOOLCHAIN='local',GOENV='off',GOFLAGS='',GOEXPERIMENT='',GOPROXY='off',GOSUMDB='off',GOWORK='off',CGO_ENABLED='0',GOAMD64='v1',GOARM64='v8.0',GOCACHE=str(ROOT/'.cache/release-build'),GOPATH=str(ROOT/'.cache/release-gopath'))
  version=run([str(go),'version'],env=env)
  if version.split()[2]!=PIN:raise SystemExit(f'Expected {PIN}, got {version}')
- if not re.fullmatch(r'v\d+\.\d+\.\d+-[a-zA-Z0-9.\-]+',args.version):raise SystemExit('Only explicit pre-release versions are allowed until public distribution is approved')
+ if not re.fullmatch(r'v?[0-9]+\.[0-9]+\.[0-9]+(?:-[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*)?',args.version):raise SystemExit('Expected a version such as 0.4.0 or v0.4.0-ci.123.1')
  out=args.out.resolve()
  if out.exists():raise SystemExit('Output exists; choose a new empty output directory')
  sources=sorted([ROOT/'go.mod',*ROOT.glob('cmd/**/*.go'),*ROOT.glob('internal/**/*.go')]);source_bytes={str(p.relative_to(ROOT)):p.read_bytes() for p in sources}
