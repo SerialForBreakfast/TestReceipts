@@ -1,0 +1,197 @@
+{
+  "runUrl": "https://github.com/SerialForBreakfast/TestReceipts/actions/runs/45306925614",
+  "targets": [
+    {
+      "target": "darwin/amd64",
+      "status": "passed",
+      "sourceRevision": "e118af32445fd001e9f4fd3d07db8bf829ca7f2e",
+      "runner": {
+        "name": "GitHub Actions 1000002755",
+        "os": "macOS-15.7.9-x86_64-i386-64bit-Mach-O",
+        "machine": "x86_64",
+        "runnerArch": "X64"
+      },
+      "binarySha256": "3aa16bca21e4c2627fc5c8a1f0254fc9883a7293e251731c57194f4ef047f58d",
+      "packageSha256": "aeb74163ae2b9a7376c9a088dd344924fb11844d9e4bb88c570e0c78f62a5823",
+      "skippedGoTests": [],
+      "checks": {
+        "nativeArchitecture": "passed",
+        "archiveVerification": "passed",
+        "goTests": "passed",
+        "goVet": "passed",
+        "referenceParity": "passed",
+        "packageSmoke": "passed",
+        "packagingBoundaries": "passed",
+        "liveHTTPS": "passed",
+        "liveReplay": "passed",
+        "mcpParity": "passed",
+        "offlineQuickstart": "passed",
+        "minimalLinux": "not_applicable"
+      },
+      "installedLogSearch": "pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input",
+      "mcpComparisonCases": 17,
+      "mcpLogCases": 4,
+      "reportSha256": "2bc6acf24e5f4ba3d465442208d9eeff1bc94c6ace5c8a5278152748cb18fe06"
+    },
+    {
+      "target": "darwin/arm64",
+      "status": "passed",
+      "sourceRevision": "e118af32445fd001e9f4fd3d07db8bf829ca7f2e",
+      "runner": {
+        "name": "GitHub Actions 1000002754",
+        "os": "macOS-15.8.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "runnerArch": "ARM64"
+      },
+      "binarySha256": "6c23c0b26bd29111fbe79dc1e70c8748ca2b5c59bd2e243c9512bc8aedfc1a86",
+      "packageSha256": "9a200973a340a30658f0a50394ef6f84a22e73589ddbebbcdaff245c72f97d4a",
+      "skippedGoTests": [],
+      "checks": {
+        "nativeArchitecture": "passed",
+        "archiveVerification": "passed",
+        "goTests": "passed",
+        "goVet": "passed",
+        "referenceParity": "passed",
+        "packageSmoke": "passed",
+        "packagingBoundaries": "passed",
+        "liveHTTPS": "passed",
+        "liveReplay": "passed",
+        "mcpParity": "passed",
+        "offlineQuickstart": "passed",
+        "minimalLinux": "not_applicable"
+      },
+      "installedLogSearch": "pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input",
+      "mcpComparisonCases": 17,
+      "mcpLogCases": 4,
+      "reportSha256": "d2e47cd93f26057fc3b05def20f870b2898129ae3197c1118b3d6f9b25838bc4"
+    },
+    {
+      "target": "linux/amd64",
+      "status": "passed",
+      "sourceRevision": "e118af32445fd001e9f4fd3d07db8bf829ca7f2e",
+      "runner": {
+        "name": "GitHub Actions 1000002757",
+        "os": "Linux-7.0.0-1014-aws-x86_64-with-glibc2.39",
+        "machine": "x86_64",
+        "runnerArch": "X64"
+      },
+      "binarySha256": "d28cad33cbb67ae6b19b99fadb69f184e4f2ccaebaccb573b6aa5032df90c62c",
+      "packageSha256": "8966efaaf05c82d112dc638da31e0915a17cdda060c7e611f1f91aaad7ad1de8",
+      "skippedGoTests": [],
+      "checks": {
+        "nativeArchitecture": "passed",
+        "archiveVerification": "passed",
+        "goTests": "passed",
+        "goVet": "passed",
+        "referenceParity": "passed",
+        "packageSmoke": "passed",
+        "packagingBoundaries": "passed",
+        "liveHTTPS": "passed",
+        "liveReplay": "passed",
+        "mcpParity": "passed",
+        "offlineQuickstart": "passed",
+        "minimalLinux": "passed"
+      },
+      "installedLogSearch": "pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input",
+      "mcpComparisonCases": 17,
+      "mcpLogCases": 4,
+      "reportSha256": "483ce78a9bef1dde359aef96a64d6d6a67e0353251a73e7ae5c4f76250e55465"
+    },
+    {
+      "target": "linux/arm64",
+      "status": "passed",
+      "sourceRevision": "e118af32445fd001e9f4fd3d07db8bf829ca7f2e",
+      "runner": {
+        "name": "GitHub Actions 1000002758",
+        "os": "Linux-7.0.0-1017-azure-aarch64-with-glibc2.39",
+        "machine": "aarch64",
+        "runnerArch": "ARM64"
+      },
+      "binarySha256": "6e6bddf2fc0c8590b766153a7ccc8503f29d5f493380b424cc81426a89cb6b89",
+      "packageSha256": "377b526db14191f0470cf7ea6ab3c0413f363e57e51ed0c5adaa2bcc90f46430",
+      "skippedGoTests": [],
+      "checks": {
+        "nativeArchitecture": "passed",
+        "archiveVerification": "passed",
+        "goTests": "passed",
+        "goVet": "passed",
+        "referenceParity": "passed",
+        "packageSmoke": "passed",
+        "packagingBoundaries": "passed",
+        "liveHTTPS": "passed",
+        "liveReplay": "passed",
+        "mcpParity": "passed",
+        "offlineQuickstart": "passed",
+        "minimalLinux": "passed"
+      },
+      "installedLogSearch": "pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input",
+      "mcpComparisonCases": 17,
+      "mcpLogCases": 4,
+      "reportSha256": "acaac444a6e941358750f370561c3c4e383e713bae6597bdef486568d36eab48"
+    },
+    {
+      "target": "windows/amd64",
+      "status": "passed",
+      "sourceRevision": "e118af32445fd001e9f4fd3d07db8bf829ca7f2e",
+      "runner": {
+        "name": "GitHub Actions 1000002759",
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "machine": "AMD64",
+        "runnerArch": "X64"
+      },
+      "binarySha256": "6545ecce99bedfdbb92e3daad0f9e163b247ab6ac4ba80f7e7255a1ae795d05a",
+      "packageSha256": "58909f7fe42fd406cfc7af9e56df5b74f6fed405940a84128f8dcbda478566d0",
+      "skippedGoTests": [],
+      "checks": {
+        "nativeArchitecture": "passed",
+        "archiveVerification": "passed",
+        "goTests": "passed",
+        "goVet": "passed",
+        "referenceParity": "passed",
+        "packageSmoke": "passed",
+        "packagingBoundaries": "passed",
+        "liveHTTPS": "passed",
+        "liveReplay": "passed",
+        "mcpParity": "passed",
+        "offlineQuickstart": "passed",
+        "minimalLinux": "not_applicable"
+      },
+      "installedLogSearch": "pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input",
+      "mcpComparisonCases": 17,
+      "mcpLogCases": 4,
+      "reportSha256": "61c86928fea52d27856800932632bbfe8c33150a392c0e580290a0e38ea5b516"
+    },
+    {
+      "target": "windows/arm64",
+      "status": "passed",
+      "sourceRevision": "e118af32445fd001e9f4fd3d07db8bf829ca7f2e",
+      "runner": {
+        "name": "GitHub Actions 1000002756",
+        "os": "Windows-11-10.0.26200-SP0",
+        "machine": "ARM64",
+        "runnerArch": "ARM64"
+      },
+      "binarySha256": "31199a078f27353ef4ce5c2c10fbbbb30f543c315a2b945bce619fd4cf78443f",
+      "packageSha256": "eaac74e46cdd561bc8ee518412c9b6342fcaecef00ba0b68b04086ce555adf0b",
+      "skippedGoTests": [],
+      "checks": {
+        "nativeArchitecture": "passed",
+        "archiveVerification": "passed",
+        "goTests": "passed",
+        "goVet": "passed",
+        "referenceParity": "passed",
+        "packageSmoke": "passed",
+        "packagingBoundaries": "passed",
+        "liveHTTPS": "passed",
+        "liveReplay": "passed",
+        "mcpParity": "passed",
+        "offlineQuickstart": "passed",
+        "minimalLinux": "not_applicable"
+      },
+      "installedLogSearch": "pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input",
+      "mcpComparisonCases": 17,
+      "mcpLogCases": 4,
+      "reportSha256": "b20571b527005ebceca1b8fc20de9d67d969b230c486c7fc889cb6f7fa560c70"
+    }
+  ]
+}

@@ -81,17 +81,17 @@ The Go tool found **40 more evidence groups** and returned **67 more extra lines
 
 The current source adds an [installable skill](skills/testreceipts/SKILL.md) that tells agents when to compare runs, reuse a capture, or search a local log. The optional MCP interface exposes `compare_live`, `compare_recording`, and `log_context` with described arguments and scoped file access.
 
-Follow the [offline quickstart](docs/QUICKSTART.md) for installation and examples with expected outputs. These integration changes are **Unreleased** and locally checked. Automatic skill selection and third-party host behavior remain unmeasured. [MCP setup](docs/MCP.md) · [Integration validation](docs/AGENT-INTEGRATION-VALIDATION.md).
+Follow the [offline quickstart](docs/QUICKSTART.md) for installation and examples with expected outputs. These integration changes are **Unreleased** and pass native checks on macOS, Linux and Windows, each on amd64 and arm64. The official MCP Python SDK 1.30.0 also passes local interoperability checks. Automatic skill selection and agent-app behavior remain unmeasured. [MCP setup](docs/MCP.md) · [Integration validation](docs/AGENT-INTEGRATION-VALIDATION.md).
 
 ## Validation and availability
 
 | Check | Observed result |
 |---|---|
 | Current source | Go race tests and vet pass; 20 reference tests and 15 fixture comparisons pass |
-| Current MCP integration | 16 comparison fixtures and four log searches match CLI output locally |
-| Offline quickstart | Both documented examples and exact log citations pass |
+| Current MCP integration | CLI parity passes on all six native targets; official Python SDK 1.30.0 passes 20 local parity cases and three invalid-input checks |
+| Offline quickstart | Both documented examples and exact log citations pass on all six native targets |
 | Archived log replay | Existing 20-log evidence receipts reproduced exactly |
 | Real capture | Previously validated 2 runs, 4 requests and 1.85 MB of response bodies with exact offline replay |
-| Platform qualification | Earlier source passed six native OS/CPU targets and reproducible builds; updated native runs remain pending |
+| Platform qualification | Six native OS/CPU targets, reproducible packages and Linux race checks pass on source `e118af3` |
 
-See [current integration checks](docs/AGENT-INTEGRATION-VALIDATION.md), [real-capture evidence](docs/G03-VALIDATION.md), and [historical native CI results](evidence/platform-ci/README.md). Support is limited to the tested platforms. Go speed, repeated-use token savings and log-search token savings remain unmeasured. [Release notes](CHANGELOG.md) · [Remaining tasks](Tasks.md).
+See [current integration checks](docs/AGENT-INTEGRATION-VALIDATION.md), [real-capture evidence](docs/G03-VALIDATION.md), and [current native CI results](https://github.com/SerialForBreakfast/TestReceipts/actions/runs/45306925614). Support is limited to the tested platforms. Go speed, repeated-use token savings and log-search token savings remain unmeasured. [Release notes](CHANGELOG.md) · [Remaining tasks](Tasks.md).

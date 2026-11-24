@@ -5,7 +5,8 @@
 - Add an installable TestReceipts agent skill with command selection, capture reuse and explicit evidence limits.
 - Expose `log_context` through the existing MCP stdio profile, using the shared CLI extraction implementation and scoped file access. Improve argument descriptions for comparison tools.
 - Add an offline quickstart with expected outputs and refresh agent handoff instructions.
-- Local verification covers the new integration. Native checks on the updated source, third-party host behavior and skill activation remain pending. No additional token savings have been measured.
+- All six native targets pass updated package, MCP and offline quickstart checks. Qualification now requires quickstart evidence. Package tests exercise log search with empty PATH, Unicode filenames and partial/missing input.
+- Official MCP Python SDK 1.30.0 passes 20 local parity cases and three invalid-input checks. Agent-app behavior and skill activation remain unmeasured. No additional token savings have been measured.
 
 ## 0.4.0 — 2026-11-12
 

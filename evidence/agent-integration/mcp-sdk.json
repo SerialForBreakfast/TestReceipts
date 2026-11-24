@@ -1,0 +1,100 @@
+{
+  "sdk": "official MCP Python SDK",
+  "sdkVersion": "1.30.0",
+  "protocol": "2025-11-25",
+  "tools": [
+    "compare_live",
+    "compare_recording",
+    "log_context"
+  ],
+  "binarySha256": "3856fb237ddac6849d550db8883274b8fe38ef2b5ee9e991b254666eda4847d0",
+  "checks": [
+    {
+      "case": "testdata/cases/changes",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/empty",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/entities",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/identity-and-counts",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/malformed",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/namespace",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/non-junit",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/pagination",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/retries",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/suite-errors",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/unicode",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/unicode-added",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/unsupported-constructs",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/upstream-parser-only",
+      "parity": true
+    },
+    {
+      "case": "testdata/cases/xml-text",
+      "parity": true
+    },
+    {
+      "case": "testdata/live/partial-listing",
+      "parity": true
+    },
+    {
+      "query": "failed to restore temporary ACL",
+      "partial": false,
+      "parity": true
+    },
+    {
+      "query": "Traceback",
+      "partial": false,
+      "parity": true
+    },
+    {
+      "query": "absent diagnostic",
+      "partial": false,
+      "parity": true
+    },
+    {
+      "query": "failed to restore temporary ACL",
+      "partial": true,
+      "parity": true
+    }
+  ],
+  "invalidInputsRejected": 3,
+  "modelCalls": 0,
+  "limits": "Local SDK stdio interoperability only; agent-host UI and model tool selection unmeasured."
+}

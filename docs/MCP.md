@@ -4,7 +4,7 @@ The existing profile is optional and complete for the PoC. Modern protocol upgra
 
 Start `testreceipts mcp ROOT` using an explicit existing workspace/capture root. The three tools invoke the same Go functions as the CLI; no second parser, generated answers, Python runtime, or model calls are involved.
 
-This implementation pins the **legacy MCP 2025-11-25 stdio profile**. It implements initialization, initialized notification, ping, tools/list, tools/call and cancellation notifications. It does not implement the 2026 stateless profile, HTTP serving, prompts, sampling, authentication, sessions shared across clients or background tasks. Use a host that supports the pinned legacy version. The official [2025 lifecycle](https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle) and [tool messages](https://modelcontextprotocol.io/specification/2025-11-25/server/tools) define the interface. Third-party host/SDK integration is not yet verified.
+This implementation pins the **legacy MCP 2025-11-25 stdio profile**. It implements initialization, initialized notification, ping, tools/list, tools/call and cancellation notifications. It does not implement the 2026 stateless profile, HTTP serving, prompts, sampling, authentication, sessions shared across clients or background tasks. Use a host that supports the pinned legacy version. The official [2025 lifecycle](https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle) and [tool messages](https://modelcontextprotocol.io/specification/2025-11-25/server/tools) define the interface. Official Python SDK 1.30.0 stdio integration passes local checks. Agent-app integration remains unverified.
 
 A generic stdio host configuration (replace both absolute paths):
 
@@ -49,7 +49,7 @@ python3 tools/check_mcp.py --binary bin/testreceipts --out evidence/g04 --real-c
 
 The independent Python standard-library wire client compares all 15 original fixtures, the partial-listing fixture and the retained real capture against CLI output. It records wire bytes and wall time per case, separately from correctness. Optional `--live` also captures the two already-known public real URLs through MCP and checks MCP live = MCP replay = CLI replay; it writes a new ignored `.artifacts/g04-mcp-live` capture and refuses to overwrite one. This needs public network access. No models are called.
 
-The measurements compare an already-started MCP process with a fresh CLI process, with uncontrolled OS caches. They are protocol overhead observations, not agent-token or speed advantage claims. The pinned profile now passes [native CI on all six targets](../evidence/platform-ci/README.md). Client-host interoperability and modern MCP support remain unverified. See [validation evidence](../evidence/g04/README.md) and [remaining tasks](../Tasks.md).
+The measurements compare an already-started MCP process with a fresh CLI process, with uncontrolled OS caches. They are protocol overhead observations, not agent-token or speed advantage claims. The pinned profile now passes [native CI on all six targets](../evidence/platform-ci/README.md). Official Python SDK 1.30.0 interoperability is verified locally. Agent-app behavior and modern MCP support remain unverified. See [validation evidence](../evidence/g04/README.md) and [remaining tasks](../Tasks.md).
 
 ## Log search
 
@@ -61,4 +61,4 @@ With ROOT set to this checkout, call `log_context` with
 
 The expected result has two matching lines and `status=ambiguous`. `partial=true` declares known incomplete input. Inspect `coverage`, `skippedLines` and `omittedMatches` even when `isError=false`. Missing or out-of-scope paths return tool errors. A readable path whose log cannot be processed returns `isError=true` with structured unavailable evidence. The same session, output and path limits apply to all three tools. [Offline examples and skill installation](QUICKSTART.md).
 
-The wire harness now checks four log searches as well as the comparison fixtures. New log-search integration has local validation only until native CI runs on the updated source. Historical six-target results cover the earlier interface. Third-party host discovery and automatic skill selection remain unmeasured.
+The wire harness now checks four log searches as well as the comparison fixtures. The updated source `e118af3` passed all six native targets in [run 45306925614](https://github.com/SerialForBreakfast/TestReceipts/actions/runs/45306925614). The official Python SDK 1.30.0 passed 20 local parity cases and three invalid-input checks. Agent-app discovery and automatic skill selection remain unmeasured.

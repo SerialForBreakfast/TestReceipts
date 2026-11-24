@@ -1,0 +1,70 @@
+{
+  "sourceRevision": "e118af32445fd001e9f4fd3d07db8bf829ca7f2e",
+  "workingTreeDirty": false,
+  "toolchain": "go version go1.27.3 darwin/arm64",
+  "targets": [
+    {
+      "target": "darwin/amd64",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "binarySha256": "2268022e4c8ccfa989c777b0069864eaaf7cfbd05ac666502f72b5bb2cd0e387",
+      "archiveSha256": "8916a2d3f029c04e01bef49159e3017d5de6128637ef8cb42f3d569a1e7bd0b0",
+      "binaryBytes": 7452288,
+      "archiveBytes": 3120908
+    },
+    {
+      "target": "darwin/arm64",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "binarySha256": "3856fb237ddac6849d550db8883274b8fe38ef2b5ee9e991b254666eda4847d0",
+      "archiveSha256": "28634d2e6f43a08e0071b4be3e0a013be57ff67e2c1fc2313ebde0750df14983",
+      "binaryBytes": 6878578,
+      "archiveBytes": 2861521
+    },
+    {
+      "target": "linux/amd64",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "binarySha256": "56eeb1a85aee37d3f069a2078568fe503636ae042d51ca45a3fdddb13683b410",
+      "archiveSha256": "d5579d7c26b37ed73921441729fdf9899d5e065264ec50be71c73ea15ecfc8ad",
+      "binaryBytes": 7282812,
+      "archiveBytes": 3072487
+    },
+    {
+      "target": "linux/arm64",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "binarySha256": "19829436c23990dc92f9f149b0acb5f984abf868581218afc247f5e5df8e17a0",
+      "archiveSha256": "617aee6d8927566d8aab76ce118fe6ffb00474fe57955b68ddca43cc1c593679",
+      "binaryBytes": 6750332,
+      "archiveBytes": 2760305
+    },
+    {
+      "target": "windows/amd64",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "binarySha256": "4a4e88f3d6a3224a3f5e69004c14c9d78a2772356b9d8e7470fc9efdc2db0b57",
+      "archiveSha256": "bd5cf6589dd9f5e59f8abe2395ab84538c791b747f36bb15c708f0d03ba71cca",
+      "binaryBytes": 7494144,
+      "archiveBytes": 3148012
+    },
+    {
+      "target": "windows/arm64",
+      "reproducibility": "pass (two source directories, shared build cache)",
+      "binarySha256": "5e06c7072bd5952924d5c83de0c45ab2d504fca151ed3f555ee24f7333c98394",
+      "archiveSha256": "8a8f77510ba74bcc7ed95fa88101af4271dbdb045ca4c55346149ce7783b1da7",
+      "binaryBytes": 6794752,
+      "archiveBytes": 2801201
+    }
+  ],
+  "installedDarwinArm64": {
+    "extractedArchiveAndExecutablePermissions": "pass",
+    "fifteenExactComparisons": "pass",
+    "spacesAndUnicodePaths": "pass",
+    "outputFileRedirection": "pass",
+    "versionStamp": "pass",
+    "emptyExecutablePATH": "pass; host still has development runtimes installed",
+    "unknownCommand": "pass; exit 2, stderr only",
+    "missingRecording": "pass; exit 2, stderr only",
+    "badArguments": "pass; exit 2, stderr only",
+    "missingExecutePermission": "pass; OS rejected execution",
+    "unreadableCatalog": "pass; exit 2",
+    "unwritableStdout": "pass; exit 2",
+    "installedLogSearch": "pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input"
+  }
+}
