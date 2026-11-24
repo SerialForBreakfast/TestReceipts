@@ -60,9 +60,13 @@ Optional MCP stdio mode:
     testreceipts mcp ROOT
 
 ROOT is an explicit existing workspace/capture directory. A compatible legacy
-MCP 2025-11-25 host can call compare_recording and compare_live; the same facts,
+MCP 2025-11-25 host can call compare_recording, compare_live and (with the updated source build) log_context; the same facts,
 coverage warnings and provider limits apply. Use relative paths within ROOT;
 new live captures must be direct child directory names. See source docs/MCP.md
 for configuration, wire/output limits and compatibility. No model calls are made
 by the server. MCP upgrades and all model evaluations are deferred, not PoC release blockers.
 MCP 2026 stateless compatibility and third-party clients remain unverified.
+
+Agent skill and offline examples are available in the source checkout at
+skills/testreceipts/SKILL.md and docs/QUICKSTART.md. The skill is installed separately
+from the executable. The quickstart includes a copy command and expected results.

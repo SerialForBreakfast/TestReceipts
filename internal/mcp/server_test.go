@@ -9,6 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 	"testing"
+	"testreceipts/internal/logcontext"
 	"testreceipts/internal/provider"
 	"time"
 )
@@ -89,7 +90,7 @@ func TestRecordingParity(t *testing.T) {
 	c.init(t)
 	c.send(t, object{"jsonrpc": "2.0", "id": 2, "method": "tools/list"})
 	tools := c.read(t)["result"].(object)["tools"].([]any)
-	if len(tools) != 2 {
+	if len(tools) != 3 {
 		t.Fatal(tools)
 	}
 	paths, _ := filepath.Glob("../../testdata/cases/*")
@@ -277,4 +278,77 @@ func TestExplicitRoot(t *testing.T) {
 	if _, e := New(p, "test"); e == nil {
 		t.Fatal("file root accepted")
 	}
+}
+
+func TestLogContextParityAndScope(t *testing.T) {
+	root := t.TempDir()
+	file := filepath.Join(root, "build.log")
+	if err := os.WriteFile(file, []byte("start\nhit\n"+strings.Repeat("x", 64<<10)+"\nhit again\n"), 0600); err != nil {
+		t.Fatal(err)
+	}
+	c := start(t, root)
+	c.init(t)
+	for _, tc := range []struct {
+		query   string
+		partial bool
+	}{{"hit", false}, {"start", true}, {"absent", false}} {
+		c.send(t, object{"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": object{"name": "log_context", "arguments": object{"file": "build.log", "query": tc.query, "partial": tc.partial}}})
+		result := c.read(t)["result"].(object)
+		resolved, err := filepath.EvalSymlinks(file)
+		if err != nil {
+			t.Fatal(err)
+		}
+		want, _ := json.Marshal(logcontext.Search(resolved, tc.query, tc.partial))
+		got, _ := json.Marshal(result["structuredContent"])
+		if result["isError"] != false || !bytes.Equal(got, canonicalJSON(t, want)) {
+			t.Fatalf("parity: %s != %s", got, want)
+		}
+		if result["content"].([]any)[1].(object)["name"] != "build.log" {
+			t.Fatal("missing log reference")
+		}
+	}
+	for _, args := range []object{
+		{"file": "../escape", "query": "hit"}, {"file": file, "query": "hit"},
+		{"file": "missing.log", "query": "hit"}, {"file": "build.log", "query": " "},
+		{"file": "build.log", "query": "hit\nagain"}, {"file": "build.log", "query": "hit", "partial": "true"},
+		{"file": "build.log", "query": "hit", "extra": true}, {"query": "hit"},
+	} {
+		c.send(t, object{"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": object{"name": "log_context", "arguments": args}})
+		if c.read(t)["result"].(object)["isError"] != true {
+			t.Fatalf("accepted invalid arguments: %v", args)
+		}
+	}
+	// Reuse the same scoped path checks for symlinks as recording comparison.
+	outside := filepath.Join(t.TempDir(), "outside.log")
+	if err := os.WriteFile(outside, []byte("hit"), 0600); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.Symlink(outside, filepath.Join(root, "escape.log")); err == nil {
+		c.send(t, object{"jsonrpc": "2.0", "id": 4, "method": "tools/call", "params": object{"name": "log_context", "arguments": object{"file": "escape.log", "query": "hit"}}})
+		if c.read(t)["result"].(object)["isError"] != true {
+			t.Fatal("symlink escaped root")
+		}
+	} else {
+		t.Logf("symlink creation unavailable: %v", err)
+	}
+	c.server.mu.Lock()
+	c.server.calls = MaxCalls
+	c.server.mu.Unlock()
+	c.send(t, object{"jsonrpc": "2.0", "id": 5, "method": "tools/call", "params": object{"name": "log_context", "arguments": object{"file": "build.log", "query": "hit"}}})
+	if c.read(t)["result"].(object)["isError"] != true {
+		t.Fatal("log search bypassed session budget")
+	}
+}
+
+func canonicalJSON(t *testing.T, raw []byte) []byte {
+	t.Helper()
+	var value any
+	if err := json.Unmarshal(raw, &value); err != nil {
+		t.Fatal(err)
+	}
+	result, err := json.Marshal(value)
+	if err != nil {
+		t.Fatal(err)
+	}
+	return result
 }

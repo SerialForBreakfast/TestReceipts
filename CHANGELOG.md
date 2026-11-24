@@ -1,5 +1,12 @@
 # TestReceipts release notes
 
+## Unreleased
+
+- Add an installable TestReceipts agent skill with command selection, capture reuse and explicit evidence limits.
+- Expose `log_context` through the existing MCP stdio profile, using the shared CLI extraction implementation and scoped file access. Improve argument descriptions for comparison tools.
+- Add an offline quickstart with expected outputs and refresh agent handoff instructions.
+- Local verification covers the new integration. Native checks on the updated source, third-party host behavior and skill activation remain pending. No additional token savings have been measured.
+
 ## 0.4.0 — 2026-11-12
 
 Unsigned proof of concept. The CLI and local packager now use the plain version `0.4.0`, following the `v0.4.0-dev.1` source build. This minor version adds a CLI command alongside the existing CI report comparison commands.

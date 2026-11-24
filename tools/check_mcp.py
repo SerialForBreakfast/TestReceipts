@@ -21,7 +21,7 @@ class Client:
   assert self.process.returncode==0;assert not self.process.stderr.read();self.thread.join(timeout=2);assert self.q.empty(),'unsolicited stdout'
 client=Client(ROOT);rows=[]
 try:
- result,_,_=client.call('tools/list');assert len(result['result']['tools'])==2
+ result,_,_=client.call('tools/list');assert {tool['name'] for tool in result['result']['tools']}=={'compare_recording','compare_live','log_context'}
  cases=sorted((ROOT/'testdata/cases').iterdir())+[ROOT/'testdata/live/partial-listing']
  if a.real_capture:cases.append(a.real_capture.resolve())
  for case in cases:
@@ -30,6 +30,11 @@ try:
   start=time.perf_counter();cli=subprocess.run([str(binary),'compare-recording',str(case),*urls],capture_output=True,text=True,check=True,timeout=30);cli_seconds=round(time.perf_counter()-start,6);assert not cli.stderr
   response,elapsed,wire=client.call('tools/call',{'name':'compare_recording','arguments':{'recording':case.relative_to(ROOT).as_posix(),'beforeUrl':urls[0],'afterUrl':urls[1]}});value=response['result'];assert value['isError'] is False;assert value['structuredContent']==json.loads(cli.stdout)==json.loads(value['content'][0]['text']);assert value['content'][1]['type']=='resource_link'
   rows.append({'case':case.relative_to(ROOT).as_posix(),'factsEqual':True,'cliOutputBytes':len(cli.stdout.encode()),'mcpWireResponseBytes':wire,'mcpEnvelopeExtraBytes':wire-len(cli.stdout.encode()),'cliWallSeconds':cli_seconds,'mcpWallSeconds':elapsed})
+ for query,partial in [('failed to restore temporary ACL',False),('Traceback',False),('absent diagnostic',False),('failed to restore temporary ACL',True)]:
+  path=ROOT/'testdata/build-logs/failed.txt'
+  cli=subprocess.run([str(binary),'log-context',*(['--partial'] if partial else []),str(path),query],capture_output=True,text=True,check=True)
+  response,_,_=client.call('tools/call',{'name':'log_context','arguments':{'file':path.relative_to(ROOT).as_posix(),'query':query,'partial':partial}})
+  value=response['result'];assert value['isError'] is False;assert value['structuredContent']==json.loads(cli.stdout)==json.loads(value['content'][0]['text'])
  value,_,_=client.call('tools/call',{'name':'unknown','arguments':{}});assert value['error']['code']==-32602
  value,_,_=client.call('tools/call',{'name':'compare_recording','arguments':{'recording':'../escape','beforeUrl':urls[0],'afterUrl':urls[1]}});assert value['result']['isError'] is True
 finally:client.close()
@@ -42,5 +47,5 @@ if a.live:
   replay,_,_=client.call('tools/call',{'name':'compare_recording','arguments':{'recording':capture,'beforeUrl':urls[0],'afterUrl':urls[1]}});assert replay['result']['structuredContent']==value['structuredContent'];cli=subprocess.run([str(binary),'compare-recording',str(root/capture),*urls],capture_output=True,text=True,check=True);assert json.loads(cli.stdout)==value['structuredContent']
   live={'capture':'.artifacts/'+capture,'liveAndMCPReplayAndCLIEqual':True,'comparisonComplete':value['structuredContent']['comparisonComplete'],'wallSeconds':elapsed,'mcpWireResponseBytes':wire}
  finally:client.close()
-report={'protocol':'2025-11-25 legacy stdio; modern 2026 stateless profile not implemented','client':'independent Python standard-library JSON-RPC harness; not a third-party-host integration test','modelCalls':0,'comparisons':rows,'live':live,'validationErrors':'unknown tool and traversal rejected','measurementLimits':'Single observations; MCP process already initialized, CLI includes process launch; caches uncontrolled. Bytes are protocol overhead, not agent token savings.'}
-(a.out/'mcp-audit.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {len(rows)} MCP/CLI comparisons; live tool checked={live is not None}; no model calls.')
+report={'protocol':'2025-11-25 legacy stdio; modern 2026 stateless profile not implemented','client':'independent Python standard-library JSON-RPC harness; not a third-party-host integration test','modelCalls':0,'comparisons':rows,'live':live,'logContextParityCases':4,'validationErrors':'unknown tool and traversal rejected','measurementLimits':'Single observations; MCP process already initialized, CLI includes process launch; caches uncontrolled. Bytes are protocol overhead, not agent token savings.'}
+(a.out/'mcp-audit.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {len(rows)} MCP/CLI comparisons + 4 log searches; live tool checked={live is not None}; no model calls.')

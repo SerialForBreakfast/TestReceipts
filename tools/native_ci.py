@@ -13,7 +13,7 @@ import time
 from pathlib import Path
 from release import ROOT, TARGETS, PIN, unpack
 
-REQUIRED_CHECKS = ['nativeArchitecture', 'archiveVerification', 'goTests', 'goVet', 'referenceParity', 'packageSmoke', 'packagingBoundaries', 'mcpParity']
+REQUIRED_CHECKS = ['nativeArchitecture', 'archiveVerification', 'goTests', 'goVet', 'referenceParity', 'packageSmoke', 'packagingBoundaries', 'mcpParity', 'offlineQuickstart']
 
 
 def read(path):
@@ -157,6 +157,7 @@ def qualify(args):
         if live:
             mcp += ['--real-capture', capture]
         command('mcpParity', mcp)
+        command('offlineQuickstart', [sys.executable, ROOT / 'tools/check_quickstart.py', '--binary', binary])
         if os.getenv('MINIMAL_LINUX', 'false').lower() == 'true':
             command('minimalLinux', [sys.executable, ROOT / 'tools/minimal_linux.py', '--target', target, '--binary', binary, '--out', output / 'minimal'])
         else:

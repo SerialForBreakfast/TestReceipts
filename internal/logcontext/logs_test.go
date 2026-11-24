@@ -1,4 +1,4 @@
-package main
+package logcontext
 
 import (
 	"os"
@@ -13,7 +13,7 @@ func TestLogSkipPreservesCitations(t *testing.T) {
 	if err := os.WriteFile(path, []byte("hit before\r\n"+large+"\r\nhit after\n"+large), 0600); err != nil {
 		t.Fatal(err)
 	}
-	r := searchLog(path, "hit", true)
+	r := Search(path, "hit", true)
 	if r.Status != "ambiguous" || r.Coverage != "partial" || !r.DeclaredPartial || r.Scanned != 4 || r.Count != 2 || len(r.Skipped) != 2 || r.Skipped[0] != 2 || r.Skipped[1] != 4 {
 		t.Fatalf("unexpected result %+v", r)
 	}
@@ -30,11 +30,11 @@ func TestLongSummaryBoundary(t *testing.T) {
 	if err := os.WriteFile(path, []byte(body), 0600); err != nil {
 		t.Fatal(err)
 	}
-	direct := searchLog(path, "Summarizing", false).Excerpts[0]
+	direct := Search(path, "Summarizing", false).Excerpts[0]
 	if direct.Start != 1 || len(direct.Lines) != 61 {
 		t.Fatalf("summary start %d, length %d", direct.Start, len(direct.Lines))
 	}
-	trailing := searchLog(path, "--- FAIL:", false).Excerpts[0]
+	trailing := Search(path, "--- FAIL:", false).Excerpts[0]
 	if trailing.Start != 1 || trailing.Match != 64 {
 		t.Fatalf("trailing match %d, start %d", trailing.Match, trailing.Start)
 	}
@@ -63,7 +63,7 @@ func TestRelatedEvidenceBoundaries(t *testing.T) {
 	if err := os.WriteFile(path, []byte(data), 0600); err != nil {
 		t.Fatal(err)
 	}
-	if r := searchLog(path, "=== FAIL: pkg/example", false); len(r.Related) != 0 {
+	if r := Search(path, "=== FAIL: pkg/example", false); len(r.Related) != 0 {
 		t.Fatal("attached diagnostic from a different batch")
 	}
 }
@@ -74,7 +74,7 @@ func TestTeardownMustMatchInterruptedCommand(t *testing.T) {
 	if err := os.WriteFile(path, []byte(data), 0600); err != nil {
 		t.Fatal(err)
 	}
-	if r := searchLog(path, "error during", false); len(r.Related) != 0 {
+	if r := Search(path, "error during", false); len(r.Related) != 0 {
 		t.Fatalf("attached unrelated timeout: %+v", r.Related)
 	}
 }

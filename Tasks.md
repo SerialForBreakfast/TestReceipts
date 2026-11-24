@@ -129,3 +129,10 @@ Go source errors, named assertions and gotestsum compiler sections replayed on a
 Frozen replay beyond all sixteen tuning logs: four additional builds, Go 5/8 groups with 21 extra lines and Python 3/8 with 17. [Per-case misses and replay](evidence/build-logs/cross-pass/README.md).
 
 Suite-count, interrupted-command and pod stderr replay: 54/54 groups with 171 extra lines across twenty known logs, +3 groups for +5 extra versus preceding Go. [Line receipts](evidence/build-logs/teardown/results.json).
+
+## Agent discovery and offline onboarding — 2026-11-23
+
+- Implemented an installable skill at `skills/testreceipts/SKILL.md`, with command routing, capture reuse, supported inputs and evidence interpretation.
+- Added MCP `log_context` through the shared extraction package, with scoped paths and existing session budgets. Comparison argument descriptions now explain their inputs.
+- Added `docs/QUICKSTART.md` and executable checks in `tools/check_quickstart.py`; native CI now invokes those checks. Refreshed README, installation pointers and new-chat handoff.
+- Local skill validation, quickstart, reference contracts, MCP parity and unchanged twenty-log receipts are documented in [agent integration validation](docs/AGENT-INTEGRATION-VALIDATION.md). Updated native runs and actual agent discovery remain pending. No model calls.

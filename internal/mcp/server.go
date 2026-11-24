@@ -14,6 +14,7 @@ import (
 	"strings"
 	"sync"
 	"testreceipts/internal/evidence"
+	"testreceipts/internal/logcontext"
 	"testreceipts/internal/provider"
 	"time"
 )
@@ -242,8 +243,32 @@ func tools() []any {
 			description = "Capture two supported public Prow/GCS runs into a NEW direct child directory, then compare. Bounded HTTPS; partial evidence stays explicit."
 			readonly = false
 		}
-		out = append(out, object{"name": name, "description": description, "inputSchema": object{"type": "object", "properties": object{pathKey: object{"type": "string"}, "beforeUrl": object{"type": "string"}, "afterUrl": object{"type": "string"}}, "required": []string{pathKey, "beforeUrl", "afterUrl"}, "additionalProperties": false}, "annotations": object{"readOnlyHint": readonly, "destructiveHint": false, "idempotentHint": readonly, "openWorldHint": !readonly}})
+		out = append(out, object{
+			"name":        name,
+			"description": description,
+			"inputSchema": object{
+				"type": "object",
+				"properties": object{
+					pathKey:     object{"type": "string", "description": "Slash-separated path relative to ROOT. For recording, reuse an existing capture. For capture, supply a new direct child directory name."},
+					"beforeUrl": object{"type": "string", "description": "Earlier supported public Prow/GCS run URL."},
+					"afterUrl":  object{"type": "string", "description": "Later supported public Prow/GCS run URL. Inspect comparisonComplete and per-run coverage before drawing conclusions."},
+				},
+				"required":             []string{pathKey, "beforeUrl", "afterUrl"},
+				"additionalProperties": false,
+			},
+			"annotations": object{"readOnlyHint": readonly, "destructiveHint": false, "idempotentHint": readonly, "openWorldHint": !readonly},
+		})
 	}
+	out = append(out, object{
+		"name":        "log_context",
+		"description": "Find context for a known failure message in a local build log. Literal, case-sensitive search with line numbers, source hash, nearby failure summaries and related diagnostics. Inspect status, coverage, skippedLines and omittedMatches; no_match does not establish success. Supply a file already inside ROOT; this tool does not download logs.",
+		"inputSchema": object{"type": "object", "properties": object{
+			"file":    object{"type": "string", "description": "Existing log file relative to ROOT, using forward slashes. Absolute paths and parent traversal are rejected."},
+			"query":   object{"type": "string", "minLength": 1, "description": "Known single-line literal failure text, case-sensitive. Example: failed to restore temporary ACL"},
+			"partial": object{"type": "boolean", "default": false, "description": "Set true when the supplied log is known to be truncated or incomplete."},
+		}, "required": []string{"file", "query"}, "additionalProperties": false},
+		"annotations": object{"readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false},
+	})
 	return out
 }
 func (s *Server) path(value string, live bool) (string, error) {
@@ -277,7 +302,7 @@ func (s *Server) path(value string, live bool) (string, error) {
 }
 func (s *Server) call(ctx context.Context, id any, params object) {
 	name, ok := params["name"].(string)
-	if !ok || (name != "compare_recording" && name != "compare_live") {
+	if !ok || (name != "compare_recording" && name != "compare_live" && name != "log_context") {
 		s.rpcError(id, -32602, "unknown_tool")
 		return
 	}
@@ -287,34 +312,19 @@ func (s *Server) call(ctx context.Context, id any, params object) {
 		return
 	}
 	live := name == "compare_live"
-	key := "recording"
-	if live {
-		key = "capture"
+	var path string
+	var urls []string
+	var query string
+	var partial bool
+	var e error
+	if name == "log_context" {
+		path, query, partial, e = s.logArguments(args)
+	} else {
+		path, urls, e = s.comparisonArguments(args, live)
 	}
-	if len(args) != 3 {
-		s.result(id, toolError("expected exactly path, beforeUrl and afterUrl arguments"))
-		return
-	}
-	values := map[string]string{}
-	for _, k := range []string{key, "beforeUrl", "afterUrl"} {
-		v, ok := args[k].(string)
-		if !ok || v == "" || len(v) > 4096 {
-			s.result(id, toolError("invalid argument: "+k))
-			return
-		}
-		values[k] = v
-	}
-	path, e := s.path(values[key], live)
 	if e != nil {
 		s.result(id, toolError(e.Error()))
 		return
-	}
-	urls := []string{values["beforeUrl"], values["afterUrl"]}
-	for _, u := range urls {
-		if _, e := provider.RunScope(u); e != nil {
-			s.result(id, toolError(e.Error()))
-			return
-		}
 	}
 	s.mu.Lock()
 	if s.cancel != nil {
@@ -339,9 +349,18 @@ func (s *Server) call(ctx context.Context, id any, params object) {
 	go func() {
 		defer s.wg.Done()
 		defer cancel()
-		var result provider.Object
+		var result any
+		source := filepath.Join(path, "catalog.json")
+		mimeType := "application/json"
+		unavailable := false
 		var err error
-		if live {
+		if name == "log_context" {
+			log := logcontext.Search(path, query, partial)
+			result = log
+			source = path
+			mimeType = "text/plain"
+			unavailable = log.Coverage == "unavailable"
+		} else if live {
 			result, err = provider.Capture(callCtx, provider.NewHTTPSource(), path, urls)
 		} else {
 			result, err = provider.Compare(path, urls)
@@ -362,11 +381,11 @@ func (s *Server) call(ctx context.Context, id any, params object) {
 				s.result(id, toolError("output_budget_exceeded; use CLI and retained original recording"))
 				return
 			}
-			source := filepath.ToSlash(filepath.Join(path, "catalog.json"))
+			source = filepath.ToSlash(source)
 			if !strings.HasPrefix(source, "/") {
 				source = "/" + source
 			}
-			response = object{"isError": false, "structuredContent": result, "content": []any{object{"type": "text", "text": string(raw)}, object{"type": "resource_link", "uri": (&url.URL{Scheme: "file", Path: source}).String(), "name": "catalog.json", "mimeType": "application/json"}}}
+			response = object{"isError": unavailable, "structuredContent": result, "content": []any{object{"type": "text", "text": string(raw)}, object{"type": "resource_link", "uri": (&url.URL{Scheme: "file", Path: source}).String(), "name": filepath.Base(source), "mimeType": mimeType}}}
 		}
 		s.mu.Lock()
 		s.active = ""
@@ -374,4 +393,61 @@ func (s *Server) call(ctx context.Context, id any, params object) {
 		s.mu.Unlock()
 		s.result(id, response)
 	}()
+}
+
+func (s *Server) comparisonArguments(args object, live bool) (string, []string, error) {
+	key := "recording"
+	if live {
+		key = "capture"
+	}
+	if len(args) != 3 {
+		return "", nil, errors.New("expected exactly path, beforeUrl and afterUrl arguments")
+	}
+	values := map[string]string{}
+	for _, k := range []string{key, "beforeUrl", "afterUrl"} {
+		v, ok := args[k].(string)
+		if !ok || v == "" || len(v) > 4096 {
+			return "", nil, errors.New("invalid argument: " + k)
+		}
+		values[k] = v
+	}
+	path, e := s.path(values[key], live)
+	if e != nil {
+		return "", nil, e
+	}
+	urls := []string{values["beforeUrl"], values["afterUrl"]}
+	for _, u := range urls {
+		if _, e := provider.RunScope(u); e != nil {
+			return "", nil, e
+		}
+	}
+	return path, urls, nil
+}
+
+func (s *Server) logArguments(args object) (string, string, bool, error) {
+	for key := range args {
+		if key != "file" && key != "query" && key != "partial" {
+			return "", "", false, errors.New("unknown log_context argument: " + key)
+		}
+	}
+	file, ok := args["file"].(string)
+	if !ok {
+		return "", "", false, errors.New("file must be a relative path within ROOT")
+	}
+	query, ok := args["query"].(string)
+	if !ok || strings.TrimSpace(query) == "" || strings.ContainsAny(query, "\r\n") {
+		return "", "", false, errors.New("query must be a nonempty single-line literal")
+	}
+	partial := false
+	if value, exists := args["partial"]; exists {
+		partial, ok = value.(bool)
+		if !ok {
+			return "", "", false, errors.New("partial must be boolean")
+		}
+	}
+	path, err := s.path(file, false)
+	if err != nil && err.Error() == "recording_unavailable" {
+		err = errors.New("log_unavailable; supply an existing file within ROOT")
+	}
+	return path, query, partial, err
 }
