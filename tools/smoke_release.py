@@ -19,6 +19,14 @@ with tempfile.TemporaryDirectory(prefix='testreceipts-installed-') as tmp:
   if a.measure and measure.exists():
    m=re.search(r'(\d+)\s+maximum resident set size',measure.read_text());rss=int(m.group(1)) if m else None
   return r,elapsed,rss
+ log=work/'Build failure 界.log';shutil.copyfile(ROOT/'testdata/build-logs/failed.txt',log)
+ for extra,query,status,coverage in [([], 'failed to restore temporary ACL','ambiguous','supplied_file'), (['--partial'],'AssertionError: failed to restore temporary ACL','incomplete','partial'), ([], 'absent diagnostic','no_match','supplied_file')]:
+  r,_,_=execute(['log-context',*extra,str(log),query]);value=json.loads(r.stdout)
+  assert r.returncode==0 and not r.stderr and value['status']==status and value['coverage']==coverage
+  lines=log.read_text().splitlines()
+  for block in value['excerpts']:
+   start=block['startLine']-1;assert block['lines']==lines[start:start+len(block['lines'])]
+ r,_,_=execute(['log-context',str(work/'missing.log'),'error']);assert r.returncode==2 and json.loads(r.stdout)['coverage']=='unavailable'
  r,_,_=execute(['version']);assert r.returncode==0 and r.stdout.strip()==metadata['version'];version_times=[]
  for _ in range(10):
   r,elapsed,_=execute(['version']);assert r.returncode==0;version_times.append(round(elapsed,6))
@@ -69,6 +77,7 @@ with tempfile.TemporaryDirectory(prefix='testreceipts-installed-') as tmp:
    r=subprocess.run([str(exe),'compare-recording',str(sample),*urls],env=env,cwd=work,stdout=readonly,stderr=subprocess.PIPE,text=True,timeout=30)
   assert r.returncode==2 and 'Output failed' in r.stderr;checks['unwritableStdout']='pass; read-only stdout handle, exit 2'
 
+ checks['installedLogSearch']='pass; Unicode path, empty PATH, exact citations, partial/no-match/missing input'
  inspections={}
  if platform.system()=='Darwin':
   for label,cmd in [('runtimeLibraries',['/usr/bin/otool','-L',str(exe)]),('codeSignature',['/usr/bin/codesign','-dv','--verbose=4',str(exe)])]:
